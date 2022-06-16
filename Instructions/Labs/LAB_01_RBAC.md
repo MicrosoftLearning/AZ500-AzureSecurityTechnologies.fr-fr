@@ -2,12 +2,12 @@
 lab:
   title: 01 - Contrôle d’accès en fonction du rôle
   module: Module 01 - Manage Identity and Access
-ms.openlocfilehash: 156b27cdbdd97656e8ccd85c4ed3656c0db91937
-ms.sourcegitcommit: 46495f1eba96da4be553aff5b7521e7ab62f50b8
+ms.openlocfilehash: 9ddbfd416d9897bcdf891c9c9265d8205277c176
+ms.sourcegitcommit: 79ca7b110859fe71a3849a28fdc781cad95d1567
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "146032707"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "146381338"
 ---
 # <a name="lab-01-role-based-access-control"></a>Lab 01 : Contrôle d’accès en fonction du rôle
 # <a name="student-lab-manual"></a>Manuel de labo pour l’étudiant
@@ -21,7 +21,7 @@ Vous avez été invité à créer une preuve de concept montrant comment les uti
 - Créer un groupe Service Desk contenant le compte d’utilisateur de Dylan Williams en tant que membre.
 - Attribuer le rôle Contributeur de machines virtuelles au groupe Service Desk. 
 
-> Pour toutes les ressources dans ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit de la région à utiliser pour la classe. 
+> Pour toutes les ressources dans ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser. 
 
 ## <a name="lab-objectives"></a>Objectifs du labo
 
@@ -329,11 +329,11 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 
 > N’oubliez pas de supprimer toutes les nouvelles ressources Azure que vous n’utilisez plus. La suppression des ressources inutilisées garantit que vous n’encourrez pas de coûts imprévus.
 
-1. Dans le portail Azure, ouvrez le Cloud Shell en cliquant sur la première icône en haut à droite du portail Azure. 
+1. Dans le portail Azure, ouvrez Cloud Shell en cliquant sur la première icône située en haut à droite du portail Azure. 
 
 2. Dans le menu déroulant dans le coin supérieur gauche du volet Cloud Shell, sélectionnez **PowerShell** et, lorsque vous y êtes invité, cliquez sur **Confirmer**. 
 
-3. Dans la session PowerShell dans le volet Cloud Shell, exécutez la commande suivante pour supprimer le groupe de ressources que vous avez créé dans ce labo :
+3. Dans la session PowerShell du volet Cloud Shell, exécutez ce qui suit pour supprimer le groupe de ressources que vous avez créé dans ce labo :
   
     ```
     Remove-AzResourceGroup -Name "AZ500LAB01" -Force -AsJob
