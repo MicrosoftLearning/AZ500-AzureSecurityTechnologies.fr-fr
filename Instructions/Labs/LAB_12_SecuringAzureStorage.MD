@@ -2,12 +2,12 @@
 lab:
   title: " 12 - Points de terminaison de service et sécurisation du stockage"
   module: Module 03 - Secure data and applications
-ms.openlocfilehash: ef6f31230914c8c122015334e629dad5c54dfe8d
-ms.sourcegitcommit: 47a471392d8e979c08213fe7de3fcc296adc35da
+ms.openlocfilehash: 094c35e70258656693d64a816b9ed9382eade199
+ms.sourcegitcommit: 7c5e8e9a86553c6bd9b9a6651b60c6cb9676f0ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "146453859"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "147168505"
 ---
 # <a name="lab-12-service-endpoints-and-securing-storage"></a>Labo 12 : Points de terminaison de service et sécurisation du stockage
 # <a name="student-lab-manual"></a>Manuel de labo pour l’étudiant
@@ -195,13 +195,6 @@ Dans cette tâche, vous allez créer un groupe de sécurité réseau avec deux r
     |---|---|
     |Réseau virtuel|**myVirtualNetwork**|
     |Subnet|**Privé**|
-
-16. Dans le volet **Sous-réseaux**, sélectionnez **+ Associer** et spécifiez les paramètres suivants dans la section **Associer un sous-réseau**, puis cliquez sur **OK** :
-
-    |Paramètre|Valeur|
-    |---|---|
-    |Réseau virtuel|**myVirtualNetwork**|
-    |Subnet|**Public**|
     
 #### <a name="task-4-create-a-storage-account-with-a-file-share"></a>Tâche 4 : Créer un compte de stockage avec un partage de fichiers
 
