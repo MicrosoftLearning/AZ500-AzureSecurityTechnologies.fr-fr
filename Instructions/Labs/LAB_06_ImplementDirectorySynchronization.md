@@ -2,12 +2,12 @@
 lab:
   title: '06 : Implémenter la synchronisation des annuaires'
   module: Module 01 - Manage Identity and Access
-ms.openlocfilehash: 9403e136799cd27b91f27c5d8d268ab0aec3f7c5
-ms.sourcegitcommit: 79ca7b110859fe71a3849a28fdc781cad95d1567
+ms.openlocfilehash: 00c359e1875ab915ab697d8ed33e36d956540529
+ms.sourcegitcommit: 1da29a6d959a7f91dbbcbabf5ec06869c98fc1f1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "146381347"
+ms.lasthandoff: 03/30/2022
+ms.locfileid: "145195885"
 ---
 # <a name="lab-06-implement-directory-synchronization"></a>Labo 06 : Implémenter la synchronisation des annuaires
 # <a name="student-lab-manual"></a>Manuel de labos pour étudiant
@@ -20,7 +20,8 @@ Vous avez été invité à créer une preuve de concept illustrant comment inté
 - Créer et configurer un abonné Azure AD
 - Synchroniser la forêt AD DS avec le locataire Azure AD
 
-> Pour toutes les ressources de ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser. 
+
+> Pour toutes les ressources de ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit de la région à utiliser pour la classe. 
 
 ## <a name="lab-objectives"></a>Objectifs du labo
 
@@ -51,7 +52,7 @@ Dans cette tâche, vous identifierez un nom DNS pour votre déploiement de machi
 
 1. Connectez-vous au portail Azure **`https://portal.azure.com/`** .
 
-    >**Remarque** : connectez-vous au portail Azure en utilisant un compte disposant du rôle Propriétaire ou Contributeur dans l’abonnement Azure que vous utilisez pour ce labo.
+    >**Remarque** : connectez-vous au Portail Azure à l’aide d’un compte disposant du rôle Propriétaire ou Contributeur dans l’abonnement Azure que vous utilisez pour ce laboratoire.
 
 2. Ouvrez Cloud Shell en cliquant sur la première icône située en haut à droite du portail Azure. Si vous y êtes invité, cliquez sur **PowerShell** et **Créer un stockage**.
 
@@ -65,7 +66,7 @@ Dans cette tâche, vous identifierez un nom DNS pour votre déploiement de machi
 
     >**Remarque** : remplacez l’espace réservé `<custom-label>` par un nom DNS valide susceptible d’être globalement unique. Remplacez l’espace réservé `<location>` par le nom de la région dans laquelle vous souhaitez déployer la machine virtuelle Azure qui hébergera le contrôleur de domaine Active Directory que vous utiliserez dans ce laboratoire.
 
-    >**Remarque** : pour identifier les régions Azure où vous pouvez approvisionner des machines virtuelles Azure, reportez-vous à [ **https://azure.microsoft.com/en-us/regions/offers/**](https://azure.microsoft.com/en-us/regions/offers/)
+    >**Remarque** : pour identifier les régions Azure où vous pouvez approvisionner des machines virtuelles Azure, reportez-vous à [ **https://azure.microsoft.com/en-us/regions/offers/** ](https://azure.microsoft.com/en-us/regions/offers/)
 
 5. Vérifiez que la commande a retourné **True**. Si ce n’est pas le cas, réexécutez la même commande avec une valeur différente de celle-ci `<custom-label>` jusqu’à ce que la commande retourne la valeur **True**.
 
@@ -89,7 +90,7 @@ Dans cette tâche, vous allez déployer une machine virtuelle Azure qui héberge
 
    |Paramètre|Valeur|
    |---|---|
-   |Abonnement|nom de votre abonnement Azure|
+   |Abonnement|le nom de votre abonnement Azure|
    |Resource group|cliquez sur **Créer** et tapez le nom **AZ500LAB06**|
    |Région|la région Azure que vous avez identifiée dans la tâche précédente|
    |Nom d’utilisateur d’administrateur|**Étudiant**|
@@ -121,9 +122,9 @@ Dans cette tâche, vous allez créer un locataire Azure AD à utiliser dans ce l
 
 1. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents** en haut de la page Portail Azure, tapez **Azure Active Directory** et appuyez sur la touche **Entrée**.
 
-2. Dans le volet affichant la **vue d’ensemble** de votre locataire Azure AD actuel, cliquez sur **Gérer les locataires**, puis sur l’écran suivant, cliquez sur **+Créer**.
+2. Dans le volet affichant la **vue d’ensemble** de votre locataire Azure AD actuel, cliquez sur **Gérer les locataires**, puis sur l’écran suivant, cliquez sur **+ Créer**.
 
-3. Sous l’onglet **Informations de base** du volet **Créer un locataire**, assurez-vous que l’option **Azure Active Directory** est cochée, puis cliquez sur **Suivant : Configuration >** .
+3. Sous l’onglet **Informations de base** du volet **Créer un répertoire**, assurez-vous que l’option **Azure Active Directory** est cochée, puis cliquez sur **Suivant : Configuration >** .
 
 4. Sous l’onglet **Configuration** du volet **Créer un répertoire**, spécifiez les paramètres suivants :
 
@@ -177,12 +178,12 @@ Dans cette tâche, vous allez ajouter un nouvel utilisateur Azure AD et les affe
    |Nom|**syncadmin**|
    |Mot de passe|vérifiez que l’option **Générer automatiquement un mot de passe** est cochée et cliquez sur **Afficher le mot de passe**|
    |Groupes|**0 groupes sélectionnés**|
-   |Rôles|Cliquez sur **Utilisateur**, sur **Administrateur général**, puis sur **Sélectionner**|
+   |Rôles|cliquez sur **Utilisateur**, puis sur **Administrateur général**, puis sur **Sélectionner**|
    |Emplacement d’utilisation|**États-Unis**|  
 
     >**Remarque** : prenez note du nom complet. Vous pouvez copier sa valeur en cliquant sur le bouton **Copier dans le Presse-papiers** sur le côté droit de la liste déroulante affichant le nom de domaine. 
 
-    >**Remarque** : prenez note du mot de passe de l’utilisateur. Vous en aurez besoin plus tard dans ce labo. 
+    >**Remarque** : prenez note du mot de passe de l'utilisateur. Vous en aurez besoin plus tard dans ce labo. 
 
     >**Remarque** : un utilisateur Azure AD disposant du rôle Administrateur général est requis pour implémenter Azure AD Connect.
 

@@ -2,12 +2,12 @@
 lab:
   title: 01 - Contrôle d’accès en fonction du rôle
   module: Module 01 - Manage Identity and Access
-ms.openlocfilehash: 9ddbfd416d9897bcdf891c9c9265d8205277c176
-ms.sourcegitcommit: 79ca7b110859fe71a3849a28fdc781cad95d1567
+ms.openlocfilehash: 9520d720976926da7583c53a50cc25b216286d8a
+ms.sourcegitcommit: 967cb50981ef07d731dd7548845a38385b3fb7fb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "146381338"
+ms.lasthandoff: 05/31/2022
+ms.locfileid: "145955397"
 ---
 # <a name="lab-01-role-based-access-control"></a>Lab 01 : Contrôle d’accès en fonction du rôle
 # <a name="student-lab-manual"></a>Manuel de labo pour l’étudiant
@@ -16,19 +16,19 @@ ms.locfileid: "146381338"
 
 Vous avez été invité à créer une preuve de concept montrant comment les utilisateurs et les groupes Azure sont créés. Et aussi comment le contrôle d’accès en fonction du rôle est utilisé pour attribuer des rôles à des groupes. Plus précisément, vous devez :
 
-- Créer un groupe Administrateurs seniors contenant le compte d’utilisateur de Joseph Price en tant que membre.
-- Créer un groupe Administrateurs juniors contenant le compte d’utilisateur d’Isabel Garcia en tant que membre.
+- Créer un groupe Senior Admins contenant le compte d’utilisateur de Joseph Price en tant que membre.
+- Créer un groupe Junior Admins contenant le compte d’utilisateur d’Isabel Garcia en tant que membre.
 - Créer un groupe Service Desk contenant le compte d’utilisateur de Dylan Williams en tant que membre.
 - Attribuer le rôle Contributeur de machines virtuelles au groupe Service Desk. 
 
-> Pour toutes les ressources dans ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser. 
+> Pour toutes les ressources dans ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser pour la classe. 
 
 ## <a name="lab-objectives"></a>Objectifs du labo
 
 Dans ce labo, vous allez effectuer les exercices suivants :
 
-- Exercice 1 : Créer le groupe Administrateurs seniors avec le compte d’utilisateur Joseph Price comme membre (portail Azure). 
-- Exercice 2 : Créer le groupe Administrateurs juniors avec le compte d’utilisateur d’Isabel Garcia en tant que membre (PowerShell).
+- Exercice 1 : Créer le groupe Senior Admins avec le compte d’utilisateur Joseph Price comme membre (portail Azure). 
+- Exercice 2 : Créer le groupe Junior Admins avec le compte d’utilisateur d’Isabel Garcia en tant que membre (PowerShell).
 - Exercice 3 : Créer le groupe Service Desk avec l’utilisateur Dylan Williams comme membre (Azure CLI). 
 - Exercice 4 : Attribuer le rôle Contributeur de machines virtuelles au groupe Service Desk.
 
@@ -247,7 +247,7 @@ Dans cette tâche, vous allez créer le groupe Service Desk et y affecter Dylan.
 4. Dans la session Bash dans le volet Cloud Shell, exécutez la commande suivante pour obtenir la propriété objectId du compte d’utilisateur de Dylan Williams : 
 
     ```cli
-    OBJECTID=$(echo $USER | jq '.[].id' | tr -d '"')
+    OBJECTID=$(echo $USER | jq '.[].objectId' | tr -d '"')
     ```
 
 5. Dans la session Bash dans le volet Cloud Shell, exécutez la commande suivante pour ajouter le compte d’utilisateur de Dylan au groupe Service Desk : 
@@ -282,10 +282,10 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 
 2. Dans le volet **Groupes de ressources**, cliquez sur **+ Créer**, puis spécifiez les paramètres suivants :
 
-   |Paramètre|Valeur|
+   |Paramètre|Value|
    |---|---|
    |Nom d’abonnement|le nom de votre abonnement Azure|
-   |Nom de groupe ressources|**AZ500Lab01**|
+   |Nom du groupe ressources|**AZ500Lab01**|
    |Location|**USA Est**|
 
 3. Cliquez sur **Vérifier + créer**, puis sur **Créer**.
@@ -305,7 +305,7 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 
 4. Dans le volet **Ajouter une attribution de rôle**, spécifiez les paramètres suivants et cliquez sur **Suivant** après chaque étape :
 
-   |Paramètre|Valeur|
+   |Paramètre|Value|
    |---|---|
    |Rôle sous l’onglet Recherche|**Contributeur de machine virtuelle**|
    |Attribuer l’accès à (dans le volet Membres)|**Utilisateur, groupe ou principal de service**|
@@ -327,13 +327,13 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 
 **Nettoyer les ressources**
 
-> N’oubliez pas de supprimer toutes les nouvelles ressources Azure que vous n’utilisez plus. La suppression des ressources inutilisées garantit que vous n’encourrez pas de coûts imprévus.
+> N’oubliez pas de supprimer toutes les nouvelles ressources Azure que vous n’utilisez plus. La suppression des ressources inutilisées garantit que vous n’exposerez pas de coûts imprévus.
 
-1. Dans le portail Azure, ouvrez Cloud Shell en cliquant sur la première icône située en haut à droite du portail Azure. 
+1. Dans le portail Azure, ouvrez le Cloud Shell en cliquant sur la première icône en haut à droite du portail Azure. 
 
-2. Dans le menu déroulant dans le coin supérieur gauche du volet Cloud Shell, sélectionnez **PowerShell** et, lorsque vous y êtes invité, cliquez sur **Confirmer**. 
+2. Dans le menu déroulant, dans l’angle supérieur gauche du volet Cloud Shell, sélectionnez **PowerShell**, puis, lorsque vous y êtes invité, cliquez sur **Confirmer**. 
 
-3. Dans la session PowerShell du volet Cloud Shell, exécutez ce qui suit pour supprimer le groupe de ressources que vous avez créé dans ce labo :
+3. Dans la session PowerShell dans le volet Cloud Shell, exécutez la commande suivante pour supprimer le groupe de ressources que vous avez créé dans ce labo :
   
     ```
     Remove-AzResourceGroup -Name "AZ500LAB01" -Force -AsJob

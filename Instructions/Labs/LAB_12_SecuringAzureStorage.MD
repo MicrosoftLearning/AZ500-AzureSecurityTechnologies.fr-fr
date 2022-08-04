@@ -2,12 +2,14 @@
 lab:
   title: " 12 - Points de terminaison de service et sécurisation du stockage"
   module: Module 03 - Secure data and applications
-ms.openlocfilehash: 094c35e70258656693d64a816b9ed9382eade199
-ms.sourcegitcommit: 7c5e8e9a86553c6bd9b9a6651b60c6cb9676f0ff
+
+ms.openlocfilehash: d47890d94d7f1a008024ebedf5154d487cb35792
+ms.sourcegitcommit: 967cb50981ef07d731dd7548845a38385b3fb7fb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "147168505"
+ms.lasthandoff: 05/31/2022
+ms.locfileid: "145955407"
+
 ---
 # <a name="lab-12-service-endpoints-and-securing-storage"></a>Labo 12 : Points de terminaison de service et sécurisation du stockage
 # <a name="student-lab-manual"></a>Manuel de labo pour l’étudiant
@@ -20,7 +22,9 @@ Vous avez été invité à créer une preuve de concept pour montrer la sécuris
 - Configurez le point de terminaison de stockage afin que seules des ressources d’un sous-réseau spécifique puissent accéder au stockage.
 - Vérifiez que des ressources extérieures au sous-réseau spécifique ne peuvent pas accéder au stockage. 
 
-> Pour toutes les ressources dans ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser. 
+
+> Pour toutes les ressources dans ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser pour la classe. 
+
 
 ## <a name="lab-objectives"></a>Objectifs du labo
 
@@ -62,9 +66,10 @@ Dans cette tâche, vous allez créer un réseau virtuel.
 
 4. Dans le volet **Créer un réseau virtuel**, sous l’onglet **Options de base**, spécifiez les paramètres suivants (conservez les valeurs par défaut pour les autres), puis cliquez sur **Suivant : Adresses IP** :
 
-    |Paramètre|Valeur|
+
+    |Paramètre|Value|
     |---|---|
-    |Abonnement|le nom de l’abonnement Azure que vous utilisez dans ce labo|
+    |Abonnement|Nom de l’abonnement Azure que vous utilisez dans ce labo|
     |Groupe de ressources|Cliquez sur **Créer** et tapez le nom **AZ500LAB12**|
     |Nom|**myVirtualNetwork**|
     |Région|**(États-Unis) USA Est**|
@@ -110,13 +115,13 @@ Dans cette tâche, vous allez créer un groupe de sécurité réseau avec deux r
 
 1. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents** en haut de la page, tapez **Réseau virtuel**, puis appuyez sur la touche **Entrée**.
 
-2. Dans le volet **Groupes de sécurité réseau**, cliquez sur **+Créer**.
+2. Dans le volet **Groupes de sécurité réseau**, cliquez sur **+ Créer**.
 
 3. Sous l’onglet **Options de base** du volet **Créer un groupe de sécurité réseau**, spécifiez les paramètres suivants : 
 
-    |Paramètre|Valeur|
+    |Paramètre|Value|
     |---|---|
-    |Abonnement|le nom de l’abonnement Azure que vous utilisez dans ce labo|
+    |Abonnement|Nom de l’abonnement Azure que vous utilisez dans ce labo|
     |Groupe de ressources|**AZ500LAB12**|
     |Nom|**myNsgPrivate**|
     |Région|**USA Est**|
@@ -195,7 +200,8 @@ Dans cette tâche, vous allez créer un groupe de sécurité réseau avec deux r
     |---|---|
     |Réseau virtuel|**myVirtualNetwork**|
     |Subnet|**Privé**|
-    
+
+
 #### <a name="task-4-create-a-storage-account-with-a-file-share"></a>Tâche 4 : Créer un compte de stockage avec un partage de fichiers
 
 Dans cette tâche, vous allez créer un compte de stockage avec un partage de fichiers et obtenir la clé du compte de stockage.  
@@ -206,9 +212,10 @@ Dans cette tâche, vous allez créer un compte de stockage avec un partage de fi
 
 3. Sous l’onglet **Options de base** du volet **Créer un compte de stockage**, spécifiez les paramètres suivants (conservez les valeurs par défaut pour les autres) :
 
-    |Paramètre|Valeur|
+
+    |Paramètre|Value|
     |---|---|
-    |Abonnement|le nom de l’abonnement Azure que vous utilisez dans ce labo|
+    |Abonnement|Nom de l’abonnement Azure que vous utilisez dans ce labo|
     |Groupe de ressources|**AZ500LAB12**|
     |Nom du compte de stockage|Nom global unique comprenant entre 3 et 24 caractères alphanumériques.|
     |Emplacement|**(États-Unis) EastUS**|
@@ -229,7 +236,7 @@ Dans cette tâche, vous allez créer un compte de stockage avec un partage de fi
 
 9. Dans le volet **Nouveau partage de fichiers**, spécifiez les paramètres suivants :
 
-    |Paramètre|Valeur|
+    |Paramètre|Value|
     |---|---|
     |Nom|**my-file-share**|
 
@@ -251,7 +258,7 @@ Dans cette tâche, vous allez créer un compte de stockage avec un partage de fi
 
 16. Dans le volet **Ajouter des réseaux**, spécifiez les paramètres suivants :
 
-    |Paramètre|Valeur|
+    |Paramètre|Value|
     |---|---|
     |Abonnement|Nom de l’abonnement Azure que vous utilisez dans ce labo|
     |Réseaux virtuels|**myVirtualNetwork**|
@@ -275,7 +282,7 @@ Dans cette tâche, vous allez créer deux machines virtuelles : l’une dans le
 
 3. Sous l’onglet **Informations de base** du volet **Créer une machine virtuelle**, spécifiez les paramètres suivants (conservez les valeurs par défaut pour les autres) :
 
-    |Paramètre|Valeur|
+    |Paramètre|Value|
     |---|---|
     |Abonnement|Nom de l’abonnement Azure que vous utilisez dans ce labo|
     |Groupe de ressources|**AZ500LAB12**|
@@ -285,7 +292,8 @@ Dans cette tâche, vous allez créer deux machines virtuelles : l’une dans le
     |Nom d’utilisateur|**localadmin**|
     |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 04 > Exercice 1 > Tâche 1 > Étape 9.**|
     |Aucun port d’entrée public|**Aucun**|
-    |Vous disposez déjà d’une licence Windows Server|**Non**|
+    |Vous disposez déjà d’une licence Windows Server ?|**Non**|
+
 
     >**Remarque** : pour les ports d’entrée publics, nous allons nous appuyer sur le groupe de sécurité réseau (NSG) pré-créé. 
 
@@ -310,7 +318,8 @@ Dans cette tâche, vous allez créer deux machines virtuelles : l’une dans le
 
 9. Sous l’onglet **Informations de base** du volet **Créer une machine virtuelle**, spécifiez les paramètres suivants (conservez les valeurs par défaut pour les autres) :
 
-    |Paramètre|Valeur|
+
+    |Paramètre|Value|
     |---|---|
     |Abonnement|Nom de l’abonnement Azure que vous utilisez dans ce labo|
     |Groupe de ressources|**AZ500LAB12**|
@@ -320,7 +329,7 @@ Dans cette tâche, vous allez créer deux machines virtuelles : l’une dans le
     |Nom d’utilisateur|**localadmin**|
     |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 04 > Exercice 1 > Tâche 1 > Étape 9.**|
     |Aucun port d’entrée public|**Aucun**|
-    |Vous disposez déjà d’une licence Windows Server|**Non**|
+    |Vous disposez déjà d’une licence Windows Server ?|**Non**|
 
     >**Remarque** : pour les ports d’entrée publics, nous allons nous appuyer sur le groupe de sécurité réseau (NSG) pré-créé. 
 
