@@ -14,7 +14,7 @@ ms.locfileid: "145195911"
 
 ## <a name="lab-scenario"></a>Scénario du labo
 
-Vous avez été invité à examiner les fonctionnalités de sécurité pour Azure SQL Database. Plus précisément, vous êtes intéressé par :
+Vous avez été invité à examiner les fonctionnalités de sécurité pour Azure SQL Database. Plus précisément, vos domaines d'intérêt sont les suivants :
 
 - Protection contre les attaques telles que l’injection SQL et l’exfiltration des données. 
 - Capacité à découvrir et à classer les informations des bases de données dans des catégories telles que Confidentiel. 
@@ -146,7 +146,7 @@ Dans cette tâche, vous allez d’abord configurer l’audit au niveau serveur, 
 
 3. Définissez le commutateur **Activer Azure SQL Audit** sur **ON** pour activer l’audit. 
 
-4. Cochez la case **Stockage** et les zones d’entrée pour **Abonnement** et **Compte de stockage** s’affichent.
+4. Activez la case à cocher **Stockage**. les zones d’entrée pour **Abonnement** et **Compte de stockage** s’affichent.
 
 5. Sélectionnez votre **abonnement** dans la liste déroulante.
 

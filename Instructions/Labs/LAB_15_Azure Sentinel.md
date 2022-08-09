@@ -61,7 +61,7 @@ Dans cette tâche, vous allez intégrer Microsoft Sentinel et connecter l’espa
 
     >**Remarque** : connectez-vous au Portail Azure à l’aide d’un compte disposant du rôle Propriétaire ou Contributeur dans l’abonnement Azure que vous utilisez pour ce laboratoire.
 
-2. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents** en haut de la page Portail Azure, tapez **Microsoft Sentinel** et appuyez sur la touche **Entrée**.
+2. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents**, située en haut de la page Portail Azure, tapez **Microsoft Sentinel** et appuyez sur la touche **Entrée**.
 
     >**Remarque** : si c’est la première fois que vous tentez d’actionner Microsoft Sentinel dans le tableau de bord Azure, suivez les étapes suivantes : Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents** en haut de la page Portail Azure, tapez **Microsoft Sentinel** et appuyez sur la touche **Entrée**. Sélectionnez **Microsoft Sentinel** dans la vue **Services**.
   
@@ -137,7 +137,7 @@ Dans cette tâche, vous allez créer un playbook. Un playbook de sécurité est 
 
 2. Dans le volet **Déploiement personnalisé**, sélectionnez **Créer votre propre modèle dans l’éditeur**.
 
-3. Dans le volet **Modifier le modèle** , cliquez sur **Charger le fichier**, recherchez le **\\fichier Allfiles\\Labs\\15\\changeincidentseverity.json**, puis cliquez sur **Ouvrir**.
+3. Dans le volet **Modifier le modèle**, cliquez sur **Charger le fichier**, recherchez le **\\fichier Allfiles\\Labs\\15\\changeincidentseverity.json**, puis cliquez sur **Ouvrir**.
 
     >**Remarque** : vous pouvez trouver des exemples de playbooks sur [https://github.com/Azure/Azure-Sentinel/tree/master/Playbooks](https://github.com/Azure/Azure-Sentinel/tree/master/Playbooks).
 
@@ -187,7 +187,7 @@ Dans cette tâche, vous allez créer un playbook. Un playbook de sécurité est 
 
 2. Dans le volet **Microsoft Sentinel \| Vue d’ensemble**, dans la section **Configuration**, cliquez sur **Analytics**.
 
-3. Dans le volet **Microsoft Sentinel \| Analytics**, cliquez sur **+ Créer** et, dans le menu déroulant, cliquez sur **Règle de requête planifiée**. 
+3. Dans le volet **Microsoft Sentinel \| Analytics**, cliquez sur **+ Créer** puis, dans le menu déroulant, cliquez sur **Règle de requête planifiée**. 
 
 4. Sous l’onglet **Général** de **l’Assistant Règle analytique - Créer une nouvelle règle**, spécifiez les paramètres suivants (laissez les autres avec leurs valeurs par défaut) :
 

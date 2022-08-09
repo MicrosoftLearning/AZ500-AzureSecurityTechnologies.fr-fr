@@ -2,12 +2,12 @@
 lab:
   title: 13 - Azure Monitor
   module: Module 04 - Manage security operations
-ms.openlocfilehash: df6fbcf475fe0a5cefec130ab713f92997dcf206
-ms.sourcegitcommit: 022221e69467f2fdccf2e02bb54e6ec395570668
+ms.openlocfilehash: e51e88d55193532e3c91c485d0a247b5e686a48f
+ms.sourcegitcommit: 7c5e8e9a86553c6bd9b9a6651b60c6cb9676f0ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "145195880"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "147168496"
 ---
 # <a name="lab-13-azure-monitor"></a>Labo 13 : Azure Monitor
 # <a name="student-lab-manual"></a>Manuel de labos pour étudiant
@@ -20,7 +20,7 @@ Vous avez été invité à créer une preuve de concept de surveillance des perf
 - Montrer quelles données de télémétrie et quels journaux peuvent être collectés.
 - Montrer comment les données peuvent être utilisées et interrogées. 
 
-> Pour toutes les ressources de ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit de la région à utiliser pour la classe. 
+> Pour toutes les ressources de ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser. 
 
 ## <a name="lab-objectives"></a>Objectifs du labo
 
@@ -50,9 +50,9 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 
 1. Connectez-vous au portail Azure **`https://portal.azure.com/`** .
 
-    >**Remarque** : connectez-vous au Portail Azure à l’aide d’un compte disposant du rôle Propriétaire ou Contributeur dans l’abonnement Azure que vous utilisez pour ce laboratoire.
+    >**Remarque** : connectez-vous au portail Azure en utilisant un compte disposant du rôle Propriétaire ou Contributeur dans l’abonnement Azure que vous utilisez pour ce labo.
 
-2. Ouvrez Cloud Shell en cliquant sur la première icône située en haut à droite du portail Azure. Si vous y êtes invité, sélectionnez **PowerShell**, puis **Créer un stockage**.
+2. Ouvrez Cloud Shell en cliquant sur la première icône en haut à droite du portail Azure. Si vous y êtes invité, sélectionnez **PowerShell**, puis **Créer un stockage**.
 
 3. Vérifiez que **PowerShell** est sélectionné dans le menu déroulant en haut à gauche du volet Cloud Shell.
 
@@ -127,7 +127,7 @@ Dans cette tâche, vous allez activer l’extension de machine virtuelle Log Ana
 
 1. Dans le portail Azure, revenez au volet **Espaces de travail Log Analytics** et, dans la liste des espaces de travail, cliquez sur l’entrée représentant l’espace de travail que vous avez créé dans la tâche précédente.
 
-2. Dans le volet de l’espace de travail Log Analytics, dans la page **Vue d’ensemble**, dans la section **Connecter une source de données**, cliquez sur l’entrée **Machines virtuelles Azure**.
+2. Dans le panneau de l’espace de travail Log Analytics de la page  **Vue d’ensemble**, cliquez sur l’entrée **Machines virtuelles Azure** dans la section **Connecter une source de données**.
 
     >**Remarque** : pour que l’agent soit correctement installé, la machine virtuelle doit être en cours d’exécution.
 
@@ -158,7 +158,7 @@ Dans cette tâche, vous allez configurer la collection du journal système Windo
 6. Cliquez sur **Compteurs de performances Windows**, cliquez sur **+ Ajouter un compteur de performances**, passez en revue la liste des compteurs de performances disponibles et ajoutez les éléments suivants :
 
     - Mémoire(\*)\Mo de mémoire disponible
-    - Processus(\*)\%Temps processeur
+    - Process(\*)\\% Processor Time
     - Suivi d’événements pour Windows\Utilisation totale de la mémoire --- Pool non paginé
     - Suivi d’événements pour Windows\Utilisation totale de la mémoire --- Pool paginé
 
