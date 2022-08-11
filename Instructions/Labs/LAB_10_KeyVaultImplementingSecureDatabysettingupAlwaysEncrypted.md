@@ -138,7 +138,7 @@ Dans cette tâche, vous allez créer une ressource Azure Key Vault. Vous allez �
     |Autorisations de certification|Cliquez sur **Sélectionner tout**, ce qui aboutit à la sélection **16 autorisations**.|
     |Sélectionner le principal|Dans le volet **Principal**, cliquez sur **Aucune sélection**, sélectionnez votre compte d’utilisateur, puis cliquez sur **Sélectionner**.|
 
-10. De retour dans le panneau **Ajouter une stratégie d’accès**, cliquez sur **Ajouter** pour ajouter la stratégie d’accès, puis, dans le volet Stratégies d’accès du Key Vault, cliquez sur **Enregistrer** pour enregistrer vos modifications. 
+10. De retour dans le panneau **Ajouter une stratégie d’accès**, cliquez sur **Ajouter** pour ajouter la stratégie d’accès puis, dans le volet Stratégies d’accès du Key Vault, cliquez sur **Enregistrer** pour enregistrer vos modifications. 
 
 #### <a name="task-2-add-a-key-to-key-vault"></a>Tâche 2 : Ajouter une clé à Key Vault
 

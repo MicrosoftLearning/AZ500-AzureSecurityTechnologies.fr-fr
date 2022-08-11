@@ -10,7 +10,7 @@ ms.lasthandoff: 03/30/2022
 ms.locfileid: "145195886"
 ---
 # <a name="lab-05-azure-ad-privileged-identity-management"></a>Labo 05 : Azure AD Privileged Identity Management
-# <a name="student-lab-manual"></a>Manuel de labos pour étudiant
+# <a name="student-lab-manual"></a>Manuel de labo de l’étudiant
 
 ## <a name="lab-scenario"></a>Scénario du labo
 
@@ -101,7 +101,7 @@ Dans cette tâche, vous allez rendre un utilisateur éligible pour un rôle d’
 
 8. Cliquez sur **Suivant : Affectation**.
 
-9. Décochez la case **Autoriser l’affectation éligible permanente**, en laissant tous les autres paramètres avec leurs valeurs par défaut.
+9. Décochez la case **à cocher Autoriser l’affectation éligible permanente**, et laissez les valeurs par défaut de tous les autres paramètres.
 
 10. Cliquez sur **Suivant : Notification**.
 
@@ -164,7 +164,7 @@ Dans cette tâche, vous allez activer un rôle qui ne nécessite pas d’approba
 
 4. Dans le volet **Privileged Identity Management**, dans la section **Tâches**, cliquez sur **Mes rôles**.
 
-5. Vous devriez voir trois **rôles éligibles** pour **aaduser2** : **Lecteur général**, **Administrateur de la sécurité** et **Administrateur de la facturation**. 
+5. Vous devez maintenant voir trois **rôles éligibles** pour **aaduser2** : **Lecteur général**, **Administrateur de la sécurité** et **Administrateur de la facturation**. 
 
 6. Dans la ligne affichant l’entrée du rôle **Administrateur de la facturation**, cliquez sur **Activer**.
 

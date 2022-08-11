@@ -45,8 +45,8 @@ Dans ce labo, vous allez effectuer les exercices suivants :
 
 Dans cet exercice, vous allez effectuer les tâches suivantes :
 
-- Tâche 1 : Créez un réseau virtuel avec un sous-réseau
-- Tâche 2 : Créez deux groupes de sécurité d’application.
+- Tâche 1 : Créer un réseau virtuel avec un sous-réseau
+- Tâche 2 : Créer deux groupes de sécurité d’application.
 - Tâche 3 : Créer un groupe de sécurité réseau et associez-le au sous-réseau virtuel.
 - Tâche 4 : Créer des règles de sécurité NSG entrantes pour tous les trafics vers des serveurs web et RDP vers les serveurs d’administration.
 
