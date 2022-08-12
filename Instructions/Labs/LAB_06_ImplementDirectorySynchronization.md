@@ -295,7 +295,7 @@ Dans cette tâche, vous allez installer AD Connect sur la machine virtuelle.
 
 14. De retour sur la page **Connexion de vos annuaires**, vérifiez que l’entrée **adatum.com** s’affiche sous la forme d’un répertoire configuré, puis cliquez sur **Suivant**
 
-15. Dans la page **Configuration de la connexion à Azure AD**, notez l’avertissement indiquant que **les utilisateurs n epourront pas se connecter à Azure AD avec des informations d’identification locales si le suffixe UPN ne correspond pas à un nom de domaine vérifié**, activez la case à cocher **Continuer sans faire correspondre tous les suffixes UPN au domaine vérifié**, puis cliquez sur **Suivant**.
+15. Dans la page **Configuration de la connexion à Azure AD**, notez l’avertissement indiquant que **les utilisateurs ne pourront pas se connecter à Azure AD avec des informations d’identification locales si le suffixe UPN ne correspond pas à un nom de domaine vérifié**, activez la case à cocher **Continuer sans faire correspondre tous les suffixes UPN au domaine vérifié**, puis cliquez sur **Suivant**.
 
     >**Remarque** : comme expliqué précédemment, cela est attendu, car vous n’avez pas pu vérifier le domaine Azure AD DNS personnalisé **adatum.com**.
 

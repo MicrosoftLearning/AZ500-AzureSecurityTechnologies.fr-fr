@@ -15,7 +15,7 @@ Les fichiers de labo requis peuvent être [téléchargés ici](https://github.co
 
 Les liens hypertexte vers chaque exercice et démonstration de labo sont répertoriés ci-dessous.
 
-## <a name="labs"></a>Laboratoires
+## <a name="labs"></a>Labos
 
 {% assign labs = site.pages | where_exp:"page", "page.url contains '/Instructions/Labs'" %}
 | Module | Laboratoire |

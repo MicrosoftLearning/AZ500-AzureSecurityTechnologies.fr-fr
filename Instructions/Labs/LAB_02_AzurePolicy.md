@@ -10,14 +10,14 @@ ms.lasthandoff: 05/31/2022
 ms.locfileid: "145955388"
 ---
 # <a name="lab-02-azure-policy"></a>Lab 02 : Azure Policy
-# <a name="student-lab-manual"></a>Manuel de labo pour l’étudiant
+# <a name="student-lab-manual"></a>Manuel de labo de l’étudiant
 
 ## <a name="lab-scenario"></a>Scénario du labo
 
 Vous avez été invité à créer une preuve de concept montrant comment Azure Policy peut être utilisé. Plus précisément, vous devez :
 
-- Créez une stratégie Emplacements autorisés qui garantit que des ressources ne sont créées que dans une région spécifique.
-- Testez pour vérifier que des ressources ne sont créées que dans l’emplacement autorisé
+- Créer une stratégie Emplacements autorisés qui garantit que des ressources ne sont créées que dans une région spécifique.
+- Tester pour vérifier que des ressources ne sont créées que dans l’emplacement autorisé
 
 > Pour toutes les ressources de ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit de la région à utiliser pour la classe. 
 
@@ -25,7 +25,7 @@ Vous avez été invité à créer une preuve de concept montrant comment Azure P
 
 Dans ce labo, vous allez effectuer les opérations suivantes :
 
-- Exercice 1 : Implémentez Azure Policy. 
+- Exercice 1 : Implémenter Azure Policy. 
 
 ## <a name="azure-policy-diagram"></a>Diagramme Azure Policy
 
@@ -89,7 +89,7 @@ Dans cette tâche, vous allez créer une attribution de stratégie Emplacements 
 
 1. Dans le volet **Emplacements autorisés**, cliquez sur **Attribuer**.
 
-1. Sous l’onglet **Options de base** du volet **Emplacements autorisés**, cliquez sur le bouton Points de suspension (...) en regard de la zone de texte **Étendue**, puis, dans le volet **Étendue**, spécifiez les paramètres suivants :
+1. Sous l’onglet **Options de base** du volet **Emplacements autorisés**, cliquez sur le bouton de sélection (...) affiché en regard de la zone de texte **Étendue**, puis, dans le volet **Étendue**, spécifiez les paramètres suivants :
 
    |Paramètre|Value|
    |---|---|

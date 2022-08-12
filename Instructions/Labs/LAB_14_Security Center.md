@@ -113,7 +113,7 @@ Dans cette tâche, vous allez implémenter la recommandation Microsoft Defender 
 
 1. Dans le portail Azure, revenez au volet **Microsoft Defender pour le cloud \| Vue d’ensemble**, puis sélectionnez les **protections de charge de travail** sous la partie **Sécurité cloud**.
 
-2. Dans le panneau **Protections de charge de travail**, dans la section **Protection avancée** , cliquez sur la vignette **Accès Juste à temps à la machine virtuelle** puis, dans le panneau **Accès Juste à temps à la machine virtuelle**, cliquez sur **Essayer l’accès Juste à temps à la machine virtuelle**.
+2. Dans le panneau **Protections de charge de travail**, dans la section **Protection avancée** , cliquez sur la vignette **Accès Juste à temps à la machine virtuelle** puis, dans le panneau **Accès Juste à temps à la machine virtuelle**, cliquez sur **Accès Juste à temps à la machine virtuelle**.
 
     >**Remarque** : si les machines virtuelles ne sont pas répertoriées, accédez au volet **Machine virtuelle** et cliquez sur **Configuration**. Cliquez sur l’option **Activer les machines virtuelles Juste à temps** sous **l’accès Juste à temps de la machine virtuelle**. Répétez l’étape ci-dessus pour revenir à la page **Microsoft Defender pour le cloud** et actualiser la page : la machine virtuelle s’affiche.
 
