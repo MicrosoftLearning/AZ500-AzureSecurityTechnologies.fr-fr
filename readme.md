@@ -22,7 +22,7 @@ ms.locfileid: "145195901"
 
 - Le manuel de l’instructeur et les fichiers PowerPoint seront toujours votre principale source d’enseignement du contenu du cours.
 
-- Ces fichiers sur GitHub sont conçus pour être utilisés conjointement avec le manuel de l'étudiant, mais sont dansGitHub en tant que référentiel central afin que les MCT et les auteurs de cours puissent avoir une source partagéepour les derniers fichiers de labo.
+- Ces fichiers sur GitHub sont conçus pour être utilisés conjointement avec le manuel de l'étudiant. Gardez à l’esprit qu’ils ne sont présents dans GitHub qu’en tant que référentiel central afin que les MCT et les auteurs de cours puissent avoir une source partagée pour les derniers fichiers de labo.
 
 - Pour chaque prestation, il est demandé aux formateurs de vérifier dans GitHub les modifications qui ont pu être apportées afin de prendre en charge les derniers services Azure et afin de garantir que ce sont bien les tout derniers fichiers qui seront utilisés dans la cadre de la formation.
 

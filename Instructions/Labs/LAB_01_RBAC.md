@@ -57,7 +57,7 @@ Dans cette tâche, vous allez créer un compte d’utilisateur pour Joseph Price
 
 2. Dans la zone de texte **Rechercher des ressources, des services et des documents** en haut de la page du portail Azure, tapez **Azure Active Directory**, puis appuyez sur la touche **Entrée**.
 
-3. Sur le panneau **Vue d’ensemble** du locataire Azure Active Directory, dans la section **Gérer**, sélectionnez **Utilisateurs**, puis **+ Nouvel utilisateur**.
+3. Dans le panneau **Vue d’ensemble** du locataire Azure Active Directory, dans la section **Gérer**, sélectionnez **Utilisateurs**, puis **+ Nouvel utilisateur**.
 
 4. Dans le panneau **Nouvel utilisateur**, assurez-vous que l’option **Créer un utilisateur** est sélectionnée et spécifiez les paramètres suivants :
 
