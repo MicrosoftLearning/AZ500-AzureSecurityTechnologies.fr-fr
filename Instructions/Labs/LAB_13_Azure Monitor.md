@@ -2,12 +2,12 @@
 lab:
   title: 13 - Azure Monitor
   module: Module 04 - Manage security operations
-ms.openlocfilehash: e51e88d55193532e3c91c485d0a247b5e686a48f
-ms.sourcegitcommit: 7c5e8e9a86553c6bd9b9a6651b60c6cb9676f0ff
+ms.openlocfilehash: d7418287b895ccb5af66f01b499181b321e2bc36
+ms.sourcegitcommit: 3c178de473f4f986a3a7ea1d03c9f5ce699a05a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "147168496"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "147871971"
 ---
 # <a name="lab-13-azure-monitor"></a>Labo 13 : Azure Monitor
 # <a name="student-lab-manual"></a>Manuel de labos pour étudiant
@@ -20,7 +20,7 @@ Vous avez été invité à créer une preuve de concept de surveillance des perf
 - Montrer quelles données de télémétrie et quels journaux peuvent être collectés.
 - Montrer comment les données peuvent être utilisées et interrogées. 
 
-> Pour toutes les ressources de ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser. 
+> Pour toutes les ressources de ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit de la région à utiliser pour la classe. 
 
 ## <a name="lab-objectives"></a>Objectifs du labo
 
@@ -112,7 +112,7 @@ Dans cette tâche, vous allez créer un espace de travail Log Analytics.
 
     |Paramètre|Valeur|
     |---|---|
-    |Abonnement|le nom de l’abonnement Azure que vous utilisez dans ce labo|
+    |Abonnement|Nom de l’abonnement Azure que vous utilisez dans ce labo|
     |Resource group|**AZ500LAB131415**|
     |Nom|n’importe quel nom unique valide et global|
     |Région|**(États-Unis) USA Est**|
@@ -145,7 +145,7 @@ Dans cette tâche, vous allez configurer la collection du journal système Windo
 
 1. Dans le portail Azure, revenez à l’espace de travail Log Analytics que vous avez créé précédemment dans cet exercice.
 
-2. Dans le volet de l’espace de travail Log Analytics, dans la section **Paramètres**, cliquez sur **Configuration des agents**.
+2. Dans le volet de l’espace de travail Log Analytics, dans la section **Paramètres**, cliquez sur **Gestion des agents hérités**.
 
 3. Dans le volet **Configuration des agents**, passez en revue les paramètres configurables, notamment les journaux d’événements Windows, les compteurs de performances Windows, les compteurs de performances Linux, les journaux IIS et Syslog. 
 
