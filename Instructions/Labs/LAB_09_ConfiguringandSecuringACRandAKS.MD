@@ -21,7 +21,7 @@ Vous avez été invité à déployer une preuve de concept avec Azure Container 
 - Configuration d’un environnement Azure Kubernetes Service.
 - Sécurisation des applications conteneurs et accès à celles-ci tant en interne qu’en externe. 
 
-> Pour toutes les ressources dans ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser pour la classe. 
+> Pour toutes les ressources utilisées dans ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser pour la classe. 
 
 ## <a name="lab-objectives"></a>Objectifs du labo
 
@@ -44,7 +44,7 @@ Dans ce labo, vous allez effectuer les exercices suivants :
 
 ### <a name="estimated-timing-45-minutes"></a>Durée estimée : 45 minutes
 
-> Pour toutes les ressources dans ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser pour la classe. 
+> Pour toutes les ressources utilisées dans ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser pour la classe. 
 
 Dans cet exercice, vous allez effectuer les tâches suivantes :
 
@@ -81,7 +81,7 @@ Dans cette tâche, vous allez créer un groupe de ressources pour le labo et un 
     az group list --query "[?name=='AZ500LAB09']" -o table
     ```
 
-6. Dans la session Bash dans le volet Cloud Shell, exécutez la commande suivante afin de créer une instance Azure Container Registry (ACR) (le nom de l’ACR doit être globalement unique) : 
+6. Dans la session Bash du volet Cloud Shell, exécutez la commande suivante pour créer une instance Azure Container Registry (ACR) (le nom de l’ACR doit être globalement unique) : 
 
     ```sh
     az acr create --resource-group AZ500LAB09 --name az500$RANDOM$RANDOM --sku Basic
@@ -121,7 +121,7 @@ Dans cette tâche, vous allez créer un Dockerfile, générer une image à parti
 
 4. Dans le portail Azure, accédez au groupe de ressources **AZ500Lab09**, puis, dans la liste des ressources, cliquez sur l’entrée représentant l’instance Azure Container Registry que vous avez approvisionnée dans la tâche précédente.
 
-5. Dans le volet Registre de conteneurs, dans la section **Services**, cliquez **Dépôts**. 
+5. Dans le volet Registre de conteneurs, dans la section **Services**, cliquez sur **Dépôts**. 
 
 6. Vérifiez que la liste des dépôts inclut la nouvelle image conteneur nommée **sample/nginx**.
 
@@ -240,7 +240,7 @@ Dans cette tâche, vous allez télécharger les fichiers manifestes, modifier le
 
 1. Dans la session Bash dans le volet Cloud Shell, cliquez sur l’icône **Charger/Télécharger des fichiers**. Dans le menu déroulant, cliquez sur **Charger**. Dans la boîte de dialogue **Ouvrir**, accédez à l’emplacement où vous avez téléchargé les fichiers du labo, sélectionnez **\\Allfiles\\Labs\\09\\nginxexternal.yaml**, puis cliquez sur **Ouvrir**. Ensuite, sélectionnez **\\Allfiles\\Labs\\09\\nginxinternal.yaml**, puis cliquez sur **Ouvrir**.
 
-2. Dans la session Bash dans le volet Cloud Shell, exécutez la commande suivante afin d’identifier le nom de votre instance Azure Container Registry :
+2. Dans la session Bash du volet Cloud Shell, exécutez la commande suivante afin d’identifier le nom de votre instance Azure Container Registry :
 
     ```sh
     echo $ACRNAME

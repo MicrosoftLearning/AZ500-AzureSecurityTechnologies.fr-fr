@@ -74,7 +74,7 @@ Dans cette tâche, vous allez créer une machine virtuelle à l’aide d’un mo
 
 7. Dans le volet **Modifier les paramètres**, cliquez sur **Charger le fichier**, recherchez le fichier **\\Allfiles\\Labs\\04\\az-500-04_azuredeploy.parameters.json**, puis cliquez sur **Ouvrir**.
 
-    >**Remarque** : passez en revue le contenu du fichier de paramètres notant les valeurs adminUsername et adminPassword.
+    >**Remarque** :  passez en revue le contenu du fichier de paramètres en notant les valeurs adminUsername etadminPassword.
 
 8. Dans le volet **Modifier les paramètres**, cliquez sur **Enregistrer**.
 
@@ -138,7 +138,7 @@ Dans cette tâche, vous allez créer un locataire Azure AD.
 5. Cliquez sur **Vérifier + créer**, puis cliquez sur **Créer**.
 6. Ajoutez un code Captcha dans le volet **Aide pour prouver que vous n’êtes pas un robot**, puis cliquez sur le bouton **Envoyer**. 
 
-    >**Remarque** : Attendez que le nouveau locataire soit créé. Utilisez l’icône **Notification** pour surveiller l’état du déploiement. 
+    >**Remarque** : attendez que le nouveau locataire soit créé. Utilisez l’icône **Notification** pour surveiller l’état du déploiement. 
 
 
 #### <a name="task-2-activate-azure-ad-premium-p2-trial"></a>Tâche 2 : Activer l’essai Azure AD Premium P2
@@ -229,7 +229,7 @@ Dans cette tâche, vous allez affecter chaque utilisateur à la licence Azure Ac
 
 6. Dans le volet **Utilisateurs**, sélectionnez **aaduser1**, **aaduser2**, **aaduser3** et votre compte d’utilisateur, puis cliquez sur **Sélectionner**.
 
-7. Revenez dans le panneau **Affecter des licences**, cliquez sur Options **d’affectation**, vérifiez que toutes les options sont activées, cliquez sur **Vérifier + affecter**, cliquez sur **Affecter**.
+7. Revenez dans le panneau **Affecter des licences**, cliquez sur Options **d’affectation**, vérifiez que toutes les options sont activées, cliquez sur **Vérifier + affecter**, puis cliquez sur **Affecter**.
 
 8. Déconnectez-vous du Portail Azure et connectez-vous à l’aide du même compte. Cette étape est nécessaire pour que l’attribution de licence prenne effet.
 
@@ -488,7 +488,7 @@ Dans cette tâche, vous allez configurer une stratégie de connexion à risque.
    |Nom d’utilisateur|**Étudiant**|
    |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 04 > Exercice 1 > Tâche 1 > Étape 9.**|
 
-    >**Remarque** : attendez que la session Bureau à distance et que le **Gestionnaire de serveur** se chargent.  
+    >**Remarque** : attendez que la session Bureau à distance et le **Gestionnaire de serveur** se chargent.  
 
     >**Remarque** : les étapes suivantes sont effectuées dans la session Bureau à distance sur la machine virtuelle Azure **az500-04-vm1**. 
 

@@ -9,8 +9,8 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 03/09/2022
 ms.locfileid: "145195887"
 ---
-# <a name="lab-03-resource-manager-locks"></a>Lab 03 : Verrous Resource Manager
-# <a name="student-lab-manual"></a>Manuel de labo pour l’étudiant
+# <a name="lab-03-resource-manager-locks"></a>Labo 03 : Verrous Resource Manager
+# <a name="student-lab-manual"></a>Manuel de labo de l’étudiant
 
 ## <a name="lab-scenario"></a>Scénario du labo 
 
@@ -64,13 +64,13 @@ Dans cette tâche, vous allez créer un groupe de ressources et un compte de sto
     New-AzResourceGroup -Name AZ500LAB03 -Location 'EastUS'
     ```
 
-1. Dans le volet Cloud Shell, dans la session PowerShell, exécutez la commande suivante pour créer un compte de stockage dans le nouveau groupe de ressources :
+1. Dans le volet Cloud Shell de la session PowerShell, exécutez la commande suivante pour créer un compte de stockage dans le nouveau groupe de ressources :
     
     ```powershell
     New-AzStorageAccount -ResourceGroupName AZ500LAB03 -Name (Get-Random -Maximum 999999999999999) -Location  EastUS -SkuName Standard_LRS -Kind StorageV2 
     ```
 
-   >**Remarque** :  Attendez que le compte de stockage soit créé. Cela peut prendre quelques minutes. 
+   >**Remarque** :  attendez que le compte de stockage soit créé. Cela peut prendre quelques minutes. 
 
 1. Fermez le volet Cloud Shell.
 
@@ -95,7 +95,7 @@ Dans cette tâche, vous allez ajouter un verrou en lecture seule au compte de st
 
 1. Cliquez sur **OK**. 
 
-   >**Remarque** :  Le compte de stockage est désormais protégé contre la suppression et la modification accidentelles.
+   >**Remarque** :  le compte de stockage est désormais protégé contre la suppression et la modification accidentelles.
 
 #### <a name="task-3-test-the-readonly-lock"></a>Tâche 3 : Tester le verrou ReadOnly 
 
@@ -119,7 +119,7 @@ Dans cette tâche, vous allez ajouter un verrou en lecture seule au compte de st
 
     > **« Échec de la suppression du compte de stockage 'xxxxxxxx'. Erreur : L’étendue 'xxxxxxxx' ne peut pas effectuer l’opération de suppression, car les étendues suivantes sont verrouillées : '/subscriptions/xxxx-xxxx-xxxx-xxxx-xxxxxx/resourceGroups/AZ500LAB03/providers/Microsoft.Storage/storageAccounts/xxxxxxx'. Retirez le verrou et réessayez »**
 
-   >**Remarque** :  Vous avez maintenant vérifié qu’un verrou ReadOnly arrête la suppression accidentelle et la modification d’une ressource.
+   >**Remarque** :  vous avez maintenant vérifié qu’un verrou ReadOnly arrête la suppression accidentelle et la modification d’une ressource.
 
 #### <a name="task-4-remove-the-readonly-lock-and-create-a-delete-lock"></a>Tâche 4 : Supprimer le verrou ReadOnly et créer un verrou Supprimer.
 
@@ -148,7 +148,7 @@ Dans cette tâche, vous allez tester le verrou Supprimer. Vous devez pouvoir mod
 
 1. Définissez l’option **Transfert sécurisé obligatoire** sur **Désactivé**, puis cliquez sur **Enregistrer**.
 
-   >**Remarque** :  Cette fois, la modification devrait réussir.
+   >**Remarque** :  cette fois, la modification devrait réussir.
 
 1. Dans le volet du compte de stockage, sélectionnez **Vue d’ensemble** et, dans le volet **Vue d’ensemble**, cliquez sur **Supprimer**.
 
@@ -158,9 +158,9 @@ Dans cette tâche, vous allez tester le verrou Supprimer. Vous devez pouvoir mod
 
     > **« Impossible de supprimer 'xxxxxx', car cette ressource ou son parent comporte un verrou Supprimer. Les verrous doivent être supprimés avant de pouvoir supprimer cette ressource »**
 
-   >**Remarque** :  Vous avez maintenant vérifié qu’un verrou **Supprimer** autorise les modifications de configuration, mais arrête la suppression accidentelle.
+   >**Remarque** :  vous avez maintenant vérifié qu’un verrou **Supprimer** autorise les modifications de configuration, mais arrête la suppression accidentelle.
 
-   >**Remarque** :  En utilisant les verrous de ressources, vous pouvez implémenter une ligne de défense supplémentaire contre les modifications accidentelles ou malveillantes et/ou la suppression des ressources les plus importantes. Les verrous de ressources peuvent être supprimés par n’importe quel utilisateur avec le rôle **Propriétaire**, mais cela nécessite un effort conscient. Les verrous viennent en complément du contrôle d’accès basé sur les rôles. 
+   >**Remarque** :  en utilisant les verrous de ressources, vous pouvez implémenter une ligne de défense supplémentaire contre les modifications accidentelles ou malveillantes et/ou la suppression des ressources les plus importantes. Les verrous de ressources peuvent être supprimés par n’importe quel utilisateur avec le rôle **Propriétaire**, mais cela nécessite un effort conscient. Les verrous viennent en complément du contrôle d’accès basé sur les rôles. 
 
 > Résultats : dans cet exercice, vous avez appris à utiliser des verrous Resource Manager pour protéger les ressources contre la modification et la suppression accidentelle.
 

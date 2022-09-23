@@ -19,7 +19,7 @@ Vous avez été invité à créer une application de preuve de concept qui utili
 - Création d’un Azure Key Vault et stockage des clés et secrets dans le coffre.
 - Créez une base de données SQL Database et un chiffrement du contenu des colonnes de tables de base de données à l’aide d’Always Encrypted.
 
->**Remarque** : Pour toutes les ressources dans ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser pour la classe. 
+>**Remarque** : Pour toutes les ressources utilisées dans ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser pour la classe. 
 
 Pour rester concentré sur les aspects de sécurité d’Azure liés à l’élaboration de cette preuve de concept, vous allez partir d’un déploiement de modèle ARM automatisé, en configurant une machine virtuelle avec Visual Studio 2019 et SQL Server Management Studio 2018.
 
@@ -90,7 +90,7 @@ Dans cette tâche, vous allez déployer une machine virtuelle Azure qui installe
 
 ### <a name="exercise-2-configure-the-key-vault-resource-with-a-key-and-a-secret"></a>Exercice 2 : Configurer les ressource Key Vault avec une clé et un secret
 
->**Remarque** : Pour toutes les ressources dans ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser pour la classe. 
+>**Remarque** : Pour toutes les ressources utilisées dans ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser pour la classe. 
 
 Dans cet exercice, vous allez effectuer les tâches suivantes :
 
@@ -138,7 +138,7 @@ Dans cette tâche, vous allez créer une ressource Azure Key Vault. Vous allez �
     |Autorisations de certification|Cliquez sur **Sélectionner tout**, ce qui aboutit à la sélection **16 autorisations**.|
     |Sélectionner le principal|Dans le volet **Principal**, cliquez sur **Aucune sélection**, sélectionnez votre compte d’utilisateur, puis cliquez sur **Sélectionner**.|
 
-10. De retour dans le volet **Ajouter une stratégie d’accès**, cliquez sur **Ajouter** pour ajouter la stratégie d’accès, puis, dans le volet Stratégies d’accès du Key Vault, cliquez sur **Enregistrer** pour enregistrer vos modifications. 
+10. De retour dans le panneau **Ajouter une stratégie d’accès**, cliquez sur **Ajouter** pour ajouter la stratégie d’accès puis, dans le volet Stratégies d’accès du Key Vault, cliquez sur **Enregistrer** pour enregistrer vos modifications. 
 
 #### <a name="task-2-add-a-key-to-key-vault"></a>Tâche 2 : Ajouter une clé à Key Vault
 

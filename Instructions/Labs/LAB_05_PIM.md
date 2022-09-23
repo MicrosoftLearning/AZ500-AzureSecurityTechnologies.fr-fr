@@ -10,7 +10,7 @@ ms.lasthandoff: 03/30/2022
 ms.locfileid: "145195886"
 ---
 # <a name="lab-05-azure-ad-privileged-identity-management"></a>Labo 05 : Azure AD Privileged Identity Management
-# <a name="student-lab-manual"></a>Manuel de labos pour étudiant
+# <a name="student-lab-manual"></a>Manuel de labo de l’étudiant
 
 ## <a name="lab-scenario"></a>Scénario du labo
 
@@ -59,7 +59,7 @@ Dans cette tâche, vous allez rendre un utilisateur éligible pour un rôle d’
     
     >**Remarque** : si vous ne voyez toujours pas l’entrée AdatumLab500-04, cliquez sur le lien Changer d’annuaire, sélectionnez la ligne AdatumLab500-04, puis cliquez sur le bouton Changer.
 
-2. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents** en haut de la page Portail Azure, tapez **Azure AD Privileged Identity Management** et appuyez sur la touche **Entrée**.
+2. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents,** située en haut de la page Portail Azure, tapez **Azure AD Privileged Identity Management** et appuyez sur la touche **Entrée**.
 
 3. Dans le volet **Privileged Identity Management**, dans la section **Gérer**, cliquez sur **Rôles Azure AD**.
 
@@ -101,7 +101,7 @@ Dans cette tâche, vous allez rendre un utilisateur éligible pour un rôle d’
 
 8. Cliquez sur **Suivant : Affectation**.
 
-9. Décochez la case **Autoriser l’affectation éligible permanente**, en laissant tous les autres paramètres avec leurs valeurs par défaut.
+9. Désactivez la case **à cocher Autoriser l’affectation éligible permanente** et laissez les valeurs par défaut de tous les autres paramètres.
 
 10. Cliquez sur **Suivant : Notification**.
 
@@ -160,11 +160,11 @@ Dans cette tâche, vous allez activer un rôle qui ne nécessite pas d’approba
 
     >**Remarque** : pour vous connecter, vous devez fournir un nom complet du compte d’utilisateur **aaduser2**, y compris le nom de domaine DNS du locataire Azure AD dont vous avez pris note précédemment dans ce labo. Ce nom d’utilisateur est au format aaduser2@`<your_tenant_name>`.onmicrosoft.com, où `<your_tenant_name>` est l’espace réservé représentant votre nom de locataire Azure AD unique. 
 
-3. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents** en haut de la page Portail Azure, tapez **Azure AD Privileged Identity Management** et appuyez sur la touche **Entrée**.
+3. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents,** située en haut de la page Portail Azure, tapez **Azure AD Privileged Identity Management** et appuyez sur la touche **Entrée**.
 
 4. Dans le volet **Privileged Identity Management**, dans la section **Tâches**, cliquez sur **Mes rôles**.
 
-5. Vous devriez voir trois **rôles éligibles** pour **aaduser2** : **Lecteur général**, **Administrateur de la sécurité** et **Administrateur de la facturation**. 
+5. Vous devez maintenant voir trois **rôles éligibles** pour **aaduser2** : **Lecteur général**, **Administrateur de la sécurité** et **Administrateur de la facturation**. 
 
 6. Dans la ligne affichant l’entrée du rôle **Administrateur de la facturation**, cliquez sur **Activer**.
 
@@ -272,7 +272,7 @@ Dans cette tâche, vous allez réduire les risques liés aux attributions de rô
     
     >**Remarque** : si vous ne voyez toujours pas l’entrée AdatumLab500-04, cliquez sur le lien Changer d’annuaire, sélectionnez la ligne AdatumLab500-04, puis cliquez sur le bouton Changer.
 
-2. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents** en haut de la page Portail Azure, tapez **Azure AD Privileged Identity Management** et appuyez sur la touche **Entrée**.
+2. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents,** située en haut de la page Portail Azure, tapez **Azure AD Privileged Identity Management** et appuyez sur la touche **Entrée**.
 
 3. Accédez au volet **Privileged Identity Management**. 
 

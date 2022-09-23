@@ -45,10 +45,10 @@ Dans ce labo, vous allez effectuer les exercices suivants :
 
 Dans cet exercice, vous allez effectuer les tâches suivantes :
 
-- Tâche 1 : Créez un réseau virtuel avec un sous-réseau
-- Tâche 2 : Créez deux groupes de sécurité d’application.
-- Tâche 3 : Créez un groupe de sécurité réseau et associez-le au sous-réseau virtuel.
-- Tâche 4 : Créez des règles de sécurité NSG entrantes pour tous les trafics vers des serveurs web et RDP vers les serveurs d’administration.
+- Tâche 1 : Créer un réseau virtuel avec un sous-réseau
+- Tâche 2 : Créer deux groupes de sécurité d’application.
+- Tâche 3 : Créer un groupe de sécurité réseau et associez-le au sous-réseau virtuel.
+- Tâche 4 : Créer des règles de sécurité NSG entrantes pour tous les trafics vers des serveurs web et RDP vers les serveurs d’administration.
 
 #### <a name="task-1--create-a-virtual-network"></a>Tâche 1 :  Créer un réseau virtuel
 
@@ -86,7 +86,7 @@ Dans cette tâche, vous allez créer un réseau virtuel à utiliser avec les gro
 
 Dans cette tâche, vous allez créer un groupe de sécurité d’application.
 
-1. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents** en haut de la page, tapez **Groupes de sécurité d’application**, puis appuyez sur la touche **Entrée**.
+1. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents**, située en haut de la page, tapez **Groupes de sécurité d’application**, puis appuyez sur la touche **Entrée**.
 
 2. Dans le volet **Groupes de sécurité d’application** , cliquez sur **+Créer**.
 

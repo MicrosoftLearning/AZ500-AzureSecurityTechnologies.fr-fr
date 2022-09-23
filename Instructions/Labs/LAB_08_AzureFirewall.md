@@ -135,7 +135,7 @@ Dans cette tâche, vous allez créer un itinéraire par défaut pour le sous-ré
 
 2. Dans le panneau **Tables de routage**, cliquez sur **+Créer**.
 
-3. Dans l’onglet **Créer une table de routage**, spécifiez les paramètres suivants :
+3. Dans le panneau **Créer une table de routage**, spécifiez les paramètres suivants :
 
    |Paramètre|Valeur|
    |---|---|

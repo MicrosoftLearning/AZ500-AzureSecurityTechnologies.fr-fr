@@ -2,12 +2,12 @@
 lab:
   title: 15 - Microsoft Sentinel
   module: Module 04 - Manage Security Operations
-ms.openlocfilehash: 63a24bbc17b846d3587cf3fb83ab46b7235d5fcd
-ms.sourcegitcommit: 2f08105eaaf0413d3ec3c12a3b078678151fd211
+ms.openlocfilehash: 147bb0c8f6637393087c5a913f5c9bd8ca380866
+ms.sourcegitcommit: 3c178de473f4f986a3a7ea1d03c9f5ce699a05a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2022
-ms.locfileid: "145195917"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "147871962"
 ---
 # <a name="lab-15-microsoft-sentinel"></a>Labo 15 : Microsoft Sentinel
 # <a name="student-lab-manual"></a>Manuel de labos pour étudiant
@@ -61,7 +61,7 @@ Dans cette tâche, vous allez intégrer Microsoft Sentinel et connecter l’espa
 
     >**Remarque** : connectez-vous au Portail Azure à l’aide d’un compte disposant du rôle Propriétaire ou Contributeur dans l’abonnement Azure que vous utilisez pour ce laboratoire.
 
-2. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents** en haut de la page Portail Azure, tapez **Microsoft Sentinel** et appuyez sur la touche **Entrée**.
+2. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents**, située en haut de la page Portail Azure, tapez **Microsoft Sentinel** et appuyez sur la touche **Entrée**.
 
     >**Remarque** : si c’est la première fois que vous tentez d’actionner Microsoft Sentinel dans le tableau de bord Azure, suivez les étapes suivantes : Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents** en haut de la page Portail Azure, tapez **Microsoft Sentinel** et appuyez sur la touche **Entrée**. Sélectionnez **Microsoft Sentinel** dans la vue **Services**.
   
@@ -137,7 +137,7 @@ Dans cette tâche, vous allez créer un playbook. Un playbook de sécurité est 
 
 2. Dans le volet **Déploiement personnalisé**, sélectionnez **Créer votre propre modèle dans l’éditeur**.
 
-3. Dans le volet **Modifier le modèle** , cliquez sur **Charger le fichier**, recherchez le **\\fichier Allfiles\\Labs\\15\\changeincidentseverity.json**, puis cliquez sur **Ouvrir**.
+3. Dans le volet **Modifier le modèle**, cliquez sur **Charger le fichier**, recherchez le **\\fichier Allfiles\\Labs\\15\\changeincidentseverity.json**, puis cliquez sur **Ouvrir**.
 
     >**Remarque** : vous pouvez trouver des exemples de playbooks sur [https://github.com/Azure/Azure-Sentinel/tree/master/Playbooks](https://github.com/Azure/Azure-Sentinel/tree/master/Playbooks).
 
@@ -187,7 +187,7 @@ Dans cette tâche, vous allez créer un playbook. Un playbook de sécurité est 
 
 2. Dans le volet **Microsoft Sentinel \| Vue d’ensemble**, dans la section **Configuration**, cliquez sur **Analytics**.
 
-3. Dans le volet **Microsoft Sentinel \| Analytics**, cliquez sur **+ Créer** et, dans le menu déroulant, cliquez sur **Règle de requête planifiée**. 
+3. Dans le volet **Microsoft Sentinel \| Analytics**, cliquez sur **+ Créer** puis, dans le menu déroulant, cliquez sur **Règle de requête planifiée**. 
 
 4. Sous l’onglet **Général** de **l’Assistant Règle analytique - Créer une nouvelle règle**, spécifiez les paramètres suivants (laissez les autres avec leurs valeurs par défaut) :
 
@@ -217,7 +217,7 @@ Dans cette tâche, vous allez créer un playbook. Un playbook de sécurité est 
 
 9. Sous l’onglet **Paramètres de l’incident** du volet **Assistant Règle analytique - Créer une nouvelle règle**, acceptez les paramètres par défaut et cliquez sur **Suivant : Réponse automatisée >** . 
 
-10. Sous l’onglet **Réponse automatisée** de **l’Assistant Règle analytique - Créer une nouvelle règle**, dans la liste déroulante **Automatisation des alertes**, cochez la case en regard de l’entrée **Change-Incident-Severity**, puis cliquez sur **Suivant : Révision >** . 
+10. Sous l’onglet **Réponse automatisée** du volet **Assistant Règle analytique - Créer une règle**, dans la liste déroulante **Automatisation des alertes (classique)** , cochez la case à côté de l’entrée **Change-Incident-Severity**, puis cliquez sur **Suivant : Vérifier >** . 
 
 11. Sous l’onglet **Vérifier et créer** du volet **Assistant Règle analytique - Créer une règle une nouvelle règle**, cliquez sur **Créer**.
 
