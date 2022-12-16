@@ -2,13 +2,8 @@
 lab:
   title: 09 - Configuration et sécurisation d’ACR et d’AKS
   module: Module 02 - Implement Platform Protection
-ms.openlocfilehash: 167dca080d65d97997b3a884015bfa2228c17a23
-ms.sourcegitcommit: 967cb50981ef07d731dd7548845a38385b3fb7fb
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 05/31/2022
-ms.locfileid: "145955416"
 ---
+
 # <a name="lab-09-configuring-and-securing-acr-and-aks"></a>Labo 09 : Configuration et sécurisation d’ACR et d’AKS
 # <a name="student-lab-manual"></a>Manuel de labo pour l’étudiant
 
@@ -21,7 +16,7 @@ Vous avez été invité à déployer une preuve de concept avec Azure Container 
 - Configuration d’un environnement Azure Kubernetes Service.
 - Sécurisation des applications conteneurs et accès à celles-ci tant en interne qu’en externe. 
 
-> Pour toutes les ressources utilisées dans ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser pour la classe. 
+> Pour toutes les ressources dans ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser. 
 
 ## <a name="lab-objectives"></a>Objectifs du labo
 
@@ -44,7 +39,7 @@ Dans ce labo, vous allez effectuer les exercices suivants :
 
 ### <a name="estimated-timing-45-minutes"></a>Durée estimée : 45 minutes
 
-> Pour toutes les ressources utilisées dans ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser pour la classe. 
+> Pour toutes les ressources dans ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser pour la classe. 
 
 Dans cet exercice, vous allez effectuer les tâches suivantes :
 
@@ -112,7 +107,7 @@ Dans cette tâche, vous allez créer un Dockerfile, générer une image à parti
     ```sh
     ACRNAME=$(az acr list --resource-group AZ500LAB09 --query '[].{Name:name}' --output tsv)
 
-    az acr build --image sample/nginx:v1 --registry $ACRNAME --file Dockerfile .
+    az acr build --resource-group AZ500LAB09 --image sample/nginx:v1 --registry $ACRNAME --file Dockerfile .
     ```
 
     >**Remarque** : Attendez que l’exécution de la commande se termine. Cela peut prendre environ 2 minutes.
@@ -141,9 +136,9 @@ Dans cette tâche, vous allez créer un service Azure Kubernetes et examiner les
 
 3. Sous l’onglet **Options de base** du volet **Créer un cluster Kubernetes**, sélectionnez **Configuration prédéfinie du cluster**,puis **Dev/Test ($)** . Spécifiez maintenant les paramètres suivants (conservez les valeurs par défaut pour les autres) :
 
-    |Paramètre|Value|
+    |Paramètre|Valeur|
     |----|----|
-    |Abonnement|Nom de l’abonnement Azure que vous utilisez dans ce labo|
+    |Abonnement|le nom de l’abonnement Azure que vous utilisez dans ce labo|
     |Groupe de ressources|**AZ500LAB09**|
     |Nom du cluster Kubernetes|**MyKubernetesCluster**|
     |Région|**(États-Unis) USA Est**|
@@ -153,7 +148,7 @@ Dans cette tâche, vous allez créer un service Azure Kubernetes et examiner les
 
 4. Cliquez sur **Suivant : Pools de noeuds >** , puis sous l’onglet **Pools de noeuds** du volet **Créer un cluster Kubernetes**, spécifiez les paramètres suivants (conservez les valeurs par défaut pour les autres) :
 
-    |Paramètre|Value|
+    |Paramètre|Valeur|
     |----|----|
     |Activer les nœuds virtuels|Case à cocher désactivée|
     
@@ -161,7 +156,7 @@ Dans cette tâche, vous allez créer un service Azure Kubernetes et examiner les
 
 6. Sous l’onglet **Mise en réseau** du volet **Créer un cluster Kubernetes**, spécifiez les paramètres suivants (conservez les valeurs par défaut pour les autres) :
 
-    |Paramètre|Value|
+    |Paramètre|Valeur|
     |----|----|
     |Configuration réseau|**Azure CNI**|
     |Préfixe du nom DNS|**Conservez la valeur par défaut**|

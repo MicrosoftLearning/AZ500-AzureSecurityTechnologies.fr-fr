@@ -2,13 +2,8 @@
 lab:
   title: 01 - Contrôle d’accès en fonction du rôle
   module: Module 01 - Manage Identity and Access
-ms.openlocfilehash: 9ddbfd416d9897bcdf891c9c9265d8205277c176
-ms.sourcegitcommit: 79ca7b110859fe71a3849a28fdc781cad95d1567
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "146381338"
 ---
+
 # <a name="lab-01-role-based-access-control"></a>Lab 01 : Contrôle d’accès en fonction du rôle
 # <a name="student-lab-manual"></a>Manuel de labo pour l’étudiant
 
@@ -21,7 +16,7 @@ Vous avez été invité à créer une preuve de concept montrant comment les uti
 - Créer un groupe Service Desk contenant le compte d’utilisateur de Dylan Williams en tant que membre.
 - Attribuer le rôle Contributeur de machines virtuelles au groupe Service Desk. 
 
-> Pour toutes les ressources utilisées dans ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser pour la classe. 
+> Pour toutes les ressources dans ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser. 
 
 ## <a name="lab-objectives"></a>Objectifs du labo
 

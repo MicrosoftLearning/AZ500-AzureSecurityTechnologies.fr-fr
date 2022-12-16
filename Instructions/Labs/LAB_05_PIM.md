@@ -2,15 +2,10 @@
 lab:
   title: 05 - Azure AD Privileged Identity Management
   module: Module 01 - Manage Identity and Access
-ms.openlocfilehash: 6ef7c51d334587e5e4e7116194fa46f2eb5d1df0
-ms.sourcegitcommit: 1da29a6d959a7f91dbbcbabf5ec06869c98fc1f1
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2022
-ms.locfileid: "145195886"
 ---
+
 # <a name="lab-05-azure-ad-privileged-identity-management"></a>Labo 05 : Azure AD Privileged Identity Management
-# <a name="student-lab-manual"></a>Manuel de labo de l’étudiant
+# <a name="student-lab-manual"></a>Manuel de labos pour étudiant
 
 ## <a name="lab-scenario"></a>Scénario du labo
 

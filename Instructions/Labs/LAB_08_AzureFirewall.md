@@ -2,13 +2,8 @@
 lab:
   title: 08 - Pare-feu Azure
   module: Module 02 - Implement Platform Protection
-ms.openlocfilehash: 1657a251f1355150d6386f8793825369be955705
-ms.sourcegitcommit: e9389f8de66fec6d456a3f303bd350e380df7ff2
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2022
-ms.locfileid: "145195883"
 ---
+
 # <a name="lab-08-azure-firewall"></a>Labo 8 : Pare-feu Azure
 # <a name="student-lab-manual"></a>Manuel de labo pour l’étudiant
 
@@ -167,8 +162,8 @@ Dans cette tâche, vous allez créer un itinéraire par défaut pour le sous-ré
    |Paramètre|Valeur|
    |---|---|
    |Nom de l’itinéraire|**FW-DG**|
-   |Source du préfixe d’adresse|**Adresses IP**|
-   |Plages d’adresses IP/CIDR sources|**0.0.0.0/0**
+   |Destination du préfixe d’adresse|**Adresse IP**|
+   |Plages d’adresses IP/CIDR de destination|**0.0.0.0/0**
    |Type de tronçon suivant|**Appliance virtuelle**|
    |adresse de tronçon suivant|l’adresse IP privée du pare-feu que vous avez identifié à l’étape précédente|
 
