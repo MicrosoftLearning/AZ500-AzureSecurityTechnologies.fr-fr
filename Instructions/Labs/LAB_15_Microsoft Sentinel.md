@@ -1,14 +1,9 @@
 ---
 lab:
-  title: 15 - Microsoft Sentinel
+  title: "15 - Microsoft\_Sentinel"
   module: Module 04 - Manage Security Operations
-ms.openlocfilehash: 147bb0c8f6637393087c5a913f5c9bd8ca380866
-ms.sourcegitcommit: 3c178de473f4f986a3a7ea1d03c9f5ce699a05a4
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "147871962"
 ---
+
 # <a name="lab-15-microsoft-sentinel"></a>Labo 15 : Microsoft Sentinel
 # <a name="student-lab-manual"></a>Manuel de labos pour étudiant
 
@@ -22,7 +17,7 @@ Vous avez été invité à créer une preuve de concept de détection et répons
 - Ajouter des alertes intégrées et personnalisées 
 - Passer en revue comment les playbooks peuvent être utilisés pour automatiser une réponse à un incident.
 
-> Pour toutes les ressources de ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit de la région à utiliser pour la classe. 
+> Pour toutes les ressources de ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser. 
 
 ## <a name="lab-objectives"></a>Objectifs du labo
 
