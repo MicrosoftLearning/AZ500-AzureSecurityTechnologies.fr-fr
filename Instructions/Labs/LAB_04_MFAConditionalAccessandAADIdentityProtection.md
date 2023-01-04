@@ -1,14 +1,9 @@
 ---
 lab:
-  title: 04 - MFA, accès conditionnel et protection des identités AAD
+  title: '04 - MFA, accès conditionnel et protection des identités AAD'
   module: Module 01 - Manage Identity and Access
-ms.openlocfilehash: f63f8a24c0d9b7c870967ee8c83292bd80b617f9
-ms.sourcegitcommit: 2f08105eaaf0413d3ec3c12a3b078678151fd211
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2022
-ms.locfileid: "145195888"
 ---
+
 # <a name="lab-04-mfa-conditional-access-and-aad-identity-protection"></a>Labo 4 : MFA, accès conditionnel et protection des identités AAD
 # <a name="student-lab-manual"></a>Manuel de labo pour l’étudiant
 
@@ -86,7 +81,7 @@ Dans cette tâche, vous allez créer une machine virtuelle à l’aide d’un mo
    |---|---|
    |Abonnement|Nom de l’abonnement Azure que vous utilisez dans ce labo|
    |Resource group|Cliquez sur **Créer** et tapez le nom **AZ500LAB04**|
-   |Emplacement|**(États-Unis) USA Est**|
+   |Emplacement|**USA Est**|
    |Taille de machine virtuelle|**Standard_D2s_v3**|
    |Nom de la machine virtuelle|**az500-04-vm1**|
    |Nom d’utilisateur d’administrateur|**Étudiant**|
@@ -123,7 +118,7 @@ Dans cette tâche, vous allez créer un locataire Azure AD.
 
 2. Dans le volet affichant la **vue d’ensemble** de votre locataire Azure AD actuel, cliquez sur **Gérer les locataires**, puis sur l’écran suivant, cliquez sur **+Créer**.
 
-3. Sous l’onglet **Informations de base** du volet **Créer un locataire**, assurez-vous que l’option **Azure Active Directory** est cochée, puis cliquez sur **Suivant : Configuration >** .
+3. Sous l’onglet**Informations de base** du volet **Créer un locataire**, assurez-vous que l’option **Azure Active Directory** est cochée, puis cliquez sur **Suivant : Configuration >** .
 
 4. Sous l’onglet **Configuration** du volet **Créer un locataire**, spécifiez les paramètres suivants :
 
@@ -219,17 +214,17 @@ Dans cette tâche, vous allez affecter chaque utilisateur à la licence Azure Ac
 
 1. Dans le volet **Utilisateurs \| Tous les utilisateurs**, cliquez sur l’entrée représentant votre compte d’utilisateur. 
 
-2. Dans le panneau affichant les propriétés de votre compte d’utilisateur, cliquez sur **Modifier**.  Vérifiez que l’emplacement d’utilisation est défini sur **États-Unis** s’il n’est pas défini sur l’emplacement d’utilisation, puis cliquez sur **Enregistrer**.
+2. Dans le panneau affichant les propriétés de votre compte d’utilisateur, cliquez sur **Modifier les propriétés**.  Vérifiez que l’emplacement d’utilisation est défini sur **États-Unis** s’il n’est pas défini sur l’emplacement d’utilisation, puis cliquez sur **Enregistrer**.
 
 3. Revenez au volet **AdatumLab500-04 Azure Active Directory** et, dans la section **Gérer**, cliquez sur **Licences**.
 
 4. Dans le volet **Licences \| Vue d’ensemble**, cliquez sur **Tous les produits**, cochez la case **Azure Active Directory Premium P2** et cliquez sur **+Affecter**.
 
-5. Dans le volet **Affecter des licences**, cliquez sur **+Ajouter des utilisateurs et des groupes**.
+5. Dans le volet **Affecter une licence**, cliquez sur **+Ajouter des utilisateurs et des groupes**.
 
 6. Dans le volet **Utilisateurs**, sélectionnez **aaduser1**, **aaduser2**, **aaduser3** et votre compte d’utilisateur, puis cliquez sur **Sélectionner**.
 
-7. Revenez dans le panneau **Affecter des licences**, cliquez sur Options **d’affectation**, vérifiez que toutes les options sont activées, cliquez sur **Vérifier + affecter**, puis cliquez sur **Affecter**.
+7. Revenez dans le panneau **Affecter des licences**, cliquez sur Options **d’affectation**, vérifiez que toutes les options sont activées, cliquez sur **Vérifier + affecter**, cliquez sur **Affecter**.
 
 8. Déconnectez-vous du Portail Azure et connectez-vous à l’aide du même compte. Cette étape est nécessaire pour que l’attribution de licence prenne effet.
 
@@ -245,11 +240,11 @@ Dans cette tâche, vous allez configurer l’authentification multifacteur et ac
 
 2. Sur le volet de locataire **AdatumLab500-04** Azure Active Directory, dans la section **Gérer**, cliquez sur **Sécurité**.
 
-3. Dans le volet **Prise en main de la sécurité\|** , dans la section **Gérer**, cliquez sur **MFA**.
+3. Dans le volet **Prise en main de la sécurité\|** , dans la section **Gérer**, cliquez sur **Authentification multifacteur**.
 
-4. Dans le volet **Prise en main de l’authentification multifacteur\|** , cliquez sur le lien des **paramètres MFA basés sur le cloud supplémentaires**. 
+4. Dans le volet **Prise en main de l’authentification multifacteur\|** , cliquez sur le lien des **paramètres d’authentification multifacteur basés sur le cloud supplémentaires**. 
 
-    >**Remarque** : Cela ouvre un nouvel onglet de navigateur, affichant la page **d’authentification multifacteur** .
+    >**Remarque** : Cela ouvre un nouvel onglet de navigateur, affichant la page **d’authentification multifacteur**.
 
 5. Dans la page d’**authentification multifacteur**, cliquez sur **Paramètres du service**. Examinez les **options de vérification**. Notez que **Message texte vers le téléphone**, **Notification via l’application mobile** et **Code de vérification à partir d’une application mobile ou d’un jeton matériel** sont activés. Cliquez sur **Enregistrer**, puis sur **Fermer**.
 
@@ -488,7 +483,7 @@ Dans cette tâche, vous allez configurer une stratégie de connexion à risque.
    |Nom d’utilisateur|**Étudiant**|
    |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 04 > Exercice 1 > Tâche 1 > Étape 9.**|
 
-    >**Remarque** : attendez que la session Bureau à distance et le **Gestionnaire de serveur** se chargent.  
+    >**Remarque** : attendez que la session Bureau à distance et que le **Gestionnaire de serveur** se chargent.  
 
     >**Remarque** : les étapes suivantes sont effectuées dans la session Bureau à distance sur la machine virtuelle Azure **az500-04-vm1**. 
 

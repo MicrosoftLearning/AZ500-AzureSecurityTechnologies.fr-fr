@@ -67,7 +67,7 @@ Dans cette tâche, vous allez créer une machine virtuelle à l’aide d’un mo
 
 4. Dans le volet **Modifier le modèle**, cliquez sur **Charger le fichier**, recherchez le fichier **\\Allfiles\\Labs\\08\\template.json**, puis cliquez sur **Ouvrir**.
 
-    >**Remarque** : passez en revue le contenu du modèle et notez qu’il déploie une machine virtuelle Azure hébergeant Windows Centre de données Server 2019.
+    >**Remarque** : passez en revue le contenu du modèle et notez qu’il déploie une machine virtuelle Azure hébergeant Windows Centre de données Server 2016.
 
 5. Dans le volet **Modifier le modèle**, cliquez sur **Enregistrer**.
 

@@ -2,13 +2,8 @@
 lab:
   title: 14 - Microsoft Defender pour le cloud
   module: Module 04 - Microsoft Defender for Cloud
-ms.openlocfilehash: 647e2dc79012d6fedca9da9a78f6006f64be093b
-ms.sourcegitcommit: 18d4f5ccc60ae6d43b27e8b7d4d3ef7f68a02e93
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "145195916"
 ---
+
 # <a name="lab-14-microsoft-defender-for-cloud"></a>Labo 14 : Microsoft Defender pour le cloud
 # <a name="student-lab-manual"></a>Manuel de labos pour étudiant
 
@@ -21,7 +16,7 @@ Vous avez été invité à créer une preuve de concept d’environnement Micros
 - Implémenter des recommandations pour la configuration des invités et l’accès Juste à temps à la machine virtuelle. 
 - Passer en revue la façon dont le niveau de sécurité peut être utilisé pour déterminer la progression vers la création d’une infrastructure plus sécurisée.
 
-> Pour toutes les ressources de ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit de la région à utiliser pour la classe. 
+> Pour toutes les ressources de ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser. 
 
 ## <a name="lab-objectives"></a>Objectifs du labo
 
@@ -53,52 +48,37 @@ Dans cette tâche, vous allez démarrer Microsoft Defender pour le cloud et le c
 
 2. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents** en haut de la page Portail Azure, tapez **Microsoft Defender pour le cloud** et appuyez sur la touche **Entrée**.
 
-3. Si cela n'a pas été fait précédemment, dans le volet **Microsoft Defender pour le cloud | Prise en main**, cliquez sur **Mettre à niveau**.
+3. Si cela n'a pas été fait précédemment, dans le volet **Prise en main\| de Microsoft Defender pour le cloud**, cliquez sur **Mettre à niveau**.
      
-4. Si cela n'a pas été fait précédemment, dans le volet **Microsoft Defender pour le cloud | Prise en main**, sous l’onglet **Installer des agents**, faites défiler vers le bas et cliquez sur **Installer des agents**.
+4. Si cela n'a pas été fait précédemment, dans le volet **Prise en main\| de Microsoft Defender pour le cloud**, sous l’onglet **Installer des agents**, faites défiler vers le bas et cliquez sur **Installer des agents**.
 
-5. Dans le volet **Microsoft Defender pour le cloud | Prise en main**, sous l’onglet **Mettre à niveau** >> dans la section **Sélectionner des espaces de travail avec des fonctionnalités de sécurité renforcée** >> activez le **plan Microsoft Defender** en sélectionnant votre espace de travail Log Analytics. 
+5. Dans le volet **Prise en main\| de Microsoft Defender pour le cloud**, sous l’onglet **Mettre à niveau** >> dans la section **Sélectionner des espaces de travail avec des fonctionnalités de sécurité renforcée** >> activez le **plan Microsoft Defender** en sélectionnant votre espace de travail Log Analytics. 
 
     >**Remarque** : passez en revue toutes les fonctionnalités disponibles dans le cadre des plans Microsoft Defender. 
 
 6. Accédez à **Microsoft Defender pour le cloud** et cliquez sur **Paramètres d’environnement** sous les paramètres de gestion, dans la barre de menus verticale sur le côté gauche.
 
-7. Dans le volet **Microsoft Defender pour le cloud | Paramètres d’environnement**, cliquez sur l’abonnement approprié. 
+7. Dans le volet **Microsoft Defender pour le cloud \| Paramètres d’environnement**, cliquez sur l’abonnement approprié. 
 
-8. Dans le volet **Plans Defender**, sélectionnez **Activer tous les plans Microsoft Defender pour le cloud**, puis cliquez sur **Enregistrer**.
+8. Dans le volet **Plans Defender**, sélectionnez **Activer tous les plans Microsoft Defender pour le cloud**.
 
-9. Dans le volet **Paramètres | Plans Defender**, dans le menu vertical situé à gauche, cliquez sur **Approvisionnement automatique**. 
+9. Revenez au volet **Microsoft Defender pour le cloud \|Paramètres d’environnement**, développez votre abonnement, puis cliquez sur l’entrée représentant l’espace de travail Log Analytics que vous avez créé dans le labo précédent.
 
-10. Dans le volet **Paramètres | Approvisionnement automatique**, assurez-vous que l’approvisionnement automatique est **activé** pour le premier **agent Log Analytics pour les machines virtuelles Azure**.
+10. Dans le volet **Paramètres \| Plans Defender**, vérifiez que l’option **Activer tous les plans Microsoft Defender pour le cloud** est sélectionnée.
 
-11. Dans le volet **Paramètres | Automatisation du workflow**, passez en revue les paramètres disponibles. 
-
-    >**Remarque** : vous pouvez déclencher des actions basées sur des alertes de détection des menaces et des recommandations Microsoft Defender pour le cloud. Vous pouvez également configurer une action en fonction des applications logiques. 
-    
-12. Dans le volet **Ajouter une automatisation du workflow**, passez en revue les paramètres disponibles.
-
-    >**Remarque** : Microsoft Defender pour le cloud fournit de nombreuses informations sur les machines virtuelles, notamment l’état de mise à jour du système, les configurations de sécurité du système d’exploitation et la protection des points de terminaison.
-
-13. Dans le panneau **Ajouter une automatisation du workflow**, cliquez sur **Annuler**.
-
-14. Revenez au volet **Microsoft Defender pour le cloud | Paramètres d’environnement**, développez votre abonnement, puis cliquez sur l’entrée représentant l’espace de travail Log Analytics que vous avez créé dans le labo précédent.
-
-15. Dans le volet **Paramètres | Plans Defender**, vérifiez que l’option **Activer tous les plans Microsoft Defender pour le cloud** est sélectionnée et cliquez sur **Enregistrer**.
-
-16. Sélectionnez **Collecte de données** dans le volet **Microsoft Defender pour le cloud | Paramètres**. Sélectionnez **Tous les événements** et **enregistrez**.
-
+11. Sélectionnez **Collecte de données** dans le volet **Paramètres\| Microsoft Defender pour le cloud**. Sélectionnez **Tous les événements** et **enregistrez**.
 
 #### <a name="task-2-review-the-microsoft-defender-for-cloud-recommendation"></a>Tâche 2 : Passer en revue les recommandations de Microsoft Defender pour le cloud
 
 Dans cette tâche, vous passerez en revue les recommandations de Microsoft Defender pour le cloud. 
 
-1. Dans le portail Azure, revenez au volet **Microsoft Defender pour le cloud | Vue d’ensemble**. 
+1. Dans le Portail Azure, revenez au volet **Microsoft Defender pour le cloud \| Vue d’ensemble**. 
 
-2. Dans le volet **Microsoft Defender pour le cloud | Vue d’ensemble**, passez en revue la partie **Niveau de sécurité**.
+2. Dans le volet **Microsoft Defender pour le cloud \| Vue d’ensemble**, passez en revue la partie **Niveau de sécurité**.
 
     >**Remarque** : notez le niveau en cours s’il est disponible.
 
-3. Revenez au volet **Microsoft Defender pour le cloud | Vue d’ensemble**, sélectionnez **Ressources évaluées**.
+3. Revenez au volet **Microsoft Defender pour le cloud \| Vue d’ensemble**, sélectionnez **Ressources évaluées**.
 
 4. Dans le panneau **Inventaire**, sélectionnez l’entrée **myVM**.
 
@@ -106,22 +86,19 @@ Dans cette tâche, vous passerez en revue les recommandations de Microsoft Defen
     
 5. Dans le volet **Intégrité des ressources**, sous l’onglet **Recommandations**, passez en revue la liste des recommandations pour **myVM**.
 
-
 #### <a name="task-3-implement-the-microsoft-defender-for-cloud-recommendation-to-enable-just-in-time-vm-access"></a>Tâche 3 : Implémenter la recommandation Microsoft Defender pour le cloud pour activer l’accès Juste à temps à la machine virtuelle
 
 Dans cette tâche, vous allez implémenter la recommandation Microsoft Defender pour le cloud pour activer l’accès Juste à temps à la machine virtuelle sur la machine virtuelle. 
 
 1. Dans le portail Azure, revenez au volet **Microsoft Defender pour le cloud | Vue d’ensemble**, puis sélectionnez les **protections de charge de travail** sous la partie **Sécurité cloud**.
 
-2. Dans le panneau **Protections de charge de travail**, dans la section **Protection avancée** , cliquez sur la vignette **Accès Juste à temps à la machine virtuelle** puis, dans le panneau **Accès Juste à temps à la machine virtuelle**, cliquez sur **Accès Juste à temps à la machine virtuelle**.
+2. Dans le volet **Protections de charge de travail**, dans la section **Protection avancée**, cliquez sur la vignette **Accès Juste à temps à la machine virtuelle** et, dans le volet **Accès Juste à temps à la machine virtuelle**.
 
-    >**Remarque** : si les machines virtuelles ne sont pas répertoriées, accédez au volet **Machine virtuelle** et cliquez sur **Configuration**. Cliquez sur l’option **Activer les machines virtuelles Juste à temps** sous **l’accès Juste à temps de la machine virtuelle**. Répétez l’étape ci-dessus pour revenir à la page **Microsoft Defender pour le cloud** et actualiser la page : la machine virtuelle s’affiche.
+3. Dans le volet **Accès Juste à temps à la machine virtuelle**, dans la section **Machines virtuelles**, sélectionnez **Non configuré**, puis cliquez sur l’entrée **myVM**.
 
-3. Dans la page **Accès Juste à temps à la machine virtuelle**, sélectionnez **Non configuré**, puis cliquez sur l’entrée **myVM**.
+4. Cliquez sur l’option **Activer JIT sur 1 machine virtuelle** à l’extrême droite de la section **Machines virtuelles**.
 
     >**Remarque** : vous devrez peut-être attendre quelques minutes avant que l’entrée **myVM** ne soit disponible.
-
-4. Sélectionnez **Activer JIT sur 1 machine virtuelle**.
 
 5. Dans le volet **Configuration de l’accès à la machine virtuelle JIT**, à droite de la ligne faisant référence au port **22**, cliquez sur le bouton Points de suspension (...), puis cliquez sur **Supprimer**.
 
@@ -133,4 +110,4 @@ Dans cette tâche, vous allez implémenter la recommandation Microsoft Defender 
 
 > Résultats : vous avez lancé Microsoft Defender pour le cloud et mis en œuvre les recommandations sur les machines virtuelles. 
 
-    >**Note**: Do not remove the resources from this lab as they are needed for the Azure Sentinel lab.
+    >**Note**: Do not remove the resources from this lab as they are needed for the Microsoft Sentinel lab.

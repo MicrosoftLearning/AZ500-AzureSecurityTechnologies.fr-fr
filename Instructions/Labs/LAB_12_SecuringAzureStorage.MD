@@ -1,14 +1,9 @@
 ---
 lab:
-  title: " 12 - Points de terminaison de service et sécurisation du stockage"
+  title: ' 12 - Points de terminaison de service et sécurisation du stockage'
   module: Module 03 - Secure data and applications
-ms.openlocfilehash: 96c1073571e40558a102d2fd661b6b4e3b4f48d7
-ms.sourcegitcommit: 5eaa012a52e6f14e499393257855d314a720a668
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "147717266"
 ---
+
 # <a name="lab-12-service-endpoints-and-securing-storage"></a>Labo 12 : Points de terminaison de service et sécurisation du stockage
 # <a name="student-lab-manual"></a>Manuel de labo pour l’étudiant
 
@@ -20,7 +15,7 @@ Vous avez été invité à créer une preuve de concept pour montrer la sécuris
 - Configurez le point de terminaison de stockage afin que seules des ressources d’un sous-réseau spécifique puissent accéder au stockage.
 - Vérifiez que des ressources extérieures au sous-réseau spécifique ne peuvent pas accéder au stockage. 
 
-> Pour toutes les ressources dans ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit de la région à utiliser pour la classe. 
+> Pour toutes les ressources dans ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser. 
 
 ## <a name="lab-objectives"></a>Objectifs du labo
 
@@ -59,7 +54,7 @@ Dans cette tâche, vous allez créer un réseau virtuel.
 
 2. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents** en haut de la page, tapez **Réseaux virtuels**, puis appuyez sur la touche **Entrée**.
 
-3. Dans le volet **Réseaux virtuels**, cliquez sur **+ Créer**.
+3. Dans le volet **Réseaux virtuels**, cliquez sur  **+ Créer**.
 
 4. Dans le volet **Créer un réseau virtuel**, sous l’onglet **Options de base**, spécifiez les paramètres suivants (conservez les valeurs par défaut pour les autres), puis cliquez sur **Suivant : Adresses IP** :
 
@@ -253,7 +248,7 @@ Dans cette tâche, vous allez créer un compte de stockage avec un partage de fi
 
 1. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents** située en haut de la page, tapez **Comptes de stockage**, puis appuyez sur la touche **Entrée**.
 
-2. Dans le volet **Comptes de stockage**, cliquez sur **+ Créer**.
+2. Dans le volet **Comptes de stockage**, cliquez sur  **+ Créer**.
 
 3. Sous l’onglet **Options de base** du volet **Créer un compte de stockage**, spécifiez les paramètres suivants (conservez les valeurs par défaut pour les autres) :
 
@@ -336,7 +331,7 @@ Dans cette tâche, vous allez créer deux machines virtuelles : l’une dans le
     |Nom d’utilisateur|**localadmin**|
     |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 04 > Exercice 1 > Tâche 1 > Étape 9.**|
     |Aucun port d’entrée public|**Aucun**|
-    |Vous disposez déjà d’une licence Windows Server|**Non**|
+    |Vous disposez déjà d’une licence Windows Server|**Non sélectionnée**|
 
     >**Remarque** : pour les ports d’entrée publics, nous allons nous appuyer sur le groupe de sécurité réseau (NSG) pré-créé. 
 
@@ -371,7 +366,7 @@ Dans cette tâche, vous allez créer deux machines virtuelles : l’une dans le
     |Nom d’utilisateur|**localadmin**|
     |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 04 > Exercice 1 > Tâche 1 > Étape 9.**|
     |Aucun port d’entrée public|**Aucun**|
-    |Vous disposez déjà d’une licence Windows Server|**Non**|
+    |Vous disposez déjà d’une licence Windows Server|**Non sélectionnée**|
 
     >**Remarque** : pour les ports d’entrée publics, nous allons nous appuyer sur le groupe de sécurité réseau (NSG) pré-créé. 
 
@@ -428,7 +423,7 @@ Dans cette tâche, vous allez vous connecter à la machine virtuelle myVMPrivate
        Write-Error -Message "Unable to reach the Azure storage account via port 445. Check to make sure your organization or ISP is not blocking port 445, or use Azure P2S VPN, Azure S2S VPN, or Express Route to tunnel SMB traffic over a different port."
     }
     ```
-    >**Remarque** : l’espace réservé `<storage-account-name>` représente le nom du compte de stockage hébergeant le partage de fichiers, et `<storage_account_name>` sa clé primaire
+    >**Remarque** : l’espace réservé `<storage_account_name>` représente le nom du compte de stockage hébergeant le partage de fichiers, et `<storage_account_key>` sa clé primaire
 
 7. Démarrez l’Explorateur de fichiers et vérifiez que le mappage du lecteur Z: a été correctement créé.
 

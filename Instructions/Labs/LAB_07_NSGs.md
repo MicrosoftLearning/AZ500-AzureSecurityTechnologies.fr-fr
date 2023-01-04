@@ -2,13 +2,8 @@
 lab:
   title: 07 - Groupes de sécurité réseau et groupes de sécurité des applications
   module: Module 02 - Implement Platform Protection
-ms.openlocfilehash: d7cfed1e861215cf32c3b51c4a07aa6886575000
-ms.sourcegitcommit: 2f08105eaaf0413d3ec3c12a3b078678151fd211
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2022
-ms.locfileid: "145195884"
 ---
+
 # <a name="lab-07-network-security-groups-and-application-security-groups"></a>Lab 07 : Groupes de sécurité réseau et groupes de sécurité des applications
 # <a name="student-lab-manual"></a>Manuel de labo pour l’étudiant
 
@@ -26,7 +21,7 @@ Vous avez été invité à implémenter l’infrastructure de mise en réseau vi
 
 ## <a name="lab-objectives"></a>Objectifs du labo
 
-Dans ce labo, vous allez effectuer les exercices suivants :
+Dans ce labo, vous allez effectuer l’exercice suivant :
 
 - Exercice 1 : Créer l’infrastructure réseau virtuelle
 - Exercice 2 : Déployer les machines virtuelles et tester les filtres réseau
@@ -48,7 +43,7 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 - Tâche 1 : Créer un réseau virtuel avec un sous-réseau
 - Tâche 2 : Créer deux groupes de sécurité d’application.
 - Tâche 3 : Créer un groupe de sécurité réseau et associez-le au sous-réseau virtuel.
-- Tâche 4 : Créer des règles de sécurité NSG entrantes pour tous les trafics vers des serveurs web et RDP vers les serveurs d’administration.
+- Tâche 4 : Créez des règles de sécurité NSG entrantes pour tous les trafics vers des serveurs web et RDP vers les serveurs d’administration.
 
 #### <a name="task-1--create-a-virtual-network"></a>Tâche 1 :  Créer un réseau virtuel
 
@@ -146,7 +141,7 @@ Dans cette tâche, vous allez créer un groupe de sécurité de réseau.
     |Réseau virtuel|**myVirtualNetwork**|
     |Subnet|**default**|
 
-#### <a name="task-4-create-inbound-nsg-security-rules-to-all-traffic-to-web-servers-and-rdp-to-the-management-servers"></a>Tâche 4 : Créez des règles de sécurité NSG entrantes pour tous les trafics vers des serveurs web et RDP vers les serveurs d’administration. 
+#### <a name="task-4-create-inbound-nsg-security-rules-to-all-traffic-to-web-servers-and-rdp-to-the-servers"></a>Tâche 4 : créez des règles de sécurité NSG entrantes pour tous les trafics vers des serveurs web et RDP vers les serveurs. 
 
 1. Dans le volet **myNsg**, dans la section **Paramètres**, cliquez sur **Règles de sécurité de trafic entrant**.
 
@@ -223,7 +218,7 @@ Dans cette tâche, vous allez créer une machine virtuelle à utiliser comme ser
 
 6. Sous **Groupe de sécurité réseau de la carte réseau**, sélectionnez **Aucun**.
 
-7. Cliquez sur **Suivant : Gestion >** , sur l’onglet **Gestion** du volet **Créer une machine virtuelle**, vérifiez le paramètre suivant :
+7. Cliquez sur **Suivant : Gestion >** , puis sur **Suivant : Supervision >** dans l’onglet **Supervision** du volet **Créer une machine virtuelle**, vérifiez le paramètre suivant :
 
    |Paramètre|Valeur|
    |---|---|
@@ -260,7 +255,7 @@ Dans cette tâche, vous allez créer une machine virtuelle à utiliser comme ser
 
 5. Sous **Groupe de sécurité réseau de la carte réseau**, sélectionnez **Aucun**.
 
-6. Cliquez sur **Suivant : Gestion >** , sur l’onglet **Gestion** du volet **Créer une machine virtuelle**, spécifiez les paramètres suivants.
+6. Cliquez sur **Suivant : Gestion >** , puis sur **Suivant : Supervision >** dans l’onglet **Supervision** du volet **Créer une machine virtuelle**, vérifiez le paramètre suivant :
 
    |Paramètre|Valeur|
    |---|---|

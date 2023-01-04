@@ -2,15 +2,10 @@
 lab:
   title: 03 - Verrous Resource Manager
   module: Module 01 - Manage Identity and Access
-ms.openlocfilehash: 54375454646bdcf0586b249f65349691c3a3b9c3
-ms.sourcegitcommit: a8470295248a6363987bd5ea47154fe39f8535c3
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "145195887"
 ---
+
 # <a name="lab-03-resource-manager-locks"></a>Labo 03 : Verrous Resource Manager
-# <a name="student-lab-manual"></a>Manuel de labo de l’étudiant
+# <a name="student-lab-manual"></a>Manuel de labo pour l’étudiant
 
 ## <a name="lab-scenario"></a>Scénario du labo 
 
@@ -52,7 +47,7 @@ Dans cette tâche, vous allez créer un groupe de ressources et un compte de sto
 
 1. Connectez-vous au portail Azure **`https://portal.azure.com/`** .
 
-    >**Remarque** : connectez-vous au portail Azure en utilisant un compte disposant du rôle Propriétaire ou Contributeur dans l’abonnement Azure que vous utilisez pour ce labo.
+    >**Remarque** : connectez-vous au Portail Azure à l’aide d’un compte disposant du rôle Propriétaire ou Contributeur dans l’abonnement Azure que vous utilisez pour ce laboratoire.
 
 1. Ouvrez Cloud Shell en cliquant sur la première icône en haut à droite du portail Azure. Si vous y êtes invité, sélectionnez **PowerShell**, puis **Créer un stockage**.
 
@@ -62,7 +57,12 @@ Dans cette tâche, vous allez créer un groupe de ressources et un compte de sto
 
     ```powershell
     New-AzResourceGroup -Name AZ500LAB03 -Location 'EastUS'
+    
+    Confirm
+    Provided resource group already exists. Are you sure you want to update it?
+    [Y] Yes [N] No [S] Suspend [?] Help (default is "Y"): Y
     ```
+1. Dans la session PowerShell du volet Cloud Shell, tapez **Y**, puis appuyez sur la touche Entrée.
 
 1. Dans le volet Cloud Shell de la session PowerShell, exécutez la commande suivante pour créer un compte de stockage dans le nouveau groupe de ressources :
     
