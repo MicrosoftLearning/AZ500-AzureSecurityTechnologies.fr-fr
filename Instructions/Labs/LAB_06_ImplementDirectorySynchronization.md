@@ -1,14 +1,9 @@
 ---
 lab:
-  title: '06 : Implémenter la synchronisation des annuaires'
+  title: "06\_: Implémenter la synchronisation des annuaires"
   module: Module 01 - Manage Identity and Access
-ms.openlocfilehash: 9403e136799cd27b91f27c5d8d268ab0aec3f7c5
-ms.sourcegitcommit: 79ca7b110859fe71a3849a28fdc781cad95d1567
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "146381347"
 ---
+
 # <a name="lab-06-implement-directory-synchronization"></a>Labo 06 : Implémenter la synchronisation des annuaires
 # <a name="student-lab-manual"></a>Manuel de labos pour étudiant
 
@@ -51,7 +46,7 @@ Dans cette tâche, vous identifierez un nom DNS pour votre déploiement de machi
 
 1. Connectez-vous au portail Azure **`https://portal.azure.com/`** .
 
-    >**Remarque** : connectez-vous au portail Azure en utilisant un compte disposant du rôle Propriétaire ou Contributeur dans l’abonnement Azure que vous utilisez pour ce labo.
+    >**Remarque** : connectez-vous au Portail Azure à l’aide d’un compte disposant du rôle Propriétaire ou Contributeur dans l’abonnement Azure que vous utilisez pour ce laboratoire.
 
 2. Ouvrez Cloud Shell en cliquant sur la première icône située en haut à droite du portail Azure. Si vous y êtes invité, cliquez sur **PowerShell** et **Créer un stockage**.
 
@@ -65,7 +60,7 @@ Dans cette tâche, vous identifierez un nom DNS pour votre déploiement de machi
 
     >**Remarque** : remplacez l’espace réservé `<custom-label>` par un nom DNS valide susceptible d’être globalement unique. Remplacez l’espace réservé `<location>` par le nom de la région dans laquelle vous souhaitez déployer la machine virtuelle Azure qui hébergera le contrôleur de domaine Active Directory que vous utiliserez dans ce laboratoire.
 
-    >**Remarque** : pour identifier les régions Azure où vous pouvez approvisionner des machines virtuelles Azure, reportez-vous à [ **https://azure.microsoft.com/en-us/regions/offers/**](https://azure.microsoft.com/en-us/regions/offers/)
+    >**Remarque** : pour identifier les régions Azure où vous pouvez approvisionner des machines virtuelles Azure, reportez-vous à [ **https://azure.microsoft.com/en-us/regions/offers/** ](https://azure.microsoft.com/en-us/regions/offers/)
 
 5. Vérifiez que la commande a retourné **True**. Si ce n’est pas le cas, réexécutez la même commande avec une valeur différente de celle-ci `<custom-label>` jusqu’à ce que la commande retourne la valeur **True**.
 
@@ -123,7 +118,7 @@ Dans cette tâche, vous allez créer un locataire Azure AD à utiliser dans ce l
 
 2. Dans le volet affichant la **vue d’ensemble** de votre locataire Azure AD actuel, cliquez sur **Gérer les locataires**, puis sur l’écran suivant, cliquez sur **+Créer**.
 
-3. Sous l’onglet **Informations de base** du volet **Créer un locataire**, assurez-vous que l’option **Azure Active Directory** est activée, puis cliquez sur **Suivant : Configuration >** .
+3. Sous l’onglet**Informations de base** du volet **Créer un locataire**, assurez-vous que l’option **Azure Active Directory** est activée, puis cliquez sur **Suivant : Configuration >** .
 
 4. Sous l’onglet **Configuration** du volet **Créer un répertoire**, spécifiez les paramètres suivants :
 
@@ -194,7 +189,7 @@ Dans cette tâche, vous allez ajouter un nouvel utilisateur Azure AD et les affe
 
 6. Déconnectez-vous en tant que **syncadmin** et fermez la fenêtre du navigateur InPrivate.
 
-> **Result** : une fois cet exercice terminé, vous avez créé un locataire Azure AD, ajouté un nom DNS personnalisé au nouveau locataire Azure AD et créé un utilisateur Azure AD avec le rôle Administrateur général.
+> **Résultat** : une fois cet exercice terminé, vous avez créé un locataire Azure AD, appris à ajouter un nom DNS personnalisé au nouveau locataire Azure AD et créé un utilisateur Azure AD avec le rôle Administrateur général.
 
 
 ### <a name="exercise-3-synchronize-active-directory-forest-with-an-azure-active-directory-tenant"></a>Exercice 3 : Synchroniser la forêt Active Directory avec un locataire Azure Active Directory

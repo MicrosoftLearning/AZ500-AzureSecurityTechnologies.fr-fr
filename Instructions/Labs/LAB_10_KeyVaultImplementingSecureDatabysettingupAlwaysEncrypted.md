@@ -2,13 +2,8 @@
 lab:
   title: 10 - Key Vault (Implémentation de données sécurisées en configurant Always Encrypted)
   module: Module 03 - Secure Data and Applications
-ms.openlocfilehash: c31dd6e930e0f1d1b82e7c6ea502bb6fa51a7dd7
-ms.sourcegitcommit: 967cb50981ef07d731dd7548845a38385b3fb7fb
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 05/31/2022
-ms.locfileid: "145955380"
 ---
+
 # <a name="lab-10-key-vault-implementing-secure-data-by-setting-up-always-encrypted"></a>Labo 10 : Key Vault (Implémentation de données sécurisées en configurant Always Encrypted)
 # <a name="student-lab-manual"></a>Manuel de labo pour l’étudiant
 
@@ -70,11 +65,11 @@ Dans cette tâche, vous allez déployer une machine virtuelle Azure qui installe
 
 6. Dans le volet **Déploiement personnalisé**, sous **Étendue du déploiement**, vérifiez que les paramètres suivants sont configurés (conservez les valeurs par défaut pour les autres) :
 
-   |Paramètre|Value|
+   |Paramètre|Valeur|
    |---|---|
    |Abonnement|Nom de l’abonnement Azure que vous utilisez dans ce labo|
    |Groupe de ressources|Cliquez sur **Créer** et tapez le nom **AZ500LAB10**.|
-   |Emplacement|**(États-Unis) USA Est**|
+   |Emplacement|**USA Est**|
    |Nom d’utilisateur d’administrateur|**Étudiant**|
    |Mot de passe d’administrateur|**Utilisez votre mot de passe personnel créé dans le labo 04 > Exercice 1 > Tâche 1 > Étape 9.**|
    
@@ -126,20 +121,22 @@ Dans cette tâche, vous allez créer une ressource Azure Key Vault. Vous allez �
 
 7. Dans le volet Groupe de ressources, cliquez sur l’entrée représentant le Key Vault nouvellement créé. 
 
-8. Dans le volet Key Vault, dans la section **Paramètres**, cliquez sur **Stratégies d’accès**, puis sur **+ Ajouter une stratégie d’accès**.
+8. Dans le volet Key Vault, dans la section **Paramètres**, cliquez sur **Stratégies d’accès**, puis sur **+ Créer**.
 
-9. Dans le volet **Ajouter une stratégie d’accès**, spécifiez les paramètres suivants (conservez les valeurs par défaut pour les autres) : 
+9. Dans le volet **Créer une stratégie d’accès**, spécifiez les paramètres suivants (conservez les valeurs par défaut pour les autres) : 
 
     |Paramètre|Value|
     |----|----|
     |Configurer à partir d’un modèle (facultatif)|**Gestion des clés, des secrets et des certificats**|
-    |Autorisations de clé|Cliquez sur **Sélectionner tout**, ce qui aboutit à la sélection de **17 autorisations** (assurez-vous que les autorisations pour les **Opérations de stratégie de rotation** sont **désactivées**). |
-    |Autorisations de secret|Cliquez sur **Sélectionner tout**, ce qui aboutit à la sélection **8 autorisations**.|
-    |Autorisations de certification|Cliquez sur **Sélectionner tout**, ce qui aboutit à la sélection **16 autorisations**.|
-    |Sélectionner le principal|Dans le volet **Principal**, cliquez sur **Aucune sélection**, sélectionnez votre compte d’utilisateur, puis cliquez sur **Sélectionner**.|
-
-10. De retour dans le panneau **Ajouter une stratégie d’accès**, cliquez sur **Ajouter** pour ajouter la stratégie d’accès puis, dans le volet Stratégies d’accès du Key Vault, cliquez sur **Enregistrer** pour enregistrer vos modifications. 
-
+    |Autorisations de clé|Cliquez sur **Sélectionner tout**, ce qui aboutit à la sélection de **12 autorisations** (assurez-vous que les autorisations pour les **Opérations de stratégie de rotation** sont **désactivées**) |
+    |Autorisations de secret|Cliquez sur **Sélectionner tout**, ce qui aboutit à la sélection **7 autorisations**|
+    |Autorisations de certification|Cliquez sur **Sélectionner tout**, ce qui aboutit à la sélection **15 autorisations**|
+    |Sélectionner le principal|Dans le volet **Principal**, cliquez sur **Aucune sélection**, sélectionnez votre compte d’utilisateur, puis cliquez sur **Suivant**|
+    |Application (facultatif)|Cliquez sur **Suivant**|
+    |Vérifier + créer|Cliquez sur **Créer**|
+    
+    >**Remarque** : l’opération Vérifier + créer précédente retourne à la page Stratégies d’accès, qui contient les éléments Application, E-mail, Autorisations de clé, Autorisations de secret et Autorisations de certificat.
+      
 #### <a name="task-2-add-a-key-to-key-vault"></a>Tâche 2 : Ajouter une clé à Key Vault
 
 Dans cette tâche, vous allez ajouter une clé au Key Vault, et afficher les informations relatives à cette clé. 
@@ -172,7 +169,7 @@ Dans cette tâche, vous allez ajouter une clé au Key Vault, et afficher les inf
 
 6. Réduisez le volet Cloud Shell. 
 
-7. De retour dans le Portail Azure, dans le volet Key Vault, dans la section **Paramètres**, cliquez sur **Clés**.
+7. De retour dans le Portail Azure, dans le volet Key Vault, dans la section **Objets**, cliquez sur **Clés**.
 
 8. Dans la liste des clés, cliquez sur l’entrée **MyLabKey**, puis, dans le volet **MyLabKey**, cliquez sur l’entrée représentant la version actuelle de la clé.
 
@@ -207,7 +204,7 @@ Dans cette tâche, vous allez ajouter une clé au Key Vault, et afficher les inf
 
 5. Réduisez le volet Cloud Shell. 
 
-6. Dans le portail Azure, revenez au volet Key Vault, puis, dans la section **Paramètres**, cliquez sur **Secrets**.
+6. Dans le portail Azure, revenez au volet Key Vault, puis, dans la section **Objets**, cliquez sur **Secrets**.
 
 7. Dans la liste des secrets, cliquez sur l’entrée **SQLPassword**, puis, dans le volet **SQLPassword**, cliquez sur l’entrée correspondant à la version actuelle du secret.
 
@@ -229,7 +226,7 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 
 #### <a name="task-1-enable-a-client-application-to-access-the-azure-sql-database-service"></a>Tâche 1 : Autoriser votre application cliente à accéder au service Azure SQL Database 
 
-Dans cette tâche, vous allez autoriser votre application cliente à accéder au service Azure SQL Database. Vous effectuerez cela en configurant l’authentification requise, et en acquérant l’ID d’application et le secret dont vous aurez besoin pour authentifier votre application. T
+Dans cette tâche, vous allez autoriser votre application cliente à accéder au service Azure SQL Database. Vous effectuerez cela en configurant l’authentification requise, et en acquérant l’ID d’application et le secret dont vous aurez besoin pour authentifier votre application.
 
 1. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents** en haut de la page, tapez **Inscriptions d’applications**, puis appuyez sur la touche **Entrée**.
 
@@ -237,7 +234,7 @@ Dans cette tâche, vous allez autoriser votre application cliente à accéder au
 
 3. Dans le volet **Inscrire une application**, spécifiez les paramètres suivants (conservez les valeurs par défaut pour les autres) :
 
-    |Paramètre|Value|
+    |Paramètre|Valeur|
     |----|----|
     |Nom|**sqlApp**|
     |URI de redirection (facultatif)|**Web** et **https://sqlapp**|
@@ -256,7 +253,7 @@ Dans cette tâche, vous allez autoriser votre application cliente à accéder au
 
 8. Dans le volet **Ajouter un secret client**, spécifiez les paramètres suivants :
 
-    |Paramètre|Value|
+    |Paramètre|Valeur|
     |----|----|
     |Description|**Key1**|
     |Expires|**12 mois**|

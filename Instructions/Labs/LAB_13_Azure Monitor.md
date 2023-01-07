@@ -1,14 +1,9 @@
 ---
 lab:
-  title: 13 - Azure Monitor
+  title: "13 - Azure\_Monitor"
   module: Module 04 - Manage security operations
-ms.openlocfilehash: d7418287b895ccb5af66f01b499181b321e2bc36
-ms.sourcegitcommit: 3c178de473f4f986a3a7ea1d03c9f5ce699a05a4
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "147871971"
 ---
+
 # <a name="lab-13-azure-monitor"></a>Labo 13 : Azure Monitor
 # <a name="student-lab-manual"></a>Manuel de labos pour étudiant
 
@@ -20,7 +15,7 @@ Vous avez été invité à créer une preuve de concept de surveillance des perf
 - Montrer quelles données de télémétrie et quels journaux peuvent être collectés.
 - Montrer comment les données peuvent être utilisées et interrogées. 
 
-> Pour toutes les ressources de ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit de la région à utiliser pour la classe. 
+> Pour toutes les ressources de ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser. 
 
 ## <a name="lab-objectives"></a>Objectifs du labo
 
@@ -50,7 +45,7 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 
 1. Connectez-vous au portail Azure **`https://portal.azure.com/`** .
 
-    >**Remarque** : connectez-vous au portail Azure en utilisant un compte disposant du rôle Propriétaire ou Contributeur dans l’abonnement Azure que vous utilisez pour ce labo.
+    >**Remarque** : connectez-vous au Portail Azure à l’aide d’un compte disposant du rôle Propriétaire ou Contributeur dans l’abonnement Azure que vous utilisez pour ce laboratoire.
 
 2. Ouvrez Cloud Shell en cliquant sur la première icône en haut à droite du portail Azure. Si vous y êtes invité, sélectionnez **PowerShell**, puis **Créer un stockage**.
 
@@ -66,23 +61,10 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 
 5. Dans la session PowerShell du volet Cloud Shell, exécutez la commande suivante pour créer une nouvelle machine virtuelle Azure. 
 
-    >**Attention** : la commande New-AzVm ne fonctionne pas dans la version 4.24 d’Azure CLI et Microsoft étudie actuellement comment résoudre ce problème.  Le travail autour de ce labo consiste à installer et à revenir à la version 4.23.0 d’Az.Compute, qui n’est pas affectée par ce problème.
-   
-    >**Instructions** : Retour à la version 4.23.0 d’Az.Compute 
-  
-   #### <a name="step-1-download-the-working-version-of-the-module-4230-into-your-cloud-shell-session"></a>Étape 1 : Télécharger la version de travail du module (4.23.0) dans votre session Cloud Shell 
-   **Type** : Install-Module -Name Az.Compute -Force -RequiredVersion 4.23.0
-
-   #### <a name="step-2-start-a-new-powershell-session-that-will-allow-the-azcompute-assembly-version-to-be-loaded"></a>Étape 2 : Démarrer une nouvelle session PowerShell qui permettra le chargement de la version de l’assembly Az.Compute 
-   **Type** : pwsh
-
-   #### <a name="step-3-verify-that-version-4230-is-loaded"></a>Étape 3 : Vérifier que la version 4.23.0 est chargée
-   **Type** : Get-Module -Name Az.Compute
-   
     ```powershell
-    New-AzVm -ResourceGroupName "AZ500LAB131415" -Name "myVM" -Location 'EastUS' -VirtualNetworkName "myVnet" -SubnetName "mySubnet" -SecurityGroupName   "myNetworkSecurityGroup" -PublicIpAddressName "myPublicIpAddress" -OpenPorts 80,3389
+    New-AzVm -ResourceGroupName "AZ500LAB131415" -Name "myVM" -Location 'EastUS' -VirtualNetworkName "myVnet" -SubnetName "mySubnet" -SecurityGroupName   "myNetworkSecurityGroup" -PublicIpAddressName "myPublicIpAddress" -PublicIpSku Standard -OpenPorts 80,3389 -Size Standard_DS1_v2 
     ```
-
+    
 6.  Lorsque vous êtes invité des informations d'identification:
 
     |Paramètre|Valeur|
@@ -106,16 +88,16 @@ Dans cette tâche, vous allez créer un espace de travail Log Analytics.
 
 1. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents** en haut de la page, tapez **Espaces de travail Log Analytics**, puis appuyez sur la touche **Entrée**.
 
-2. Dans le volet **Espaces de travail Log Analytics** , cliquez sur **+ Créer**.
+2. Dans le volet **Espaces de travail Log Analytics**, cliquez sur  **+ Créer**.
 
 3. Sous l’onglet **Informations de base** du volet **Créer un espace de travail Log Analytics**, spécifiez les paramètres suivants (laissez les valeurs par défaut des autres paramètres) :
 
     |Paramètre|Valeur|
     |---|---|
-    |Abonnement|Nom de l’abonnement Azure que vous utilisez dans ce labo|
+    |Abonnement|le nom de l’abonnement Azure que vous utilisez dans ce labo|
     |Resource group|**AZ500LAB131415**|
     |Nom|n’importe quel nom unique valide et global|
-    |Région|**(États-Unis) USA Est**|
+    |Région|**USA Est**|
 
 4. Sélectionnez **Revoir + créer**.
 
@@ -127,7 +109,7 @@ Dans cette tâche, vous allez activer l’extension de machine virtuelle Log Ana
 
 1. Dans le portail Azure, revenez au volet **Espaces de travail Log Analytics** et, dans la liste des espaces de travail, cliquez sur l’entrée représentant l’espace de travail que vous avez créé dans la tâche précédente.
 
-2. Dans le panneau de l’espace de travail Log Analytics de la page  **Vue d’ensemble**, cliquez sur l’entrée **Machines virtuelles Azure** dans la section **Connecter une source de données**.
+2. Dans le panneau de l’espace de travail Log Analytics de la page  **Vue d’ensemble**, cliquez sur l’entrée **Machines virtuelles Azure**dans la section **Connecter une source de données**.
 
     >**Remarque** : pour que l’agent soit correctement installé, la machine virtuelle doit être en cours d’exécution.
 
