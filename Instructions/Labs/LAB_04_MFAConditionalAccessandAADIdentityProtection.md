@@ -133,7 +133,7 @@ Dans cette tâche, vous allez créer un locataire Azure AD.
 5. Cliquez sur **Vérifier + créer**, puis cliquez sur **Créer**.
 6. Ajoutez un code Captcha dans le volet **Aide pour prouver que vous n’êtes pas un robot**, puis cliquez sur le bouton **Envoyer**. 
 
-    >**Remarque** : attendez que le nouveau locataire soit créé. Utilisez l’icône **Notification** pour surveiller l’état du déploiement. 
+    >**Remarque** : Attendez que le nouveau locataire soit créé. Utilisez l’icône **Notification** pour surveiller l’état du déploiement. 
 
 
 #### <a name="task-2-activate-azure-ad-premium-p2-trial"></a>Tâche 2 : Activer l’essai Azure AD Premium P2
@@ -424,45 +424,89 @@ Dans cette tâche, vous allez consulter les options d’Azure AD Identity Protec
 
     >**Remarque** : vérifiez que vous êtes connecté au locataire Azure AD **AdatumLab500-04**. Vous pouvez utiliser le filtre **Annuaire + abonnement** pour basculer entre les locataires Azure AD. Vérifiez que vous êtes connecté en tant qu’utilisateur avec le rôle Administrateur général dans le locataire Azure AD.
 
-2. Dans le volet **AdatumLab500-04**, dans la section **Gérer**, cliquez sur **Sécurité**.
-
-3. Dans le volet **Prise en main de la sécurité\|** , dans la section **Protéger**, cliquez sur **Identity Protection**.
-
-4. Dans le volet **Vue d’ensemble de Identity Protection\|** , passez en revue les **Nouveaux utilisateurs à risque détectés** et les graphiques **Nouvelles connexions à risque détectées** et d’autres informations sur les utilisateurs à risque. 
-
 #### <a name="task-2-configure-a-user-risk-policy"></a>Tâche 2 : Configurer une stratégie de risque utilisateur
 
 Dans cette tâche, vous allez créer une stratégie de risque utilisateur. 
 
-1. Dans le volet **Vue d’ensemble de Identity Protection\|** , dans la section **Protéger**, cliquez sur **Stratégie de risque d’utilisateur**.
+2. Accédez à **AdatumLab500-04** Locataire Azure AD >**Sécurité** > **Accès conditonnel**.
 
-2. Configurez la **stratégie de correction des risques utilisateur** avec les paramètres suivants : 
+3. Cliquez sur **Nouvelle stratégie**.
 
-   - Cliquez sur **Utilisateurs**. Sous l’onglet **Inclure** du volet **Utilisateurs**, vérifiez que l’option **Tous les utilisateurs** est sélectionnée.
+4. Tapez le nom de stratégie suivant dans la zone de texte **Nom**, puis tapez **AZ500Policy2**.
 
-   - Dans le volet **Utilisateurs**, passez dans l’onglet **Exclure**, cliquez sur **Sélectionner les utilisateurs exclus**, sélectionnez votre compte d’utilisateur, puis cliquez sur **Sélectionner**. 
+5. Sous **Attributions**, sélectionnez **Utilisateurs**.
 
-   - Cliquez sur **Risque de l’utilisateur**. Dans le volet **Risque de l’utilisateur**, sélectionnez **Faible et plus**, puis cliquez sur **Terminé**. 
+6. Sous **Inclure**, cliquez sur **Sélectionner des utilisateurs et des groupes**, puis sélectionnez **aaduser2** et **aaduser3**.
 
-   - Cliquez sur **Accès**. Dans le volet **Accès**, vérifiez que l’option **Autoriser l’accès** et la case à cocher **Exiger la modification du mot de passe** sont activées et cliquez sur **Terminé**.
+7. Sous **Exclure**, cliquez sur **Utilisateurs et groupes** et sélectionnez **aaduser1**. 
 
-   - Définissez **Appliquer la stratégie** sur **Activé** et cliquez sur **Enregistrer**.
+8. Sous **Applications ou actions cloud** > **Inclure**, sélectionnez **Toutes les applications cloud**.
 
-#### <a name="task-3-configure-sign-in-risk-policy"></a>Tâche 3 : Configurer la stratégie de connexion à risque
+9. Dans **Conditions** > **des risques utilisateur**, définissez **Configurer** sur **Oui**.
 
-Dans cette tâche, vous allez configurer une stratégie de connexion à risque. 
+10. Sous **Configurer les niveaux de risque utilisateur nécessaires à l’application de la stratégie**, sélectionnez **Élevé**.
 
-1. Dans le volet **Identity Protection \| Stratégie de risque utilisateur**, dans la section **Protéger**, cliquez sur **Stratégie de connexion à risque**.
+11. Cliquez sur **Done**.
 
-2. Configurez la **Stratégie de correction des risques utilisateur** avec les paramètres suivants : 
+12. Sous **Contrôles d’accès** > vérifiez que **Octroyer** est activé.    
 
-   - Cliquez sur **Utilisateurs**. Sous l’onglet **Inclure** du volet **Utilisateurs**, vérifiez que l’option **Tous les utilisateurs** est sélectionnée.
+13. Sélectionnez **Exiger l’authentification multifacteur** et **Exiger la modification du mot de passe**.
 
-   - Cliquez sur **Risque de connexion**. Dans le volet **Risque de connexion**, sélectionnez **Moyen et plus**, puis cliquez sur **Terminé**. 
+14. Cliquez sur **Sélectionner**.
 
-   - Cliquez sur **Accès**. Dans le volet **Accès**, vérifiez que l’option **Autoriser l’accès** et la case à cocher **Exiger l’authentification multifacteur** sont activées et cliquez sur **Terminé**.
+15. Sous **Session**, cliquez sur **Fréquence de connexion** et vérifiez que **Tout le temps** est activé.
 
-   - Définissez **Appliquer la stratégie** sur **Activé** et cliquez sur **Enregistrer**.
+16. Cliquez sur **Sélectionner**.
+
+17. Confirmez vos paramètres et définissez **Activer la stratégie** sur **Rapport seul**.
+
+    >**Remarque** : Le message suivant s’affiche en bas de la page : **« Il semble que vous êtes sur le point de gérer les configurations de sécurité de votre organisation. Excellent ! Vous devez d’abord désactiver les paramètres de sécurité par défaut avant d’activer une stratégie d’accès conditionnel »** .
+
+18. Cliquez sur la partie du message qui dit : **désactiver les paramètres de sécurité par défaut**.
+
+19. Pour **Activer les paramètres de sécurité par défaut**, remplacez Oui par **Non**.
+
+20. Cliquez sur **Autre** et tapez ce qui suit dans le champ : **AZ500 lab use**.
+
+21. Cliquez sur **Enregistrer**.
+
+22. Cliquez sur **Créer** pour activer votre stratégie.
+
+#### <a name="task-3-configure-a-sign-in-risk-policy"></a>Tâche 3 : Configurer une stratégie de connexion à risque
+
+1. Accédez à **AdatumLab500-04** Locataire Azure AD >**Sécurité** > **Accès conditonnel**.
+
+2. Sélectionnez **Nouvelle stratégie**.
+
+3. Tapez le nom de stratégie suivant dans la zone de texte **Nom**, puis tapez **AZ500Policy3**.
+
+4. Sous **Attributions**, sélectionnez **Utilisateurs**.
+
+5. Sous **Inclure**, cliquez sur **Sélectionner des utilisateurs et des groupes**, puis sélectionnez **aaduser2** et **aaduser3**.
+
+6. Sous **Exclure**, cliquez sur **Utilisateurs et groupes** et sélectionnez **aaduser1**. 
+
+7. Sous **Applications ou actions cloud** > **Inclure**, sélectionnez **Toutes les applications cloud**.
+
+8. Dans **Conditions** > **Risque de connexion**, définissez **Configurer** sur **Oui**.
+
+9. Sous **Sélectionner le niveau de risque de connexion auquel cette stratégie s’applique**, sélectionnez **Haut** et **Moyen**.
+
+10. Cliquez sur **Done**.
+
+11. Sous **Contrôles d’accès** > **Octroyer**.  
+
+12. Sélectionnez **Accorder l’accès**, **Exiger l’authentification multifacteur**.
+
+13. Cliquez sur **Sélectionner**.
+
+13. Sous **Session**, sélectionnez **Fréquence de connexion** et vérifiez que **Tout le temps** est activé.
+
+14. Cliquez sur **Sélectionner**.
+
+15. Confirmez vos paramètres et définissez **Activer la stratégie** sur **Rapport seul**.
+
+16. Cliquez sur **Créer** pour activer votre stratégie.
 
 #### <a name="task-4-simulate-risk-events-against-the-azure-ad-identity-protection-policies"></a>Tâche 4 : Simuler des événements à risque par rapport aux stratégies Azure AD Identity Protection 
 
@@ -483,7 +527,7 @@ Dans cette tâche, vous allez configurer une stratégie de connexion à risque.
    |Nom d’utilisateur|**Étudiant**|
    |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 04 > Exercice 1 > Tâche 1 > Étape 9.**|
 
-    >**Remarque** : attendez que la session Bureau à distance et que le **Gestionnaire de serveur** se chargent.  
+    >**Remarque** : attendez que la session Bureau à distance et le **Gestionnaire de serveur** se chargent.  
 
     >**Remarque** : les étapes suivantes sont effectuées dans la session Bureau à distance sur la machine virtuelle Azure **az500-04-vm1**. 
 
