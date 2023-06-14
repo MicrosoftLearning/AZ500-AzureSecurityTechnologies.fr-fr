@@ -4,10 +4,10 @@ lab:
   module: Module 01 - Manage Identity and Access
 ---
 
-# <a name="lab-03-resource-manager-locks"></a>Labo 03 : Verrous Resource Manager
-# <a name="student-lab-manual"></a>Manuel de labo pour l’étudiant
+# Labo 03 : Verrous Resource Manager
+# Manuel de labo de l’étudiant
 
-## <a name="lab-scenario"></a>Scénario du labo 
+## Scénario du labo 
 
 Vous avez été invité à créer une preuve de concept montrant comment les verrous de ressources peuvent être utilisés pour empêcher la suppression accidentelle ou les modifications. Plus précisément, vous devez :
 
@@ -17,21 +17,21 @@ Vous avez été invité à créer une preuve de concept montrant comment les ver
 
 > Pour toutes les ressources dans ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser. 
  
-## <a name="lab-objectives"></a>Objectifs du labo
+## Objectifs du labo
 
 Dans ce labo, vous allez effectuer l’exercice suivant :
 
 - Exercice 1 : Verrous Resource Manager
 
-## <a name="resource-manager-locks-diagram"></a>Schéma des verrous Resource Manager
+## Schéma des verrous Resource Manager
 
 ![image](https://user-images.githubusercontent.com/91347931/157514986-1bf6a9ea-4c7f-4487-bcd7-542648f8dc95.png)
 
-## <a name="instructions"></a>Instructions
+## Instructions
 
-### <a name="exercise-1-resource-manager-locks"></a>Exercice 1 : Verrous Resource Manager
+### Exercice 1 : Verrous Resource Manager
 
-#### <a name="estimated-timing-20-minutes"></a>Durée estimée : 20 minutes
+#### Durée estimée : 20 minutes
 
 Dans cet exercice, vous allez effectuer les tâches suivantes :
 
@@ -41,7 +41,7 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 - Tâche 4 : Supprimer le verrou ReadOnly et créer un verrou Supprimer.
 - Tâche 5 : Tester le verrou Supprimer.
 
-#### <a name="task-1-create-a-resource-group-with-a-storage-account"></a>Tâche 1 : Créer un groupe de ressources avec un compte de stockage.
+#### Tâche 1 : Créer un groupe de ressources avec un compte de stockage.
 
 Dans cette tâche, vous allez créer un groupe de ressources et un compte de stockage pour le labo. 
 
@@ -74,7 +74,7 @@ Dans cette tâche, vous allez créer un groupe de ressources et un compte de sto
 
 1. Fermez le volet Cloud Shell.
 
-#### <a name="task-2-add-a-readonly-lock-on-the-storage-account"></a>Tâche 2 : Ajouter un verrou en lecture seule sur le compte de stockage. 
+#### Tâche 2 : Ajouter un verrou en lecture seule sur le compte de stockage. 
 
 Dans cette tâche, vous allez ajouter un verrou en lecture seule au compte de stockage. Cela protégera la ressource contre toute suppression ou modification accidentelle. 
 
@@ -97,7 +97,7 @@ Dans cette tâche, vous allez ajouter un verrou en lecture seule au compte de st
 
    >**Remarque** :  le compte de stockage est désormais protégé contre la suppression et la modification accidentelles.
 
-#### <a name="task-3-test-the-readonly-lock"></a>Tâche 3 : Tester le verrou ReadOnly 
+#### Tâche 3 : Tester le verrou ReadOnly 
 
 1. Dans la section **Paramètres du panneau** du compte de stockage, cliquez sur **Configuration**.
 
@@ -121,7 +121,7 @@ Dans cette tâche, vous allez ajouter un verrou en lecture seule au compte de st
 
    >**Remarque** :  vous avez maintenant vérifié qu’un verrou ReadOnly arrête la suppression accidentelle et la modification d’une ressource.
 
-#### <a name="task-4-remove-the-readonly-lock-and-create-a-delete-lock"></a>Tâche 4 : Supprimer le verrou ReadOnly et créer un verrou Supprimer.
+#### Tâche 4 : Supprimer le verrou ReadOnly et créer un verrou Supprimer.
 
 Dans cette tâche, vous supprimez le verrou ReadOnly du compte de stockage et créez un verrou Supprimer. 
 
@@ -140,7 +140,7 @@ Dans cette tâche, vous supprimez le verrou ReadOnly du compte de stockage et cr
 
 1. Cliquez sur **OK**. 
 
-#### <a name="task-5-test-the-delete-lock"></a>Tâche 5 : Tester le verrou Supprimer.
+#### Tâche 5 : Tester le verrou Supprimer.
 
 Dans cette tâche, vous allez tester le verrou Supprimer. Vous devez pouvoir modifier le compte de stockage, mais pas le supprimer. 
 
@@ -151,8 +151,6 @@ Dans cette tâche, vous allez tester le verrou Supprimer. Vous devez pouvoir mod
    >**Remarque** :  cette fois, la modification devrait réussir.
 
 1. Dans le volet du compte de stockage, sélectionnez **Vue d’ensemble** et, dans le volet **Vue d’ensemble**, cliquez sur **Supprimer**.
-
-1. Dans le volet **Supprimer le compte de stockage**, tapez le nom du compte de stockage pour confirmer que vous avez l’intention de continuer, puis cliquez sur **Supprimer**.
 
 1. Passez en revue la notification qui ressemble au texte suivant : 
 

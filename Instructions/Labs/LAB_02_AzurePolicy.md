@@ -4,10 +4,10 @@ lab:
   module: Module 01 - Manage Identity and Access
 ---
 
-# <a name="lab-02-azure-policy"></a>Lab 02 : Azure Policy
-# <a name="student-lab-manual"></a>Manuel de labo pour l’étudiant
+# Lab 02 : Azure Policy
+# Manuel de labo de l’étudiant
 
-## <a name="lab-scenario"></a>Scénario du labo
+## Scénario du labo
 
 Vous avez été invité à créer une preuve de concept montrant comment Azure Policy peut être utilisé. Plus précisément, vous devez :
 
@@ -16,21 +16,21 @@ Vous avez été invité à créer une preuve de concept montrant comment Azure P
 
 > Pour toutes les ressources de ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser. 
 
-## <a name="lab-objectives"></a>Objectifs du labo
+## Objectifs du labo
 
 Dans ce labo, vous allez effectuer les opérations suivantes :
 
 - Exercice 1 : Implémenter Azure Policy. 
 
-## <a name="azure-policy-diagram"></a>Diagramme Azure Policy
+## Diagramme Azure Policy
 
 ![image](https://user-images.githubusercontent.com/91347931/157511920-19c1f06c-86bd-440d-80ac-d96aa27aefff.png)
 
-## <a name="instructions"></a>Instructions
+## Instructions
 
-### <a name="exercise-1-implement-azure-policy"></a>Exercice 1 : Implémenter Azure Policy
+### Exercice 1 : Implémenter Azure Policy
 
-#### <a name="estimated-timing-20-minutes"></a>Durée estimée : 20 minutes
+#### Durée estimée : 20 minutes
 
 Dans cet exercice, vous allez effectuer les tâches suivantes :
 
@@ -38,7 +38,7 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 - Tâche 2 : Créer une attribution de stratégie Emplacements autorisés.
 - Tâche 3 : Vérifier le bon fonctionnement de l’attribution de stratégie Emplacements autorisés. 
 
-#### <a name="task-1-create-a-resource-group-for-the-lab"></a>Tâche 1 : Créer un groupe de ressources pour le labo. 
+#### Tâche 1 : Créer un groupe de ressources pour le labo. 
 
 Dans cette tâche, vous allez créer un groupe de ressources pour le labo. 
 
@@ -69,7 +69,7 @@ Dans cette tâche, vous allez créer un groupe de ressources pour le labo.
 
 1. Fermez le **Cloud Shell**.
 
-#### <a name="task-2-create-an-allowed-locations-policy-assignment"></a>Tâche 2 : Créer une attribution de stratégie Emplacements autorisés.
+#### Tâche 2 : Créer une attribution de stratégie Emplacements autorisés.
 
 Dans cette tâche, vous allez créer une attribution de stratégie Emplacements autorisés et spécifier les régions Azure que la stratégie peut utiliser. 
 
@@ -118,7 +118,7 @@ Dans cette tâche, vous allez créer une attribution de stratégie Emplacements 
 
    >**Remarque** : la raison pour laquelle l’attribution de stratégie Azure pourrait prendre jusqu’à 30 minutes est qu’elle doit être répliquée globalement. En règle générale, cela ne prend que quelques minutes.  Si la tâche suivante échoue, patientez simplement quelques minutes, puis réessayez d’effectuer ses étapes.
 
-#### <a name="task-3-test-the-allowed-locations-policy-assignment"></a>Tâche 3 : Tester l’attribution de stratégie Emplacements autorisés
+#### Tâche 3 : Tester l’attribution de stratégie Emplacements autorisés
 
 Dans cette tâche, vous allez tester l’attribution de stratégie Emplacements autorisés. 
 

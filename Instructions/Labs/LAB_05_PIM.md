@@ -4,10 +4,10 @@ lab:
   module: Module 01 - Manage Identity and Access
 ---
 
-# <a name="lab-05-azure-ad-privileged-identity-management"></a>Labo 05 : Azure AD Privileged Identity Management
-# <a name="student-lab-manual"></a>Manuel de labos pour étudiant
+# Labo 05 : Azure AD Privileged Identity Management
+# Manuel de labo de l’étudiant
 
-## <a name="lab-scenario"></a>Scénario du labo
+## Scénario du labo
 
 Vous avez été invité à créer une preuve de concept qui utilise Azure Privileged Identity Management (PIM) pour activer l’administration juste-à-temps et contrôler le nombre d’utilisateurs qui peuvent effectuer des opérations privilégiées. Voici les conditions spécifiques :
 
@@ -20,7 +20,7 @@ Vous avez été invité à créer une preuve de concept qui utilise Azure Privil
 
 > Avant de continuer, vérifiez que vous avez terminé le labo 04 : MFA, accès conditionnel et protection des identités AAD. Vous aurez besoin du locataire Azure AD, d’AdatumLab500-04 et des comptes d’utilisateur aaduser1, aaduser2 et aaduser3.
 
-## <a name="lab-objectives"></a>Objectifs du labo
+## Objectifs du labo
 
 Dans ce labo, vous effectuerez les exercices suivants :
 
@@ -28,15 +28,15 @@ Dans ce labo, vous effectuerez les exercices suivants :
 - Exercice 2 : Activer des rôles PIM avec et sans approbation.
 - Exercice 3 : Créer une révision d’accès et passer en revue les fonctionnalités d’audit PIM.
 
-## <a name="azure-ad-privileged-identity-management-diagram"></a>Diagramme Azure AD Privileged Identity Management
+## Diagramme Azure AD Privileged Identity Management
 
 ![image](https://user-images.githubusercontent.com/91347931/157522920-264ce57e-5c55-4a9d-8f35-e046e1a1e219.png)
 
-## <a name="instructions"></a>Instructions
+## Instructions
 
-### <a name="exercise-1---configure-pim-users-and-roles"></a>Exercice 1 - Configurer les utilisateurs et les rôles PIM
+### Exercice 1 - Configurer les utilisateurs et les rôles PIM
 
-#### <a name="estimated-timing-15-minutes"></a>Durée estimée : 15 minutes
+#### Durée estimée : 15 minutes
 
 Dans cet exercice, vous allez effectuer les tâches suivantes :
 
@@ -44,7 +44,7 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 - Tâche 2 : Configurer un rôle pour exiger l’approbation afin d’activer et d’ajouter un membre éligible.
 - Tâche 3 : Donner à un utilisateur une affectation permanente à un rôle. 
 
-#### <a name="task-1-make-a-user-eligible-for-a-role"></a>Tâche 1 : Rendre un utilisateur éligible pour un rôle
+#### Tâche 1 : Rendre un utilisateur éligible pour un rôle
 
 Dans cette tâche, vous allez rendre un utilisateur éligible pour un rôle d’annuaire Azure AD.
 
@@ -78,7 +78,7 @@ Dans cette tâche, vous allez rendre un utilisateur éligible pour un rôle d’
 
     >**Remarque** : lors de la connexion, aaduser2 pourra utiliser le rôle d’administrateur de facturation. 
 
-#### <a name="task-2-configure-a-role-to-require-approval-to-activate-and-add-an-eligible-member"></a>Tâche 2 : Configurer un rôle pour exiger l’approbation afin d’activer et d’ajouter un membre éligible
+#### Tâche 2 : Configurer un rôle pour exiger l’approbation afin d’activer et d’ajouter un membre éligible
 
 1. Dans le portail Azure, revenez au volet **Privileged Identity Management**, puis cliquez sur **Rôles Azure AD**.
 
@@ -116,7 +116,7 @@ Dans cette tâche, vous allez rendre un utilisateur éligible pour un rôle d’
 
     >**Remarque** : l’utilisateur aaduser2 est éligible au rôle Lecteur général. 
  
-#### <a name="task-3-give-a-user-permanent-assignment-to-a-role"></a>Tâche 3 : Donner à un utilisateur une affectation permanente à un rôle.
+#### Tâche 3 : Donner à un utilisateur une affectation permanente à un rôle.
 
 1. Dans le portail Azure, revenez au volet **Privileged Identity Management**, puis cliquez sur **Rôles Azure AD**.
 
@@ -136,16 +136,16 @@ Dans cette tâche, vous allez rendre un utilisateur éligible pour un rôle d’
 
     >**Remarque** : l’utilisateur aaduser2 est désormais éligible définitivement au rôle Administrateur de sécurité.
     
-### <a name="exercise-2---activate-pim-roles-with-and-without-approval"></a>Exercice 2 - Activer des rôles PIM avec et sans approbation
+### Exercice 2 - Activer des rôles PIM avec et sans approbation
 
-#### <a name="estimated-timing-15-minutes"></a>Durée estimée : 15 minutes
+#### Durée estimée : 15 minutes
 
 Dans cet exercice, vous allez effectuer les tâches suivantes :
 
 - Tâche 1 : Activer un rôle qui ne nécessite pas d’approbation. 
 - Tâche 2 : Activer un rôle qui nécessite une approbation. 
 
-#### <a name="task-1-activate-a-role-that-does-not-require-approval"></a>Tâche 1 : Activer un rôle qui ne nécessite pas d’approbation.
+#### Tâche 1 : Activer un rôle qui ne nécessite pas d’approbation.
 
 Dans cette tâche, vous allez activer un rôle qui ne nécessite pas d’approbation.
 
@@ -184,7 +184,7 @@ Dans cette tâche, vous allez activer un rôle qui ne nécessite pas d’approba
 12.  Dans le volet **Désactiver - Administrateur de la facturation**, cliquez à nouveau sur **Désactiver** pour confirmer.
 
 
-#### <a name="task-2-activate-a-role-that-requires-approval"></a>Tâche 2 : Activer un rôle qui nécessite une approbation. 
+#### Tâche 2 : Activer un rôle qui nécessite une approbation. 
 
 Dans cette tâche, vous allez activer un rôle qui nécessite une approbation.
 
@@ -248,16 +248,16 @@ Dans cette tâche, vous allez activer un rôle qui nécessite une approbation.
 
 > Résultat : vous avez pratiqué l’activation des rôles PIM avec et sans approbation. 
 
-### <a name="exercise-3---create-an-access-review-and-review-pim-auditing-features"></a>Exercice 3 - Créer une révision d’accès et passer en revue les fonctionnalités d’audit PIM
+### Exercice 3 - Créer une révision d’accès et passer en revue les fonctionnalités d’audit PIM
 
-#### <a name="estimated-timing-10-minutes"></a>Durée estimée : 10 minutes
+#### Durée estimée : 10 minutes
 
 Dans cet exercice, vous allez effectuer les tâches suivantes :
 
 - Tâche 1 : Configurer des alertes de sécurité pour les rôles d’annuaire Azure AD dans PIM
 - Tâche 2 : Passer en revue les alertes PIM, les informations récapitulatives et les informations d’audit détaillées
 
-#### <a name="task-1-configure-security-alerts-for-azure-ad-directory-roles-in-pim"></a>Tâche 1 : Configurer des alertes de sécurité pour les rôles d’annuaire Azure AD dans PIM
+#### Tâche 1 : Configurer des alertes de sécurité pour les rôles d’annuaire Azure AD dans PIM
 
 Dans cette tâche, vous allez réduire les risques liés aux attributions de rôles obsolètes. Pour ce faire, vous allez créer une révision d’accès PIM pour vous assurer que les rôles affectés sont toujours valides. Plus précisément, vous allez passer en revue le rôle Lecteur général. 
 
@@ -315,7 +315,7 @@ Dans cette tâche, vous allez réduire les risques liés aux attributions de rô
 
 19. Sélectionnez l’entrée représentant la révision du **Lecteur général**. Notez que le graphique **Progression** a été mis à jour pour afficher votre révision. 
 
-#### <a name="task-2-review-pim-alerts-summary-information-and-detailed-audit-information"></a>Tâche 2 : Passer en revue les alertes PIM, les informations récapitulatives et les informations d’audit détaillées. 
+#### Tâche 2 : Passer en revue les alertes PIM, les informations récapitulatives et les informations d’audit détaillées. 
 
 Dans cette tâche, vous allez passer en revue les alertes PIM, les informations récapitulatives et les informations d’audit détaillées. 
 
