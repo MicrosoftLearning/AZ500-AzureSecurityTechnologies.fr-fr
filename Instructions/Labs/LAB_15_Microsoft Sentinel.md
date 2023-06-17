@@ -4,10 +4,10 @@ lab:
   module: Module 04 - Manage Security Operations
 ---
 
-# <a name="lab-15-microsoft-sentinel"></a>Labo 15 : Microsoft Sentinel
-# <a name="student-lab-manual"></a>Manuel de labos pour étudiant
+# Labo 15 : Microsoft Sentinel
+# Manuel de labos pour étudiant
 
-## <a name="lab-scenario"></a>Scénario du labo
+## Scénario du labo
 
 **Remarque :** **Azure Sentinel** s’appelle désormais **Microsoft Sentinel** 
 
@@ -19,25 +19,25 @@ Vous avez été invité à créer une preuve de concept de détection et répons
 
 > Pour toutes les ressources de ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser. 
 
-## <a name="lab-objectives"></a>Objectifs du labo
+## Objectifs du labo
 
 Dans ce labo, vous effectuerez les exercices suivants :
 
 - Exercice 1 : Implémenter Microsoft Sentinel
 
-## <a name="microsoft-sentinel-diagram"></a>Diagramme Microsoft Sentinel
+## Diagramme Microsoft Sentinel
 
 ![image](https://user-images.githubusercontent.com/91347931/157538440-4953be73-90be-4edd-bd23-b678326ba637.png)
 
-## <a name="instructions"></a>Instructions
+## Instructions
 
-## <a name="lab-files"></a>Fichiers du labo :
+## Fichiers du labo :
 
 - **\\Allfiles\\Labs\\15\\changeincidentseverity.json**
 
-### <a name="exercise-1-implement-microsoft-sentinel"></a>Exercice 1 : Implémenter Microsoft Sentinel
+### Exercice 1 : Implémenter Microsoft Sentinel
 
-### <a name="estimated-timing-30-minutes"></a>Durée estimée : 30 minutes
+### Durée estimée : 30 minutes
 
 Dans cet exercice, vous allez effectuer les tâches suivantes :
 
@@ -48,7 +48,7 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 - Tâche 5 : Créer une alerte personnalisée et configurer le playbook en tant que réponse automatisée.
 - Tâche 6 : Appeler un incident et passer en revue les actions associées.
 
-#### <a name="task-1-on-board-azure-sentinel"></a>Tâche 1 : Intégrer Azure Sentinel
+#### Tâche 1 : Intégrer Azure Sentinel
 
 Dans cette tâche, vous allez intégrer Microsoft Sentinel et connecter l’espace de travail Log Analytics. 
 
@@ -66,7 +66,7 @@ Dans cette tâche, vous allez intégrer Microsoft Sentinel et connecter l’espa
 
     >**Remarque** : Microsoft Sentinel a des exigences très spécifiques pour les espaces de travail. Par exemple, les espaces de travail créés par Microsoft Defender pour le cloud ne peuvent pas être utilisés. En savoir plus sur [Démarrage rapide : Intégrer Azure Sentinel](https://docs.microsoft.com/en-us/azure/sentinel/quickstart-onboard)
     
-#### <a name="task-2-configure-microsoft-sentinel-to-use-the-azure-activity-data-connector"></a>Tâche 2 : Configurer Microsoft Sentinel pour utiliser le connecteur de données d’activité Azure. 
+#### Tâche 2 : Configurer Microsoft Sentinel pour utiliser le connecteur de données d’activité Azure. 
 
 Dans cette tâche, vous allez configurer Sentinel pour utiliser le connecteur de données d’activité Azure.  
 
@@ -96,7 +96,7 @@ Dans cette tâche, vous allez configurer Sentinel pour utiliser le connecteur de
 
     >**Remarque** : 15 minutes peuvent s’écouler avant que l’état affiche « Connecté » et que le graphique affiche les données reçues.
 
-#### <a name="task-3-create-a-rule-that-uses-the-azure-activity-data-connector"></a>Tâche 3 : Créer une règle qui utilise le connecteur de données Azure Activity. 
+#### Tâche 3 : Créer une règle qui utilise le connecteur de données Azure Activity. 
 
 Dans cette tâche, vous allez examiner et créer une règle qui utilise le connecteur de données d’activité Azure. 
 
@@ -124,7 +124,7 @@ Dans cette tâche, vous allez examiner et créer une règle qui utilise le conne
 
     >**Remarque** : vous avez désormais une régle active.
 
-#### <a name="task-4-create-a-playbook"></a>Tâche 4 : Créer un playbook
+#### Tâche 4 : Créer un playbook
 
 Dans cette tâche, vous allez créer un playbook. Un playbook de sécurité est une collection de tâches qui peuvent être appelées par Microsoft Sentinel en réponse à une alerte. 
 
@@ -176,7 +176,7 @@ Dans cette tâche, vous allez créer un playbook. Un playbook de sécurité est 
 
 16. Dans le volet **Concepteur Logic Apps**, cliquez sur **Enregistrer** pour enregistrer vos modifications.
 
-#### <a name="task-5-create-a-custom-alert-and-configure-a-playbook-as-an-automated-response"></a>Tâche 5 : Créer une alerte personnalisée et configurer un playbook en tant que réponse automatisée
+#### Tâche 5 : Créer une alerte personnalisée et configurer un playbook en tant que réponse automatisée
 
 1. Dans le portail Azure, revenez au volet **Microsoft Sentinel \| Vue d’ensemble**.
 
@@ -218,7 +218,7 @@ Dans cette tâche, vous allez créer un playbook. Un playbook de sécurité est 
 
     >**Remarque** : vous disposez maintenant d’une nouvelle règle active appelée **Démonstration du playbook**. Si un événement identifié par la logique de règle se produit, il génère une alerte de gravité moyenne, qui génère un incident correspondant.
 
-#### <a name="task-6-invoke-an-incident-and-review-the-associated-actions"></a>Tâche 6 : Appeler un incident et passer en revue les actions associées.
+#### Tâche 6 : Appeler un incident et passer en revue les actions associées.
 
 1. Dans le portail Azure, accédez au volet **Microsoft Defender pour le cloud \| Vue d’ensemble**.
 

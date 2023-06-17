@@ -4,10 +4,10 @@ lab:
   module: Module 02 - Implement Platform Protection
 ---
 
-# <a name="lab-08-azure-firewall"></a>Labo 8 : Pare-feu Azure
-# <a name="student-lab-manual"></a>Manuel de labo pour l’étudiant
+# Labo 8 : Pare-feu Azure
+# Manuel de labo pour l’étudiant
 
-## <a name="lab-scenario"></a>Scénario du labo
+## Scénario du labo
 
 Vous avez été invité à installer le pare-feu Azure. Cela aidera votre organisation à contrôler l’accès au réseau entrant et sortant, ce qui constitue un élément important d’un plan de sécurité réseau global. Plus précisément, vous souhaitez créer et tester les composants d’infrastructure suivants :
 
@@ -19,25 +19,25 @@ Vous avez été invité à installer le pare-feu Azure. Cela aidera votre organi
 
 > Pour toutes les ressources dans ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser. 
 
-## <a name="lab-objectives"></a>Objectifs du labo
+## Objectifs du labo
 
 Dans ce labo, vous allez effectuer l’exercice suivant :
 
 - Exercice 1 : Déployer et tester un pare-feu Azure
 
-## <a name="azure-firewall-diagram"></a>Schéma de Pare-feu Azure
+## Schéma de Pare-feu Azure
 
 ![image](https://user-images.githubusercontent.com/91347931/157529954-a1bc434b-2eca-41c1-b875-1f0c977d5e20.png)
 
-## <a name="instructions"></a>Instructions
+## Instructions
 
-## <a name="lab-files"></a>Fichiers du labo :
+## Fichiers du labo :
 
 - **\\Allfiles\\Labs\\08\\template.json**
 
-### <a name="exercise-1-deploy-and-test-an-azure-firewall"></a>Exercice 1 : Déployer et tester un pare-feu Azure
+### Exercice 1 : Déployer et tester un pare-feu Azure
 
-### <a name="estimated-timing-40-minutes"></a>Durée estimée : 40 minutes
+### Durée estimée : 40 minutes
 
 > Pour toutes les ressources dans ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser pour la classe. 
 
@@ -51,7 +51,7 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 - Tâche 6 : Configurer les serveurs DNS.
 - Tâche 7 : Tester le pare-feu. 
 
-#### <a name="task-1-use-a-template-to-deploy-the-lab-environment"></a>Tâche 1 : Utiliser un modèle pour déployer l’environnement lab. 
+#### Tâche 1 : Utiliser un modèle pour déployer l’environnement lab. 
 
 Dans cette tâche, vous allez examiner et déployer l’environnement lab. 
 
@@ -75,7 +75,7 @@ Dans cette tâche, vous allez créer une machine virtuelle à l’aide d’un mo
 
    |Paramètre|Valeur|
    |---|---|
-   |Abonnement|Nom de l’abonnement Azure que vous utilisez dans ce labo|
+   |Abonnement|le nom de l’abonnement Azure que vous utilisez dans ce labo|
    |Resource group|cliquez sur **Créer** et tapez le nom **AZ500LAB08**|
    |Emplacement|**(États-Unis) USA Est**|
 
@@ -85,7 +85,7 @@ Dans cette tâche, vous allez créer une machine virtuelle à l’aide d’un mo
 
     >**Remarque** : Attendez la fin du déploiement. Ce processus prend environ 2 minutes. 
 
-#### <a name="task-2-deploy-the-azure-firewall"></a>Tâche 2 : Déployer le Pare-feu Azure
+#### Tâche 2 : Déployer le Pare-feu Azure
 
 Au cours de cette tâche, vous allez déployer le pare-feu dans le réseau virtuel. 
 
@@ -100,7 +100,7 @@ Au cours de cette tâche, vous allez déployer le pare-feu dans le réseau virtu
    |Resource group|**AZ500LAB08**|
    |Nom|**Test-FW01**|
    |Région|**(États-Unis) USA Est**|
-   |Niveau de pare-feu|**Standard**|
+   |Référence SKU de pare-feu|**Standard**|
    |Gestion de pare-feu|**Utiliser des règles de pare-feu (classique) pour gérer ce pare-feu**|
    |Choisir un réseau virtuel|cliquez sur l’option **Utiliser l’option existante** et, dans la liste déroulante, sélectionnez **Test-FW-VN**|
    |Adresse IP publique|Cliquez sur **Ajouter nouveau** et tapez le nom **TEST-FW-PIP**, puis cliquez sur **OK**|
@@ -122,7 +122,7 @@ Au cours de cette tâche, vous allez déployer le pare-feu dans le réseau virtu
     >**Remarque** : Vous aurez besoin de ces informations dans la tâche suivante.
 
 
-#### <a name="task-3-create-a-default-route"></a>Tâche 3 : Créer un itinéraire par défaut
+#### Tâche 3 : Créer un itinéraire par défaut
 
 Dans cette tâche, vous allez créer un itinéraire par défaut pour le sous-réseau **Workload-SN**. Cet itinéraire configure le trafic sortant via le pare-feu.
 
@@ -172,7 +172,7 @@ Dans cette tâche, vous allez créer un itinéraire par défaut pour le sous-ré
 11.  Cliquez sur **Ajouter** pour ajouter l’itinéraire. 
 
 
-#### <a name="task-4-configure-an-application-rule"></a>Tâche 4 : Configurer une règle d’application
+#### Tâche 4 : Configurer une règle d’application
 
 Dans cette tâche, vous allez ajouter une règle d’application qui autorise l’accès sortant à `www.bing.com`.
 
@@ -204,7 +204,7 @@ Dans cette tâche, vous allez ajouter une règle d’application qui autorise l�
 
     >**Remarque** : Le Pare-feu Azure comprend un regroupement de règles intégré pour les noms de domaine complets d’infrastructure qui sont autorisés par défaut. Ces noms de domaine complets sont spécifiques à la plateforme et ne peuvent pas être utilisés à d’autres fins. 
 
-#### <a name="task-5-configure-a-network-rule"></a>Tâche 5 : Configurer une règle de réseau
+#### Tâche 5 : Configurer une règle de réseau
 
 Dans cette tâche, vous allez créer une règle réseau qui autorise l’accès sortant à deux adresses IP sur le port 53 (DNS).
 
@@ -236,7 +236,7 @@ Dans cette tâche, vous allez créer une règle réseau qui autorise l’accès 
 
     >**Remarque** : les adresses de destination utilisées dans ce cas sont des serveurs DNS publics connus. 
 
-#### <a name="task-6-configure-the-virtual-machine-dns-servers"></a>Tâche 6 : Configurer les serveurs DNS de la machine virtuelle
+#### Tâche 6 : Configurer les serveurs DNS de la machine virtuelle
 
 Dans cette tâche, vous allez configurer les adresses DNS principales et secondaires de la machine virtuelle. Il ne s’agit pas d’une exigence de pare-feu. 
 
@@ -256,7 +256,7 @@ Dans cette tâche, vous allez configurer les adresses DNS principales et seconda
 
     >**Remarque** : La mise à jour des serveurs DNS de cette interface réseau va automatiquement redémarrer la machine virtuelle à laquelle elle est attachée et, le cas échéant, les autres machines virtuelles du même groupe à haute disponibilité.
 
-#### <a name="task-7-test-the-firewall"></a>Tâche 7 : Tester le pare-feu
+#### Tâche 7 : Tester le pare-feu
 
 Dans cette tâche, vous allez tester le pare-feu pour confirmer qu’il fonctionne comme prévu.
 

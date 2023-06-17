@@ -4,10 +4,10 @@ lab:
   module: Module 03 - Secure data and applications
 ---
 
-# <a name="lab-12-service-endpoints-and-securing-storage"></a>Labo 12 : Points de terminaison de service et sécurisation du stockage
-# <a name="student-lab-manual"></a>Manuel de labo pour l’étudiant
+# Labo 12 : Points de terminaison de service et sécurisation du stockage
+# Manuel de labo pour l’étudiant
 
-## <a name="lab-scenario"></a>Scénario du labo
+## Scénario du labo
 
 Vous avez été invité à créer une preuve de concept pour montrer la sécurisation des partages de fichiers Azure. Plus précisément, vous souhaitez :
     
@@ -17,21 +17,21 @@ Vous avez été invité à créer une preuve de concept pour montrer la sécuris
 
 > Pour toutes les ressources dans ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser. 
 
-## <a name="lab-objectives"></a>Objectifs du labo
+## Objectifs du labo
 
 Dans ce labo, vous allez effectuer les exercices suivants :
 
 - Exercice 1 : Points de terminaison de service et stockage de sécurité
 
-## <a name="service-endpoints-and-securing-storage-diagram"></a>Diagramme de points de terminaison de services et de sécurisation du stockage
+## Diagramme de points de terminaison de services et de sécurisation du stockage
 
 ![image](https://user-images.githubusercontent.com/91347931/157534883-29664a05-85d1-4c70-99a7-f16d2360755d.png)
 
-## <a name="instructions"></a>Instructions
+## Instructions
 
-### <a name="exercise-1-service-endpoints-and-security-storage"></a>Exercice 1 : Points de terminaison de service et stockage de sécurité
+### Exercice 1 : Points de terminaison de service et stockage de sécurité
 
-### <a name="estimated-timing-45-minutes"></a>Durée estimée : 45 minutes
+### Durée estimée : 45 minutes
 
 Dans cet exercice, vous allez effectuer les tâches suivantes :
 
@@ -44,7 +44,7 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 - Tâche 7 : Tester la connexion de stockage à partir du sous-réseau privé pour confirmer que l’accès est autorisé
 - Tâche 8 : Tester la connexion de stockage à partir du sous-réseau public pour confirmer que l’accès est refusé 
 
-#### <a name="task-1-create-a-virtual-network"></a>Tâche 1 : Créer un réseau virtuel
+#### Tâche 1 : Créer un réseau virtuel
 
 Dans cette tâche, vous allez créer un réseau virtuel.
 
@@ -76,7 +76,7 @@ Dans cette tâche, vous allez créer un réseau virtuel.
 
 7. Sous l’onglet **Vérifier + créer** du volet **Créer un réseau virtuel**, cliquez sur **Créer**.
 
-#### <a name="task-2-add-a-subnet-to-the-virtual-network-and-configure-a-storage-endpoint"></a>Tâche 2 : Ajouter un sous-réseau au réseau virtuel et configurer un point de terminaison de stockage
+#### Tâche 2 : Ajouter un sous-réseau au réseau virtuel et configurer un point de terminaison de stockage
 
 Dans cette tâche, vous allez créer un autre sous-réseau et activer un point de terminaison de service sur celui-ci. Les points de terminaison de service sont activés par service, par sous-réseau. 
 
@@ -100,7 +100,7 @@ Dans cette tâche, vous allez créer un autre sous-réseau et activer un point d
 
     >**Remarque** : le réseau virtuel a maintenant deux sous-réseaux : public et privé. 
     
-#### <a name="task-3-configure-a-network-security-group-to-restrict-access-to-the-subnet"></a>Tâche 3 : Configurer un groupe de sécurité réseau pour restreindre l’accès au sous-réseau
+#### Tâche 3 : Configurer un groupe de sécurité réseau pour restreindre l’accès au sous-réseau
 
 Dans cette tâche, vous allez créer un groupe de sécurité réseau avec deux règles de sécurité du trafic sortant (Stockage et Internet) et une règle de sécurité du trafic entrant (RDP). Vous allez également associer le groupe de sécurité réseau au sous-réseau privé. Cela aura pour effet de limiter le trafic sortant à partir de machines virtuelles Azure connectées à ce sous-réseau.
 
@@ -171,7 +171,7 @@ Dans cette tâche, vous allez créer un groupe de sécurité réseau avec deux r
 
     |Paramètre|Valeur|
     |---|---|
-    |Source|**Aucune**|
+    |Source|**Any**|
     |Source port ranges|**\***|
     |Destination|**Étiquette du service**|
     |Identification de destination|**VirtualNetwork**|
@@ -192,7 +192,7 @@ Dans cette tâche, vous allez créer un groupe de sécurité réseau avec deux r
     |Réseau virtuel|**myVirtualNetwork**|
     |Subnet|**Privé**|
 
-#### <a name="task-4-configure-a-network-security-group-to-allow-rdp-on-the-public-subnet"></a>Tâche 4 : Configurer un groupe de sécurité réseau pour autoriser RDP sur le sous-réseau public
+#### Tâche 4 : Configurer un groupe de sécurité réseau pour autoriser RDP sur le sous-réseau public
 
 Dans cette tâche, vous allez créer un groupe de sécurité réseau avec une règle de sécurité de trafic entrant (RDP). Vous allez également associer le groupe de sécurité réseau au sous-réseau public. Cela autorisera l’accès RDP à la machine virtuelle publique.
 
@@ -221,7 +221,7 @@ Dans cette tâche, vous allez créer un groupe de sécurité réseau avec une r�
 
     |Paramètre|Valeur|
     |---|---|
-    |Source|**Aucune**|
+    |Source|**Any**|
     |Source port ranges|**\***|
     |Destination|**Étiquette du service**|
     |Identification de destination|**VirtualNetwork**|
@@ -242,7 +242,7 @@ Dans cette tâche, vous allez créer un groupe de sécurité réseau avec une r�
     |Réseau virtuel|**myVirtualNetwork**|
     |Subnet|**Public**|
     
-#### <a name="task-5-create-a-storage-account-with-a-file-share"></a>Tâche 5 : Créer un compte de stockage avec un partage de fichiers
+#### Tâche 5 : Créer un compte de stockage avec un partage de fichiers
 
 Dans cette tâche, vous allez créer un compte de stockage avec un partage de fichiers et obtenir la clé du compte de stockage.  
 
@@ -309,7 +309,7 @@ Dans cette tâche, vous allez créer un compte de stockage avec un partage de fi
 
     >**Remarque** : à ce stade du labo, vous avez configuré un réseau virtuel, un groupe de sécurité réseau et un compte de stockage avec un partage de fichiers. 
 
-#### <a name="task-6-deploy-virtual-machines-into-the-designated-subnets"></a>Tâche 6 : Déployer des machines virtuelles dans les sous-réseaux désignés
+#### Tâche 6 : Déployer des machines virtuelles dans les sous-réseaux désignés
 
 Dans cette tâche, vous allez créer deux machines virtuelles : l’une dans le sous-réseau privé et l’autre dans le sous-réseau public. 
 
@@ -323,7 +323,7 @@ Dans cette tâche, vous allez créer deux machines virtuelles : l’une dans le
 
     |Paramètre|Valeur|
     |---|---|
-    |Abonnement|Nom de l’abonnement Azure que vous utilisez dans ce labo|
+    |Abonnement|le nom de l’abonnement Azure que vous utilisez dans ce labo|
     |Groupe de ressources|**AZ500LAB12**|
     |Nom de la machine virtuelle|**myVmPrivate**|
     |Région|**(États-Unis) USA Est**|
@@ -358,7 +358,7 @@ Dans cette tâche, vous allez créer deux machines virtuelles : l’une dans le
 
     |Paramètre|Valeur|
     |---|---|
-    |Abonnement|Nom de l’abonnement Azure que vous utilisez dans ce labo|
+    |Abonnement|le nom de l’abonnement Azure que vous utilisez dans ce labo|
     |Groupe de ressources|**AZ500LAB12**|
     |Nom de la machine virtuelle|**myVmPublic**|
     |Région|**(États-Unis) USA Est**|
@@ -387,7 +387,7 @@ Dans cette tâche, vous allez créer deux machines virtuelles : l’une dans le
 
     >**Remarque** : vous pouvez passer à la tâche suivante une fois le déploiement de la machine virtuelle Azure **myVMPrivate** terminé.
 
-#### <a name="task-7-test-the-storage-connection-from-the-private-subnet-to-confirm-that-access-is-allowed"></a>Tâche 7 : Tester la connexion de stockage à partir du sous-réseau privé pour confirmer que l’accès est autorisé
+#### Tâche 7 : Tester la connexion de stockage à partir du sous-réseau privé pour confirmer que l’accès est autorisé
 
 Dans cette tâche, vous allez vous connecter à la machine virtuelle myVMPrivate via le Bureau à distance et mapper un lecteur au partage de fichiers. 
 
@@ -439,7 +439,7 @@ Dans cette tâche, vous allez vous connecter à la machine virtuelle myVMPrivate
 
     >**Remarque** : à ce stade, vous avez confirmé que la machine virtuelle dans le sous-réseau privé peut accéder au compte de stockage. 
 
-####  <a name="task-8-test-the-storage-connection-from-the-public-subnet-to-confirm-that-access-is-denied"></a>Tâche 8 : Tester la connexion de stockage à partir du sous-réseau public pour confirmer que l’accès est refusé 
+####  Tâche 8 : Tester la connexion de stockage à partir du sous-réseau public pour confirmer que l’accès est refusé 
 
 1. Revenez au panneau **Machines virtuelles**. 
 

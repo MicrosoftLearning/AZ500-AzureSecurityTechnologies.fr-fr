@@ -4,10 +4,10 @@ lab:
   module: Module 02 - Implement Platform Protection
 ---
 
-# <a name="lab-09-configuring-and-securing-acr-and-aks"></a>Labo 09 : Configuration et sécurisation d’ACR et d’AKS
-# <a name="student-lab-manual"></a>Manuel de labo pour l’étudiant
+# Labo 09 : Configuration et sécurisation d’ACR et d’AKS
+# Manuel de labo pour l’étudiant
 
-## <a name="lab-scenario"></a>Scénario du labo
+## Scénario du labo
 
 Vous avez été invité à déployer une preuve de concept avec Azure Container Registry et Azure Kubernetes Service. Plus précisément, la preuve de concept devrait montrer ce qui suit :
 
@@ -18,26 +18,26 @@ Vous avez été invité à déployer une preuve de concept avec Azure Container 
 
 > Pour toutes les ressources dans ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser. 
 
-## <a name="lab-objectives"></a>Objectifs du labo
+## Objectifs du labo
 
 Dans ce labo, vous allez effectuer les exercices suivants :
 
 - Exercice 1 : Configuration et sécurisation d’ACR et d’AKS
 
-## <a name="configuring-and-securing-acr-and-aks-diagram"></a>Diagramme de configuration et sécurisation d’ACR et d’AKS
+## Diagramme de configuration et sécurisation d’ACR et d’AKS
 
 ![image](https://user-images.githubusercontent.com/91347931/157532250-1104a829-792a-4b6d-beff-fe976e2d5d4b.png)
 
-## <a name="intructions"></a>Intructions
+## Intructions
 
-## <a name="lab-files"></a>Fichiers du labo :
+## Fichiers du labo :
 
 - **\\Allfiles\\Labs\\09\\nginxexternal.yaml**
 - **\\Allfiles\\Labs\\09\\nginxinternal.yaml**
 
-### <a name="exercise-1-configuring-and-securing-acr-and-aks"></a>Exercice 1 : Configuration et sécurisation d’ACR et d’AKS
+### Exercice 1 : Configuration et sécurisation d’ACR et d’AKS
 
-### <a name="estimated-timing-45-minutes"></a>Durée estimée : 45 minutes
+### Durée estimée : 45 minutes
 
 > Pour toutes les ressources dans ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser pour la classe. 
 
@@ -52,7 +52,7 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 - Tâche 7 : Déployer un service interne sur AKS
 - Tâche 8 : Vérifier que vous pouvez accéder à un service interne hébergé par AKS
 
-#### <a name="task-1-create-an-azure-container-registry"></a>Tâche 1 : Créer un registre de conteneurs Azure
+#### Tâche 1 : Créer un registre de conteneurs Azure
 
 Dans cette tâche, vous allez créer un groupe de ressources pour le labo et un Azure Container Registry.
 
@@ -90,7 +90,7 @@ Dans cette tâche, vous allez créer un groupe de ressources pour le labo et un 
 
     >**Remarque** : notez le nom de l’ACR. Vous en aurez besoin dans la prochaine tâche.
 
-#### <a name="task-2-create-a-dockerfile-build-a-container-and-push-it-to-azure-container-registry"></a>Tâche 2 : Créer un Dockerfile, générer un conteneur et l’envoyer (push) à Azure Container Registry
+#### Tâche 2 : Créer un Dockerfile, générer un conteneur et l’envoyer (push) à Azure Container Registry
 
 Dans cette tâche, vous allez créer un Dockerfile, générer une image à partir de celui-ci, et déployer l’image sur l’ACR. 
 
@@ -126,7 +126,7 @@ Dans cette tâche, vous allez créer un Dockerfile, générer une image à parti
 
     >**Remarque** : le manifeste inclut la synthèse sha256, la date de création du manifeste et des entrées de plateforme. 
 
-#### <a name="task-3-create-an-azure-kubernetes-service-cluster"></a>Tâche 3 : Créer un cluster Azure Kubernetes Service
+#### Tâche 3 : Créer un cluster Azure Kubernetes Service
 
 Dans cette tâche, vous allez créer un service Azure Kubernetes et examiner les ressources déployées. 
 
@@ -197,7 +197,7 @@ Dans cette tâche, vous allez créer un service Azure Kubernetes et examiner les
 
     >**Remarque** : vérifiez que l’**État** du nœud de cluster est **Prêt**.
 
-#### <a name="task-4-grant-the-aks-cluster-permissions-to-access-the-acr-and-manage-its-virtual-network"></a>Tâche 4 : Accorder des autorisations de cluster AKS pour accéder à l’ACR et gérer son réseau virtuel
+#### Tâche 4 : Accorder des autorisations de cluster AKS pour accéder à l’ACR et gérer son réseau virtuel
 
 Dans cette tâche, vous allez accorder des autorisations de cluster AKS pour accéder à l’ACR et gérer son réseau virtuel 
 
@@ -229,7 +229,7 @@ Dans cette tâche, vous allez accorder des autorisations de cluster AKS pour acc
     az role assignment create --assignee $AKS_MANAGED_ID --role "Contributor" --scope $AKS_VNET_ID
     ```
 
-#### <a name="task-5-deploy-an-external-service-to-aks"></a>Tâche 5 : Déployer un service externe sur AKS
+#### Tâche 5 : Déployer un service externe sur AKS
 
 Dans cette tâche, vous allez télécharger les fichiers manifestes, modifier le fichier YAML et appliquer vos modifications au cluster. 
 
@@ -268,7 +268,7 @@ Dans cette tâche, vous allez télécharger les fichiers manifestes, modifier le
     service/nginxexternal created
     ```
 
-#### <a name="task-6-verify-the-you-can-access-an-external-aks-hosted-service"></a>Tâche 6 : Vérifier que vous pouvez accéder à un service externe hébergé par AKS
+#### Tâche 6 : Vérifier que vous pouvez accéder à un service externe hébergé par AKS
 
 Dans cette tâche, vérifiez que le conteneur est accessible en externe à l’aide de l’adresse IP publique.
 
@@ -284,7 +284,7 @@ Dans cette tâche, vérifiez que le conteneur est accessible en externe à l’a
 
 4. Vérifiez que la page **Bienvenue dans nginx** s’affiche. 
 
-#### <a name="task-7-deploy-an-internal-service-to-aks"></a>Tâche 7 : Déployer un service interne sur AKS
+#### Tâche 7 : Déployer un service interne sur AKS
 
 Dans cette tâche, vous allez déployer le service interne sur l’AKS. 
 
@@ -327,7 +327,7 @@ Dans cette tâche, vous allez déployer le service interne sur l’AKS.
 
     >**Remarque** : vous pouvez également utiliser l’adresse CLUSTER-IP.
 
-#### <a name="task-8-verify-the-you-can-access-an-internal-aks-hosted-service"></a>Tâche 8 : Vérifier que vous pouvez accéder à un service interne hébergé par AKS
+#### Tâche 8 : Vérifier que vous pouvez accéder à un service interne hébergé par AKS
 
 Dans cette tâche, vous allez utiliser l’un des pods s’exécutant sur le cluster AKS pour accéder au service interne. 
 
