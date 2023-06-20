@@ -4,10 +4,10 @@ lab:
   module: Module 02 - Implement Platform Protection
 ---
 
-# <a name="lab-07-network-security-groups-and-application-security-groups"></a>Lab 07 : Groupes de sécurité réseau et groupes de sécurité des applications
-# <a name="student-lab-manual"></a>Manuel de labo pour l’étudiant
+# Lab 07 : Groupes de sécurité réseau et groupes de sécurité des applications
+# Manuel de labo pour l’étudiant
 
-## <a name="lab-scenario"></a>Scénario du labo
+## Scénario du labo
 
 Vous avez été invité à implémenter l’infrastructure de mise en réseau virtuelle de votre organisation et à la tester pour s’assurer qu’elle fonctionne correctement. En particulier :
 
@@ -19,22 +19,22 @@ Vous avez été invité à implémenter l’infrastructure de mise en réseau vi
 
 > Pour toutes les ressources dans ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser. 
 
-## <a name="lab-objectives"></a>Objectifs du labo
+## Objectifs du labo
 
-Dans ce labo, vous allez effectuer l’exercice suivant :
+Dans ce labo, vous allez effectuer les exercices suivants :
 
 - Exercice 1 : Créer l’infrastructure réseau virtuelle
 - Exercice 2 : Déployer les machines virtuelles et tester les filtres réseau
 
-## <a name="network-and-application-security-groups-diagram"></a>Schéma des groupes de sécurité réseau et d’application
+## Schéma des groupes de sécurité réseau et d’application
 
 ![image](https://user-images.githubusercontent.com/91347931/157526438-6da4f68b-db88-4931-a041-8474e66d3fe5.png)
 
-## <a name="instructions"></a>Instructions
+## Instructions
 
-### <a name="exercise-1-create-the-virtual-networking-infrastructure"></a>Exercice 1 : Créer l’infrastructure réseau virtuelle
+### Exercice 1 : Créer l’infrastructure réseau virtuelle
 
-### <a name="estimated-timing-20-minutes"></a>Durée estimée : 20 minutes
+### Durée estimée : 20 minutes
 
 > Pour toutes les ressources dans ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser pour la classe. 
 
@@ -45,7 +45,7 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 - Tâche 3 : Créer un groupe de sécurité réseau et associez-le au sous-réseau virtuel.
 - Tâche 4 : Créez des règles de sécurité NSG entrantes pour tous les trafics vers des serveurs web et RDP vers les serveurs d’administration.
 
-#### <a name="task-1--create-a-virtual-network"></a>Tâche 1 :  Créer un réseau virtuel
+#### Tâche 1 :  Créer un réseau virtuel
 
 Dans cette tâche, vous allez créer un réseau virtuel à utiliser avec les groupes de sécurité réseau et d’application. 
 
@@ -77,7 +77,7 @@ Dans cette tâche, vous allez créer un réseau virtuel à utiliser avec les gro
 
 7. Sous l’onglet **Vérifier + créer** du volet **Créer un réseau virtuel**, cliquez sur **Créer**.
 
-#### <a name="task-2--create-application-security-groups"></a>Tâche 2 :  Créer des groupes de sécurité d’application
+#### Tâche 2 :  Créer des groupes de sécurité d’application
 
 Dans cette tâche, vous allez créer un groupe de sécurité d’application.
 
@@ -111,7 +111,7 @@ Dans cette tâche, vous allez créer un groupe de sécurité d’application.
 
 7. Cliquez sur **Vérifier + créer**, puis sur **Créer**.
 
-#### <a name="task-3--create-a-network-security-group-and-associate-the-nsg-to-the-subnet"></a>Tâche 3 :  Créez un groupe de sécurité réseau et associez-le au sous-réseau
+#### Tâche 3 :  Créez un groupe de sécurité réseau et associez-le au sous-réseau
 
 Dans cette tâche, vous allez créer un groupe de sécurité de réseau. 
 
@@ -141,7 +141,7 @@ Dans cette tâche, vous allez créer un groupe de sécurité de réseau.
     |Réseau virtuel|**myVirtualNetwork**|
     |Subnet|**default**|
 
-#### <a name="task-4-create-inbound-nsg-security-rules-to-all-traffic-to-web-servers-and-rdp-to-the-servers"></a>Tâche 4 : créez des règles de sécurité NSG entrantes pour tous les trafics vers des serveurs web et RDP vers les serveurs. 
+#### Tâche 4 : créez des règles de sécurité NSG entrantes pour tous les trafics vers des serveurs web et RDP vers les serveurs. 
 
 1. Dans le volet **myNsg**, dans la section **Paramètres**, cliquez sur **Règles de sécurité de trafic entrant**.
 
@@ -175,9 +175,9 @@ Dans cette tâche, vous allez créer un groupe de sécurité de réseau.
 
 > Résultat : vous avez déployé un réseau virtuel, une sécurité réseau avec des règles de sécurité entrantes et deux groupes de sécurité d’application. 
 
-### <a name="exercise-2-deploy-virtual-machines-and-test-network-filters"></a>Exercice 2 : Déployer les machines virtuelles et tester les filtres réseau
+### Exercice 2 : Déployer les machines virtuelles et tester les filtres réseau
 
-### <a name="estimated-timing-25-minutes"></a>Durée estimée : 25 minutes
+### Durée estimée : 25 minutes
 
 Dans cet exercice, vous allez effectuer les tâches suivantes :
 
@@ -186,7 +186,7 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 - Tâche 3 : Associez chaque interface réseau de machines virtuelles au groupe de sécurité d’application.
 - Tâche 4 : Testez les règles de filtrage du trafic réseau.
 
-#### <a name="task-1-create-a-virtual-machine-to-use-as-a-web-server"></a>Tâche 1 : Créez une machine virtuelle à utiliser comme serveur web.
+#### Tâche 1 : Créez une machine virtuelle à utiliser comme serveur web.
 
 Dans cette tâche, vous allez créer une machine virtuelle à utiliser comme serveur web.
 
@@ -198,11 +198,11 @@ Dans cette tâche, vous allez créer une machine virtuelle à utiliser comme ser
 
    |Paramètre|Valeur|
    |---|---|
-   |Abonnement|Nom de l’abonnement Azure que vous utilisez dans ce labo|
+   |Abonnement|le nom de l’abonnement Azure que vous utilisez dans ce labo|
    |Resource group|**AZ500LAB07**|
    |Nom de la machine virtuelle|**myVmWeb**|
    |Région|**(États-Unis) USA Est**|
-   |Image|**Windows Server 2022 Datacenter : Édition Azure - Gen 2**|
+   |Image|**Centre de données Windows Server 2022 : Édition Azure - x64 Gen2**|
    |Taille|**Standard D2s v3**|
    |Nom d’utilisateur|**Étudiant**|
    |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 04 > Exercice 1 > Tâche 1 > Étape 9.**|
@@ -218,7 +218,7 @@ Dans cette tâche, vous allez créer une machine virtuelle à utiliser comme ser
 
 6. Sous **Groupe de sécurité réseau de la carte réseau**, sélectionnez **Aucun**.
 
-7. Cliquez sur **Suivant : Gestion >** , puis sur **Suivant : Supervision >** dans l’onglet **Supervision** du volet **Créer une machine virtuelle**, vérifiez le paramètre suivant :
+7. Cliquez sur **Suivant : Gestion >** , puis sur **Suivant : Supervision > sous l’onglet **Supervision** du volet **Créer une machine virtuelle**, vérifiez le paramètre suivant :
 
    |Paramètre|Valeur|
    |---|---|
@@ -226,7 +226,7 @@ Dans cette tâche, vous allez créer une machine virtuelle à utiliser comme ser
 
 8. Cliquez sur **Vérifier + créer** dans le volet **Vérifier + créer** et vérifiez que la validation a réussi, puis cliquez sur **Créer**.
 
-#### <a name="task-2-create-a-virtual-machine-to-use-as-a-management-server"></a>Tâche 2 : Créez une machine virtuelle à utiliser comme serveur d’administration. 
+#### Tâche 2 : Créez une machine virtuelle à utiliser comme serveur d’administration. 
 
 Dans cette tâche, vous allez créer une machine virtuelle à utiliser comme serveur d’administration.
 
@@ -236,11 +236,11 @@ Dans cette tâche, vous allez créer une machine virtuelle à utiliser comme ser
 
    |Paramètre|Valeur|
    |---|---|
-   |Abonnement|Nom de l’abonnement Azure que vous utilisez dans ce labo|
+   |Abonnement|le nom de l’abonnement Azure que vous utilisez dans ce labo|
    |Resource group|**AZ500LAB07**|
    |Nom de la machine virtuelle|**myVMMgmt**|
    |Région|(États-Unis) USA Est|
-   |Image|**Windows Server 2022 Datacenter : Édition Azure - Gen 2**|
+   |Image|**Centre de données Windows Server 2022 : Édition Azure - x64 Gen2**|
    |Taille|**Standard D2s v3**|
    |Nom d’utilisateur|**Étudiant**|
    |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 04 > Exercice 1 > Tâche 1 > Étape 9.**|
@@ -255,7 +255,7 @@ Dans cette tâche, vous allez créer une machine virtuelle à utiliser comme ser
 
 5. Sous **Groupe de sécurité réseau de la carte réseau**, sélectionnez **Aucun**.
 
-6. Cliquez sur **Suivant : Gestion >** , puis sur **Suivant : Supervision >** dans l’onglet **Supervision** du volet **Créer une machine virtuelle**, vérifiez le paramètre suivant :
+6. Cliquez sur **Suivant : Gestion >** , puis sur **Suivant : Supervision > sous l’onglet **Supervision** du volet **Créer une machine virtuelle**, vérifiez le paramètre suivant :
 
    |Paramètre|Valeur|
    |---|---|
@@ -265,7 +265,7 @@ Dans cette tâche, vous allez créer une machine virtuelle à utiliser comme ser
 
     >**Remarque** : Attendez que les deux machines virtuelles soient approvisionnées avant de continuer. 
 
-#### <a name="task-3-associate-each-virtual-machines-network-interface-to-its-application-security-group"></a>Tâche 3 : Associez l’interface réseau de chaque machine virtuelle à son groupe de sécurité d’application.
+#### Tâche 3 : Associez l’interface réseau de chaque machine virtuelle à son groupe de sécurité d’application.
 
 Dans cette tâche, vous allez associer chaque interface réseau des machines virtuelles au groupe de sécurité d’application correspondant. L’interface de machine virtuelle myVMWeb est associée à l’ASG myAsgWebServers. L’interface de machine virtuelle myVMMgmt est associée à l’ASG myAsgMgmtServers. 
 
@@ -283,7 +283,7 @@ Dans cette tâche, vous allez associer chaque interface réseau des machines vir
 
 7. Cliquez sur **Configurer les groupes de sécurité d’application**, dans la liste déroulante **Groupe de sécurité d’application**, sélectionnez **myAsgMgmtServers**, puis cliquez sur **Enregistrer**.
 
-#### <a name="task-4-test-the-network-traffic-filtering"></a>Tâche 4 : Testez les règles de filtrage du trafic réseau
+#### Tâche 4 : Testez les règles de filtrage du trafic réseau
 
 Dans cette tâche, vous allez tester les filtres de trafic réseau. Vous devez être en mesure vous connecter en RDP à la machine virtuelle myVMMgmnt. Vous devez pouvoir vous connecter à partir d’Internet à la machine virtuelle myVMWeb et voir la page web IIS par défaut.  
 

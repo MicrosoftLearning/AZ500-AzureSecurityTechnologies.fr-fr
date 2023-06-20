@@ -4,10 +4,10 @@ lab:
   module: Module 01 - Manage Identity and Access
 ---
 
-# <a name="lab-06-implement-directory-synchronization"></a>Labo 06 : Implémenter la synchronisation des annuaires
-# <a name="student-lab-manual"></a>Manuel de labos pour étudiant
+# Labo 06 : Implémenter la synchronisation des annuaires
+# Manuel de labos pour étudiant
 
-## <a name="lab-scenario"></a>Scénario du labo
+## Scénario du labo
 
 Vous avez été invité à créer une preuve de concept illustrant comment intégrer un environnement local Active Directory Domain Services (AD DS) à un locataire Azure Active Directory (Azure AD). Plus précisément, vous souhaitez :
 
@@ -17,7 +17,7 @@ Vous avez été invité à créer une preuve de concept illustrant comment inté
 
 > Pour toutes les ressources de ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser. 
 
-## <a name="lab-objectives"></a>Objectifs du labo
+## Objectifs du labo
 
 Dans ce labo, vous effectuerez les exercices suivants :
 
@@ -25,22 +25,22 @@ Dans ce labo, vous effectuerez les exercices suivants :
 - Exercice 2 : Créer et configurer un locataire Azure Active Directory
 - Exercice 3 : Synchroniser la forêt Active Directory avec un locataire Azure Active Directory
 
-## <a name="implement-directory-synchronization"></a>Implémenter la synchronisation des annuaires
+## Implémenter la synchronisation des annuaires
 
 ![image](https://user-images.githubusercontent.com/91347931/157525374-8f740f14-c2db-47b3-98f8-7feb9bc122b5.png)
 
-## <a name="instructions"></a>Instructions
+## Instructions
 
-### <a name="exercise-1-deploy-an-azure-vm-hosting-an-active-directory-domain-controller"></a>Exercice 1 : Déployer une machine virtuelle Azure hébergeant un contrôleur de domaine Active Directory
+### Exercice 1 : Déployer une machine virtuelle Azure hébergeant un contrôleur de domaine Active Directory
 
-### <a name="estimated-timing-10-minutes"></a>Durée estimée : 10 minutes
+### Durée estimée : 10 minutes
 
 Dans cet exercice, vous allez effectuer les tâches suivantes :
 
 - Tâche 1 : Identifier un nom DNS disponible pour un déploiement Azure VM
 - Tâche 2 : Utiliser un modèle ARM pour déployer une machine virtuelle Azure hébergeant un contrôleur de domaine Active Directory
 
-#### <a name="task-1-identify-an-available-dns-name-for-an-azure-vm-deployment"></a>Tâche 1 : Identifier un nom DNS disponible pour un déploiement Azure VM
+#### Tâche 1 : Identifier un nom DNS disponible pour un déploiement Azure VM
 
 Dans cette tâche, vous identifierez un nom DNS pour votre déploiement de machine virtuelle Azure. 
 
@@ -68,13 +68,13 @@ Dans cette tâche, vous identifierez un nom DNS pour votre déploiement de machi
 
 7. Fermez Cloud Shell.
 
-#### <a name="task-2-use-an-arm-template-to-deploy-an-azure-vm-hosting-an-active-directory-domain-controller"></a>Tâche 2 : Utiliser un modèle ARM pour déployer une machine virtuelle Azure hébergeant un contrôleur de domaine Active Directory
+#### Tâche 2 : Utiliser un modèle ARM pour déployer une machine virtuelle Azure hébergeant un contrôleur de domaine Active Directory
 
 Dans cette tâche, vous allez déployer une machine virtuelle Azure qui hébergera un contrôleur de domaine Active Directory
 
 1. Ouvrez un autre onglet de navigateur dans la même fenêtre de navigateur web et accédez à la page **https://github.com/Azure/azure-quickstart-templates/tree/master/application-workloads/active-directory/active-directory-new-domain** .
 
-2. Dans la page **Créer une machine virtuelle Windows et créer une nouvelle forêt AD, un domaine et un contrôleur de domaine**, cliquez sur **Déployer sur Azure**. Cela va rediriger automatiquement le navigateur vers le volet **Créer une machine virtuelle Azure avec une nouvelle forêt AD** dans le portail Azure.
+2. Dans la page **Créer une machine virtuelle Azure avec une nouvelle forêt Active Directory**, cliquez sur **Déployer sur Azure**. Cela va rediriger automatiquement le navigateur vers le volet **Créer une machine virtuelle Azure avec une nouvelle forêt AD** dans le portail Azure. 
 
 3. Dans le volet **Créer une machine virtuelle Azure avec une nouvelle forêt Active Directory**, cliquez sur **Modifier les paramètres**.
 
@@ -100,9 +100,9 @@ Dans cette tâche, vous allez déployer une machine virtuelle Azure qui héberge
 > Résultat : une fois cet exercice terminé, vous avez lancé le déploiement d’une machine virtuelle Azure qui hébergera un contrôleur de domaine Active Directory à l’aide d’un modèle Azure Resource Manager
 
 
-### <a name="exercise-2-create-and-configure-an-azure-active-directory-tenant"></a>Exercice 2 : Créer et configurer un locataire Azure Active Directory 
+### Exercice 2 : Créer et configurer un locataire Azure Active Directory 
 
-### <a name="estimated-timing-20-minutes"></a>Durée estimée : 20 minutes
+### Durée estimée : 20 minutes
 
 Dans cet exercice, vous allez effectuer les tâches suivantes :
 
@@ -110,7 +110,7 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 - Tâche 2 : Ajouter un nom DNS personnalisé au nouveau locataire Azure AD
 - Tâche 3 : Créer un utilisateur Azure AD avec le rôle Administrateur général
 
-#### <a name="task-1-create-an-azure-active-directory-ad-tenant"></a>Tâche 1 : Créer un locataire Azure Active Directory (AD)
+#### Tâche 1 : Créer un locataire Azure Active Directory (AD)
 
 Dans cette tâche, vous allez créer un locataire Azure AD à utiliser dans ce laboratoire. 
 
@@ -136,7 +136,7 @@ Dans cette tâche, vous allez créer un locataire Azure AD à utiliser dans ce l
 
     >**Remarque** : Attendez que le nouveau locataire soit créé. Utilisez l’icône **Notification** pour surveiller l’état du déploiement. 
 
-#### <a name="task-2-add-a-custom-dns-name-to-the-new-azure-ad-tenant"></a>Tâche 2 : Ajouter un nom DNS personnalisé au nouveau locataire Azure AD
+#### Tâche 2 : Ajouter un nom DNS personnalisé au nouveau locataire Azure AD
 
 Dans cette tâche, vous allez ajouter votre nom DNS personnalisé au nouveau locataire Azure AD. 
 
@@ -156,13 +156,13 @@ Dans cette tâche, vous allez ajouter votre nom DNS personnalisé au nouveau loc
 
     >**Remarque** : vous ne pourrez pas terminer le processus de validation, car vous ne possédez pas le nom de domaine DNS **adatum.com**. Cela ne vous empêchera pas de synchroniser le domaine AD DS **adatum.com** avec le locataire Azure AD. Vous utiliserez à cet effet le nom DNS initial du locataire Azure AD (le nom se terminant par le suffixe **onmicrosoft.com**), que vous avez identifié dans la tâche précédente. Toutefois, gardez à l’esprit que, par conséquent, le nom de domaine DNS du domaine AD DS et le nom DNS du locataire Azure AD seront différents. Cela signifie que les utilisateurs Adatum devront utiliser différents noms lors de la connexion au domaine AD DS et lors de la connexion au locataire Azure AD.
 
-#### <a name="task-3-create-an-azure-ad-user-with-the-global-administrator-role"></a>Tâche 3 : Créer un utilisateur Azure AD avec le rôle Administrateur général
+#### Tâche 3 : Créer un utilisateur Azure AD avec le rôle Administrateur général
 
 Dans cette tâche, vous allez ajouter un nouvel utilisateur Azure AD et les affecter au rôle Administrateur général. 
 
 1. Dans le volet du locataire Azure AD **AdatumSync**, dans la section **Gérer**, cliquez sur **Utilisateurs**.
 
-2. Dans le volet **Utilisateurs \| Tous les utilisateurs**, cliquez sur **+ Nouvel utilisateur**. 
+2. Dans le volet **Utilisateurs | Tous les utilisateurs**, cliquez sur **+ Nouvel utilisateur**, puis sur **Créer un utilisateur**.
 
 3. Dans le volet **Nouvel utilisateur**, assurez-vous que l’option **Créer un utilisateur** est sélectionnée et spécifiez les paramètres suivants (laissez les autres paramètres avec leurs valeurs par défaut) et cliquez sur **Créer** :
 
@@ -192,9 +192,9 @@ Dans cette tâche, vous allez ajouter un nouvel utilisateur Azure AD et les affe
 > **Résultat** : une fois cet exercice terminé, vous avez créé un locataire Azure AD, appris à ajouter un nom DNS personnalisé au nouveau locataire Azure AD et créé un utilisateur Azure AD avec le rôle Administrateur général.
 
 
-### <a name="exercise-3-synchronize-active-directory-forest-with-an-azure-active-directory-tenant"></a>Exercice 3 : Synchroniser la forêt Active Directory avec un locataire Azure Active Directory
+### Exercice 3 : Synchroniser la forêt Active Directory avec un locataire Azure Active Directory
 
-### <a name="estimated-timing-20-minutes"></a>Durée estimée : 20 minutes
+### Durée estimée : 20 minutes
 
 Dans cet exercice, vous allez effectuer les tâches suivantes :
 
@@ -202,7 +202,7 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 - Tâche 2 : Installer Azure AD Connect
 - Tâche 3 : Vérifier la synchronisation d'annuaires
 
-#### <a name="task-1-prepare-ad-ds-for-directory-synchronization"></a>Tâche 1 : Préparer AD DS pour la synchronisation d'annuaires
+#### Tâche 1 : Préparer AD DS pour la synchronisation d'annuaires
 
 Dans cette tâche, vous allez vous connecter à la machine virtuelle Azure exécutant le contrôleur de domaine AD DS et créer un compte de synchronisation d’annuaires. 
 
@@ -253,7 +253,7 @@ Dans cette tâche, vous allez vous connecter à la machine virtuelle Azure exéc
    |Mot de passe et Confirmer le mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 04 > Exercice 1 > Tâche 1 > Étape 9.**|
    |Autres options de mot de passe|**Le mot de passe n'expire jamais**|
 
-#### <a name="task-2-install-azure-ad-connect"></a>Tâche 2 : Installer Azure AD Connect
+#### Tâche 2 : Installer Azure AD Connect
 
 Dans cette tâche, vous allez installer AD Connect sur la machine virtuelle. 
 
@@ -309,7 +309,7 @@ Dans cette tâche, vous allez installer AD Connect sur la machine virtuelle.
 21. Passez en revue les informations de la page **Configuration terminée**, puis cliquez sur **Quitter** pour fermer la fenêtre **Microsoft Azure Active Directory Connect**.
 
 
-#### <a name="task-3-verify-directory-synchronization"></a>Tâche 3 : Vérifier la synchronisation d'annuaires
+#### Tâche 3 : Vérifier la synchronisation d'annuaires
 
 Dans cette tâche, vous allez vérifier que la synchronisation d’annuaires fonctionne. 
 
@@ -317,7 +317,7 @@ Dans cette tâche, vous allez vérifier que la synchronisation d’annuaires fon
 
 2. Dans le volet **Utilisateurs \| Tous les utilisateurs**, notez que la liste des objets utilisateur inclut le compte **aduser1**. 
 
->**Remarque** : vous devrez peut-être attendre quelques minutes et sélectionner **Actualiser** pour que le compte d’utilisateur **aduser1** apparaisse.
+   >**Remarque** : vous devrez peut-être attendre quelques minutes et sélectionner **Actualiser** pour que le compte d’utilisateur **aduser1** apparaisse.
 
 3. Sélectionnez le compte **aduser1** et, dans la section **Profil > Identité**, notez que l’attribut **Source** est défini sur **Windows Server AD**.
 
@@ -337,7 +337,7 @@ Dans cette tâche, vous allez vérifier que la synchronisation d’annuaires fon
     Start-ADSyncSyncCycle -PolicyType Delta
     ```
 
-9. Basculez vers la fenêtre Microsoft Edge affichant le volet **aduser1 \| Profile**, actualisez la page et notez que la propriété **Département** est définie sur **Ventes**.
+9. Basculez vers la fenêtre Microsoft Edge affichant le volet **aduser1**, actualisez la page et notez que la propriété Department est définie sur Sales.
 
     >**Remarque** : vous devrez peut-être attendre une autre minute et actualiser à nouveau la page si l’attribut **Département** reste non défini.
 

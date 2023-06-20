@@ -4,10 +4,10 @@ lab:
   module: Module 04 - Microsoft Defender for Cloud
 ---
 
-# <a name="lab-14-microsoft-defender-for-cloud"></a>Labo 14 : Microsoft Defender pour le cloud
-# <a name="student-lab-manual"></a>Manuel de labos pour étudiant
+# Labo 14 : Microsoft Defender pour le cloud
+# Manuel de labos pour étudiant
 
-## <a name="lab-scenario"></a>Scénario du labo
+## Scénario du labo
 
 Vous avez été invité à créer une preuve de concept d’environnement Microsoft Defender pour le cloud. Plus précisément, vous souhaitez :
 
@@ -18,19 +18,19 @@ Vous avez été invité à créer une preuve de concept d’environnement Micros
 
 > Pour toutes les ressources de ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser. 
 
-## <a name="lab-objectives"></a>Objectifs du labo
+## Objectifs du labo
 
 Dans ce labo, vous effectuerez les exercices suivants :
 
 - Exercice 1 : Implémenter Microsoft Defender pour le cloud
 
-## <a name="microsoft-defender-for-cloud-diagram"></a>Diagramme Microsoft Defender pour le cloud
+## Diagramme Microsoft Defender pour le cloud
 
 ![image](https://user-images.githubusercontent.com/91347931/157537800-94a64b6e-026c-41b2-970e-f8554ce1e0ab.png)
 
-## <a name="instructions"></a>Instructions
+## Instructions
 
-### <a name="exercise-1-implement-microsoft-defender-for-cloud"></a>Exercice 1 : Implémenter Microsoft Defender pour le cloud
+### Exercice 1 : Implémenter Microsoft Defender pour le cloud
 
 Dans cet exercice, vous allez effectuer les tâches suivantes :
 
@@ -38,7 +38,7 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 - Tâche 2 : Passer en revue les recommandations de Microsoft Defender pour le cloud
 - Tâche 3 : Implémenter la recommandation Microsoft Defender pour le cloud pour activer l’accès Juste à temps à la machine virtuelle
 
-#### <a name="task-1-configure-microsoft-defender-for-cloud"></a>Tâche 1 : Configurer Microsoft Defender pour le cloud
+#### Tâche 1 : Configurer Microsoft Defender pour le cloud
 
 Dans cette tâche, vous allez démarrer Microsoft Defender pour le cloud et le configurer.
 
@@ -48,11 +48,11 @@ Dans cette tâche, vous allez démarrer Microsoft Defender pour le cloud et le c
 
 2. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents** en haut de la page Portail Azure, tapez **Microsoft Defender pour le cloud** et appuyez sur la touche **Entrée**.
 
-3. Si cela n'a pas été fait précédemment, dans le volet **Prise en main\| de Microsoft Defender pour le cloud**, cliquez sur **Mettre à niveau**.
+3. Dans le volet **Microsoft Defender pour le cloud \| Prise en main**, cliquez sur **Mettre à niveau**.
      
-4. Si cela n'a pas été fait précédemment, dans le volet **Prise en main\| de Microsoft Defender pour le cloud**, sous l’onglet **Installer des agents**, faites défiler vers le bas et cliquez sur **Installer des agents**.
+4. Dans le volet **Microsoft Defender pour le cloud \| Prise en main**, sous l’onglet Installer des agents, faites défiler vers le bas et cliquez sur Installer des agents. 
 
-5. Dans le volet **Prise en main\| de Microsoft Defender pour le cloud**, sous l’onglet **Mettre à niveau** >> dans la section **Sélectionner des espaces de travail avec des fonctionnalités de sécurité renforcée** >> activez le **plan Microsoft Defender** en sélectionnant votre espace de travail Log Analytics. 
+5. Dans le volet **Microsoft Defender pour le cloud \| Prise en main**, sous l’onglet **Mettre à niveau** >> faites défiler jusqu’à la section **Sélectionner des espaces de travail avec des fonctionnalités de sécurité renforcée** >> activez le **plan Microsoft Defender** en sélectionnant votre espace de travail Log Analytics, puis cliquez sur le grand bouton bleu Mettre à niveau.  
 
     >**Remarque** : passez en revue toutes les fonctionnalités disponibles dans le cadre des plans Microsoft Defender. 
 
@@ -62,13 +62,13 @@ Dans cette tâche, vous allez démarrer Microsoft Defender pour le cloud et le c
 
 8. Dans le volet **Plans Defender**, sélectionnez **Activer tous les plans Microsoft Defender pour le cloud**.
 
-9. Revenez au volet **Microsoft Defender pour le cloud \|Paramètres d’environnement**, développez votre abonnement, puis cliquez sur l’entrée représentant l’espace de travail Log Analytics que vous avez créé dans le labo précédent.
+9. Revenez au volet **Microsoft Defender pour le cloud \| Paramètres d’environnement**, développez jusqu’à voir votre abonnement, puis cliquez sur l’entrée représentant l’espace de travail Log Analytics que vous avez créé dans le labo précédent.
 
 10. Dans le volet **Paramètres \| Plans Defender**, vérifiez que l’option **Activer tous les plans Microsoft Defender pour le cloud** est sélectionnée.
 
 11. Sélectionnez **Collecte de données** dans le volet **Paramètres\| Microsoft Defender pour le cloud**. Sélectionnez **Tous les événements** et **enregistrez**.
 
-#### <a name="task-2-review-the-microsoft-defender-for-cloud-recommendation"></a>Tâche 2 : Passer en revue les recommandations de Microsoft Defender pour le cloud
+#### Tâche 2 : Passer en revue les recommandations de Microsoft Defender pour le cloud
 
 Dans cette tâche, vous passerez en revue les recommandations de Microsoft Defender pour le cloud. 
 
@@ -86,11 +86,11 @@ Dans cette tâche, vous passerez en revue les recommandations de Microsoft Defen
     
 5. Dans le volet **Intégrité des ressources**, sous l’onglet **Recommandations**, passez en revue la liste des recommandations pour **myVM**.
 
-#### <a name="task-3-implement-the-microsoft-defender-for-cloud-recommendation-to-enable-just-in-time-vm-access"></a>Tâche 3 : Implémenter la recommandation Microsoft Defender pour le cloud pour activer l’accès Juste à temps à la machine virtuelle
+#### Tâche 3 : Implémenter la recommandation Microsoft Defender pour le cloud pour activer l’accès Juste à temps à la machine virtuelle
 
 Dans cette tâche, vous allez implémenter la recommandation Microsoft Defender pour le cloud pour activer l’accès Juste à temps à la machine virtuelle sur la machine virtuelle. 
 
-1. Dans le portail Azure, revenez au volet **Microsoft Defender pour le cloud | Vue d’ensemble**, puis sélectionnez les **protections de charge de travail** sous la partie **Sécurité cloud**.
+1. Dans le portail Azure, revenez au volet **Microsoft Defender pour le cloud \| Vue d’ensemble**, puis sélectionnez les **protections de charge de travail** sous la partie **Sécurité cloud**.
 
 2. Dans le volet **Protections de charge de travail**, dans la section **Protection avancée**, cliquez sur la vignette **Accès Juste à temps à la machine virtuelle** et, dans le volet **Accès Juste à temps à la machine virtuelle**.
 
