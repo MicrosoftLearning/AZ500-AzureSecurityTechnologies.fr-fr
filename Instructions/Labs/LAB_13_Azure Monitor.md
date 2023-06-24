@@ -4,10 +4,10 @@ lab:
   module: Module 04 - Manage security operations
 ---
 
-# <a name="lab-13-azure-monitor"></a>Labo 13 : Azure Monitor
-# <a name="student-lab-manual"></a>Manuel de labos pour étudiant
+# Labo 13 : Azure Monitor
+# Manuel de labos pour étudiant
 
-## <a name="lab-scenario"></a>Scénario du labo
+## Scénario du labo
 
 Vous avez été invité à créer une preuve de concept de surveillance des performances des machines virtuelles. Plus précisément, vous souhaitez :
 
@@ -17,21 +17,21 @@ Vous avez été invité à créer une preuve de concept de surveillance des perf
 
 > Pour toutes les ressources de ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser. 
 
-## <a name="lab-objectives"></a>Objectifs du labo
+## Objectifs du labo
 
 Dans ce labo, vous effectuerez les exercices suivants :
 
 - Exercice 1 : Collecter des données à partir d’une machine virtuelle Azure avec Azure Monitor
 
-## <a name="azure-monitor"></a>Azure Monitor
+## Azure Monitor
 
 ![image](https://user-images.githubusercontent.com/91347931/157536648-0a286514-a7e2-4058-9dea-e42da21eef76.png)
 
-## <a name="instructions"></a>Instructions
+## Instructions
 
-### <a name="exercise-1-collect-data-from-an-azure-virtual-machine-with-azure-monitor"></a>Exercice 1 : Collecter des données à partir d’une machine virtuelle Azure avec Azure Monitor
+### Exercice 1 : Collecter des données à partir d’une machine virtuelle Azure avec Azure Monitor
 
-### <a name="exercise-timing-20-minutes"></a>Durée de l’exercice : 20 minutes
+### Durée de l’exercice : 20 minutes
 
 Dans cet exercice, vous allez effectuer les tâches suivantes : 
 
@@ -41,7 +41,7 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 - Tâche 4 : Collecter des données de performances et d’événement de machine virtuelle
 - Tâche 5 : Afficher et interroger des données collectées 
 
-#### <a name="task-1-deploy-an-azure-virtual-machine"></a>Tâche 1 : Déployer une machine virtuelle Azure
+#### Tâche 1 : Déployer une machine virtuelle Azure
 
 1. Connectez-vous au portail Azure **`https://portal.azure.com/`** .
 
@@ -82,7 +82,7 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 
 8. Fermez le volet Cloud Shell. 
 
-#### <a name="task-2-create-a-log-analytics-workspace"></a>Tâche 2 : Créer un espace de travail Log Analytics
+#### Tâche 2 : Créer un espace de travail Log Analytics
 
 Dans cette tâche, vous allez créer un espace de travail Log Analytics. 
 
@@ -103,7 +103,7 @@ Dans cette tâche, vous allez créer un espace de travail Log Analytics.
 
 5. Dans l’onglet **Vérifier + créer** du volet **Créer un espace de travail Log Analytics**, sélectionnez **Créer**.
 
-#### <a name="task-3-enable-the-log-analytics-virtual-machine-extension"></a>Tâche 3 : Activer l’extension de machine virtuelle Log Analytics
+#### Tâche 3 : Activer l’extension de machine virtuelle Log Analytics
 
 Dans cette tâche, vous allez activer l’extension de machine virtuelle Log Analytics. Cette extension installe l’agent Log Analytics sur les machines virtuelles Windows et Linux. Cet agent collecte les données de la machine virtuelle et les transfère à l’espace de travail Log Analytics que vous désignez. Une fois l’agent installé, il est automatiquement mis à niveau pour vous assurer que vous disposez toujours des dernières fonctionnalités et correctifs. 
 
@@ -121,7 +121,7 @@ Dans cette tâche, vous allez activer l’extension de machine virtuelle Log Ana
 
     >**Remarque** : Elle peut prendre quelques minutes. **L’état** affiché dans le volet **myVM** passera de **Connexion en cours** à **Cet espace de travail**. 
 
-#### <a name="task-4-collect-virtual-machine-event-and-performance-data"></a>Tâche 4 : Collecter des données de performances et d’événement de machine virtuelle
+#### Tâche 4 : Collecter des données de performances et d’événement de machine virtuelle
 
 Dans cette tâche, vous allez configurer la collection du journal système Windows et plusieurs compteurs de performances courants. Vous examinerez également d’autres sources disponibles.
 
@@ -148,7 +148,7 @@ Dans cette tâche, vous allez configurer la collection du journal système Windo
   
 7. Dans le volet **Configuration des agents**, cliquez sur **Appliquer**.
 
-#### <a name="task-5-view-and-query-collected-data"></a>Tâche 5 : Afficher et interroger des données collectées
+#### Tâche 5 : Afficher et interroger des données collectées
 
 Dans cette tâche, vous allez exécuter une recherche dans les journaux sur votre collecte de données. 
 
@@ -192,5 +192,5 @@ Dans cette tâche, vous allez exécuter une recherche dans les journaux sur votr
 
 **Nettoyer les ressources**
 
->**Remarque** : ne supprimez pas les ressources de ce labo, car elles sont nécessaires pour le labo Azure Security Center et le labo Azure Sentinel.
+>**Remarque** : Ne supprimez pas les ressources de ce labo, car elles sont nécessaires pour le labo Microsoft Defender pour le cloud et le labo Microsoft Sentinel.
  

@@ -4,10 +4,10 @@ lab:
   module: Module 03 - Secure data and applications
 ---
 
-# <a name="lab-11-securing-azure-sql-database"></a>Labo 11 : Sécurisation d’Azure SQL Database
-# <a name="student-lab-manual"></a>Manuel de labo pour l’étudiant
+# Labo 11 : Sécurisation d’Azure SQL Database
+# Manuel de labo pour l’étudiant
 
-## <a name="lab-scenario"></a>Scénario du labo
+## Scénario du labo
 
 Vous avez été invité à examiner les fonctionnalités de sécurité pour Azure SQL Database. Plus précisément, vos domaines d'intérêt sont les suivants :
 
@@ -17,25 +17,25 @@ Vous avez été invité à examiner les fonctionnalités de sécurité pour Azur
 
 > Pour toutes les ressources dans ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser. 
 
-## <a name="lab-objectives"></a>Objectifs du labo
+## Objectifs du labo
 
 Dans ce labo, vous allez effectuer l’exercice suivant :
 
 - Exercice 1 : Mettre en œuvre les fonctions de sécurité de SQL Database
 
-## <a name="securing-azure-sql-database-diagram"></a>Schéma de sécurisation d’Azure SQL Database
+## Schéma de sécurisation d’Azure SQL Database
 
 ![image](https://user-images.githubusercontent.com/91347931/157533836-7250fa58-a109-4882-a55b-d3fa3baf34ab.png)
 
-## <a name="instructions"></a>Instructions
+## Instructions
 
-## <a name="lab-files"></a>Fichiers du labo :
+## Fichiers du labo :
 
 - **\\Allfiles\\Labs\\11\\azuredeploy.json**
 
-### <a name="exercise-1-implement-sql-database-security-features"></a>Exercice 1 : Mettre en œuvre les fonctions de sécurité de SQL Database
+### Exercice 1 : Mettre en œuvre les fonctions de sécurité de SQL Database
 
-### <a name="estimated-timing-30-minutes"></a>Durée estimée : 30 minutes
+### Durée estimée : 30 minutes
 
 Dans cet exercice, vous allez effectuer les tâches suivantes :
 
@@ -44,7 +44,7 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 - Tâche 3 : Configurer la classification des données
 - Tâche 4 : Configurer l’audit
 
-#### <a name="task-1-deploy-an-azure-sql-database"></a>Tâche 1 : Déployer une base de données Azure SQL Database
+#### Tâche 1 : Déployer une base de données Azure SQL Database
 
 Dans cette tâche, vous allez utiliser un modèle pour déployer l’infrastructure du labo. 
 
@@ -66,7 +66,7 @@ Dans cette tâche, vous allez utiliser un modèle pour déployer l’infrastruct
 
    |Paramètre|Valeur|
    |---|---|
-   |Abonnement|Nom de l’abonnement Azure que vous utilisez dans ce labo|
+   |Abonnement|le nom de l’abonnement Azure que vous utilisez dans ce labo|
    |Resource group|Cliquez sur **Créer** et tapez le nom **AZ500LAB11**.|
    |Emplacement|**(États-Unis) USA Est**|
 
@@ -74,7 +74,7 @@ Dans cette tâche, vous allez utiliser un modèle pour déployer l’infrastruct
 
     >**Remarque** : Attendez la fin du déploiement. 
 
-#### <a name="task-2-configure-advanced-data-protection"></a>Tâche 2 : Configurer la protection avancée des données
+#### Tâche 2 : Configurer la protection avancée des données
 
 1. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents** en haut de la page, tapez **Groupes de ressources**, puis appuyez sur la touche **Entrée**.
 
@@ -82,24 +82,22 @@ Dans cette tâche, vous allez utiliser un modèle pour déployer l’infrastruct
 
 3. Dans le volet **AZ500LAB11**, cliquez sur l’entrée représentant le nouveau SQL Server.
 
-4. Dans le volet SQL Server, dans la section **Sécurité**, cliquez sur **Microsoft Defender pour le cloud**. Descendez jusqu’à la fin de la page **Bien démarrer** et sélectionnez **Mettre à niveau**. Sous l’onglet **Installer des agents**, sélectionnez **Installer des agents**.
-
-5. Dans le volet SQL Server, dans la section **Sécurité**, cliquez sur **Microsoft Defender pour le cloud**, sélectionnez **Activer Microsoft Defender pour SQL**.
+4. Dans le volet SQL Server, dans la section **Sécurité**, cliquez sur **Microsoft Defender pour le cloud**, sélectionnez **Activer Microsoft Defender pour SQL**.
 
       >**Remarque** : attendez que la notification indique qu’Azure Defender pour SQL a été activée.
 
-6. Dans le volet SQL Server, dans la section **Sécurité**, dans la page **Microsoft Defender pour le cloud**, dans le paramètre **Microsoft Defender pour SQL : Activé au niveau serveur (configurer)** , cliquez sur **(configurer)** .   
+5. Dans le volet SQL Server, dans la section **Sécurité**, dans la page **Microsoft Defender pour le cloud**, dans le paramètre **Microsoft Defender pour SQL : Activé au niveau abonnement (configurer)** , cliquez sur **(configurer)** .  
 
       >**Remarque** : actualisez le navigateur si **(configurer)** n’est pas affiché.
     
-7. Dans le volet **Paramètres Server**, passez en revue les informations sur la tarification et la période d’évaluation, les **PARAMÈTRES D’ÉVALUATION DES VULNÉRABILITÉS** et les **PARAMÈTRES ADVANCED THREAT PROTECTION**.
+6. Dans le volet **Paramètres Server**, passez en revue les informations sur la tarification et la période d’évaluation, les **PARAMÈTRES D’ÉVALUATION DES VULNÉRABILITÉS** et les **PARAMÈTRES ADVANCED THREAT PROTECTION**.
 
-8. Revenez au volet **Microsoft Defender pour le cloud**, passez en revue les **Recommandations** et les alertes de **sécurité**.
+7. Revenez au volet **Microsoft Defender pour le cloud**, passez en revue les **Recommandations** et les alertes de **sécurité**.
 
       >**Remarque** : il peut s’écouler entre 10 et 15 minutes pour que les recommandations apparaissent dans le panneau **Microsoft Defender pour le cloud**. Au lieu d’attendre, passez à la tâche suivante, mais envisagez de revenir à ce panneau une fois que vous avez terminé toutes les tâches restantes.
 
 
-#### <a name="task-3-configure-data-classification"></a>Tâche 3 : Configurer la classification des données
+#### Tâche 3 : Configurer la classification des données
 
 Dans cette tâche, vous allez découvrir et classer des informations dans une base de données SQL pour la conformité RGPD et la protection des données.
 
@@ -129,7 +127,7 @@ Dans cette tâche, vous allez découvrir et classer des informations dans une ba
 
 9. Revenez à l’onglet **Vue d’ensemble** du volet **Découverte de données & classification**, notez qu’il a été mis à jour pour tenir compte des dernières informations de classification. 
 
-#### <a name="task-4--configure-auditing"></a>Tâche 4 : Configurer l’audit 
+#### Tâche 4 : Configurer l’audit 
 
 Dans cette tâche, vous allez d’abord configurer l’audit au niveau serveur, puis configurer l’audit au niveau de la base de données. 
 

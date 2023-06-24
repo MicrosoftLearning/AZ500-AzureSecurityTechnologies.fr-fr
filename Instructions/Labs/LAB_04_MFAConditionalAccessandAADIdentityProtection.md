@@ -1,23 +1,23 @@
 ---
 lab:
-  title: '04 - MFA, accès conditionnel et protection des identités AAD'
+  title: 04 - MFA et Accès conditionnel
   module: Module 01 - Manage Identity and Access
 ---
 
-# <a name="lab-04-mfa-conditional-access-and-aad-identity-protection"></a>Labo 4 : MFA, accès conditionnel et protection des identités AAD
-# <a name="student-lab-manual"></a>Manuel de labo pour l’étudiant
+# Labo 04 : MFA et Accès conditionnel
+# Manuel de labo de l’étudiant
 
-## <a name="lab-scenario"></a>Scénario du labo
+## Scénario du labo
 
 Vous avez été invité à créer une preuve de concept de fonctionnalités qui améliorent l’authentification Azure Active Directory (Azure AD). Plus précisément, vous souhaitez évaluer :
 
 - Authentification multifacteur Azure AD
 - Accès conditionnel Azure AD
-- Azure AD Identity Protection
+- Stratégies d’accès conditionnel Azure AD basées sur les risques
 
 > Pour toutes les ressources dans ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser. 
 
-## <a name="lab-objectives"></a>Objectifs du labo
+## Objectifs du labo
 
 Dans ce labo, vous allez effectuer les exercices suivants :
 
@@ -26,26 +26,26 @@ Dans ce labo, vous allez effectuer les exercices suivants :
 - Exercice 3 : Implémenter des stratégies d’accès conditionnel Azure AD 
 - Exercice 4 : Implémenter Azure AD Identity Protection
 
-## <a name="mfa---conditional-access---identity-protection-diagram"></a>Authentification multifacteur - Accès conditionnel - Schéma de protection de l’identité
+## Authentification multifacteur - Accès conditionnel - Schéma de protection de l’identité
 
 ![image](https://user-images.githubusercontent.com/91347931/157518628-8b4a9efe-0086-4ec0-825e-3d062748fa63.png)
 
-## <a name="instructions"></a>Instructions
+## Instructions
 
-## <a name="lab-files"></a>Fichiers du labo :
+## Fichiers du labo :
 
 - **\\Allfiles\\Labs\\04\\az-500-04_azuredeploy.json**
 - **\\Allfiles\\Labs\\04\\az-500-04_azuredeploy.parameters.json** 
 
-### <a name="exercise-1-deploy-an-azure-vm-by-using-an-azure-resource-manager-template"></a>Exercice 1 : Déployer une machine virtuelle Azure en utilisant un modèle Azure Resource Manager
+### Exercice 1 : Déployer une machine virtuelle Azure en utilisant un modèle Azure Resource Manager
 
-### <a name="estimated-timing-10-minutes"></a>Durée estimée : 10 minutes
+### Durée estimée : 10 minutes
 
 Dans cet exercice, vous allez effectuer les tâches suivantes :
 
 - Tâche 1 : Déployer une machine virtuelle Azure en utilisant un modèle Azure Resource Manager.
 
-#### <a name="task-1-deploy-an-azure-vm-by-using-an-azure-resource-manager-template"></a>Tâche 1 : Déployer une machine virtuelle Azure en utilisant un modèle Azure Resource Manager
+#### Tâche 1 : Déployer une machine virtuelle Azure en utilisant un modèle Azure Resource Manager
 
 Dans cette tâche, vous allez créer une machine virtuelle à l’aide d’un modèle ARM. Cette machine virtuelle sera utilisée dans le dernier exercice de ce labo. 
 
@@ -79,7 +79,7 @@ Dans cette tâche, vous allez créer une machine virtuelle à l’aide d’un mo
 
    |Paramètre|Valeur|
    |---|---|
-   |Abonnement|Nom de l’abonnement Azure que vous utilisez dans ce labo|
+   |Abonnement|le nom de l’abonnement Azure que vous utilisez dans ce labo|
    |Resource group|Cliquez sur **Créer** et tapez le nom **AZ500LAB04**|
    |Emplacement|**USA Est**|
    |Taille de machine virtuelle|**Standard_D2s_v3**|
@@ -97,9 +97,9 @@ Dans cette tâche, vous allez créer une machine virtuelle à l’aide d’un mo
 > Résultat : vous avez lancé un déploiement de modèle d’une machine virtuelle Azure **az500-04-vm1** que vous utiliserez dans le dernier exercice de ce labo.
 
 
-### <a name="exercise-2-implement-azure-mfa"></a>Exercice 2 : Implémenter Azure MFA
+### Exercice 2 : Implémenter Azure MFA
 
-### <a name="estimated-timing-30-minutes"></a>Durée estimée : 30 minutes
+### Durée estimée : 30 minutes
 
 Dans cet exercice, vous effectuez les tâches suivantes
 
@@ -110,7 +110,7 @@ Dans cet exercice, vous effectuez les tâches suivantes
 - Tâche 5 : Configurer les paramètres de l’authentification multifacteur Azure.
 - Tâche 6 : Valider la configuration de l’authentification multifacteur
 
-#### <a name="task-1-create-a-new-azure-ad-tenant"></a>Tâche 1 : Créer un nouveau locataire Azure AD
+#### Tâche 1 : Créer un nouveau locataire Azure AD
 
 Dans cette tâche, vous allez créer un locataire Azure AD. 
 
@@ -136,7 +136,7 @@ Dans cette tâche, vous allez créer un locataire Azure AD.
     >**Remarque** : Attendez que le nouveau locataire soit créé. Utilisez l’icône **Notification** pour surveiller l’état du déploiement. 
 
 
-#### <a name="task-2-activate-azure-ad-premium-p2-trial"></a>Tâche 2 : Activer l’essai Azure AD Premium P2
+#### Tâche 2 : Activer l’essai Azure AD Premium P2
 
 Dans cette tâche, vous allez vous inscrire à l’évaluation gratuite d’Azure AD Premium P2. 
 
@@ -153,19 +153,19 @@ Dans cette tâche, vous allez vous inscrire à l’évaluation gratuite d’Azur
 5. Dans le volet **Activer**, dans la section Azure AD Premium P2, cliquez sur **Évaluation gratuite**, puis sur **Activer**.
 
 
-#### <a name="task-3-create-azure-ad-users-and-groups"></a>Tâche 3 : Créer des utilisateurs et des groupes Azure AD.
+#### Tâche 3 : Créer des utilisateurs et des groupes Azure AD.
 
 Dans cette tâche, vous allez créer trois utilisateurs : aaduser1 (Administrateur global), aaduser2 (utilisateur) et aaduser3 (utilisateur). Vous aurez besoin du nom d’utilisateur principal et du mot de passe de chaque utilisateur pour les tâches ultérieures. 
 
 1. Revenez au volet **AdatumLab500-04 Azure Active Directory** et, dans la section **Gérer**, cliquez sur **Utilisateurs**.
 
-2. Dans le volet **Utilisateurs \| Tous les utilisateurs**, cliquez sur **+Nouvel utilisateur**. 
+2. Dans le volet **Utilisateurs | Tous les utilisateurs**, cliquez sur **+ Nouvel utilisateur**, puis sur **Créer un utilisateur**. 
 
 3. Dans le volet **Nouvel utilisateur**, assurez-vous que l’option **Créer un utilisateur** est sélectionnée et spécifiez les paramètres suivants (laissez les autres paramètres avec leurs valeurs par défaut) et cliquez sur **Créer** :
 
    |Paramètre|Valeur|
    |---|---|
-   |Nom d’utilisateur|**aaduser1**|
+   |Nom d’utilisateur principal|**aaduser1**|
    |Nom|**aaduser1**|
    |Mot de passe|vérifiez que l’option **Générer automatiquement un mot de passe** est cochée et cliquez sur **Afficher le mot de passe**|
    |Groupes|**0 groupes sélectionnés**|
@@ -178,37 +178,33 @@ Dans cette tâche, vous allez créer trois utilisateurs : aaduser1 (Administrat
 
 4. Revenez dans le volet **Utilisateurs \| Tous les utilisateurs**, cliquez sur **+Nouvel utilisateur**. 
 
-5. Dans le volet **Nouvel utilisateur**, assurez-vous que l’option **Créer un utilisateur** est sélectionnée et spécifiez les paramètres suivants (laissez les autres paramètres avec leurs valeurs par défaut) :
+5. Dans le volet **Nouvel utilisateur**, vérifiez que l’option **Créer un utilisateur** est sélectionnée, spécifiez les paramètres suivants (laissez les autres paramètres avec leurs valeurs par défaut) et cliquez sur **Créer**.
 
    |Paramètre|Valeur|
    |---|---|
-   |Nom d’utilisateur|**aaduser2**|
+   |Nom d’utilisateur principal|**aaduser2**|
    |Nom|**aaduser2**|
    |Mot de passe|vérifiez que l’option **Générer automatiquement un mot de passe** est cochée et cliquez sur **Afficher le mot de passe**|
-   |Groupes|**0 groupes sélectionnés**|
-   |Rôles|**Utilisateur**|
    |Emplacement d’utilisation|**États-Unis**|  
 
     >**Remarque** : Notez le nom d’utilisateur complet et le mot de passe.
 
 6. Revenez dans le volet **Utilisateurs \| Tous les utilisateurs**, cliquez sur **+Nouvel utilisateur**. 
 
-7. Cliquez sur **Nouvel utilisateur**, complétez les nouveaux paramètres de configuration utilisateur, puis cliquez sur **Créer**.
+7. Dans le volet **Nouvel utilisateur**, vérifiez que l’option **Créer un utilisateur** est sélectionnée, spécifiez les paramètres suivants (laissez les autres paramètres avec leurs valeurs par défaut) et cliquez sur **Créer**. 
 
    |Paramètre|Valeur|
    |---|---|
-   |Nom d’utilisateur|**aaduser3**|
+   |Nom d’utilisateur principal|**aaduser3**|
    |Nom|**aaduser3**|
    |Mot de passe|vérifiez que l’option **Générer automatiquement un mot de passe** est cochée et cliquez sur **Afficher le mot de passe**|
-   |Groupes|**0 groupes sélectionnés**|
-   |Rôles|**Utilisateur**|
    |Emplacement d’utilisation|**États-Unis**|  
 
     >**Remarque** : Notez le nom d’utilisateur complet et le mot de passe.
 
     >**Remarque** : À ce stade, vous devez disposer de trois nouveaux utilisateurs répertoriés sur la page **Utilisateurs** . 
     
-#### <a name="task-4-assign-azure-ad-premium-p2-licenses-to-azure-ad-users"></a>Tâche 4 : Affecter des licences Azure AD Premium P2 aux utilisateurs Azure AD
+#### Tâche 4 : Affecter des licences Azure AD Premium P2 aux utilisateurs Azure AD
 
 Dans cette tâche, vous allez affecter chaque utilisateur à la licence Azure Active Directory Premium P2.
 
@@ -230,7 +226,7 @@ Dans cette tâche, vous allez affecter chaque utilisateur à la licence Azure Ac
 
     >**Remarque** : À ce stade, vous avez attribué Azure Active Directory Premium P2 licences à tous les comptes d’utilisateur que vous utiliserez dans ce laboratoire. Veillez à vous déconnecter, puis à vous reconnecter. 
 
-#### <a name="task-5-configure-azure-mfa-settings"></a>Tâche 5 : Configurer les paramètres de l’authentification multifacteur Azure.
+#### Tâche 5 : Configurer les paramètres de l’authentification multifacteur Azure.
 
 Dans cette tâche, vous allez configurer l’authentification multifacteur et activer l’authentification multifacteur pour aaduser1. 
 
@@ -284,7 +280,7 @@ Dans cette tâche, vous allez configurer l’authentification multifacteur et ac
 
     >**Remarque** : vérifiez que vous êtes connecté au locataire Azure AD **AdatumLab500-04**. Vous pouvez utiliser le filtre **Annuaire + abonnement** pour basculer entre les locataires Azure AD. Vérifiez que vous êtes connecté en tant qu’utilisateur avec le rôle Administrateur général dans le locataire Azure AD.
 
-#### <a name="task-6-validate-mfa-configuration"></a>Tâche 6 : Valider la configuration de l’authentification multifacteur
+#### Tâche 6 : Valider la configuration de l’authentification multifacteur
 
 Dans cette tâche, vous allez valider la configuration de l’authentification multifacteur en testant la connexion du compte d’utilisateur aaduser1. 
 
@@ -317,16 +313,16 @@ Dans cette tâche, vous allez valider la configuration de l’authentification m
 > Résultat : vous avez créé un locataire AD, configuré des utilisateurs AD, configuré MFA et testé l’expérience MFA pour un utilisateur. 
 
 
-### <a name="exercise-3-implement-azure-ad-conditional-access-policies"></a>Exercice 3 : Implémenter des stratégies d’accès conditionnel Azure AD 
+### Exercice 3 : Implémenter des stratégies d’accès conditionnel Azure AD 
 
-### <a name="estimated-timing-15-minutes"></a>Durée estimée : 15 minutes
+### Durée estimée : 15 minutes
 
 Dans cet exercice, vous effectuez les tâches suivantes 
 
 - Tâche 1 : Configurer une stratégie d’accès conditionnel.
 - Tâche 2 : Tester la stratégie d’accès conditionnel.
 
-#### <a name="task-1---configure-a-conditional-access-policy"></a>Tâche 1 : configurer une stratégie d’accès conditionnel. 
+#### Tâche 1 : configurer une stratégie d’accès conditionnel. 
 
 Dans cette tâche, vous allez examiner les paramètres de stratégie d’accès conditionnel et créer une stratégie qui requiert l’authentification MFA lors de la connexion au Portail Azure. 
 
@@ -362,7 +358,7 @@ Dans cette tâche, vous allez examiner les paramètres de stratégie d’accès 
 
     >**Remarque** : À ce stade, vous disposez d’une stratégie d’accès conditionnel qui nécessite l’authentification multifacteur pour se connecter au Portail Azure. 
 
-#### <a name="task-2---test-the-conditional-access-policy"></a>Tâche 2 - Tester la stratégie d’accès conditionnel.
+#### Tâche 2 - Tester la stratégie d’accès conditionnel.
 
 Dans cette tâche, vous allez vous connecter au Portail Azure en tant que **aaduser2** et vérifier que l’authentification multifacteur est requise. Vous allez également supprimer la stratégie avant de passer à l’exercice suivant. 
 
@@ -404,9 +400,9 @@ Dans cette tâche, vous allez vous connecter au Portail Azure en tant que **aadu
 
 >Résultat : Vous avez configuré et testé l’accès conditionnel Azure AD.
 
-### <a name="exercise-4-implement-azure-ad-identity-protection"></a>Exercice 4 : Implémenter Azure AD Identity Protection
+### Exercice 4 : Déployer des stratégies basées sur les risques dans l’Accès conditionnel
 
-### <a name="estimated-timing-30-minutes"></a>Durée estimée : 30 minutes
+### Durée estimée : 30 minutes
 
 Dans cet exercice, vous effectuez les tâches suivantes 
 
@@ -416,7 +412,7 @@ Dans cet exercice, vous effectuez les tâches suivantes
 - Tâche 4 : Simuler des événements à risque par rapport aux stratégies Azure AD Identity Protection 
 - Tâche 5 : Examiner les rapports Azure AD Identity Protection
 
-#### <a name="task-1-enable-azure-ad-identity-protection"></a>Tâche 1 : Activer Azure AD Identity Protection
+#### Tâche 1 : Activer Azure AD Identity Protection
 
 Dans cette tâche, vous allez consulter les options d’Azure AD Identity Protection dans le Portail Azure. 
 
@@ -424,7 +420,7 @@ Dans cette tâche, vous allez consulter les options d’Azure AD Identity Protec
 
     >**Remarque** : vérifiez que vous êtes connecté au locataire Azure AD **AdatumLab500-04**. Vous pouvez utiliser le filtre **Annuaire + abonnement** pour basculer entre les locataires Azure AD. Vérifiez que vous êtes connecté en tant qu’utilisateur avec le rôle Administrateur général dans le locataire Azure AD.
 
-#### <a name="task-2-configure-a-user-risk-policy"></a>Tâche 2 : Configurer une stratégie de risque utilisateur
+#### Tâche 2 : Configurer une stratégie de risque utilisateur
 
 Dans cette tâche, vous allez créer une stratégie de risque utilisateur. 
 
@@ -472,7 +468,7 @@ Dans cette tâche, vous allez créer une stratégie de risque utilisateur.
 
 22. Cliquez sur **Créer** pour activer votre stratégie.
 
-#### <a name="task-3-configure-a-sign-in-risk-policy"></a>Tâche 3 : Configurer une stratégie de connexion à risque
+#### Tâche 3 : Configurer une stratégie de connexion à risque
 
 1. Accédez à **AdatumLab500-04** Locataire Azure AD >**Sécurité** > **Accès conditonnel**.
 
@@ -508,7 +504,7 @@ Dans cette tâche, vous allez créer une stratégie de risque utilisateur.
 
 16. Cliquez sur **Créer** pour activer votre stratégie.
 
-#### <a name="task-4-simulate-risk-events-against-the-azure-ad-identity-protection-policies"></a>Tâche 4 : Simuler des événements à risque par rapport aux stratégies Azure AD Identity Protection 
+#### Tâche 4 : Simuler des événements à risque par rapport aux stratégies Azure AD Identity Protection 
 
 > Avant de commencer cette tâche, vérifiez que le déploiement de modèle que vous avez démarré dans l’exercice 1 de ce labo est terminé. Le déploiement inclut une machine virtuelle Azure nommée **az500-04-vm1**. 
 
@@ -559,7 +555,7 @@ Dans cette tâche, vous allez créer une stratégie de risque utilisateur.
 
     >**Remarque** : À ce stade, vous avez essayé deux méthodes de connexion. Vous allez ensuite examinez les rapports Azure AD Identity Protection.
 
-#### <a name="task-5-review-the-azure-ad-identity-protection-reports"></a>Tâche 5 : Examiner les rapports Azure AD Identity Protection
+#### Tâche 5 : Examiner les rapports Azure AD Identity Protection
 
 Dans cette tâche, vous allez examiner les rapports Azure AD Identity Protection générés suite aux connexions via le navigateur ToR.
 
@@ -597,11 +593,11 @@ Utilisez les étapes suivantes pour désactiver les stratégies de protection de
 
 4. Dans le volet **Vue d’ensemble de Identity Protection\|** , cliquez sur **Stratégie de risque utilisateur**.
 
-5. Dans le volet **Stratégie de risque de l’utilisateur Identity Protection\|** , définissez **Appliquer la stratégie** sur **Désactivé**, puis cliquez sur **Enregistrer**.
+5. Dans le volet **Identity Protection \| Stratégie d’utilisateur à risque**, définissez **Appliquer la stratégie** sur **Désactivé**, puis cliquez sur **Enregistrer**.
 
 6. Dans le volet **Stratégie de risque utilisateur Identity Protection\|** , cliquez sur **Stratégie de risque de connexion**.
 
-7. Dans le volet **Stratégie de risque de connexion Identity Protection\|** , définissez **Appliquer la stratégie** sur **Désactivé**, puis cliquez sur **Enregistrer**.
+7. Dans le volet **Identity Protection \| Stratégie de connexion à risque**, définissez **Appliquer la stratégie** sur **Désactivé**, puis cliquez sur **Enregistrer**.
 
 Suivez les étapes suivantes pour arrêter la machine virtuelle Azure que vous avez approvisionnée précédemment dans le laboratoire.
 
