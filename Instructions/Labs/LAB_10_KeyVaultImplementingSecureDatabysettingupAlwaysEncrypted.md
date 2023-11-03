@@ -16,7 +16,7 @@ Vous avez été invité à créer une application de preuve de concept qui utili
 
 >**Remarque** : Pour toutes les ressources utilisées dans ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser pour la classe. 
 
-Pour rester concentré sur les aspects de sécurité d’Azure liés à l’élaboration de cette preuve de concept, vous allez partir d’un déploiement de modèle ARM automatisé, en configurant une machine virtuelle avec Visual Studio 2019 et SQL Server Management Studio 2018.
+Pour rester concentré sur les aspects de sécurité d’Azure liés à l’élaboration de cette preuve de concept, vous allez partir d’un déploiement automatisé du modèle ARM, en configurant une machine virtuelle avec Visual Studio 2019 et SQL Server Management Studio 19.
 
 ## Objectifs du labo
 
@@ -49,7 +49,7 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 
 #### Tâche 1 : Déployer une machine virtuelle et une base de données Azure SQL
 
-Dans cette tâche, vous allez déployer une machine virtuelle Azure qui installera automatiquement Visual Studio 2019 et SQL Server Management Studio 2018 dans le cadre du déploiement. 
+Dans cette tâche, vous allez déployer une machine virtuelle Azure qui va installer automatiquement Visual Studio 2019 et SQL Server Management Studio 19 dans le cadre du déploiement. 
 
 1. Connectez-vous au portail Azure **`https://portal.azure.com/`** .
 
@@ -221,7 +221,7 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 - Tâche 1 : Autoriser votre application cliente à accéder au service Azure SQL Database
 - Tâche 2 : Créez une stratégie permettant à l’application d’accéder au Key Vault
 - Tâche 3 : Récupérer une chaîne de connexion ADO.NET de base de données SQL Azure 
-- Tâche 4 : Se connecter à la machine virtuelle Azure exécutant Visual Studio 2019 et SQL Management Studio 2018
+- Tâche 4 : Se connecter à la machine virtuelle Azure exécutant Visual Studio 2019 et SQL Management Studio 19
 - Tâche 5 : Créer une table dans la base de données SQL et sélectionner des colonnes de données pour chiffrement
 
 
@@ -315,9 +315,9 @@ Le déploiement de modèle ARM dans l’exercice 1 a approvisionné une instance
 
     >**Remarque** : lorsque vous utilisez la chaîne de connexion, veillez à remplacer l’espace réservé `{your_password}` par le mot de passe que vous avez configuré avec le déploiement dans l’Exercice 1.
 
-#### Tâche 4 : Se connecter à la machine virtuelle Azure exécutant Visual Studio 2019 et SQL Management Studio 2018
+#### Tâche 4 : Se connecter à la machine virtuelle Azure exécutant Visual Studio 2019 et SQL Management Studio 19
 
-Dans cette tâche, vous allez vous connecter à la machine virtuelle Azure dont vous avez lancé le déploiement dans l’Exercice 1. Cette machine virtuelle Azure héberge Visual Studio 2019 et SQL Server Management Studio 2018.
+Dans cette tâche, vous allez vous connecter à la machine virtuelle Azure dont vous avez lancé le déploiement dans l’Exercice 1. Cette machine virtuelle Azure héberge Visual Studio 2019 et SQL Server Management Studio 19.
 
     >**Note**: Before you proceed with this task, ensure that the deployment you initiated in the first exercise has completed successfully. You can validate this by navigating to the blade of the Azure resource group "Az500Lab10" (or other name you chose) and selecting **Deployments** from the Settings pane.  
 
@@ -358,7 +358,7 @@ Dans cette tâche, vous allez vous connecter à SQL Database avec SQL Server Man
 
     >**Remarque** : les étapes restantes de ce labo sont effectuées dans la session Bureau à distance sur la machine virtuelle Azure **az500-10-vm1**. 
 
-6. Dans le menu **Démarrer**, cliquez sur **Démarrer**, développez le dossier **Microsoft SQL Server Tools 18**, puis cliquez sur l’option de menu **Micosoft SQL Server Management Studio**.
+6. Cliquez sur **Démarrer**, dans le menu **Démarrer**, développez le dossier **Outils Microsoft SQL Server 19**, puis cliquez sur l’élément de menu **Micosoft SQL Server Management Studio**.
 
 7. Dans la boîte de dialogue **Se connecter au serveur**, spécifiez les paramètres suivants : 
 

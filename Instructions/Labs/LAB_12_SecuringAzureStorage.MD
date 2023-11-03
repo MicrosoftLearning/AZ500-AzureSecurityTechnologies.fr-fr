@@ -273,29 +273,31 @@ Dans cette tâche, vous allez créer un compte de stockage avec un partage de fi
 
 8. Dans le volet **Vue d’ensemble** du compte de stockage, cliquez sur **Partages de fichiers** sous l’onglet **Stockage de données**, puis cliquez sur **+ Partage de fichiers**.
 
-9. Dans le volet **Nouveau partage de fichiers**, spécifiez les paramètres suivants :
+9. Dans le panneau **Nouveau partage de fichiers**, décochez l’option **Activer la sauvegarde** sous l’onglet sauvegarde. 
+
+10. Dans le volet **Nouveau partage de fichiers**, spécifiez les paramètres suivants :
 
     |Paramètre|Valeur|
     |---|---|
     |Nom|**my-file-share**|
 
-10. Dans le volet **Nouveau partage de fichiers**, cliquez sur **Créer**.
+11. Dans le volet **Nouveau partage de fichiers**, cliquez sur **Créer**.
 
     >**Remarque** : à présent, récupérez et enregistrez le script PowerShell qui crée un mappage de lecteur au partage de fichiers Azure. 
 
-11. Dans le volet du compte de stockage, dans la liste des partages de fichiers, cliquez sur **my-file-share**.
+12. Dans le volet du compte de stockage, dans la liste des partages de fichiers, cliquez sur **my-file-share**.
 
-12. Dans le volet **my-file-share**, cliquez sur **Se connecter**.
+13. Dans le volet **my-file-share**, cliquez sur **Se connecter**.
 
-13. Dans le volet **Se connecter**, sous l’onglet **Windows**, copiez le script PowerShell qui crée un mappage de lecteur Z au partage de fichiers. 
+14. Dans le volet **Se connecter**, sous l’onglet **Windows**, copiez le script PowerShell qui crée un mappage de lecteur Z au partage de fichiers. 
 
     >**Remarque** : enregistrez ce script. Vous en aurez besoin plus tard dans ce labo pour mapper le partage de fichiers à partir de la machine virtuelle Azure sur le sous-réseau **Privé**.
 
-14. Revenez au volet du compte de stockage, puis, dans la section **Sécurité + mise en réseau**, cliquez sur **Mise en réseau**.
+15. Revenez au volet du compte de stockage, puis, dans la section **Sécurité + mise en réseau**, cliquez sur **Mise en réseau**.
 
-15. Dans le volet **Pare-feu et réseaux virtuels**, sélectionnez l’option **Activé à partir des réseaux virtuels et adresses IP sélectionnés**, puis cliquez sur le lien **+ Ajouter un réseau virtuel existant**. 
+16. Dans le volet **Pare-feu et réseaux virtuels**, sélectionnez l’option **Activé à partir des réseaux virtuels et adresses IP sélectionnés**, puis cliquez sur le lien **+ Ajouter un réseau virtuel existant**. 
 
-16. Dans le volet **Ajouter des réseaux**, spécifiez les paramètres suivants :
+17. Dans le volet **Ajouter des réseaux**, spécifiez les paramètres suivants :
 
     |Paramètre|Valeur|
     |---|---|
@@ -303,9 +305,9 @@ Dans cette tâche, vous allez créer un compte de stockage avec un partage de fi
     |Réseaux virtuels|**myVirtualNetwork**|
     |Sous-réseaux|**Privé**|
 
-17. Dans le volet **Ajouter des réseaux**, cliquez sur **Ajouter**. 
+18. Dans le volet **Ajouter des réseaux**, cliquez sur **Ajouter**. 
 
-18. De retour dans le volet du compte de stockage, cliquez sur **Enregistrer**.
+19. De retour dans le volet du compte de stockage, cliquez sur **Enregistrer**.
 
     >**Remarque** : à ce stade du labo, vous avez configuré un réseau virtuel, un groupe de sécurité réseau et un compte de stockage avec un partage de fichiers. 
 
