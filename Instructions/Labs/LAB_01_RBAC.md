@@ -4,10 +4,10 @@ lab:
   module: Module 01 - Manage Identity and Access
 ---
 
-# <a name="lab-01-role-based-access-control"></a>Lab 01 : Contrôle d’accès en fonction du rôle
-# <a name="student-lab-manual"></a>Manuel de labo pour l’étudiant
+# Lab 01 : Contrôle d’accès en fonction du rôle
+# Manuel de labo pour l’étudiant
 
-## <a name="lab-scenario"></a>Scénario du labo
+## Scénario du labo
 
 Vous avez été invité à créer une preuve de concept montrant comment les utilisateurs et les groupes Azure sont créés. Et aussi comment le contrôle d’accès en fonction du rôle est utilisé pour attribuer des rôles à des groupes. Plus précisément, vous devez :
 
@@ -18,7 +18,7 @@ Vous avez été invité à créer une preuve de concept montrant comment les uti
 
 > Pour toutes les ressources dans ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser. 
 
-## <a name="lab-objectives"></a>Objectifs du labo
+## Objectifs du labo
 
 Dans ce labo, vous allez effectuer les exercices suivants :
 
@@ -27,22 +27,22 @@ Dans ce labo, vous allez effectuer les exercices suivants :
 - Exercice 3 : Créer le groupe Service Desk avec l’utilisateur Dylan Williams comme membre (Azure CLI). 
 - Exercice 4 : Attribuer le rôle Contributeur de machines virtuelles au groupe Service Desk.
 
-## <a name="role-based-access-control-architecture-diagram"></a>Diagramme d’architecture de contrôle d’accès en fonction du rôle
+## Diagramme d’architecture de contrôle d’accès en fonction du rôle
 
 ![image](https://user-images.githubusercontent.com/91347931/157751243-5aa6e521-9bc1-40af-839b-4fd9927479d7.png)
 
-## <a name="instructions"></a>Instructions
+## Instructions
 
-### <a name="exercise-1-create-the-senior-admins-group-with-the-user-account-joseph-price-as-its-member"></a>Exercice 1 : Créer le groupe Senior Admins avec le compte d’utilisateur Joseph Price comme membre. 
+### Exercice 1 : Créer le groupe Senior Admins avec le compte d’utilisateur Joseph Price comme membre. 
 
-#### <a name="estimated-timing-10-minutes"></a>Durée estimée : 10 minutes
+#### Durée estimée : 10 minutes
 
 Dans cet exercice, vous allez effectuer les tâches suivantes :
 
 - Tâche 1 : Utiliser le portail Azure afin de créer un compte d’utilisateur pour Joseph Price.
 - Tâche 2 : Utiliser le portail Azure pour créer un groupe Senior Admins et ajouter le compte d’utilisateur de Joseph Price au groupe.
 
-#### <a name="task-1-use-the-azure-portal-to-create-a-user-account-for-joseph-price"></a>Tâche 1 : Utiliser le portail Azure afin de créer un compte d’utilisateur pour Joseph Price. 
+#### Tâche 1 : Utiliser le portail Azure afin de créer un compte d’utilisateur pour Joseph Price. 
 
 Dans cette tâche, vous allez créer un compte d’utilisateur pour Joseph Price. 
 
@@ -50,9 +50,9 @@ Dans cette tâche, vous allez créer un compte d’utilisateur pour Joseph Price
 
     >**Remarque** : connectez-vous au portail Azure en utilisant un compte titulaire du rôle Propriétaire ou Contributeur dans l’abonnement Azure que vous utilisez pour ce labo, et du rôle Administrateur général dans le locataire Azure AD associé à cet abonnement.
 
-2. Dans la zone de texte **Rechercher des ressources, des services et des documents** en haut de la page du portail Azure, tapez **Azure Active Directory**, puis appuyez sur la touche **Entrée**.
+2. Dans la zone de texte **Rechercher dans les ressources, services et documents** en haut de la page du Portail Azure, tapez **Microsoft Entra ID** et appuyez sur la touche **Entrée**.
 
-3. Dans le panneau **Vue d’ensemble** du locataire Azure Active Directory, dans la section **Gérer**, sélectionnez **Utilisateurs**, puis **+ Nouvel utilisateur**.
+3. Sur le volet **Vue d’ensemble** du locataire Microsoft Entra ID, dans la section **Gérer**, sélectionnez **Utilisateurs**, puis **+ Nouvel utilisateur**.
 
 4. Dans le panneau **Nouvel utilisateur**, assurez-vous que l’option **Créer un utilisateur** est sélectionnée et spécifiez les paramètres suivants :
 
@@ -69,11 +69,11 @@ Dans cette tâche, vous allez créer un compte d’utilisateur pour Joseph Price
 
 8. Actualisez le volet **Utilisateurs \| Tous les utilisateurs** pour vérifier que le nouvel utilisateur a été créé dans votre locataire Azure AD.
 
-#### <a name="task2-use-the-azure-portal-to-create-a-senior-admins-group-and-add-the-user-account-of-joseph-price-to-the-group"></a>Tâche 2 : Utiliser le portail Azure pour créer un groupe Senior Admins et ajouter le compte d’utilisateur de Joseph Price au groupe.
+#### Tâche 2 : Utiliser le portail Azure pour créer un groupe Senior Admins et ajouter le compte d’utilisateur de Joseph Price au groupe.
 
 Dans cette tâche, vous allez créer le groupe *Senior Admins*, ajouter le compte d’utilisateur de Joseph Price au groupe, puis le configurer comme propriétaire du groupe.
 
-1. Dans le portail Azure, revenez au volet affichant votre locataire Azure Active Directory. 
+1. Dans le Portail Azure, revenez au volet affichant votre locataire Microsoft Entra ID. 
 
 2. Dans la section **Gérer**, cliquez sur **Groupes**, puis sélectionnez **+ Nouveau groupe**.
  
@@ -93,16 +93,16 @@ Dans cette tâche, vous allez créer le groupe *Senior Admins*, ajouter le compt
 
 > Résultat : Vous avez utilisé le portail Azure pour créer un utilisateur et un groupe, et affecté l’utilisateur au groupe. 
 
-### <a name="exercise-2-create-a-junior-admins-group-containing-the-user-account-of-isabel-garcia-as-its-member"></a>Exercice 2 : Créer un groupe Junior Admins contenant le compte d’utilisateur d’Isabel Garcia en tant que membre.
+### Exercice 2 : Créer un groupe Junior Admins contenant le compte d’utilisateur d’Isabel Garcia en tant que membre.
 
-#### <a name="estimated-timing-10-minutes"></a>Durée estimée : 10 minutes
+#### Durée estimée : 10 minutes
 
 Dans cet exercice, vous allez effectuer les tâches suivantes :
 
 - Tâche 1 : Utiliser PowerShell afin de créer un compte d’utilisateur pour Isabel Garcia.
 - Tâche 2 : Utiliser PowerShell pour créer le groupe Junior Admins et ajouter le compte d’utilisateur d’Isabel Garcia au groupe. 
 
-#### <a name="task-1-use-powershell-to-create-a-user-account-for-isabel-garcia"></a>Tâche 1 : Utiliser PowerShell afin de créer un compte d’utilisateur pour Isabel Garcia.
+#### Tâche 1 : Utiliser PowerShell afin de créer un compte d’utilisateur pour Isabel Garcia.
 
 Dans cette tâche, vous allez créer un compte d’utilisateur pour Isabel Garcia à l’aide de PowerShell.
 
@@ -123,7 +123,7 @@ Dans cette tâche, vous allez créer un compte d’utilisateur pour Isabel Garci
     $passwordProfile.Password = "Pa55w.rd1234"
     ```
 
-5. Dans la session PowerShell dans le volet Cloud Shell, exécutez la commande suivante pour vous connecter à Azure Active Directory :
+5. Dans la session PowerShell du volet Cloud Shell, exécutez la commande suivante pour vous connecter à Microsoft Entra ID :
 
     ```powershell
     Connect-AzureAD
@@ -147,7 +147,7 @@ Dans cette tâche, vous allez créer un compte d’utilisateur pour Isabel Garci
     Get-AzureADUser 
     ```
 
-#### <a name="task2-use-powershell-to-create-the-junior-admins-group-and-add-the-user-account-of-isabel-garcia-to-the-group"></a>Tâche 2 : Utiliser PowerShell pour créer le groupe Junior Admins et ajouter le compte d’utilisateur d’Isabel Garcia au groupe.
+#### Tâche 2 : Utiliser PowerShell pour créer le groupe Junior Admins et ajouter le compte d’utilisateur d’Isabel Garcia au groupe.
 
 Dans cette tâche, vous allez créer le groupe Junior Admins et ajouter le compte d’utilisateur d’Isabel Garcia au groupe à l’aide de PowerShell.
 
@@ -184,16 +184,16 @@ Dans cette tâche, vous allez créer le groupe Junior Admins et ajouter le compt
 > Résultat : Vous avez utilisé PowerShell pour créer un utilisateur et un compte de groupe, puis ajouté le compte d’utilisateur au compte de groupe. 
 
 
-### <a name="exercise-3-create-a-service-desk-group-containing-the-user-account-of-dylan-williams-as-its-member"></a>Exercice 3 : Créer un groupe Service Desk contenant le compte d’utilisateur de Dylan Williams en tant que membre.
+### Exercice 3 : Créer un groupe Service Desk contenant le compte d’utilisateur de Dylan Williams en tant que membre.
 
-#### <a name="estimated-timing-10-minutes"></a>Durée estimée : 10 minutes
+#### Durée estimée : 10 minutes
 
 Dans cet exercice, vous allez effectuer les tâches suivantes :
 
 - Tâche 1 : Utiliser Azure CLI afin de créer un compte d’utilisateur pour Dylan Williams.
 - Tâche 2 : Utiliser Azure CLI pour créer le groupe Service Desk et y ajouter le compte d’utilisateur de Dylan. 
 
-#### <a name="task-1-use-azure-cli-to-create-a-user-account-for-dylan-williams"></a>Tâche 1 : Utiliser Azure CLI afin de créer un compte d’utilisateur pour Dylan Williams.
+#### Tâche 1 : Utiliser Azure CLI afin de créer un compte d’utilisateur pour Dylan Williams.
 
 Dans cette tâche, vous allez créer un compte d’utilisateur pour Dylan Williams.
 
@@ -217,7 +217,7 @@ Dans cette tâche, vous allez créer un compte d’utilisateur pour Dylan Willia
     az ad user list --output table
     ```
 
-#### <a name="task-2-use-azure-cli-to-create-the-service-desk-group-and-add-the-user-account-of-dylan-to-the-group"></a>Tâche 2 : Utiliser Azure CLI pour créer le groupe Service Desk et y ajouter le compte d’utilisateur de Dylan. 
+#### Tâche 2 : Utiliser Azure CLI pour créer le groupe Service Desk et y ajouter le compte d’utilisateur de Dylan. 
 
 Dans cette tâche, vous allez créer le groupe Service Desk et y affecter Dylan. 
 
@@ -262,16 +262,16 @@ Dans cette tâche, vous allez créer le groupe Service Desk et y affecter Dylan.
 > Résultat : À l’aide d’Azure CLI, vous avez créé un compte d’utilisateur et un groupe, puis ajouté le compte d’utilisateur au groupe. 
 
 
-### <a name="exercise-4-assign-the-virtual-machine-contributor-role-to-the-service-desk-group"></a>Exercice 4 : Attribuer le rôle Contributeur de machines virtuelles au groupe Service Desk.
+### Exercice 4 : Attribuer le rôle Contributeur de machines virtuelles au groupe Service Desk.
 
-#### <a name="estimated-timing-10-minutes"></a>Durée estimée : 10 minutes
+#### Durée estimée : 10 minutes
 
 Dans cet exercice, vous allez effectuer les tâches suivantes :
 
 - Tâche 1 : Créez un groupe de ressources. 
 - Tâche 2 : Attribuer les autorisations de Contributeur de machines virtuelles de Service Desk au groupe de ressources.  
 
-#### <a name="task-1-create-a-resource-group"></a>Tâche 1 : Créer un groupe de ressources
+#### Tâche 1 : Créer un groupe de ressources
 
 1. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents** en haut de la page, tapez **Groupe de ressources**, puis appuyez sur la touche **Entrée**.
 
@@ -290,7 +290,7 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 4. De retour dans le volet **Groupes de ressources**, actualisez la page et vérifiez que votre nouveau groupe de ressources apparaît dans la liste des groupes de ressources.
 
 
-#### <a name="task-2-assign-the-service-desk-virtual-machine-contributor-permissions"></a>Tâche 2 : Attribuer les autorisations de Contributeur de machines virtuelles de Service Desk. 
+#### Tâche 2 : Attribuer les autorisations de Contributeur de machines virtuelles de Service Desk. 
 
 1. Dans le volet **Groupes de ressources**, cliquez sur l’entrée du groupe de ressources **AZ500LAB01**.
 

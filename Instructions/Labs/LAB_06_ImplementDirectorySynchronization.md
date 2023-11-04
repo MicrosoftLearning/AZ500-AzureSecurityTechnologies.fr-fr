@@ -46,7 +46,7 @@ Dans cette tâche, vous identifierez un nom DNS pour votre déploiement de machi
 
 1. Connectez-vous au portail Azure **`https://portal.azure.com/`** .
 
-    >**Remarque** : connectez-vous au Portail Azure à l’aide d’un compte disposant du rôle Propriétaire ou Contributeur dans l’abonnement Azure que vous utilisez pour ce laboratoire.
+    >**Remarque** : connectez-vous au portail Azure en utilisant un compte disposant du rôle Propriétaire ou Contributeur dans l’abonnement Azure que vous utilisez pour ce labo.
 
 2. Ouvrez Cloud Shell en cliquant sur la première icône située en haut à droite du portail Azure. Si vous y êtes invité, cliquez sur **PowerShell** et **Créer un stockage**.
 
@@ -164,30 +164,31 @@ Dans cette tâche, vous allez ajouter un nouvel utilisateur Azure AD et les affe
 
 2. Dans le volet **Utilisateurs | Tous les utilisateurs**, cliquez sur **+ Nouvel utilisateur**, puis sur **Créer un utilisateur**.
 
-3. Dans le volet **Nouvel utilisateur**, assurez-vous que l’option **Créer un utilisateur** est sélectionnée et spécifiez les paramètres suivants (laissez les autres paramètres avec leurs valeurs par défaut) et cliquez sur **Créer** :
+3. Dans le volet **Nouvel utilisateur**, vérifiez que l’option **Créer un utilisateur** est sélectionnée, spécifiez les paramètres suivants sous l’onglet Informations de base (laissez les autres paramètres avec leurs valeurs par défaut) et cliquez sur **Suivant : Propriétés >**  :
 
    |Paramètre|Valeur|
    |---|---|
    |Nom d’utilisateur|**syncadmin**|
    |Nom|**syncadmin**|
    |Mot de passe|vérifiez que l’option **Générer automatiquement un mot de passe** est cochée et cliquez sur **Afficher le mot de passe**|
-   |Groupes|**0 groupes sélectionnés**|
-   |Rôles|Cliquez sur **Utilisateur**, sur **Administrateur général**, puis sur **Sélectionner**|
-   |Emplacement d’utilisation|**États-Unis**|  
 
-    >**Remarque** : prenez note du nom complet. Vous pouvez copier sa valeur en cliquant sur le bouton **Copier dans le Presse-papiers** sur le côté droit de la liste déroulante affichant le nom de domaine. 
+    >**Remarque** : prenez note du nom complet. Vous pouvez copier sa valeur en cliquant sur le bouton **Copier dans le Presse-papiers** sur le côté droit de la liste déroulante en affichant le nom de domaine et en le collant dans un document du Bloc-notes. Vous en aurez besoin plus tard dans ce labo.
 
-    >**Remarque** : prenez note du mot de passe de l’utilisateur. Vous en aurez besoin plus tard dans ce labo. 
+    >**Remarque** : Enregistrez le mot de passe de l’utilisateur en cliquant sur le bouton **Copier dans le Presse-papiers** sur le côté droit de la zone de texte Mot de passe et en le collant dans un document du Bloc-notes. Vous en aurez besoin plus tard dans ce labo.
 
+4. Sous l’onglet **Propriétés**, faites défiler jusqu’en bas et spécifiez **États-Unis** comme Lieu d’utilisation (laissez toutes les autres valeurs par défaut), puis cliquez sur **Suivant : Attributions >** .
+
+5. Sous l’onglet **Attributions**, cliquez sur **+ Ajouter un rôle**, recherchez et sélectionnez **Administrateur général**, puis cliquez sur **Sélectionner**. Cliquez sur **Vérifier + créer**, puis sur **Créer**.
+   
     >**Remarque** : un utilisateur Azure AD disposant du rôle Administrateur général est requis pour implémenter Azure AD Connect.
 
-4. Ouvrez une fenêtre de navigation InPrivate.
+6. Ouvrez une fenêtre de navigation InPrivate.
 
-5. Accédez au portail Azure et connectez-vous à l’aide du compte d’utilisateur **syncadmin**. Lorsque vous y êtes invité, remplacez le mot de passe que vous avez noté précédemment dans cette tâche par **Pa55w.rd1234**.
+7. Accédez au portail Azure sur **`https://portal.azure.com/`** et connectez-vous avec le compte d’utilisateur **syncadmin**. Lorsque vous y êtes invité, remplacez le mot de passe que vous avez enregistré précédemment dans cette tâche par votre propre mot de passe qui répond aux critères de complexité, puis enregistrez-le pour vous y référer plus tard. Vous serez invité à entrer ce mot de passe dans des tâches ultérieures.
 
     >**Remarque** : pour vous connecter, vous devez fournir un nom complet du compte d’utilisateur **syncadmin**, y compris le nom de domaine DNS du locataire Azure AD dont vous avez pris note précédemment dans cette tâche. Ce nom d’utilisateur est au format syncadmin@`<your_tenant_name>`.onmicrosoft.com, où `<your_tenant_name>` est l’espace réservé représentant votre nom de locataire Azure AD unique. 
 
-6. Déconnectez-vous en tant que **syncadmin** et fermez la fenêtre du navigateur InPrivate.
+8. Déconnectez-vous en tant que **syncadmin** et fermez la fenêtre du navigateur InPrivate.
 
 > **Résultat** : une fois cet exercice terminé, vous avez créé un locataire Azure AD, appris à ajouter un nom DNS personnalisé au nouveau locataire Azure AD et créé un utilisateur Azure AD avec le rôle Administrateur général.
 
@@ -216,7 +217,7 @@ Dans cette tâche, vous allez vous connecter à la machine virtuelle Azure exéc
 
 4. Dans le volet **adVM**, cliquez sur **Connecter** et, dans le menu déroulant, cliquez sur **RDP**. 
 
-5. Dans le paramètre **Adresse IP**, sélectionnez **l’adresse IP publique de l’équilibreur de charge**, puis cliquez sur **Télécharger le fichier RDP** et utilisez-le pour vous connecter à la machine virtuelle Azure **adVM** via le Bureau à distance. Lorsque vous êtes invité à vous authentifier, indiquez les informations d'identification suivantes :
+5. Dans la liste déroulante **Adresse IP**, sélectionnez **Adresse IP publique de l’équilibreur de charge**, puis cliquez sur **Télécharger le fichier RDP** et utilisez-le pour vous connecter à la machine virtuelle Azure **adVM** via le Bureau à distance. Lorsque vous êtes invité à vous authentifier, fournissez les informations d’identification suivantes :
 
    |Paramètre|Valeur|
    |---|---|
@@ -225,47 +226,44 @@ Dans cette tâche, vous allez vous connecter à la machine virtuelle Azure exéc
 
     >**Remarque** : attendez que la session Bureau à distance et que le **Gestionnaire de serveur** se chargent.  
 
-    >**Remarque** : les étapes suivantes sont effectuées dans la session Bureau à distance sur la machine virtuelle Azure **adVM**. 
+    >**Remarque** : les étapes suivantes sont effectuées dans la session Bureau à distance sur la machine virtuelle Azure **adVM**.
 
-6. Dans **Gestionnaire de serveur**, cliquez sur **Serveur local**, puis sur **Configuration de sécurité renforcée d’Internet Explorer**.
+    >**Remarque** : Si l’**adresse IP publique de l’équilibreur de charge** n’est pas disponible dans la liste déroulante **Adresse IP** du panneau RDP, dans le portail Azure, recherchez **Adresses IP publiques**, sélectionnez **adPublicIP** et notez son adresse IP. Cliquez sur le bouton Démarrer, tapez **MSTSC**, puis appuyez sur **Entrée** pour lancer le client Bureau à distance. Tapez l’adresse IP publique de l’équilibreur de charge dans la zone de texte **Ordinateur :** et cliquez sur **Se connecter**.
 
-7. Dans la boîte de dialogue **Configuration de sécurité renforcée d’Internet Explorer**, définissez les deux options sur **Désactivé** et cliquez sur **OK**.
+6. Dans le **Gestionnaire de serveur**, cliquez sur **Outils**, puis dans le menu déroulant, cliquez sur **Centre d'administration Active Directory**.
 
-8. Démarrez Internet Explorer, accédez à **https://www.microsoft.com/en-us/edge/business/download** , téléchargez les fichiers binaires d’installation de Microsoft Edge, exécutez l’installation et configurez le navigateur web avec les paramètres par défaut.
+7. Dans le **Centre d’administration Active Directory**, cliquez sur **adatum (local)** dans le volet **Tâches**, sous le nom de domaine **adatum (local)** , cliquez sur **Nouveau**, puis, dans le menu en cascade, cliquez sur **Unité d’organisation**.
 
-9. Dans le **Gestionnaire de serveur**, cliquez sur **Outils**, puis dans le menu déroulant, cliquez sur **Centre d'administration Active Directory**.
+8. Dans la fenêtre **Créer une unité d’organisation**, dans la zone de texte **Nom**, tapez **ToSync**, puis cliquez sur **OK**.
 
-10. Dans le **Centre d’administration Active Directory**, cliquez sur **adatum (local)** dans le volet **Tâches**, sous le nom de domaine **adatum (local)** , cliquez sur **Nouveau**, puis, dans le menu en cascade, cliquez sur **Unité d’organisation**.
+9. Double-cliquez sur l’unité d’organisation **ToSync** nouvellement créée afin que son contenu apparaisse dans le volet d’informations de la console du Centre d’administration Active Directory. 
 
-11. Dans la fenêtre **Créer une unité d’organisation**, dans la zone de texte **Nom**, tapez **ToSync**, puis cliquez sur **OK**.
+10. Dans le volet **Tâches** de la section **ToSync**, cliquez sur **Nouveau** et, dans le menu en cascade, cliquez sur **Utilisateur**.
 
-12. Double-cliquez sur l’unité d’organisation **ToSync** nouvellement créée afin que son contenu apparaisse dans le volet d’informations de la console du Centre d’administration Active Directory. 
+11. Dans la fenêtre **Créer un utilisateur**, créez un compte d’utilisateur avec les paramètres suivants (laissez les autres avec leurs valeurs existantes) et cliquez sur **OK** :
+    
+    |Paramètre|Valeur|
+    |---|---|
+    |Nom complet|**aduser1**|
+    |Ouverture de session UPN de l’utilisateur|**aduser1**|
+    |Ouverture de session SamAccountName de l’utilisateur|**aduser1**|
+    |Mot de passe et Confirmer le mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 04 > Exercice 1 > Tâche 1 > Étape 9.**|
+    |Autres options de mot de passe|**Le mot de passe n'expire jamais**|
 
-13. Dans le volet **Tâches** de la section **ToSync**, cliquez sur **Nouveau** et, dans le menu en cascade, cliquez sur **Utilisateur**.
-
-14. Dans la fenêtre **Créer un utilisateur**, créez un compte d’utilisateur avec les paramètres suivants (laissez les autres avec leurs valeurs existantes) et cliquez sur **OK** :
-
-   |Paramètre|Valeur|
-   |---|---|
-   |Nom complet|**aduser1**|
-   |Ouverture de session UPN de l’utilisateur|**aduser1**|
-   |Ouverture de session SamAccountName de l’utilisateur|**aduser1**|
-   |Mot de passe et Confirmer le mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 04 > Exercice 1 > Tâche 1 > Étape 9.**|
-   |Autres options de mot de passe|**Le mot de passe n'expire jamais**|
 
 #### Tâche 2 : Installer Azure AD Connect
 
 Dans cette tâche, vous allez installer AD Connect sur la machine virtuelle. 
 
-1. Dans la session Bureau à distance vers **adVM**, utilisez Microsoft Edge pour accéder au portail Azure à l’adresse **https://portal.azure.com** , puis connectez-vous à l’aide du compte d’utilisateur **syncadmin** que vous avez créé l’exercice précédent. Lorsque vous y êtes invité, spécifiez le nom d’utilisateur complet dont vous avez pris note et le mot de passe **Pa55w.rd1234**.
+1. Dans la session Bureau à distance vers **adVM**, utilisez Microsoft Edge pour accéder au portail Azure à l’adresse **https://portal.azure.com** , puis connectez-vous à l’aide du compte d’utilisateur **syncadmin** que vous avez créé l’exercice précédent. Lorsque vous y êtes invité, spécifiez le nom d’utilisateur principal en entier et le mot de passe que vous avez enregistrés dans l’exercice précédent.
 
 2. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents** en haut de la page Portail Azure, tapez **Azure Active Directory** et appuyez sur la touche **Entrée**.
 
-3. Dans le volet **AdatumSync \| Vue d’ensemble** du portail Azure, cliquez sur **Azure AD Connect**.
+3. Dans le portail Azure, dans le panneau **AdatumSync \| Vue d’ensemble**, dans le volet de navigation de gauche sous **Gérer**, cliquez sur **Azure AD Connect**.
 
-4. Dans le volet **AdatumSync \| Azure AD Connect**, cliquez sur le lien **Télécharger Azure AD Connect**. Vous êtes redirigé vers la page de téléchargement **Microsoft Azure Active Directory Connect**.
+4. Dans le volet **AAD Connect \| Démarrer**, cliquez sur **Connect Sync** dans le volet de navigation de gauche, puis cliquez sur le lien **Télécharger Azure AD Connect**. Vous êtes redirigé vers la page de téléchargement **Azure AD Connect**.
 
-5. Dans la page de téléchargement **Microsoft Azure Active Directory Connect**, cliquez sur **Télécharger**.
+5. Dans la page de téléchargement **Azure AD Connect**, cliquez sur **Télécharger**.
 
 6. Lorsque vous y êtes invité, cliquez sur **Exécuter** pour démarrer l’Assistant **Microsoft Azure Active Directory Connect**.
 
@@ -283,10 +281,10 @@ Dans cette tâche, vous allez installer AD Connect sur la machine virtuelle.
 
 13. Dans la fenêtre **du compte de forêt AD**, vérifiez que l’option **Créer un compte AD** est sélectionnée, spécifiez les informations d’identification suivantes, puis cliquez sur **OK** :
 
-   |Paramètre|Valeur|
-   |---|---|
-   |User Name|**ADATUM\\Student**|
-   |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 06 > Exercice 1 > Tâche 2 > Étape 9**|
+    |Paramètre|Valeur|
+    |---|---|
+    |User Name|**ADATUM\\Student**|
+    |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 06 > Exercice 1 > Tâche 2 > Étape 9**|
 
 14. De retour sur la page **Connexion de vos annuaires**, vérifiez que l’entrée **adatum.com** s’affiche sous la forme d’un répertoire configuré, puis cliquez sur **Suivant**
 
@@ -294,7 +292,7 @@ Dans cette tâche, vous allez installer AD Connect sur la machine virtuelle.
 
     >**Remarque** : comme expliqué précédemment, cela est attendu, car vous n’avez pas pu vérifier le domaine Azure AD DNS personnalisé **adatum.com**.
 
-16. Dans la page **Filtrage par domaine ou unité d'organisation**, cliquez sur l’option **Synchroniser les domaines et unités d’organisation sélectionnés**, le nom de domaine **adatum.com** sera coché, développez **adatum.com** pour afficher **toSync**. Décochez toutes les cases, cliquez uniquement sur la case à cocher en regard de l’UO **ToSync**, puis cliquez sur **Suivant**.
+16. Dans la page **Filtrage par domaine et unité d’organisation**, cliquez sur l’option **Synchroniser les domaines et les unités d’organisation sélectionnés**, puis décochez la case à côté du nom de domaine **adatum.com**. Cliquez pour développer **adatum.com**, cochez uniquement la case à côté de l’unité d’organisation **ToSync**, puis cliquez sur **Suivant**.
 
 17. Sur la page **Identification de manière unique de vos utilisateurs**, acceptez les paramètres par défaut, puis cliquez sur **Suivant**.
 
@@ -319,11 +317,11 @@ Dans cette tâche, vous allez vérifier que la synchronisation d’annuaires fon
 
    >**Remarque** : vous devrez peut-être attendre quelques minutes et sélectionner **Actualiser** pour que le compte d’utilisateur **aduser1** apparaisse.
 
-3. Sélectionnez le compte **aduser1** et, dans la section **Profil > Identité**, notez que l’attribut **Source** est défini sur **Windows Server AD**.
+3. Cliquez sur le compte **aduser1** et sélectionnez l’onglet **Propriétés**. Faites défiler jusqu’à la section **Locale**, notez que l’attribut **Synchronisation locale activée** est défini sur **Oui**.
 
-4. Dans le volet **aduser1 \| Profil**, dans la section **Infos travail**, notez que l’attribut **Département** n’est pas défini.
+4. Dans le volet **aduser1**, dans la section **Informations de travail**, notez que l’attribut **Département** n’est pas défini.
 
-5. Dans la session Bureau à distance vers **adVM**, basculez vers le **Centre d’administration Active Directory**, sélectionnez l’entrée **aduser1** dans la liste des objets de l’UO **ToSync**. Dans la section **aduser1** du volet **Tâches**, sélectionnez **Propriétés**.
+5. Dans la session Bureau à distance vers **adVM**, basculez vers le **Centre d’administration Active Directory**, sélectionnez l’entrée **aduser1** dans la liste des objets de l’unité d’organisation **ToSync**. Dans la section **aduser1** du volet **Tâches**, sélectionnez **Propriétés**.
 
 6. Dans la fenêtre **aduser1** de la section **Organisation**, dans la zone de texte **Département**, tapez **Ventes**, puis sélectionnez **OK**.
 
@@ -339,7 +337,7 @@ Dans cette tâche, vous allez vérifier que la synchronisation d’annuaires fon
 
 9. Basculez vers la fenêtre Microsoft Edge affichant le volet **aduser1**, actualisez la page et notez que la propriété Department est définie sur Sales.
 
-    >**Remarque** : vous devrez peut-être attendre une autre minute et actualiser à nouveau la page si l’attribut **Département** reste non défini.
+    >**Remarque** : Vous risquez d’attendre jusqu’à trois minutes. Réactualisez la page si l’attribut **Département** n’est toujours pas défini.
 
 > **Result** : une fois cet exercice terminé, vous avez préparé AD DS pour la synchronisation d’annuaires, installé Azure AD Connect et vérifié la synchronisation d’annuaires.
 
