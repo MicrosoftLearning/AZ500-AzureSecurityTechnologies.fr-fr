@@ -75,7 +75,7 @@ Dans cette tâche, vous allez créer une machine virtuelle à l’aide d’un mo
 
 9. Dans le volet **Déploiement personnalisé**, vérifiez que les paramètres suivants sont configurés (laissez les autres avec leurs valeurs par défaut) :
 
->**Remarque** : vous devez créer un mot de passe unique qui sera utilisé pour créer des machines virtuelles (machines virtuelles) pour le reste du cours. Le mot de passe doit contenir au moins 12 caractères et satisfaire aux exigences de complexité définies. (Le mot de passe doit présenter 3 des caractéristiques suivantes : 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spécial). [Exigences relatives au mot de passe de la machine virtuelle](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/faq#what-are-the-password-requirements-when-creating-a-vm-). Notez le mot de passe.
+   >**Remarque** : vous devez créer un mot de passe unique qui sera utilisé pour créer des machines virtuelles (machines virtuelles) pour le reste du cours. Le mot de passe doit contenir au moins 12 caractères et satisfaire aux exigences de complexité définies. (Le mot de passe doit présenter 3 des caractéristiques suivantes : 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spécial). [Exigences relatives au mot de passe de la machine virtuelle](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/faq#what-are-the-password-requirements-when-creating-a-vm-). Notez le mot de passe.
 
    |Paramètre|Valeur|
    |---|---|
@@ -88,7 +88,7 @@ Dans cette tâche, vous allez créer une machine virtuelle à l’aide d’un mo
    |Mot de passe d’administrateur|**Créez votre propre mot de passe et prenez-en note. Vous serez invité à fournir ce mot de passe pour l’accès au labo.**|
    |Nom du réseau virtuel|**az500-04-vnet1**|
 
-    >**Note**: To identify Azure regions where you can provision Azure VMs, refer to [**https://azure.microsoft.com/en-us/regions/offers/**](https://azure.microsoft.com/en-us/regions/offers/)
+   >**Remarque** : pour identifier les régions Azure où vous pouvez approvisionner des machines virtuelles Azure, consultez [ **https://azure.microsoft.com/en-us/regions/offers/** ](https://azure.microsoft.com/en-us/regions/offers/)
 
 10. Cliquez sur **Examiner et créer**, puis cliquez sur **Créer**.
 
@@ -101,7 +101,7 @@ Dans cette tâche, vous allez créer une machine virtuelle à l’aide d’un mo
 
 ### Durée estimée : 30 minutes
 
-Dans cet exercice, vous effectuez les tâches suivantes
+Dans cet exercice, vous allez effectuer les tâches suivantes :
 
 - Tâche 1 : Créer un nouveau locataire Azure AD.
 - Tâche 2 : Activer l’essai Azure AD Premium P2.
@@ -155,52 +155,55 @@ Dans cette tâche, vous allez vous inscrire à l’évaluation gratuite d’Azur
 
 #### Tâche 3 : Créer des utilisateurs et des groupes Azure AD.
 
-Dans cette tâche, vous allez créer trois utilisateurs : aaduser1 (Administrateur global), aaduser2 (utilisateur) et aaduser3 (utilisateur). Vous aurez besoin du nom d’utilisateur principal et du mot de passe de chaque utilisateur pour les tâches ultérieures. 
+Dans cette tâche, vous allez créer trois utilisateurs : aaduser1 (Administrateur global), aaduser2 (utilisateur) et aaduser3 (utilisateur). Vous aurez besoin du nom d’utilisateur principal et du mot de passe de chaque utilisateur pour des tâches ultérieures. 
 
 1. Revenez au volet **AdatumLab500-04 Azure Active Directory** et, dans la section **Gérer**, cliquez sur **Utilisateurs**.
 
-2. Dans le volet **Utilisateurs | Tous les utilisateurs**, cliquez sur **+ Nouvel utilisateur**, puis sur **Créer un utilisateur**. 
+2. Dans le volet **Utilisateurs \| Tous les utilisateurs**, cliquez sur **+ Nouvel utilisateur**, puis sur **Créer un utilisateur**. 
 
-3. Dans le volet **Nouvel utilisateur**, assurez-vous que l’option **Créer un utilisateur** est sélectionnée et spécifiez les paramètres suivants (laissez les autres paramètres avec leurs valeurs par défaut) et cliquez sur **Créer** :
+3. Dans le volet **Nouvel utilisateur**, vérifiez que l’option **Créer un utilisateur** est sélectionnée, spécifiez les paramètres suivants sous l’onglet Informations de base (laissez les autres paramètres avec leurs valeurs par défaut) et cliquez sur **Suivant : Propriétés >**  :
 
    |Paramètre|Valeur|
    |---|---|
    |Nom d’utilisateur principal|**aaduser1**|
    |Nom|**aaduser1**|
-   |Mot de passe|vérifiez que l’option **Générer automatiquement un mot de passe** est cochée et cliquez sur **Afficher le mot de passe**|
-   |Groupes|**0 groupes sélectionnés**|
-   |Rôles|Cliquez sur **Utilisateur**, sur **Administrateur général**, puis sur **Sélectionner**|
-   |Emplacement d’utilisation|**États-Unis**|  
+   |Mot de passe|vérifiez que l’option **Générer automatiquement un mot de passe** est cochée|
+   
+      >**Remarque** : Notez le nom d’utilisateur principal en entier. Vous pouvez copier sa valeur en cliquant sur le bouton **Copier dans le Presse-papiers** sur le côté droit de la liste déroulante affichant le nom de domaine. Vous en aurez besoin plus tard dans ce labo.
+   
+      >**Remarque** : prenez note du mot de passe de l’utilisateur. Vous pouvez copier sa valeur en cliquant sur le bouton **Copier dans le Presse-papiers** sur le côté droit de la zone de texte. Vous en aurez besoin plus tard dans ce labo. 
+   
+4. Sous l’onglet **Propriétés**, faites défiler jusqu’en bas et spécifiez **États-Unis** comme Lieu d’utilisation (laissez toutes les autres valeurs par défaut), puis cliquez sur **Suivant : Attributions >** .
 
-    >**Remarque** : prenez note du nom complet. Vous pouvez copier sa valeur en cliquant sur le bouton **Copier dans le Presse-papiers** sur le côté droit de la liste déroulante affichant le nom de domaine. 
+5. Sous l’onglet **Attributions**, cliquez sur **+ Ajouter un rôle**, puis recherchez et sélectionnez **Administrateur général**. Cliquez sur **Sélectionner**, sur **Vérifier + créer**, puis sur **Créer**.
 
-    >**Remarque** : prenez note du mot de passe de l’utilisateur. Vous en aurez besoin plus tard dans ce labo. 
+6. Revenez dans le volet **Utilisateurs \| Tous les utilisateurs**, cliquez sur **+Nouvel utilisateur**. 
 
-4. Revenez dans le volet **Utilisateurs \| Tous les utilisateurs**, cliquez sur **+Nouvel utilisateur**. 
-
-5. Dans le volet **Nouvel utilisateur**, vérifiez que l’option **Créer un utilisateur** est sélectionnée, spécifiez les paramètres suivants (laissez les autres paramètres avec leurs valeurs par défaut) et cliquez sur **Créer**.
+7. Dans le volet **Nouvel utilisateur**, vérifiez que l’option **Créer un utilisateur** est sélectionnée, spécifiez les paramètres suivants (laissez les autres paramètres avec leurs valeurs par défaut) et cliquez sur **Suivant : Propriétés >**  :
 
    |Paramètre|Valeur|
    |---|---|
    |Nom d’utilisateur principal|**aaduser2**|
    |Nom|**aaduser2**|
-   |Mot de passe|vérifiez que l’option **Générer automatiquement un mot de passe** est cochée et cliquez sur **Afficher le mot de passe**|
-   |Emplacement d’utilisation|**États-Unis**|  
+   |Mot de passe|vérifiez que l’option **Générer automatiquement un mot de passe** est cochée| 
 
-    >**Remarque** : Notez le nom d’utilisateur complet et le mot de passe.
+    >**Remarque** : Notez le nom d’utilisateur principal en entier et le mot de passe.
 
-6. Revenez dans le volet **Utilisateurs \| Tous les utilisateurs**, cliquez sur **+Nouvel utilisateur**. 
+8. Sous l’onglet **Propriétés**, faites défiler jusqu’en bas et spécifiez **États-Unis** comme Lieu d’utilisation (laissez toutes les autres valeurs par défaut), puis cliquez sur **Vérifier + créer** et **Créer**.
 
-7. Dans le volet **Nouvel utilisateur**, vérifiez que l’option **Créer un utilisateur** est sélectionnée, spécifiez les paramètres suivants (laissez les autres paramètres avec leurs valeurs par défaut) et cliquez sur **Créer**. 
+9. Revenez dans le volet **Utilisateurs \| Tous les utilisateurs**, cliquez sur **+Nouvel utilisateur**. 
 
-   |Paramètre|Valeur|
-   |---|---|
-   |Nom d’utilisateur principal|**aaduser3**|
-   |Nom|**aaduser3**|
-   |Mot de passe|vérifiez que l’option **Générer automatiquement un mot de passe** est cochée et cliquez sur **Afficher le mot de passe**|
-   |Emplacement d’utilisation|**États-Unis**|  
+10. Dans le volet **Nouvel utilisateur**, vérifiez que l’option **Créer un utilisateur** est sélectionnée, spécifiez les paramètres suivants (laissez les autres paramètres avec leurs valeurs par défaut) et cliquez sur **Suivant : Propriétés >**  :
 
-    >**Remarque** : Notez le nom d’utilisateur complet et le mot de passe.
+    |Paramètre|Valeur|
+    |---|---|
+    |Nom d’utilisateur principal|**aaduser3**|
+    |Nom|**aaduser3**|
+    |Mot de passe|vérifiez que l’option **Générer automatiquement un mot de passe** est cochée|
+
+    >**Remarque** : Notez le nom d’utilisateur principal en entier et le mot de passe.
+
+11. Sous l’onglet **Propriétés**, faites défiler jusqu’en bas et spécifiez **États-Unis** comme Lieu d’utilisation (laissez toutes les autres valeurs par défaut), puis cliquez sur **Vérifier + créer** et **Créer**.
 
     >**Remarque** : À ce stade, vous devez disposer de trois nouveaux utilisateurs répertoriés sur la page **Utilisateurs** . 
     
@@ -210,7 +213,7 @@ Dans cette tâche, vous allez affecter chaque utilisateur à la licence Azure Ac
 
 1. Dans le volet **Utilisateurs \| Tous les utilisateurs**, cliquez sur l’entrée représentant votre compte d’utilisateur. 
 
-2. Dans le panneau affichant les propriétés de votre compte d’utilisateur, cliquez sur **Modifier les propriétés**.  Vérifiez que l’emplacement d’utilisation est défini sur **États-Unis** s’il n’est pas défini sur l’emplacement d’utilisation, puis cliquez sur **Enregistrer**.
+2. Dans le panneau affichant les propriétés de votre compte d’utilisateur, cliquez sur **Modifier les propriétés**.  Vérifiez que le Lieu d’utilisation est défini sur **États-Unis**. Si ce n’est pas le cas, définissez le lieu d’utilisation et cliquez sur **Enregistrer**.
 
 3. Revenez au volet **AdatumLab500-04 Azure Active Directory** et, dans la section **Gérer**, cliquez sur **Licences**.
 
@@ -220,9 +223,9 @@ Dans cette tâche, vous allez affecter chaque utilisateur à la licence Azure Ac
 
 6. Dans le volet **Utilisateurs**, sélectionnez **aaduser1**, **aaduser2**, **aaduser3** et votre compte d’utilisateur, puis cliquez sur **Sélectionner**.
 
-7. Revenez dans le panneau **Affecter des licences**, cliquez sur Options **d’affectation**, vérifiez que toutes les options sont activées, cliquez sur **Vérifier + affecter**, cliquez sur **Affecter**.
+7. Revenez dans le panneau **Attribuer des licences**, cliquez sur **Options d’affectation** et vérifiez que toutes les options sont activées, puis cliquez sur **Vérifier + attribuer** et sur **Attribuer**.
 
-8. Déconnectez-vous du Portail Azure et connectez-vous à l’aide du même compte. Cette étape est nécessaire pour que l’attribution de licence prenne effet.
+8. Déconnectez-vous du Portail Azure et connectez-vous à l’aide du même compte. (Cette étape est nécessaire pour que l’attribution de licence prenne effet.)
 
     >**Remarque** : À ce stade, vous avez attribué Azure Active Directory Premium P2 licences à tous les comptes d’utilisateur que vous utiliserez dans ce laboratoire. Veillez à vous déconnecter, puis à vous reconnecter. 
 
@@ -244,7 +247,7 @@ Dans cette tâche, vous allez configurer l’authentification multifacteur et ac
 
 5. Dans la page d’**authentification multifacteur**, cliquez sur **Paramètres du service**. Examinez les **options de vérification**. Notez que **Message texte vers le téléphone**, **Notification via l’application mobile** et **Code de vérification à partir d’une application mobile ou d’un jeton matériel** sont activés. Cliquez sur **Enregistrer**, puis sur **Fermer**.
 
-6. Revenez dans l’onglet **Utilisateurs**, cliquez sur l’entrée **aaduser1**, cliquez sur le lien **Activer**, puis, lorsque vous y êtes invité, cliquez sur **activer l’authentification multifacteur**.
+6. Revenez à l’onglet **Utilisateurs**, cliquez sur l’entrée **aaduser1**, cliquez sur le lien **Activer**, puis lorsque vous y êtes invité, cliquez sur **Activer l’authentification multifacteur** et sur **Fermer**.
 
 7. Notez que la colonne de l’**état Multi-Factor Auth** pour **aaduser1** est désormais **activée**.
 
@@ -260,23 +263,23 @@ Dans cette tâche, vous allez configurer l’authentification multifacteur et ac
 
    - Restaurer l’authentification multifacteur pour tous les appareils mémorisés.
 
-10. Cliquez sur **Annuler** et revenez à l’onglet navigateur affichant le volet **Prise en main de l’authentification multifacteur\|** dans le Portail Azure.
+10. Cliquez sur **Annuler** et revenez à l’onglet du navigateur affichant le volet **Authentification multifacteur \| Démarrage** dans le portail Azure.
 
 11. Dans la section **Paramètres**, cliquez sur **Alerte à la fraude**.
 
 12. Dans le volet **Alerte de fraude multifacteur d’authentification\|** , configurez les paramètres suivants :
 
-   |Paramètre|Valeur|
-   |---|---|
-   |Autoriser les utilisateurs à envoyer des alertes de fraude|**Activé**|
-   |Bloquer automatiquement les utilisateurs qui signalent une fraude|**Activé**|
-   |Code pour signaler une fraude lors du message d’accueil initial|**0**|
+    |Paramètre|Valeur|
+    |---|---|
+    |Autoriser les utilisateurs à envoyer des alertes de fraude|**Activé**|
+    |Bloquer automatiquement les utilisateurs qui signalent une fraude|**Activé**|
+    |Code pour signaler une fraude lors du message d’accueil initial|**0**|
 
 13. Cliquez sur **Enregistrer**.
 
     >**Remarque** : À ce stade, vous avez activé l’authentification multifacteur pour aaduser1 et configuré les paramètres d’alerte de fraude. 
 
-14. Revenez au volet du locataire Azure Active Directory **AdatumLab500-04**, dans la section **Gérer**, cliquez sur **Propriétés**, puis cliquez sur le lien **Gérer les valeurs par défaut** en bas du volet, et dans le volet **Activer les paramètres de sécurité par défaut**, cliquez sur **Non**. Sélectionnez **Mon organisation utilise l’accès conditionnel** comme raison, puis cliquez sur **Enregistrer**.
+14. Revenez au volet du locataire Azure Active Directory **AdatumLab500-04**. Dans la section **Gérer**, cliquez sur **Propriétés**, puis sur le lien **Gérer les paramètres de sécurité par défaut** en bas du volet. Dans le volet **Activer les paramètres de sécurité par défaut**, cliquez sur **Désactivé**. Sélectionnez **Mon organisation utilise l’accès conditionnel** comme *Motif de désactivation*, cliquez sur **Enregistrer**, lisez l’avertissement, puis cliquez sur **Désactiver**.
 
     >**Remarque** : vérifiez que vous êtes connecté au locataire Azure AD **AdatumLab500-04**. Vous pouvez utiliser le filtre **Annuaire + abonnement** pour basculer entre les locataires Azure AD. Vérifiez que vous êtes connecté en tant qu’utilisateur avec le rôle Administrateur général dans le locataire Azure AD.
 
@@ -286,7 +289,7 @@ Dans cette tâche, vous allez valider la configuration de l’authentification m
 
 1. Ouvrez une fenêtre de navigation InPrivate.
 
-2. Accédez au portail Azure et connectez-vous à l’aide du compte d’utilisateur **aaduser1**. 
+2. Accédez au portail Azure, **`https://portal.azure.com/`** , et connectez-vous avec le compte d’utilisateur **aaduser1**. 
 
     >**Remarque** : pour vous connecter, vous devez fournir un nom complet du compte d’utilisateur **aaduser1**, y compris le nom de domaine DNS du locataire Azure AD dont vous avez pris note précédemment dans ce labo. Ce nom d’utilisateur est au format aaduser1@`<your_tenant_name>`.onmicrosoft.com, où `<your_tenant_name>` est l’espace réservé représentant votre nom de locataire Azure AD unique. 
 
@@ -302,7 +305,7 @@ Dans cette tâche, vous allez valider la configuration de l’authentification m
 
 7. Dans la page **Conserver votre compte sécurisé**, vérifiez que la vérification a réussi et cliquez sur **Suivant**.
 
-8. Dans la page **Conserver votre compte sécurisé**, cliquez sur **Je souhaite utiliser une autre méthode**, sélectionnez **E-mail** dans la liste déroulante, cliquez sur **Confirmer**, indiquez l’adresse e-mail que vous avez l’intention d’utiliser, puis cliquez sur **Suivant**. Une fois que vous recevez l’e-mail correspondant, identifiez le code dans le corps de l’e-mail, indiquez-le, puis cliquez sur **Terminé**.
+8. Si vous êtes invité à spécifier une autre méthode d’authentification, cliquez sur **Je souhaite utiliser une autre méthode**, sélectionnez **E-mail** dans la liste déroulante, cliquez sur **Confirmer**, indiquez l’adresse e-mail que vous avez l’intention d’utiliser, puis cliquez sur **Suivant**. Une fois que vous recevez l’e-mail correspondant, identifiez le code dans le corps de l’e-mail, indiquez-le, puis cliquez sur **Terminé**.
 
 9. Modifiez votre mot de passe lorsque vous y êtes invité. Veillez à noter le nouveau mot de passe.
 
@@ -317,7 +320,7 @@ Dans cette tâche, vous allez valider la configuration de l’authentification m
 
 ### Durée estimée : 15 minutes
 
-Dans cet exercice, vous effectuez les tâches suivantes 
+Dans cet exercice, vous allez effectuer les tâches suivantes : 
 
 - Tâche 1 : Configurer une stratégie d’accès conditionnel.
 - Tâche 2 : Tester la stratégie d’accès conditionnel.
@@ -330,27 +333,27 @@ Dans cette tâche, vous allez examiner les paramètres de stratégie d’accès 
 
 2. Dans le volet **AdatumLab500-04**, dans la section **Gérer**, cliquez sur **Sécurité**.
 
-3. Dans le volet **prise en main de la sécurité\|** , dans la section **Protéger**, cliquez sur **Accès conditionnel**.
+3. Dans le volet **prise en main de la sécurité\|** , dans la section **Protéger**, cliquez sur **Accès conditionnel**. Dans le volet de navigation de gauche, cliquez sur **Stratégies**.
 
-4. Dans le volet **Stratégies d’accès conditionnel\|** , cliquez sur **+Nouvelle stratégie**, sélectionnez **Créer une stratégie** dans la liste déroulante. 
+4. Dans le panneau **Accès conditionnel \| Stratégies**, cliquez sur **+ Nouvelle stratégie**. 
 
 5. Dans le volet **Nouveau**, configurez les éléments suivants :
 
    - Dans la zone de texte **Nom**, tapez **AZ500Policy1**.
     
-   - Cliquez sur **Utilisateurs ou identités de charge de travail sélectionnés**. Sur le côté droit, sous À quoi s’applique cette stratégie >> Utilisateurs et groupes >> Inclure >> Activer **Sélectionner des utilisateurs et des groupes** >> cochez la case **Utilisateurs et groupes**, dans le volet **Sélectionner**, cliquez sur **aaduser2**, puis cliquez sur **Sélectionner**.
+   - Sous **Utilisateurs**, cliquez sur **0 utilisateur et groupe sélectionné**. Sur le côté droit, sous Inclure, activez **Sélectionner des utilisateurs et des groupes** >> cochez la case **Utilisateurs et groupes**. Dans le volet **Sélectionner des utilisateurs et des groupes**, cochez la case **aaduser2** et cliquez sur **Sélectionner**.
     
-   - Cliquez sur **Applications ou actions cloud**, cliquez sur **Sélectionner des applications**, dans le volet **Sélectionner**, sur **Gestion Microsoft Azure**, puis sur **Sélectionner**. 
+   - Sous **Ressources cibles**, cliquez sur **Aucune ressource cible sélectionnée** et sur **Sélectionner des applications**. Sous Sélectionner, cliquez sur **Aucune**. Dans le volet **Sélectionner**, cochez la case correspondant à **Gestion Microsoft Azure** et cliquez sur **Sélectionner**. 
 
-    >**Remarque** : Examinez l’avertissement indiquant que cette stratégie affecte l’accès au Portail Azure.
+     >**Remarque** : Examinez l’avertissement indiquant que cette stratégie affecte l’accès au Portail Azure.
     
-   - Cliquez sur **Conditions**, cliquez sur **Risque de connexion**, dans le volet **Risque de connexion**, passez en revue les niveaux de risque, mais n’apportez aucune modification et fermez le volet **Risque de connexion**.
+   - Sous **Conditions**, cliquez sur **0 condition sélectionnée**, puis sous **Risque de connexion**, cliquez sur **Non configuré**. Dans le volet **Risque de connexion**, passez en revue les niveaux de risque, mais n’apportez aucune modification et fermez le volet **Risque de connexion**.
     
-   - Cliquez sur **Plateformes d’appareils**, passez en revue les plateformes d’appareil qui peuvent être incluses et cliquez sur **Terminé**.
+   - Sous **Plateformes d’appareils**, cliquez sur **Non configuré**, passez en revue les plateformes d’appareils qui peuvent être incluses, mais n’apportez aucune modification et cliquez sur **Terminé**.
     
-   - Cliquez sur **Emplacements** et passez en revue les options d’emplacement sans apporter de modifications.
+   - Sous **Localisations**, cliquez sur **Non configuré** et passez en revue les options de localisation sans apporter de modifications.
     
-   - Cliquez sur **Accorder** dans la section **Contrôles d’accès**, dans le volet **Octroi**, cochez la case **Exiger l’authentification multifacteur**, puis cliquez sur **Sélectionner**
+   - Sous **Accorder** dans la section **Contrôles d’accès**, cliquez sur **0 contrôle sélectionné**. Dans le volet **Accorder**, cochez la case **Exiger l’authentification multifacteur** et cliquez sur **Sélectionner**
     
    - Définissez **Activer la stratégie** sur **Activé**.
 
@@ -364,11 +367,11 @@ Dans cette tâche, vous allez vous connecter au Portail Azure en tant que **aadu
 
 1. Ouvrez une fenêtre de Microsoft Edge InPrivate.
 
-2. Dans la nouvelle fenêtre du navigateur, accédez au portail Azure et connectez-vous à l’aide du compte d’utilisateur **aaduser2**.
+2. Dans la nouvelle fenêtre du navigateur, accédez au portail Azure, **`https://portal.azure.com/`** , et connectez-vous avec le compte d’utilisateur **aaduser2**.
 
 3. Lorsque vous y êtes invité, dans la boîte de dialogue **Plus d’informations requises**, cliquez sur **Suivant**.
 
-    >**Remarque** : le navigateur voit la redirection vers la page **Conserver votre compte sécurisé**.
+    >**Remarque** : La session du navigateur est redirigée vers la page **Protéger votre compte**.
     
 4. Dans la page **Conserver votre compte sécurisé**, sélectionnez le lien de la **méthode que je souhaite configurer**, dans la liste déroulante **Quelle méthode souhaitez-vous utiliser ?** sélectionnez **Téléphone**, puis cliquez sur **Confirmer**.
 
@@ -392,7 +395,7 @@ Dans cette tâche, vous allez vous connecter au Portail Azure en tant que **aadu
 
 13. Dans le volet **AdatumLab500-04**, dans la section **Gérer**, cliquez sur **Sécurité**.
 
-14. Dans le volet **prise en main de la sécurité\|** , dans la section **Protéger**, cliquez sur **Accès conditionnel**.
+14. Dans le volet **prise en main de la sécurité\|** , dans la section **Protéger**, cliquez sur **Accès conditionnel**. Dans le volet de navigation de gauche, cliquez sur **Stratégies**.
 
 15. Dans le volet **Stratégies d’accès conditionnel\|** , cliquez sur les points de suspension en regard de **AZ500Policy1**, cliquez sur **Supprimer**, puis, lorsque vous êtes invité à confirmer, cliquez sur **Oui**.
 
@@ -404,7 +407,7 @@ Dans cette tâche, vous allez vous connecter au Portail Azure en tant que **aadu
 
 ### Durée estimée : 30 minutes
 
-Dans cet exercice, vous effectuez les tâches suivantes 
+Dans cet exercice, vous allez effectuer les tâches suivantes :
 
 - Tâche 1 : Consulter les options d’Azure AD Identity Protection dans le portail Azure
 - Tâche 2 : Configurer une stratégie de risque utilisateur
@@ -424,85 +427,75 @@ Dans cette tâche, vous allez consulter les options d’Azure AD Identity Protec
 
 Dans cette tâche, vous allez créer une stratégie de risque utilisateur. 
 
-2. Accédez à **AdatumLab500-04** Locataire Azure AD >**Sécurité** > **Accès conditonnel**.
+1. Accédez à **AdatumLab500-04** Locataire Azure AD > **Sécurité** > **Accès conditionnel** > **Stratégies**.
 
-3. Cliquez sur **Nouvelle stratégie**.
+2. Cliquez sur **+ Nouvelle stratégie**.
 
-4. Tapez le nom de stratégie suivant dans la zone de texte **Nom**, puis tapez **AZ500Policy2**.
+3. Tapez le nom de stratégie suivant dans la zone de texte **Nom**, puis tapez **AZ500Policy2**.
 
-5. Sous **Attributions**, sélectionnez **Utilisateurs**.
+4. Sous **Affectations** > **Utilisateurs**, cliquez sur **0 utilisateur et groupe sélectionné**.
 
-6. Sous **Inclure**, cliquez sur **Sélectionner des utilisateurs et des groupes**, puis sélectionnez **aaduser2** et **aaduser3**.
+5. Sous **Inclure**, cliquez sur **Sélectionner des utilisateurs et des groupes** et sur **Utilisateurs et groupes**, sélectionnez **aaduser2** et **aaduser3**, puis cliquez sur **Sélectionner**.
 
-7. Sous **Exclure**, cliquez sur **Utilisateurs et groupes** et sélectionnez **aaduser1**. 
+6. Sous **Exclure**, cliquez sur **Utilisateurs et groupes**, sélectionnez **aaduser1** et cliquez sur **Sélectionner**. 
 
-8. Sous **Applications ou actions cloud** > **Inclure**, sélectionnez **Toutes les applications cloud**.
+7. Sous **Ressources cibles**, cliquez sur **Aucune ressource cible sélectionnée**, vérifiez que **Applications cloud** est sélectionné dans la liste déroulante puis, sous **Inclure**, sélectionnez **Toutes les applications cloud**.
 
-9. Dans **Conditions** > **des risques utilisateur**, définissez **Configurer** sur **Oui**.
+8. Sous **Conditions**, cliquez sur **0 condition sélectionnée**, puis sous **Utilisateur à risque**, cliquez sur **Non configuré**. Dans le panneau **Utilisateur à risque**, définissez **Configurer** sur **Oui**.
 
-10. Sous **Configurer les niveaux de risque utilisateur nécessaires à l’application de la stratégie**, sélectionnez **Élevé**.
+9. Sous **Configurer les niveaux de risque utilisateur nécessaires à l’application de la stratégie**, sélectionnez **Élevé**.
 
-11. Cliquez sur **Done**.
+10. Cliquez sur **Done**.
 
-12. Sous **Contrôles d’accès** > vérifiez que **Octroyer** est activé.    
+11. Sous **Accorder** dans la section **Contrôles d’accès**, cliquez sur **0 contrôle sélectionné**. Dans le panneau **Accorder**, vérifiez que l’option **Autoriser l’accès** est sélectionnée.
 
-13. Sélectionnez **Exiger l’authentification multifacteur** et **Exiger la modification du mot de passe**.
+12. Sélectionnez **Exiger l’authentification multifacteur** et **Exiger la modification du mot de passe**.
 
-14. Cliquez sur **Sélectionner**.
+13. Cliquez sur **Sélectionner**.
 
-15. Sous **Session**, cliquez sur **Fréquence de connexion** et vérifiez que **Tout le temps** est activé.
+14. Sous **Session**, cliquez sur **0 contrôle sélectionné**. Sélectionnez **Fréquence de connexion**, puis **À chaque fois**.
 
-16. Cliquez sur **Sélectionner**.
+15. Cliquez sur **Sélectionner**.
 
-17. Confirmez vos paramètres et définissez **Activer la stratégie** sur **Rapport seul**.
+16. Vérifiez que l’option **Activer la stratégie** est définie sur **Rapport uniquement**.
 
-    >**Remarque** : Le message suivant s’affiche en bas de la page : **« Il semble que vous êtes sur le point de gérer les configurations de sécurité de votre organisation. Excellent ! Vous devez d’abord désactiver les paramètres de sécurité par défaut avant d’activer une stratégie d’accès conditionnel »** .
-
-18. Cliquez sur la partie du message qui dit : **désactiver les paramètres de sécurité par défaut**.
-
-19. Pour **Activer les paramètres de sécurité par défaut**, remplacez Oui par **Non**.
-
-20. Cliquez sur **Autre** et tapez ce qui suit dans le champ : **AZ500 lab use**.
-
-21. Cliquez sur **Enregistrer**.
-
-22. Cliquez sur **Créer** pour activer votre stratégie.
+17. Cliquez sur **Créer** pour activer votre stratégie.
 
 #### Tâche 3 : Configurer une stratégie de connexion à risque
 
-1. Accédez à **AdatumLab500-04** Locataire Azure AD >**Sécurité** > **Accès conditonnel**.
+1. Accédez à **AdatumLab500-04** Locataire Azure AD > **Sécurité** > **Accès conditionnel**> **Stratégies**.
 
-2. Sélectionnez **Nouvelle stratégie**.
+2. Sélectionnez **+ Nouvelle stratégie**.
 
 3. Tapez le nom de stratégie suivant dans la zone de texte **Nom**, puis tapez **AZ500Policy3**.
 
-4. Sous **Attributions**, sélectionnez **Utilisateurs**.
+4. Sous **Affectations** > **Utilisateurs**, cliquez sur **0 utilisateur et groupe sélectionné**.
 
-5. Sous **Inclure**, cliquez sur **Sélectionner des utilisateurs et des groupes**, puis sélectionnez **aaduser2** et **aaduser3**.
+5. Sous **Inclure**, cliquez sur **Sélectionner des utilisateurs et des groupes** et sur **Utilisateurs et groupes**, sélectionnez **aaduser2** et **aaduser3**, puis cliquez sur **Sélectionner**.
 
-6. Sous **Exclure**, cliquez sur **Utilisateurs et groupes** et sélectionnez **aaduser1**. 
+6. Sous **Exclure**, cliquez sur **Utilisateurs et groupes**, sélectionnez **aaduser1** et cliquez sur **Sélectionner**. 
 
-7. Sous **Applications ou actions cloud** > **Inclure**, sélectionnez **Toutes les applications cloud**.
+7. Sous **Ressources cibles**, cliquez sur **Aucune ressource cible sélectionnée**, vérifiez que **Applications cloud** est sélectionné dans la liste déroulante puis, sous **Inclure**, sélectionnez **Toutes les applications cloud**.
 
-8. Dans **Conditions** > **Risque de connexion**, définissez **Configurer** sur **Oui**.
+8. Sous **Conditions**, cliquez sur **0 condition sélectionnée**, puis sous **Risque de connexion**, cliquez sur **Non configuré**. Dans le panneau **Risque de connexion**, définissez **Configurer** sur **Oui**.
 
 9. Sous **Sélectionner le niveau de risque de connexion auquel cette stratégie s’applique**, sélectionnez **Haut** et **Moyen**.
 
 10. Cliquez sur **Done**.
 
-11. Sous **Contrôles d’accès** > **Octroyer**.  
+11. Sous **Accorder** dans la section **Contrôles d’accès**, cliquez sur **0 contrôle sélectionné**. Dans le panneau **Accorder**, vérifiez que l’option **Autoriser l’accès** est sélectionnée.   
 
-12. Sélectionnez **Accorder l’accès**, **Exiger l’authentification multifacteur**.
+12. Sélectionnez **Exiger l’authentification multifacteur**.
 
 13. Cliquez sur **Sélectionner**.
 
-13. Sous **Session**, sélectionnez **Fréquence de connexion** et vérifiez que **Tout le temps** est activé.
+14. Sous **Session**, cliquez sur **0 contrôle sélectionné**. Sélectionnez **Fréquence de connexion**, puis **À chaque fois**.
 
-14. Cliquez sur **Sélectionner**.
+15. Cliquez sur **Sélectionner**.
 
-15. Confirmez vos paramètres et définissez **Activer la stratégie** sur **Rapport seul**.
+16. Confirmez vos paramètres et réglez **Activer la stratégie** sur **Activé**.
 
-16. Cliquez sur **Créer** pour activer votre stratégie.
+17. Cliquez sur **Créer** pour activer votre stratégie.
 
 #### Tâche 4 : Simuler des événements à risque par rapport aux stratégies Azure AD Identity Protection 
 
@@ -514,14 +507,14 @@ Dans cette tâche, vous allez créer une stratégie de risque utilisateur.
 
 3. Dans le volet **Machines virtuelles**, cliquez sur l’entrée **az500-04-vm1**. 
 
-4. Dans le volet **az500-04-vm1**, cliquez sur **Connecter** et, dans le menu déroulant, cliquez sur **RDP**. 
+4. Dans le panneau **az500-04-vm1**, cliquez sur **Se connecter**. Vérifiez que vous êtes sous l’onglet **RDP**.
 
 5. Cliquez sur **Télécharger le fichier RDP**, puis utilisez-le pour vous connecter à la machine virtuelle Azure **az500-04-vm1** via le Bureau à distance. Lorsque vous êtes invité à vous authentifier, fournissez les informations d’identification suivantes :
 
-   |Paramètre|Valeur|
-   |---|---|
-   |Nom d’utilisateur|**Étudiant**|
-   |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 04 > Exercice 1 > Tâche 1 > Étape 9.**|
+    |Paramètre|Valeur|
+    |---|---|
+    |Nom d’utilisateur|**Étudiant**|
+    |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 04 > Exercice 1 > Tâche 1 > Étape 9.**|
 
     >**Remarque** : attendez que la session Bureau à distance et le **Gestionnaire de serveur** se chargent.  
 
@@ -537,15 +530,15 @@ Dans cette tâche, vous allez créer une stratégie de risque utilisateur.
 
 10. Téléchargez et installez la version Windows du navigateur ToR avec les paramètres par défaut. 
 
-11. Une fois l’installation terminée, démarrez le navigateur ToR, utilisez l’option **Connecter** sur la page initiale et accédez à l’application volet d’accès à l’adresse **https://myapps.microsoft.com** .
+11. Une fois l’installation terminée, démarrez le navigateur ToR, utilisez l’option **Se connecter** dans la page initiale et accédez au Volet d’accès à l’application sur **https://myapps.microsoft.com** .
 
 12. Lorsque vous y êtes invité, essayez de vous connecter avec le compte **aaduser3**. 
 
-    >**Remarque** : vous verrez un message indiquant que **votre connexion a été bloquée**. C’est attendu, étant donné que ce compte n’est pas configuré avec l’authentification multifacteur, ce qui est nécessaire en raison d’un risque de connexion accru associé à l’utilisation du navigateur ToR.
+    >**Remarque** : vous verrez un message indiquant que **votre connexion a été bloquée**. C’est normal, étant donné que ce compte n’est pas configuré avec l’authentification multifacteur, ce qui est obligatoire en raison du nombre accru de connexions à risque associées à l’utilisation du navigateur ToR.
 
-13. Utilisez **Se déconnecter et se connecter avec une autre option de compte** ou sélectionnez la flèche arrière pour vous connecter avec le compte **aaduser1** que vous avez créé et configuré pour l’authentification multifacteur précédemment dans ce laboratoire.
+13. Dans le navigateur ToR, sélectionnez la flèche vers la gauche pour vous connecter avec le compte **aaduser1** que vous avez créé et configuré pour l’authentification multifacteur dans ce labo.
 
-    >**Remarque** : cette fois, vous verrez le message d’**activité suspecte détectée**. Là encore, c’est attendu, car ce compte est configuré avec l’authentification multifacteur. Compte tenu du risque de connexion accru associé à l’utilisation de ToR Browser, vous devez utiliser l’authentification multifacteur.
+    >**Remarque** : cette fois, vous verrez le message d’**activité suspecte détectée**. Là encore, c’est normal, car ce compte est configuré avec l’authentification multifacteur. Compte tenu du risque de connexion accru associé à l’utilisation de ToR Browser, vous devez utiliser l’authentification multifacteur.
 
 14. Utilisez l’option **Vérifier** et spécifiez si vous souhaitez vérifier votre identité via un message texte ou un appel.
 
@@ -553,7 +546,7 @@ Dans cette tâche, vous allez créer une stratégie de risque utilisateur.
 
 16. Fermez la session Bureau à distance. 
 
-    >**Remarque** : À ce stade, vous avez essayé deux méthodes de connexion. Vous allez ensuite examinez les rapports Azure AD Identity Protection.
+    >**Remarque** : Jusqu’ici, vous avez essayé deux méthodes de connexion. Vous allez ensuite consulter les rapports Azure Identity Protection.
 
 #### Tâche 5 : Examiner les rapports Azure AD Identity Protection
 
@@ -575,7 +568,7 @@ Dans cette tâche, vous allez examiner les rapports Azure AD Identity Protection
 
 8. Passez en revue le rapport et identifiez les entrées représentant la connexion à partir de l’adresse IP anonyme générée par le navigateur ToR. 
 
- >**Remarque** : Il peut s’écouler 10 à 15 minutes avant que les risques s’affichent dans les rapports.
+    >**Remarque** : Il peut s’écouler 10 à 15 minutes avant que les risques n’apparaissent dans les rapports.
 
 > **Result** : Vous avez activé Azure AD Identity Protection, configuré une stratégie de risque utilisateur et une stratégie de risque de connexion, ainsi que la configuration d’Azure AD Identity Protection validée en simulant des événements à risque.
 
@@ -595,7 +588,7 @@ Utilisez les étapes suivantes pour désactiver les stratégies de protection de
 
 5. Dans le volet **Identity Protection \| Stratégie d’utilisateur à risque**, définissez **Appliquer la stratégie** sur **Désactivé**, puis cliquez sur **Enregistrer**.
 
-6. Dans le volet **Stratégie de risque utilisateur Identity Protection\|** , cliquez sur **Stratégie de risque de connexion**.
+6. Dans le volet **Identity Protection \| Stratégie de risque utilisateur**, cliquez sur **Stratégie de risque de connexion**.
 
 7. Dans le volet **Identity Protection \| Stratégie de connexion à risque**, définissez **Appliquer la stratégie** sur **Désactivé**, puis cliquez sur **Enregistrer**.
 
