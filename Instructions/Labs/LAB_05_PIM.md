@@ -48,7 +48,7 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 
 Dans cette tâche, vous allez rendre un utilisateur éligible pour un rôle d’annuaire Azure AD.
 
-1. Connectez-vous au portail Azure **`https://portal.azure.com/`** .
+1. Connectez-vous au Portail Azure à l’adresse **`https://portal.azure.com/`** .
 
     >**Remarque** : vérifiez que vous êtes connecté au locataire Azure AD **AdatumLab500-04**. Vous pouvez utiliser le filtre **Annuaire + abonnement** pour basculer entre les locataires Azure AD. Vérifiez que vous êtes connecté en tant qu’utilisateur avec le rôle Administrateur général.
     
@@ -86,7 +86,7 @@ Dans cette tâche, vous allez rendre un utilisateur éligible pour un rôle d’
 
 3. Dans le volet **AdatumLab500-04 \| Rôles**, cliquez sur l’entrée de rôle **Lecteur général**. 
 
-4. Dans le volet **Lecteur général \| Affectations**, cliquez sur l’icône **Paramètres** dans la barre d’outils du volet et passez en revue les paramètres de configuration du rôle, y compris les exigences de l’authentification multifacteur d’Azure.
+4. Dans le volet **Lecteur général \| Affectations**, cliquez sur l’icône **Paramètres du rôle** dans la barre d’outils du volet et examinez les paramètres de configuration du rôle, y compris les exigences de l’authentification multifacteur d’Azure.
 
 5. Cliquez sur **Modifier**.
 
@@ -132,7 +132,7 @@ Dans cette tâche, vous allez rendre un utilisateur éligible pour un rôle d’
 
 7. Passez en revue les paramètres du **type d’affectation**, puis cliquez sur **Affecter**.
 
-8. Dans la page **Affectations** sous l’onglet **Affectations éligibles**, sélectionnez **Mettre à jour** pour l’affectation **aaduser2**. Sélectionnez **Éligible et** **Enregistrez** définitivement.
+8. Dans le volet de navigation de gauche, cliquez sur **Affectations**. Dans l’onglet **Affectations éligibles** sous **Administrateur de la sécurité**, sélectionnez **Mettre à jour** pour l’affectation **aaduser2**. Sélectionnez **Éligible et** **Enregistrez** définitivement.
 
     >**Remarque** : l’utilisateur aaduser2 est désormais éligible définitivement au rôle Administrateur de sécurité.
     
@@ -151,7 +151,7 @@ Dans cette tâche, vous allez activer un rôle qui ne nécessite pas d’approba
 
 1. Ouvrez une fenêtre de navigation InPrivate.
 
-2. Dans la fenêtre du navigateur InPrivate, accédez au portail Azure et connectez-vous à l’aide du compte d’utilisateur **aaduser2**.
+2. Dans la fenêtre du navigateur InPrivate, accédez au Portail Azure à l’adresse **`https://portal.azure.com/`** et connectez-vous à l’aide du compte d’utilisateur **aaduser2**.
 
     >**Remarque** : pour vous connecter, vous devez fournir un nom complet du compte d’utilisateur **aaduser2**, y compris le nom de domaine DNS du locataire Azure AD dont vous avez pris note précédemment dans ce labo. Ce nom d’utilisateur est au format aaduser2@`<your_tenant_name>`.onmicrosoft.com, où `<your_tenant_name>` est l’espace réservé représentant votre nom de locataire Azure AD unique. 
 
@@ -202,49 +202,47 @@ Dans cette tâche, vous allez activer un rôle qui nécessite une approbation.
 
 6. Dans le volet **Mes rôles \| Azure AD**, recherchez le rôle **Administrateur de la sécurité**, puis cliquez sur **Activer**. 
 
-7. Si nécessaire, cliquez sur l’avertissement **Vérification supplémentaire requise. Cliquez pour continuer**. 
-
-8. Suivez les instructions pour vérifier votre identité.
+7. Si nécessaire, cliquez sur l’avertissement **Vérification supplémentaire requise. Cliquez pour continuer** et suivez les instructions pour vérifier votre identité.
 
     >**Remarque** : Vous ne devez vous authentifier qu’une seule fois par session. 
 
-9. Une fois que vous êtes de retour dans l’interface du portail Azure, dans le volet **Activer - Administrateur de la sécurité**, dans la zone de texte **Motif**, saisissez un texte justifiant l’activation, puis cliquez sur **Activer**.
+8. Une fois que vous êtes de retour dans l’interface du portail Azure, dans le volet **Activer - Administrateur de la sécurité**, dans la zone de texte **Motif**, saisissez un texte justifiant l’activation, puis cliquez sur **Activer**.
 
     >**Remarque** : le processus d’auto-approbation doit se terminer.
 
-10. Revenez dans le volet **Mes rôles \| Azure AD**, cliquez sur l’onglet **Affectations actives** et notez que la liste des **affectations actives** inclut **l’administrateur de la sécurité**, mais pas le rôle **Lecteur général**.
+9. Revenez dans le volet **Mes rôles \| Azure AD**, cliquez sur l’onglet **Affectations actives** et notez que la liste des **affectations actives** inclut **l’administrateur de la sécurité**, mais pas le rôle **Lecteur général**.
 
     >**Remarque** : vous allez maintenant approuver le rôle Lecteur général.
 
-11. Déconnectez-vous du portail Azure en tant que **aaduser2**.
+10. Déconnectez-vous du portail Azure en tant que **aaduser2**.
 
-12. Connectez-vous au portail Azure en tant que **aaduser3**.
+11. Dans le navigateur InPrivate, connectez-vous au Portail Azure à **`https://portal.azure.com/`** en tant que **aaduser3**.
 
     >**Remarque** : si vous rencontrez des problèmes d’authentification en utilisant l’un des comptes d’utilisateur, vous pouvez vous connecter au locataire Azure AD à l’aide de votre compte d’utilisateur pour réinitialiser leurs mots de passe ou reconfigurer leurs options de connexion.
 
-13. Dans le portail Azure, accédez à **Azure AD Privileged Identity Management** (Dans la zone de texte Rechercher des ressources, des services et des documents en haut de la page Portail Azure, tapez Azure AD Privileged Identity Management et appuyez sur la touche Entrée).
+12. Dans le portail Azure, accédez à **Azure AD Privileged Identity Management** (Dans la zone de texte Rechercher des ressources, des services et des documents en haut de la page Portail Azure, tapez Azure AD Privileged Identity Management et appuyez sur la touche Entrée).
 
-14. Dans le volet **Privileged Identity Management \| Démarrage rapide**, dans la section **Tâches**, cliquez sur **Approuver les demandes**.
+13. Dans le volet **Privileged Identity Management \| Démarrage rapide**, dans la section **Tâches**, cliquez sur **Approuver les demandes**.
 
-15. Dans le volet **Approuver les demandes \| Rôles Azure AD**, dans la section **Demandes d’activations de rôle**, cochez la case de l’entrée représentant la demande d’activation de rôle au rôle **Lecteur général** par **aaduser2**.
+14. Dans le volet **Approuver les demandes \| Rôles Azure AD**, dans la section **Demandes d’activations de rôle**, cochez la case de l’entrée représentant la demande d’activation de rôle au rôle **Lecteur général** par **aaduser2**.
 
-16. Cliquez sur **Approuver**. Dans le volet **Approuver la demande**, dans la zone de texte **Justification**, tapez un motif pour l’activation, notez les heures de début et de fin, puis cliquez sur **Confirmer**. 
+15. Cliquez sur **Approuver**. Dans le volet **Approuver la demande**, dans la zone de texte **Justification**, tapez un motif pour l’activation, notez les heures de début et de fin, puis cliquez sur **Confirmer**. 
 
     >**Remarque** : vous avez également la possibilité de refuser des demandes.
 
-17. Déconnectez-vous du portail Azure en tant que **aaduser3**.
+16. Déconnectez-vous du portail Azure en tant que **aaduser3**.
 
-18. Connectez-vous au portail Azure en tant que **aaduser2**
+17. Dans le navigateur InPrivate, se connecter au Portail Azure à **`https://portal.azure.com/`** en tant que **aaduser2**
 
-19. Dans le portail Azure, accédez à **Azure AD Privileged Identity Management** (Dans la zone de texte Rechercher des ressources, des services et des documents en haut de la page Portail Azure, tapez Azure AD Privileged Identity Management et appuyez sur la touche Entrée).
+18. Dans le portail Azure, accédez à **Azure AD Privileged Identity Management** (Dans la zone de texte Rechercher des ressources, des services et des documents en haut de la page Portail Azure, tapez Azure AD Privileged Identity Management et appuyez sur la touche Entrée).
 
-20. Dans le volet **Privileged Identity Management \| Démarrage rapide**, dans la section **Tâches**, cliquez sur **Mes rôles**.
+19. Dans le volet **Privileged Identity Management \| Démarrage rapide**, dans la section **Tâches**, cliquez sur **Mes rôles**.
 
-21. Dans le volet **Mes rôles \| Rôles Azure AD**, cliquez sur l’onglet **Affectations actives** et vérifiez que le rôle Lecteur général est désormais actif.
+20. Dans le volet **Mes rôles \| Rôles Azure AD**, cliquez sur l’onglet **Affectations actives** et vérifiez que le rôle Lecteur général est désormais actif.
 
     >**Remarque** : vous devrez peut-être actualiser la page pour afficher la liste mise à jour des affectations actives.
 
-22. Déconnectez-vous et fermez la fenêtre du navigateur InPrivate.
+21. Déconnectez-vous et fermez la fenêtre du navigateur InPrivate.
 
 > Résultat : vous avez pratiqué l’activation des rôles PIM avec et sans approbation. 
 
