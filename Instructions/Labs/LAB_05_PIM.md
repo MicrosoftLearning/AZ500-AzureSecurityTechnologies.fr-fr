@@ -48,7 +48,7 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 
 Dans cette tâche, vous allez rendre un utilisateur éligible pour un rôle d’annuaire Azure AD.
 
-1. Connectez-vous au Portail Azure à l’adresse **`https://portal.azure.com/`** .
+1. Connectez-vous au Portail Azure à l’adresse **`https://portal.azure.com/`**.
 
     >**Remarque** : vérifiez que vous êtes connecté au locataire Azure AD **AdatumLab500-04**. Vous pouvez utiliser le filtre **Annuaire + abonnement** pour basculer entre les locataires Azure AD. Vérifiez que vous êtes connecté en tant qu’utilisateur avec le rôle Administrateur général.
     

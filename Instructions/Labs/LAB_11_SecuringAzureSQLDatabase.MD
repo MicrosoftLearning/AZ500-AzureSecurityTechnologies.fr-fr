@@ -166,7 +166,7 @@ Dans cette tâche, vous allez d’abord configurer l’audit au niveau serveur, 
     >**Remarque** : les audits peuvent être écrits dans un compte de stockage Azure, dans un espace de travail Log Analytics ou dans Event Hub. Vous pouvez configurer n’importe quelle combinaison de ces options.
 
     >**Remarque** : Si l’audit basé sur la stockage est activé sur le serveur, il s’applique toujours à la base de données, quels que soit les paramètres de la base de données.
-13. Sur le Portail Azure, dans le menu de gauche de la page Vue d’ensemble de votre base de données SQL, sélectionnez **Éditeur de requête (préversion)** . Essayez de vous connecter, vous risquez de rencontrer un problème avec le mot de passe, la règle de pare-feu de votre adresse IP, tout étant audité. Essayez également de réussir la connexion, exécutez la requête et vous pouvez trouver plus de détails dans les journaux d’audit
+13. Sur le Portail Azure, dans le menu de gauche de la page Vue d’ensemble de votre base de données SQL, sélectionnez **Éditeur de requête (préversion)**. Essayez de vous connecter, vous risquez de rencontrer un problème avec le mot de passe, la règle de pare-feu de votre adresse IP, tout étant audité. Essayez également de réussir la connexion, exécutez la requête et vous pouvez trouver plus de détails dans les journaux d’audit
 
 14. revenez à la base de données, Audit et cliquez sur **Afficher les journaux d’audit**.
 
