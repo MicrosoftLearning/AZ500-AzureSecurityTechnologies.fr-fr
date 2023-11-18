@@ -46,7 +46,7 @@ Dans cette tâche, vous identifierez un nom DNS pour votre déploiement de machi
 
 1. Connectez-vous au portail Azure **`https://portal.azure.com/`** .
 
-    >**Remarque** : connectez-vous au portail Azure en utilisant un compte disposant du rôle Propriétaire ou Contributeur dans l’abonnement Azure que vous utilisez pour ce labo.
+    >**Remarque** : connectez-vous au Portail Azure à l’aide d’un compte disposant du rôle Propriétaire ou Contributeur dans l’abonnement Azure que vous utilisez pour ce laboratoire.
 
 2. Ouvrez Cloud Shell en cliquant sur la première icône située en haut à droite du portail Azure. Si vous y êtes invité, cliquez sur **PowerShell** et **Créer un stockage**.
 
@@ -164,7 +164,7 @@ Dans cette tâche, vous allez ajouter un nouvel utilisateur Azure AD et les affe
 
 2. Dans le volet **Utilisateurs | Tous les utilisateurs**, cliquez sur **+ Nouvel utilisateur**, puis sur **Créer un utilisateur**.
 
-3. Dans le volet **Nouvel utilisateur**, vérifiez que l’option **Créer un utilisateur** est sélectionnée, spécifiez les paramètres suivants sous l’onglet Informations de base (laissez les autres paramètres avec leurs valeurs par défaut) et cliquez sur **Suivant : Propriétés >**  :
+3. Dans le volet **Nouvel utilisateur**, vérifiez que l’option **Créer un utilisateur** est sélectionnée, spécifiez les paramètres suivants sous l’onglet Informations de base (laissez les autres paramètres avec leurs valeurs par défaut), puis cliquez sur **Suivant : Propriétés > ** :
 
    |Paramètre|Valeur|
    |---|---|
@@ -176,7 +176,7 @@ Dans cette tâche, vous allez ajouter un nouvel utilisateur Azure AD et les affe
 
     >**Remarque** : Enregistrez le mot de passe de l’utilisateur en cliquant sur le bouton **Copier dans le Presse-papiers** sur le côté droit de la zone de texte Mot de passe et en le collant dans un document du Bloc-notes. Vous en aurez besoin plus tard dans ce labo.
 
-4. Sous l’onglet **Propriétés**, faites défiler jusqu’en bas et spécifiez **États-Unis** comme Lieu d’utilisation (laissez toutes les autres valeurs par défaut), puis cliquez sur **Suivant : Attributions >** .
+4. Sous l’onglet **Propriétés**, faites défiler vers le bas de l’écran et spécifiez l’emplacement d’utilisation : **États-Unis** (laissez les autres paramètres avec leurs valeurs par défaut), puis cliquez sur **Suivant : Affectations > **.
 
 5. Sous l’onglet **Attributions**, cliquez sur **+ Ajouter un rôle**, recherchez et sélectionnez **Administrateur général**, puis cliquez sur **Sélectionner**. Cliquez sur **Vérifier + créer**, puis sur **Créer**.
    
@@ -228,7 +228,7 @@ Dans cette tâche, vous allez vous connecter à la machine virtuelle Azure exéc
 
     >**Remarque** : les étapes suivantes sont effectuées dans la session Bureau à distance sur la machine virtuelle Azure **adVM**.
 
-    >**Remarque** : Si l’**adresse IP publique de l’équilibreur de charge** n’est pas disponible dans la liste déroulante **Adresse IP** du panneau RDP, dans le portail Azure, recherchez **Adresses IP publiques**, sélectionnez **adPublicIP** et notez son adresse IP. Cliquez sur le bouton Démarrer, tapez **MSTSC**, puis appuyez sur **Entrée** pour lancer le client Bureau à distance. Tapez l’adresse IP publique de l’équilibreur de charge dans la zone de texte **Ordinateur :** et cliquez sur **Se connecter**.
+    >**Remarque** : Si l’**adresse IP publique de l’équilibreur de charge** n’est pas disponible dans la liste déroulante **Adresse IP** du panneau RDP dans le Portail Azure, recherchez **Adresses IP publiques**, sélectionnez **adPublicIP** et notez son adresse IP. Cliquez sur le bouton Démarrer, tapez **MSTSC**, puis appuyez sur **Entrée** pour lancer le client Bureau à distance. Tapez l’adresse IP publique de l’équilibreur de charge dans la zone de texte **Ordinateur :** et cliquez sur **Se connecter**.
 
 6. Dans le **Gestionnaire de serveur**, cliquez sur **Outils**, puis dans le menu déroulant, cliquez sur **Centre d'administration Active Directory**.
 
@@ -317,7 +317,7 @@ Dans cette tâche, vous allez vérifier que la synchronisation d’annuaires fon
 
    >**Remarque** : vous devrez peut-être attendre quelques minutes et sélectionner **Actualiser** pour que le compte d’utilisateur **aduser1** apparaisse.
 
-3. Cliquez sur le compte **aduser1** et sélectionnez l’onglet **Propriétés**. Faites défiler jusqu’à la section **Locale**, notez que l’attribut **Synchronisation locale activée** est défini sur **Oui**.
+3. Cliquez sur le compte **aduser1**, puis sélectionnez l’onglet **Propriétés**. Faites défiler jusqu’à la section **Local**, notez que l’attribut **Synchronisation locale activée** est défini sur **Oui**.
 
 4. Dans le volet **aduser1**, dans la section **Informations de travail**, notez que l’attribut **Département** n’est pas défini.
 
@@ -337,7 +337,7 @@ Dans cette tâche, vous allez vérifier que la synchronisation d’annuaires fon
 
 9. Basculez vers la fenêtre Microsoft Edge affichant le volet **aduser1**, actualisez la page et notez que la propriété Department est définie sur Sales.
 
-    >**Remarque** : Vous risquez d’attendre jusqu’à trois minutes. Réactualisez la page si l’attribut **Département** n’est toujours pas défini.
+    >**Remarque** : Il est possible que vous deviez attendre jusqu’à trois minutes. Réactualisez la page si l’attribut **Service** n’est toujours pas défini.
 
 > **Result** : une fois cet exercice terminé, vous avez préparé AD DS pour la synchronisation d’annuaires, installé Azure AD Connect et vérifié la synchronisation d’annuaires.
 
