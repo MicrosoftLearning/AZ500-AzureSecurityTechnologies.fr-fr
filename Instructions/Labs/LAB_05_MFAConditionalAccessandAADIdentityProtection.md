@@ -4,7 +4,7 @@ lab:
   module: Module 01 - Manage Identity and Access
 ---
 
-# Labo 04 : MFA et Accès conditionnel
+# Labo 5 : MFA et accès conditionnel
 # Manuel de labo de l’étudiant
 
 ## Scénario du labo

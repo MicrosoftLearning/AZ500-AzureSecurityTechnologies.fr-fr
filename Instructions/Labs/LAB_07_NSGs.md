@@ -218,7 +218,7 @@ Dans cette tâche, vous allez créer une machine virtuelle à utiliser comme ser
 
 6. Sous **Groupe de sécurité réseau de la carte réseau**, sélectionnez **Aucun**.
 
-7. Cliquez sur **Suivant : Gestion >** , puis sur **Suivant : Surveillance >** . Sur l’onglet **Surveillance** du volet **Créer une machine virtuelle**, vérifiez le paramètre suivant :
+7. Cliquez sur **Suivant : Gestion >**, puis sur **Suivant : Surveillance >**. Sur l’onglet **Surveillance** du volet **Créer une machine virtuelle**, vérifiez le paramètre suivant :
 
    |Paramètre|Valeur|
    |---|---|
@@ -255,7 +255,7 @@ Dans cette tâche, vous allez créer une machine virtuelle à utiliser comme ser
 
 5. Sous **Groupe de sécurité réseau de la carte réseau**, sélectionnez **Aucun**.
 
-6. Cliquez sur **Suivant : Gestion >** , puis sur **Suivant : Surveillance >** . Sur l’onglet **Surveillance** du volet **Créer une machine virtuelle**, vérifiez le paramètre suivant :
+6. Cliquez sur **Suivant : Gestion >**, puis sur **Suivant : Surveillance >**. Sur l’onglet **Surveillance** du volet **Créer une machine virtuelle**, vérifiez le paramètre suivant :
 
    |Paramètre|Valeur|
    |---|---|

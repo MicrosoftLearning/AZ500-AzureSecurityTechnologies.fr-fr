@@ -221,7 +221,7 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 - Tâche 1 : Autoriser votre application cliente à accéder au service Azure SQL Database
 - Tâche 2 : Créez une stratégie permettant à l’application d’accéder au Key Vault
 - Tâche 3 : Récupérer une chaîne de connexion ADO.NET de base de données SQL Azure 
-- Tâche 4 : Se connecter à la machine virtuelle Azure exécutant Visual Studio 2019 et SQL Management Studio 19
+- Tâche 4 : Connectez-vous à la machine virtuelle Azure qui exécute Visual Studio 2019 et SQL Management Studio 19
 - Tâche 5 : Créer une table dans la base de données SQL et sélectionner des colonnes de données pour chiffrement
 
 
@@ -254,7 +254,7 @@ Dans cette tâche, vous allez autoriser votre application cliente à accéder au
 
 8. Dans le volet **Ajouter un secret client**, spécifiez les paramètres suivants :
 
-    |Paramètre|Valeur|
+    |Paramètre|valeur|
     |----|----|
     |Description|**Key1**|
     |Expires|**12 mois**|
@@ -315,7 +315,7 @@ Le déploiement de modèle ARM dans l’exercice 1 a approvisionné une instance
 
     >**Remarque** : lorsque vous utilisez la chaîne de connexion, veillez à remplacer l’espace réservé `{your_password}` par le mot de passe que vous avez configuré avec le déploiement dans l’Exercice 1.
 
-#### Tâche 4 : Se connecter à la machine virtuelle Azure exécutant Visual Studio 2019 et SQL Management Studio 19
+#### Tâche 4 : Connectez-vous à la machine virtuelle Azure qui exécute Visual Studio 2019 et SQL Management Studio 19
 
 Dans cette tâche, vous allez vous connecter à la machine virtuelle Azure dont vous avez lancé le déploiement dans l’Exercice 1. Cette machine virtuelle Azure héberge Visual Studio 2019 et SQL Server Management Studio 19.
 
@@ -362,7 +362,7 @@ Dans cette tâche, vous allez vous connecter à SQL Database avec SQL Server Man
 
 7. Dans la boîte de dialogue **Se connecter au serveur**, spécifiez les paramètres suivants : 
 
-    |Paramètre|Value|
+    |Paramètre|Valeur|
     |---|---|
     |Type de serveur|**Moteur de base de données**|
     |Nom du serveur|Nom de domaine DNS que vous avez identifié précédemment dans cette tâche.|
