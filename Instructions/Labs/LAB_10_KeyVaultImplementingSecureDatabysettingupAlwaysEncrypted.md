@@ -9,7 +9,7 @@ lab:
 
 ## Scénario du labo
 
-Vous avez été invité à créer une application de preuve de concept qui utilise la prise en charge d’Azure SQL Database pour la fonctionnalité Always Encrypted. Les secrets et les clés utilisés dans ce scénario devraient être stockés dans Key Vault. L’application devrait être inscrite dans Azure Active Directory (Azure AD) afin d’améliorer sa posture de sécurité. Pour atteindre ces objectifs, la preuve de concept devrait inclure ce qui suit :
+Vous avez été invité à créer une application de preuve de concept qui utilise la prise en charge d’Azure SQL Database pour la fonctionnalité Always Encrypted. Les secrets et les clés utilisés dans ce scénario devraient être stockés dans Key Vault. L’application doit être enregistrée dans Microsoft Entra ID afin de renforcer sa sécurité. Pour atteindre ces objectifs, la preuve de concept devrait inclure ce qui suit :
 
 - Création d’un Azure Key Vault et stockage des clés et secrets dans le coffre.
 - Créez une base de données SQL Database et un chiffrement du contenu des colonnes de tables de base de données à l’aide d’Always Encrypted.
@@ -29,7 +29,7 @@ Dans ce labo, vous allez effectuer les exercices suivants :
 
 ## Diagramme de Key Vault
 
-![image](https://user-images.githubusercontent.com/91347931/157532938-c724cc40-f64f-4d69-9e91-d75344c5e0a2.png)
+![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/38c4ba6d-2fc7-45e5-b9a2-d5dbb4fbbcbc)
 
 ## Instructions
 
@@ -71,7 +71,7 @@ Dans cette tâche, vous allez déployer une machine virtuelle Azure qui va insta
    |Groupe de ressources|Cliquez sur **Créer** et tapez le nom **AZ500LAB10**.|
    |Emplacement|**USA Est**|
    |Nom d’utilisateur d’administrateur|**Étudiant**|
-   |Mot de passe d’administrateur|**Utilisez votre mot de passe personnel créé dans le labo 04 > Exercice 1 > Tâche 1 > Étape 9.**|
+   |Mot de passe d’administrateur|**Utilisez votre mot de passe personnel créé dans le labo 2 > Exercice 1 > Tâche 1 > Étape 9.**|
    
     >**Remarque** : bien que vous puissiez modifier les informations d’identification d’administration utilisées pour la connexion à la machine virtuelle, ce n’est pas nécessaire.
 
@@ -352,7 +352,7 @@ Dans cette tâche, vous allez vous connecter à SQL Database avec SQL Server Man
     |Paramètre|Valeur|
     |---|---|
     |Nom d’utilisateur|**Étudiant**|
-    |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 04 > Exercice 1 > Tâche 1 > Étape 9.**|
+    |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 2 > Exercice 1 > Tâche 1 > Étape 9.**|
 
     >**Remarque** : attendez que la session Bureau à distance et le **Gestionnaire de serveur** se chargent. Fermez le gestionnaire de serveurs. 
 
@@ -368,7 +368,7 @@ Dans cette tâche, vous allez vous connecter à SQL Database avec SQL Server Man
     |Nom du serveur|Nom de domaine DNS que vous avez identifié précédemment dans cette tâche.|
     |Authentification|**Authentification SQL Server**|
     |Connexion|**Étudiant**|
-    |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 04 > Exercice 1 > Tâche 1 > Étape 9.**|
+    |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 2 > Exercice 1 > Tâche 1 > Étape 9.**|
 
 8. Dans la boîte de dialogue **Se connecter au serveur**, cliquez sur **Se connecter**.
 

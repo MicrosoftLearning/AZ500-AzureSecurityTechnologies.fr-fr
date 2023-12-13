@@ -70,7 +70,7 @@ Dans cette tâche, vous identifierez un nom DNS pour votre déploiement de machi
 
 #### Tâche 2 : utiliser un modèle ARM pour déployer une machine virtuelle Azure hébergeant un contrôleur de domaine Microsoft Entra ID
 
-Dans cette tâche, vous allez déployer une machine virtuelle Azure qui hébergera un contrôleur de domaine Microsoft Entra ID
+Dans cette tâche, vous allez déployer une machine virtuelle Azure qui hébergera un contrôleur de domaine Microsoft Entra ID.
 
 1. Ouvrez un autre onglet de navigateur dans la même fenêtre de navigateur web et accédez à la page **https://github.com/Azure/azure-quickstart-templates/tree/master/application-workloads/active-directory/active-directory-new-domain** .
 
@@ -88,7 +88,7 @@ Dans cette tâche, vous allez déployer une machine virtuelle Azure qui héberge
    |Resource group|cliquez sur **Créer** et tapez le nom **AZ500LAB06**|
    |Région|la région Azure que vous avez identifiée dans la tâche précédente|
    |Nom d’utilisateur d’administrateur|**Étudiant**|
-   |Mot de passe d’administrateur|**Utilisez votre mot de passe personnel créé dans le labo 04 > Exercice 1 > Tâche 1 > Étape 9.**|
+   |Mot de passe d’administrateur|**Utilisez votre mot de passe personnel créé dans le labo 2 > Exercice 1 > Tâche 1 > Étape 9.**|
    |Nom de domaine|**adatum.com**|
    |Préfixe DNS|le nom d’hôte DNS que vous avez identifié dans la tâche précédente|
    |Taille de la machine virtuelle|**Standard_D2s_v3**|
@@ -107,12 +107,12 @@ Dans cette tâche, vous allez déployer une machine virtuelle Azure qui héberge
 Dans cet exercice, vous allez effectuer les tâches suivantes :
 
 - Tâche 1 : créer un locataire Microsoft Entra
-- Tâche 2 : ajouter un nom DNS personnalisé au nouveau locataire Microsoft Entra
-- Tâche 3 : créer un utilisateur Microsoft Entra ID avec le rôle Administrateur général
+- Tâche 2 : ajouter un nom DNS personnalisé au nouveau locataire Microsoft Entra
+- Tâche 3 : créer un utilisateur Microsoft Entra ID avec le rôle Administrateur général
 
 #### Tâche 1 : créer un locataire Microsoft Entra
 
-Dans cette tâche, vous allez créer un locataire Microsoft Entra à utiliser dans ce labo. 
+Dans cette tâche, vous allez créer le locataire Microsoft Entra que vous utiliserez dans ce labo. 
 
 1. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents**, située en haut de la page Portail Azure, tapez **Microsoft Entra ID** et appuyez sur la touche **Entrée**.
 
@@ -154,9 +154,9 @@ Dans cette tâche, vous allez ajouter votre nom DNS personnalisé au nouveau loc
 
 6. Dans le volet **adatum.com**, passez en revue les informations nécessaires pour effectuer la vérification du nom de domaine Microsoft Entra, puis sélectionnez **Supprimer** deux fois. 
 
-    >**Remarque** : vous ne pourrez pas terminer le processus de validation, car vous ne possédez pas le nom de domaine DNS **adatum.com**. Cela ne vous empêchera pas de synchroniser le domaine Microsoft Entra Domain Services **adatum.com** avec le locataire Microsoft Entra. Vous utiliserez à cet effet le nom DNS initial du locataire Microsoft Entra (le nom se terminant par le suffixe **onmicrosoft.com**), que vous avez identifié dans la tâche précédente. Toutefois, gardez à l’esprit que, par conséquent, le nom de domaine DNS du domaine Microsoft Entra Domain Services et le nom DNS du locataire Microsoft Entra seront différents. Cela signifie que les utilisateurs Adatum devront utiliser différents noms lors de la connexion au domaine Microsoft Entra Domain Services et lors de la connexion au locataire Microsoft Entra.
+    >**Remarque** : vous ne pourrez pas terminer le processus de validation, car vous ne possédez pas le nom de domaine DNS **adatum.com**. Cela ne vous empêchera pas de synchroniser le domaine Microsoft Entra Domain Services **adatum.com** avec le locataire Microsoft Entra. Vous utiliserez à cet effet le nom DNS initial du locataire Microsoft Entra (le nom se terminant par le suffixe **onmicrosoft.com**), que vous avez identifié dans la tâche précédente. Toutefois, gardez à l’esprit que, par conséquent, le nom de domaine DNS du domaine Microsoft Entra Domain Services et le nom DNS du locataire Microsoft Entra seront différents. Cela signifie que les utilisateurs Adatum devront utiliser différents noms lors de la connexion au domaine Microsoft Entra Domain Services et lors de la connexion au locataire Microsoft Entra.
 
-#### Tâche 3 : créer un utilisateur Microsoft Entra ID avec le rôle Administrateur général
+#### Tâche 3 : créer un utilisateur Microsoft Entra ID avec le rôle Administrateur général
 
 Dans cette tâche, vous allez ajouter un nouvel utilisateur Microsoft Entra ID et lui affecter le rôle Administrateur général. 
 
@@ -199,11 +199,11 @@ Dans cette tâche, vous allez ajouter un nouvel utilisateur Microsoft Entra ID
 
 Dans cet exercice, vous allez effectuer les tâches suivantes :
 
-- Tâche 1 : préparer Microsoft Entra Domain Services pour la synchronisation d’annuaires
+- Tâche 1 : préparer Microsoft Entra Domain Services pour la synchronisation d’annuaires
 - Tâche 2 : installer Microsoft Entra Connect
 - Tâche 3 : Vérifier la synchronisation d'annuaires
 
-#### Tâche 1 : préparer Microsoft Entra Domain Services pour la synchronisation d’annuaires
+#### Tâche 1 : préparer Microsoft Entra Domain Services pour la synchronisation d’annuaires
 
 Dans cette tâche, vous allez vous connecter à la machine virtuelle Azure exécutant le contrôleur de domaine Microsoft Entra Domain Services et créer un compte de synchronisation d’annuaires. 
 
@@ -222,7 +222,7 @@ Dans cette tâche, vous allez vous connecter à la machine virtuelle Azure exéc
    |Paramètre|Valeur|
    |---|---|
    |Nom d’utilisateur|**Étudiant**|
-   |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 04 > Exercice 1 > Tâche 1 > Étape 9.**|
+   |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 2 > Exercice 1 > Tâche 1 > Étape 9.**|
 
     >**Remarque** : attendez que la session Bureau à distance et que le **Gestionnaire de serveur** se chargent.  
 
@@ -232,7 +232,7 @@ Dans cette tâche, vous allez vous connecter à la machine virtuelle Azure exéc
 
 6. Dans le **Gestionnaire de serveur**, cliquez sur **Outils**, puis dans le menu déroulant, cliquez sur **Centre d’administration Microsoft Entra ID**.
 
-7. Dans le **Centre d’administration Microsoft Entra**, cliquez sur **adatum (local)** dans le volet **Tâches**, sous le nom de domaine **adatum (local)**, cliquez sur **Nouveau**, puis, dans le menu en cascade, cliquez sur **Unité d’organisation**.
+7. Dans le **Centre d’administration Microsoft Entra**, cliquez sur **adatum (local)**, dans le volet **Tâches**, sous le nom de domaine **adatum (local)**, cliquez sur **Nouveau**, puis, dans le menu en cascade, cliquez sur **Unité d’organisation**.
 
 8. Dans la fenêtre **Créer une unité d’organisation**, dans la zone de texte **Nom**, tapez **ToSync**, puis cliquez sur **OK**.
 
@@ -247,7 +247,7 @@ Dans cette tâche, vous allez vous connecter à la machine virtuelle Azure exéc
     |Nom complet|**aduser1**|
     |Ouverture de session UPN de l’utilisateur|**aduser1**|
     |Ouverture de session SamAccountName de l’utilisateur|**aduser1**|
-    |Mot de passe et Confirmer le mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 04 > Exercice 1 > Tâche 1 > Étape 9.**|
+    |Mot de passe et Confirmer le mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 2 > Exercice 1 > Tâche 1 > Étape 9.**|
     |Autres options de mot de passe|**Le mot de passe n'expire jamais**|
 
 
@@ -279,16 +279,16 @@ Dans cette tâche, vous allez installer Microsoft Entra Connect sur la machine
 
 12. Dans la page **Connexion de vos annuaires**, cliquez sur le bouton **Ajouter un annuaire** à droite de l’entrée de forêt **adatum.com**.
 
-13. Dans la fenêtre du **compte de forêt AD**, vérifiez que l’option **Créer un nouveau compte Microsoft Entra ID** est sélectionnée, entrez les informations d’identification suivantes, puis cliquez sur **OK** :
+13. Dans la fenêtre du **compte de forêt AD**, vérifiez que l’option **Créer un compte Microsoft Entra ID** est sélectionnée, entrez les informations d’identification suivantes, puis cliquez sur **OK** :
 
     |Paramètre|Valeur|
     |---|---|
     |User Name|**ADATUM\\Student**|
-    |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 06 > Exercice 1 > Tâche 2 > Étape 9**|
+    |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 4 > Exercice 1 > Tâche 2**|
 
 14. De retour sur la page **Connexion de vos annuaires**, vérifiez que l’entrée **adatum.com** s’affiche sous la forme d’un répertoire configuré, puis cliquez sur **Suivant**
 
-15. Sur la page **Configuration de la connexion à Microsoft Entra ID**, notez l’avertissement indiquant que **les utilisateurs ne pourront pas se connecter à Microsoft Entra ID avec des informations d’identification locales si le suffixe UPN ne correspond pas à un nom de domaine vérifié**, activez la case à cocher **Continuer sans faire correspondre tous les suffixes UPN au domaine vérifié**, puis cliquez sur **Suivant**.
+15. Sur la page **Configuration de la connexion à Microsoft Entra ID**, notez l’avertissement indiquant que **Les utilisateurs ne pourront pas se connecter à Microsoft Entra ID avec des informations d’identification locales si le suffixe UPN ne correspond pas à un nom de domaine vérifié**, activez la case à cocher **Continuer sans faire correspondre tous les suffixes UPN au domaine vérifié**, puis cliquez sur **Suivant**.
 
     >**Remarque** : comme expliqué précédemment, cela est attendu, car vous n’avez pas pu vérifier le domaine DNS Microsoft Entra ID personnalisé **adatum.com**.
 
