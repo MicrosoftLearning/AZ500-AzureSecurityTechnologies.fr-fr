@@ -1,11 +1,11 @@
 ---
 lab:
-  title: "15 - Microsoft\_Sentinel"
-  module: Module 04 - Manage Security Operations
+  title: 10 – Microsoft Sentinel
+  module: Module 05 - Configure and manage security monitoring and automation solutions
 ---
 
-# Labo 15 : Microsoft Sentinel
-# Manuel de labos pour étudiant
+# Lab 10 : Microsoft Sentinel
+# Manuel de labo de l’étudiant
 
 ## Scénario du labo
 
@@ -78,7 +78,7 @@ Dans cette tâche, vous allez configurer Sentinel pour utiliser le connecteur de
 
 4. Attendez la notification **Réussite de l’installation**. Dans le volet de navigation de gauche, dans la section **Configuration**, cliquez sur **Connecteurs de données**.
 
-5. Dans le panneau **Connecteurs de données \| Microsoft Sentinel**, cliquez sur **Actualiser et passez** en revue la liste des connecteurs disponibles. Sélectionnez l’entrée représentant le connecteur **Activité Azure** (cachez la barre de menu à gauche à l’aide de \<< si besoin), passez en revue sa description et son statut tout à droite, puis cliquez sur **Ouvrir la page du connecteur**.
+5. Dans le panneau **Microsoft Sentinel \| Connecteurs de données**, cliquez sur **Actualiser et passez** en revue la liste des connecteurs disponibles. Sélectionnez l’entrée représentant le connecteur **Activité Azure** (cachez la barre de menu à gauche à l’aide de \<< si besoin), passez en revue sa description et son statut tout à droite, puis cliquez sur **Ouvrir la page du connecteur**.
 
 6. Dans le volet **Activité Azure**, l’onglet **Instructions** doit être sélectionné, notez les **prérequis** et faites défiler jusqu’à la **configuration**. Notez les informations décrivant la mise à jour du connecteur. Votre abonnement Pass Azure n’a jamais utilisé la méthode de connexion héritée si bien que vous pouvez ignorer l’étape 1 (le bouton **Déconnecter tout** sera grisé) et passer à l’étape 2.
 
@@ -214,17 +214,17 @@ Dans cette tâche, vous allez créer un playbook. Un playbook de sécurité est 
 
 7. Sous l’onglet **Définir la logique de règle** de **l’Assistant Règle analytique - Créez une nouvelle règle planifiée**, dans la section **Planification des requêtes**, définissez la **requête Exécuter toutes les** à **5 minutes**.
 
-8. Sous l’onglet **Définir la logique de la règle** du volet **Assistant Règle analytique - Créer une nouvelle règle planifiée**, acceptez les valeurs par défaut et cliquez sur **Suivant : Paramètres de l’incident >** .
+8. Sous l’onglet **Définir la logique de règle** du volet **Assistant Règle analytique - Créer une nouvelle règle planifiée**, acceptez les valeurs par défaut et cliquez sur **Suivant : Paramètres de l’incident >** .
 
 9. Sous l’onglet **Paramètres de l’incident** du volet **Assistant Règle analytique - Créer une nouvelle règle planifiée**, acceptez les paramètres par défaut et cliquez sur **Suivant : Réponse automatisée >** . 
 
 10. Sous l’onglet **Réponse automatisée** de **l’Assistant Règle analytique - Créer une règle planifiée**, sous **Règles d’automatisation**, cliquez sur **+ Ajouter**.
 
-11. Dans la fenêtre **Créer une règle d’automatisation** , **entrez Exécuter Change-Severity playbook** pour le **nom de la règle Automation** ; sous le champ **Déclencheur** , cliquez sur le menu déroulant et sélectionnez **Quand l’alerte est créée**.
+11. Dans la fenêtre **Créer une règle d’automatisation**, entrez **Exécuter le playbook - Modifier la gravité** pour le **nom de la règle Automation** ; sous le champ **Déclencheur**, cliquez sur le menu déroulant et sélectionnez **Quand l’alerte est créée**.
 
-12. Dans la fenêtre **Créer une règle d’automatisation** , sous **Actions**, lisez la note, puis cliquez sur **Gérer les autorisations du playbook**. Dans la fenêtre **Gérer les autorisations** , cochez la case en regard du **groupe de ressources créé précédemment AZ500LAB1314151** , puis cliquez sur **Appliquer**.
+12. Dans la fenêtre **Créer une règle d’automatisation**, sous **Actions**, lisez la note, puis cliquez sur **Gérer les autorisations du playbook**. Dans la fenêtre **Gérer les autorisations**, cochez la case en regard du **groupe de ressources créé précédemment AZ500LAB1314151** , puis cliquez sur **Appliquer**.
 
-13.  Dans la fenêtre **Créer une règle d’automatisation** , sous **Actions**, cliquez sur le deuxième menu déroulant et sélectionnez l’application logique **Change-Incident-Severity** . Dans la fenêtre **Créer une règle d’automatisation** , cliquez sur **Appliquer**.
+13.  Dans la fenêtre **Créer une règle d’automatisation**, sous **Actions**, cliquez sur le deuxième menu déroulant et sélectionnez l’application logique **Change-Incident-Severity** . Dans la fenêtre **Créer une règle d’automatisation**, cliquez sur **Appliquer**.
 
 14. Sous l’onglet **Réponse automatisée** du volet **Assistant Règle analytique - Créer une nouvelle règle planifiée**, cliquez sur **Suivant : Vérifier et créer >** puis cliquez sur **Enregistrer**
 
@@ -238,7 +238,7 @@ Dans cette tâche, vous allez créer un playbook. Un playbook de sécurité est 
 
 2. Dans le **panneau Vue d’ensemble de la Microsoft Defender pour le cloud\|** , cliquez sur **Protections de charge de travail** sous **Sécurité cloud** dans le volet de navigation de gauche.
 
-3. Dans le volet **Microsoft Defender pour le cloud \| Protections des charges de travail** défilez vers le bas et cliquez sur le vignette **Accès Juste à temps à la machine virtuelle** sous **Protection avancée**.
+3. Dans le volet **Microsoft Defender pour le cloud \| Protections des charges de travail**, défilez vers le bas et cliquez sur la vignette **Accès Juste à temps à la machine virtuelle** sous **Protection avancée**.
 
 4. Dans le volet **Accès juste-à-temps à la machine virtuelle**, sur le côté droit de la ligne référençant la machine virtuelle **MyVM**, cliquez sur le bouton **ellipses (...)** , cliquez sur **Supprimer**, puis sur **Oui**.
 

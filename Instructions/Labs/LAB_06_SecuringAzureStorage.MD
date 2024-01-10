@@ -1,10 +1,10 @@
 ---
 lab:
-  title: ' 13 – Points de terminaison de service et sécurisation du stockage'
-  module: Module 03 - Secure data and applications
+  title: ' 06 – Points de terminaison de service et sécurisation du stockage'
+  module: Module 03 - Plan and implement security for Azure SQL Database and Azure SQL Managed Instance
 ---
 
-# Labo 13 : Points de terminaison de service et sécurisation du stockage
+# Labo 6 : Points de terminaison de service et sécurisation du stockage
 # Manuel de labo de l’étudiant
 
 ## Scénario du labo
@@ -330,8 +330,8 @@ Dans cette tâche, vous allez créer deux machines virtuelles : l’une dans le
     |Nom de la machine virtuelle|**myVmPrivate**|
     |Région|**(États-Unis) USA Est**|
     |Image|**Windows Server 2022 Datacenter : Édition Azure - Gen 2**|
-    |Nom d’utilisateur|**localadmin**|
-    |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 04 > Exercice 1 > Tâche 1 > Étape 9.**|
+    |Nom d’utilisateur|**Étudiant**|
+    |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 02 > Exercice 2 > Tâche 1 > Étape 3.**|
     |Aucun port d’entrée public|**Aucun**|
     |Vous disposez déjà d’une licence Windows Server|**Non sélectionnée**|
 
@@ -365,8 +365,8 @@ Dans cette tâche, vous allez créer deux machines virtuelles : l’une dans le
     |Nom de la machine virtuelle|**myVmPublic**|
     |Région|**(États-Unis) USA Est**|
     |Image|**Windows Server 2022 Datacenter : Édition Azure - Gen 2**|
-    |Nom d’utilisateur|**localadmin**|
-    |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 04 > Exercice 1 > Tâche 1 > Étape 9.**|
+    |Nom d’utilisateur|**Étudiant**|
+    |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 2 > Exercice 1 > Tâche 1 > Étape 9.**|
     |Aucun port d’entrée public|**Aucun**|
     |Vous disposez déjà d’une licence Windows Server|**Non sélectionnée**|
 
@@ -403,8 +403,9 @@ Dans cette tâche, vous allez vous connecter à la machine virtuelle myVMPrivate
 
     |Paramètre|Valeur|
     |---|---|
-    |Nom d’utilisateur|**localadmin**|
-    |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 04 > Exercice 1 > Tâche 1 > Étape 9.**|
+    |Nom d’utilisateur|**Étudiant**|
+    |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 02 > Exercice 2 > Tâche 1 > Étape 3.**|
+     
 
     >**Remarque** : attendez que la session Bureau à distance s’ouvre et que le Gestionnaire de serveur soit chargé
 
@@ -453,8 +454,9 @@ Dans cette tâche, vous allez vous connecter à la machine virtuelle myVMPrivate
 
     |Paramètre|Valeur|
     |---|---|
-    |Nom d’utilisateur|**localadmin**|
-    |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 04 > Exercice 1 > Tâche 1 > Étape 9.**|
+    |Nom d’utilisateur|**Étudiant**|
+    |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 02 > Exercice 2 > Tâche 1 > Étape 3.**|
+
 
     >**Remarque** : attendez que la session Bureau à distance s’ouvre et que le Gestionnaire de serveur soit chargé
 
@@ -484,16 +486,3 @@ Dans cette tâche, vous allez vous connecter à la machine virtuelle myVMPrivate
 **Nettoyer les ressources**
 
 > N’oubliez pas de supprimer toutes les nouvelles ressources Azure que vous n’utilisez plus. La suppression des ressources inutilisées garantit que vous n’encourrez pas de coûts imprévus. 
-
-1. Ouvrez Cloud Shell en cliquant sur la première icône en haut à droite du portail Azure. Si vous y êtes invité, sélectionnez **PowerShell**, puis **Créer un stockage**.
-
-2. Vérifiez que **PowerShell** est sélectionné dans le menu déroulant en haut à gauche du volet Cloud Shell.
-
-3. Dans la session PowerShell du volet Cloud Shell, exécutez ce qui suit pour supprimer le groupe de ressources que vous avez créé dans ce labo :
-  
-    ```powershell
-    Remove-AzResourceGroup -Name "AZ500LAB12" -Force -AsJob
-    ```
-
-4.  Fermez le volet **Cloud Shell**. 
-

@@ -1,11 +1,11 @@
 ---
 lab:
-  title: 08 - Pare-feu Azure
-  module: Module 02 - Implement Platform Protection
+  title: 03 - Pare-feu Azure
+  module: Module 02 - Plan and implement security for public access to Azure resources
 ---
 
-# Labo 8 : Pare-feu Azure
-# Manuel de labo pour l’étudiant
+# Lab 03 : Pare-feu Azure
+# Manuel de labo de l’étudiant
 
 ## Scénario du labo
 

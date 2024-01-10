@@ -29,7 +29,7 @@ Dans ce labo, vous allez effectuer les exercices suivants :
 
 ## Diagramme d’architecture de contrôle d’accès en fonction du rôle
 
-![image](https://user-images.githubusercontent.com/91347931/157751243-5aa6e521-9bc1-40af-839b-4fd9927479d7.png)
+![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/506cde9c-5242-4438-a793-f88a5434a2b2)
 
 ## Instructions
 
@@ -48,7 +48,7 @@ Dans cette tâche, vous allez créer un compte d’utilisateur pour Joseph Price
 
 1. Démarrez une session de navigateur et connectez-vous au portail Azure **`https://portal.azure.com/`** .
 
-    >**Remarque** : connectez-vous au portail Azure en utilisant un compte titulaire du rôle Propriétaire ou Contributeur dans l’abonnement Azure que vous utilisez pour ce labo, et du rôle Administrateur général dans le locataire Azure AD associé à cet abonnement.
+    >**Remarque** : connectez-vous au Portail Azure en utilisant un compte titulaire du rôle Propriétaire ou Contributeur dans l’abonnement Azure que vous utilisez pour ce labo, et du rôle Administrateur général dans le locataire Microsoft Entra associé à cet abonnement.
 
 2. Dans la zone de texte **Rechercher dans les ressources, services et documents** en haut de la page du Portail Azure, tapez **Microsoft Entra ID** et appuyez sur la touche **Entrée**.
 
@@ -67,7 +67,7 @@ Dans cette tâche, vous allez créer un compte d’utilisateur pour Joseph Price
 
 7. Cliquez sur **Créer**.
 
-8. Actualisez le volet **Utilisateurs \| Tous les utilisateurs** pour vérifier que le nouvel utilisateur a été créé dans votre locataire Azure AD.
+8. Actualisez le volet **Utilisateurs \| Tous les utilisateurs** pour vérifier que le nouvel utilisateur a été créé dans votre locataire Microsoft Entra.
 
 #### Tâche 2 : Utiliser le portail Azure pour créer un groupe Senior Admins et ajouter le compte d’utilisateur de Joseph Price au groupe.
 
@@ -129,7 +129,7 @@ Dans cette tâche, vous allez créer un compte d’utilisateur pour Isabel Garci
     Connect-AzureAD
     ```
       
-6. Dans la session PowerShell dans le volet Cloud Shell, exécutez la commande suivante pour identifier le nom de votre locataire Azure AD : 
+6. Dans la session PowerShell dans le volet Cloud Shell, exécutez la commande suivante pour identifier le nom de votre locataire Microsoft Entra : 
 
     ```powershell
     $domainName = ((Get-AzureAdTenantDetail).VerifiedDomains)[0].Name
@@ -141,7 +141,7 @@ Dans cette tâche, vous allez créer un compte d’utilisateur pour Isabel Garci
     New-AzureADUser -DisplayName 'Isabel Garcia' -PasswordProfile $passwordProfile -UserPrincipalName "Isabel@$domainName" -AccountEnabled $true -MailNickName 'Isabel'
     ```
 
-8. Dans la session PowerShell dans le volet Cloud Shell, exécutez la commande suivante pour répertorier les utilisateurs Azure AD (les comptes de Joseph et d’Isabel devraient figurer sur la liste) : 
+8. Dans la session PowerShell du volet Cloud Shell, exécutez la commande suivante pour répertorier les utilisateurs Microsoft Entra ID (les comptes de Joseph et d’Isabel devraient figurer sur la liste) : 
 
     ```powershell
     Get-AzureADUser 
@@ -157,7 +157,7 @@ Dans cette tâche, vous allez créer le groupe Junior Admins et ajouter le compt
     New-AzureADGroup -DisplayName 'Junior Admins' -MailEnabled $false -SecurityEnabled $true -MailNickName JuniorAdmins
     ```
 
-2. Dans la session PowerShell dans le volet Cloud Shell, exécutez la commande suivante pour répertorier les groupes dans votre locataire Azure AD (la liste devrait inclure les groupes Senior Admins et Junior Admins) :
+2. Dans la session PowerShell du volet Cloud Shell, exécutez la commande suivante pour répertorier les groupes dans votre locataire Microsoft Entra (la liste devrait inclure les groupes Senior Admins et Junior Admins) :
 
     ```powershell
     Get-AzureADGroup
@@ -199,7 +199,7 @@ Dans cette tâche, vous allez créer un compte d’utilisateur pour Dylan Willia
 
 1. Dans le menu déroulant, dans l’angle supérieur gauche du volet Cloud Shell, sélectionnez **Bash**, puis, lorsque vous y êtes invité, cliquez sur **Confirmer**. 
 
-2. Dans la session Bash dans le volet Cloud Shell, exécutez la commande suivante pour identifier le nom de votre locataire Azure AD :
+2. Dans la session Bash dans le volet Cloud Shell, exécutez la commande suivante pour identifier le nom de votre locataire Microsoft Entra :
 
     ```cli
     DOMAINNAME=$(az ad signed-in-user show --query 'userPrincipalName' | cut -d '@' -f 2 | sed 's/\"//')
@@ -211,7 +211,7 @@ Dans cette tâche, vous allez créer un compte d’utilisateur pour Dylan Willia
     az ad user create --display-name "Dylan Williams" --password "Pa55w.rd1234" --user-principal-name Dylan@$DOMAINNAME
     ```
       
-4. Dans la session Bash dans le volet Cloud Shell, exécutez la commande suivante pour répertorier les comptes d’utilisateur Azure AD (la liste devrait inclure les comptes d’utilisateur de Joseph, d’Isabel et de Dylan)
+4. Dans la session Bash du volet Cloud Shell, exécutez la commande suivante pour répertorier les comptes d’utilisateur Microsoft Entra ID (les comptes d’utilisateur de Joseph, d’Isabel et de Dylan devraient figurer sur la liste) :
     
     ```cli
     az ad user list --output table
@@ -227,7 +227,7 @@ Dans cette tâche, vous allez créer le groupe Service Desk et y affecter Dylan.
     az ad group create --display-name "Service Desk" --mail-nickname "ServiceDesk"
     ```
  
-2. Dans la session Bash dans le volet Cloud Shell, exécutez la commande suivante pour répertorier les groupes Azure AD (la liste devrait inclure les groupes Service Desk, Senior Admins et Junior Admins) :
+2. Dans la session Bash du volet Cloud Shell, exécutez la commande suivante pour répertorier les groupes Microsoft Entra ID (les groupes Service Desk, Senior Admins et Junior Admins devraient figurer sur la liste) :
 
     ```cli
     az ad group list -o table

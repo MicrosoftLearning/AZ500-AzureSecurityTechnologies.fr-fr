@@ -1,11 +1,11 @@
 ---
 lab:
-  title: 09 - Configuration et sécurisation d’ACR et d’AKS
-  module: Module 02 - Implement Platform Protection
+  title: 04 – Configuration et sécurisation d’ACR et d’AKS
+  module: 'Module 01 - Secure compute, storage, and databases'
 ---
 
-# Labo 09 : Configuration et sécurisation d’ACR et d’AKS
-# Manuel de labo pour l’étudiant
+# Labo 4 : Configuration et sécurisation d’ACR et d’AKS
+# Manuel de labo de l’étudiant
 
 ## Scénario du labo
 
@@ -58,7 +58,7 @@ Dans cette tâche, vous allez créer un groupe de ressources pour le labo et un 
 
 1. Connectez-vous au portail Azure **`https://portal.azure.com/`** .
 
-    >**Remarque** : connectez-vous au portail Azure en utilisant un compte titulaire du rôle Propriétaire ou Contributeur dans l’abonnement Azure que vous utilisez pour ce labo, et du rôle Administrateur général dans le locataire Azure AD associé à cet abonnement.
+    >**Remarque** : connectez-vous au Portail Azure en utilisant un compte titulaire du rôle Propriétaire ou Contributeur dans l’abonnement Azure que vous utilisez pour ce labo, et du rôle Administrateur général dans le locataire Microsoft Entra associé à cet abonnement.
 
 2. Dans le portail Azure, ouvrez le Cloud Shell en cliquant sur la première icône en haut à droite du portail Azure. Si vous y êtes invité, cliquez sur **Bash**, puis **Créer un stockage**.
 
@@ -217,12 +217,14 @@ Dans cette tâche, vous allez accorder des autorisations de cluster AKS pour acc
 
     ```sh
     RG_AKS=AZ500LAB09
-    
-    AKS_VNET_NAME=AZ500LAB09-vnet
+
+    RG_VNET=MC_AZ500LAB09_MyKubernetesCluster_eastus    
+
+    AKS_VNET_NAME=aks-vnet-30198516
     
     AKS_CLUSTER_NAME=MyKubernetesCluster
     
-    AKS_VNET_ID=$(az network vnet show --name $AKS_VNET_NAME --resource-group $RG_AKS --query id -o tsv)
+    AKS_VNET_ID=$(az network vnet show --name $AKS_VNET_NAME --resource-group $RG_VNET --query id -o tsv)
     
     AKS_MANAGED_ID=$(az aks show --name $AKS_CLUSTER_NAME --resource-group $RG_AKS --query identity.principalId -o tsv)
     

@@ -1,11 +1,11 @@
 ---
 lab:
-  title: 11 - Sécurisation d’Azure SQL Database
-  module: Module 03 - Secure data and applications
+  title: 05 – Sécurisation d’Azure SQL Database
+  module: Module 02 - Plan and implement security for Azure SQL Database and Azure SQL Managed Instance
 ---
 
-# Labo 11 : Sécurisation d’Azure SQL Database
-# Manuel de labo pour l’étudiant
+# Labo 5 : Sécurisation d’Azure SQL Database
+# Manuel de labo de l’étudiant
 
 ## Scénario du labo
 

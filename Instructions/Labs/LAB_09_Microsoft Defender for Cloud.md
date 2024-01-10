@@ -1,11 +1,11 @@
 ---
 lab:
-  title: 14 - Microsoft Defender pour le cloud
-  module: Module 04 - Microsoft Defender for Cloud
+  title: 09 – Microsoft Defender pour le cloud
+  module: Module 03 - Manage security posture by using Microsoft Defender for Cloud
 ---
 
-# Labo 14 : Microsoft Defender pour le cloud
-# Manuel de labos pour étudiant
+# Lab 09 : Microsoft Defender pour le cloud
+# Manuel de labo de l’étudiant
 
 ## Scénario du labo
 
@@ -36,7 +36,7 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 
 - Tâche 1 : Configurer Microsoft Defender pour le cloud
 - Tâche 2 : Passer en revue les recommandations de Microsoft Defender pour le cloud
-- Tâche 3 : Implémenter la recommandation Microsoft Defender pour le cloud afin d’activer l’accès juste à temps à la machine virtuelle
+- Tâche 3 : Implémenter la recommandation Microsoft Defender pour le cloud afin d’activer l’accès juste-à-temps aux machines virtuelles
 
 #### Tâche 1 : Configurer Microsoft Defender pour le cloud
 
@@ -86,7 +86,7 @@ Dans cette tâche, vous passerez en revue les recommandations de Microsoft Defen
     
 5. Dans le volet **Intégrité des ressources**, sous l’onglet **Recommandations**, passez en revue la liste des recommandations pour **myVM**.
 
-#### Tâche 3 : Implémenter la recommandation Microsoft Defender pour le cloud afin d’activer l’accès juste à temps à la machine virtuelle
+#### Tâche 3 : Implémenter la recommandation Microsoft Defender pour le cloud afin d’activer l’accès juste-à-temps aux machines virtuelles
 
 Dans cette tâche, vous allez implémenter la recommandation Microsoft Defender pour le cloud pour activer l’accès Juste à temps à la machine virtuelle sur la machine virtuelle. 
 
@@ -96,7 +96,7 @@ Dans cette tâche, vous allez implémenter la recommandation Microsoft Defender 
 
 3. Dans le panneau **Accès Juste à temps à la machine virtuelle**, sous la section **Machines virtuelles**, sélectionnez **Non configurée**, puis cochez la case pour l’entrée **myVM**.
 
-    >**Remarque** : Remarque : il est possible que vous deviez attendre quelques minutes, actualiser la page du navigateur et resélectionner **Non configurée** pour que l’entrée apparaisse.
+    >**Remarque** : Vous allez peut-être devoir attendre quelques minutes, actualiser la page du navigateur et resélectionner **Non configurée** pour que l’entrée apparaisse.
 
 4. Cliquez sur l’option **Activer JIT sur 1 machine virtuelle** à l’extrême droite de la section **Machines virtuelles**.
 

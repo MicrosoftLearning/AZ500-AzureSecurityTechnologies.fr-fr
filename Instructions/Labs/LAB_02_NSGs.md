@@ -1,11 +1,11 @@
 ---
 lab:
-  title: 07 - Groupes de sécurité réseau et groupes de sécurité des applications
-  module: Module 02 - Implement Platform Protection
+  title: 02 - Groupes de sécurité réseau et groupes de sécurité des applications
+  module: Module 01 - Plan and implement security for virtual networks
 ---
 
-# Lab 07 : Groupes de sécurité réseau et groupes de sécurité des applications
-# Manuel de labo pour l’étudiant
+# Lab 02 : Groupes de sécurité réseau et groupes de sécurité des applications
+# Manuel de labo de l’étudiant
 
 ## Scénario du labo
 
@@ -205,7 +205,7 @@ Dans cette tâche, vous allez créer une machine virtuelle à utiliser comme ser
    |Image|**Centre de données Windows Server 2022 : Édition Azure - x64 Gen2**|
    |Taille|**Standard D2s v3**|
    |Nom d’utilisateur|**Étudiant**|
-   |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 04 > Exercice 1 > Tâche 1 > Étape 9.**|
+   |Mot de passe|**Créez votre propre mot de passe et enregistrez-le pour l’utiliser lors de labos ultérieurs.**|
    |Confirmer le mot de passe|**Saisissez à nouveau votre mot de passe**|
    |Aucun port d’entrée public|**Aucun**|
    |Si vous voulez utiliser une licence Windows Server existante |**Non**|
@@ -243,7 +243,7 @@ Dans cette tâche, vous allez créer une machine virtuelle à utiliser comme ser
    |Image|**Centre de données Windows Server 2022 : Édition Azure - x64 Gen2**|
    |Taille|**Standard D2s v3**|
    |Nom d’utilisateur|**Étudiant**|
-   |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 04 > Exercice 1 > Tâche 1 > Étape 9.**|
+   |Mot de passe|**Utilisez votre mot de passe personnel créé dans le Labo 02 > Exercice 2 > Tâche 1 > Étape 3.**|
    |Aucun port d’entrée public|**Aucun**|
    |Vous disposez déjà d’une licence Windows Server|**Non**|
 
@@ -273,15 +273,15 @@ Dans cette tâche, vous allez associer chaque interface réseau des machines vir
 
 2. Dans la liste des machines virtuelles, cliquez sur l’entrée **myVMWeb**.
 
-3. Dans le volet **myVMWeb**, dans la section **Paramètres**, cliquez sur **Mise en réseau**, puis, dans le volet **réseau myVMWeb\|** , cliquez sur l’onglet **Groupes de sécurité d’application**.
+3. Dans le volet **myVMWeb**, dans la section **Mise en réseau**, cliquez sur **Paramètres réseau**, puis, dans le volet **myVMWeb \| Paramètres de mise en réseau**, cliquez sur l’onglet **Groupes de sécurité d’application**.
 
-4. Cliquez sur **Configurer les groupes de sécurité d’application**, dans la liste déroulante **Groupe de sécurité d’application**, sélectionnez **myAsgWebServers**, puis cliquez sur **Enregistrer**.
+4. Cliquez sur **+ Ajouter des groupes de sécurité d’application**. Dans la liste **Groupe de sécurité d’application**, sélectionnez **myAsgWebServers**, puis cliquez sur **Enregistrer**.
 
 5. Revenez au volet **Machines virtuelles** et dans la liste des machines virtuelles, cliquez sur l’entrée **myVMMgmt**.
 
-6. Dans le volet **myVMMgmt**, dans la section **Paramètres**, cliquez sur **Mise en réseau**, puis, dans le volet **réseau myVMMgmt\|** , cliquez sur l’onglet **Groupes de sécurité d’application**.
+6. Dans le volet **myVMMgmt**, dans la section **Mise en réseau**, cliquez sur **Paramètres réseau**, puis, dans le volet **myVMMgmt \| Paramètres de mise en réseau**, cliquez sur l’onglet **Groupes de sécurité d’application**.
 
-7. Cliquez sur **Configurer les groupes de sécurité d’application**, dans la liste déroulante **Groupe de sécurité d’application**, sélectionnez **myAsgMgmtServers**, puis cliquez sur **Enregistrer**.
+7. Cliquez sur **+ Ajouter des groupes de sécurité d’application**. Dans la liste **Groupe de sécurité d’application**, sélectionnez **myAsgMgmtServers**, puis cliquez sur **Enregistrer**.
 
 #### Tâche 4 : Testez les règles de filtrage du trafic réseau
 
@@ -296,13 +296,13 @@ Dans cette tâche, vous allez tester les filtres de trafic réseau. Vous devez �
    |Paramètre|Valeur|
    |---|---|
    |Nom d’utilisateur|**Étudiant**|
-   |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 04 > Exercice 1 > Tâche 1 > Étape 9.**|
+   |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 2 > Exercice 1 > Tâche 1 > Étape 9.**|
 
     >**Remarque** : vérifiez que la connexion Bureau à distance a réussi. À ce stade, vous avez confirmé que vous pouvez vous connecter via le Bureau à distance à myVMMgmt.
 
 4. Dans le portail Azure, accédez au volet de la machine virtuelle **myVMWeb**.
 
-5. Dans le volet **myVMWeb**, dans la section **Opérations**, cliquez sur **Exécuter la commande**, puis sur **RunPowerShellScript**.
+5. Dans le volet **myVMWeb**, dans la section **Charge utile**, cliquez sur **Exécuter la commande**, puis sur **RunPowerShellScript**.
 
 6. Dans le volet **Exécuter le script de commande**, exécutez ce qui suit pour installer le rôle serveur web sur **myVmWeb** :
 
