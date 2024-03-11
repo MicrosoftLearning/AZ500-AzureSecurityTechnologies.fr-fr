@@ -126,25 +126,25 @@ Dans cette tâche, vous allez créer un compte d’utilisateur pour Isabel Garci
 5. Dans la session PowerShell du volet Cloud Shell, exécutez la commande suivante pour vous connecter à Microsoft Entra ID :
 
     ```powershell
-    Connect-AzureAD
+    Connect-MgGraph
     ```
       
 6. Dans la session PowerShell dans le volet Cloud Shell, exécutez la commande suivante pour identifier le nom de votre locataire Microsoft Entra : 
 
     ```powershell
-    $domainName = ((Get-AzureAdTenantDetail).VerifiedDomains)[0].Name
+    $domainName = ((Get-MgOrganization).VerifiedDomains)[0].Name
     ```
 
 7. Dans la session PowerShell dans le volet Cloud Shell, exécutez la commande suivante pour créer un compte d’utilisateur pour Isabel Garcia : 
 
     ```powershell
-    New-AzureADUser -DisplayName 'Isabel Garcia' -PasswordProfile $passwordProfile -UserPrincipalName "Isabel@$domainName" -AccountEnabled $true -MailNickName 'Isabel'
+    New-MgUser -DisplayName 'Isabel Garcia' -PasswordProfile $passwordProfile -UserPrincipalName "Isabel@$domainName" -AccountEnabled $true -MailNickName 'Isabel'
     ```
 
 8. Dans la session PowerShell du volet Cloud Shell, exécutez la commande suivante pour répertorier les utilisateurs Microsoft Entra ID (les comptes de Joseph et d’Isabel devraient figurer sur la liste) : 
 
     ```powershell
-    Get-AzureADUser 
+    Get-MgUser 
     ```
 
 #### Tâche 2 : Utiliser PowerShell pour créer le groupe Junior Admins et ajouter le compte d’utilisateur d’Isabel Garcia au groupe.
