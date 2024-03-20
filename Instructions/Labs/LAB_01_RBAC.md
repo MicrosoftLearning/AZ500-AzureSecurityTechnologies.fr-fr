@@ -120,13 +120,17 @@ Dans cette tâche, vous allez créer un compte d’utilisateur pour Isabel Garci
 
 4. Dans le volet Cloud Shell de la session PowerShell, exécutez la commande suivante pour définir la valeur du mot de passe dans l’objet profil :
     ```powershell
-    $passwordProfile.Password = "Pa55w.rd1234"
+    $PasswordProfile = @{
+      Password = 'Helo123!'
+      ForceChangePasswordNextSignIn = $true
+      ForceChangePasswordNextSignInWithMfa = $true
+    }
     ```
 
 5. Dans la session PowerShell du volet Cloud Shell, exécutez la commande suivante pour vous connecter à Microsoft Entra ID :
 
     ```powershell
-    Connect-MgGraph
+    Connect-MgGraph -Scopes "User.ReadWrite.All", "AuditLog.Read.All", "RoleManagement.Read.Directory"
     ```
       
 6. Dans la session PowerShell dans le volet Cloud Shell, exécutez la commande suivante pour identifier le nom de votre locataire Microsoft Entra : 
@@ -138,7 +142,7 @@ Dans cette tâche, vous allez créer un compte d’utilisateur pour Isabel Garci
 7. Dans la session PowerShell dans le volet Cloud Shell, exécutez la commande suivante pour créer un compte d’utilisateur pour Isabel Garcia : 
 
     ```powershell
-    New-MgUser -DisplayName 'Isabel Garcia' -PasswordProfile $passwordProfile -UserPrincipalName "Isabel@$domainName" -AccountEnabled -MailNickName 'Isabel'
+    New-MgUser -DisplayName 'Isabel Garcia' -PasswordProfile $passwordProfile -UserPrincipalName "Isabel@$domainName" -MailNickName 'Isabel' -AccountEnabled
     ```
 
 8. Dans la session PowerShell du volet Cloud Shell, exécutez la commande suivante pour répertorier les utilisateurs Microsoft Entra ID (les comptes de Joseph et d’Isabel devraient figurer sur la liste) : 
