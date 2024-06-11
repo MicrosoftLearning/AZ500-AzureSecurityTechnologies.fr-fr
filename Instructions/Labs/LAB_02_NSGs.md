@@ -302,7 +302,7 @@ Dans cette tâche, vous allez tester les filtres de trafic réseau. Vous devez �
 
 4. Dans le portail Azure, accédez au volet de la machine virtuelle **myVMWeb**.
 
-5. Dans le volet **myVMWeb**, dans la section **Charge utile**, cliquez sur **Exécuter la commande**, puis sur **RunPowerShellScript**.
+5. Dans le volet **myVMWeb**, dans la section **Opérations**, cliquez sur **Exécuter la commande**, puis sur **RunPowerShellScript**.
 
 6. Dans le volet **Exécuter le script de commande**, exécutez ce qui suit pour installer le rôle serveur web sur **myVmWeb** :
 
