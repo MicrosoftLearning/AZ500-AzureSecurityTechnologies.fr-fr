@@ -94,7 +94,7 @@ Dans cette tâche, vous allez créer un autre sous-réseau et activer un point d
     |---|---|
     |Nom du sous-réseau|**Privé**|
     |Plage d’adresses de sous-réseau|**10.0.1.0/24**|
-    |Points de terminaison de service|**Microsoft.Storage**|
+    |Points de terminaison de service|**Conservez la valeur par défaut Aucun**|
 
 6. Dans le volet **Ajouter un sous-réseau**, cliquez sur **Enregistrer** pour ajouter le nouveau sous-réseau.
 
@@ -331,7 +331,7 @@ Dans cette tâche, vous allez créer deux machines virtuelles : l’une dans le
     |Région|**(États-Unis) USA Est**|
     |Image|**Windows Server 2022 Datacenter : Édition Azure - Gen 2**|
     |Nom d’utilisateur|**Étudiant**|
-    |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 02 > Exercice 2 > Tâche 1 > Étape 3.**|
+    |Mot de passe|**Utilisez votre mot de passe personnel créé dans le Labo 02 > Exercice 2 > Tâche 1 > Étape 3.**|
     |Aucun port d’entrée public|**Aucun**|
     |Vous disposez déjà d’une licence Windows Server|**Non sélectionnée**|
 

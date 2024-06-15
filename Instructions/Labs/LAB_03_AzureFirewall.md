@@ -78,6 +78,7 @@ Dans cette tâche, vous allez créer une machine virtuelle à l’aide d’un mo
    |Abonnement|le nom de l’abonnement Azure que vous utilisez dans ce labo|
    |Resource group|cliquez sur **Créer** et tapez le nom **AZ500LAB08**|
    |Emplacement|**(États-Unis) USA Est**|
+   |adminPassword|Mot de passe sécurisé de votre choix pour les machines virtuelles. Mémorisez le mot de passe. Vous en aurez besoin plus tard pour vous connecter aux machines virtuelles.|
 
     >**Remarque** : pour identifier les régions Azure où vous pouvez approvisionner des machines virtuelles Azure, consultez [ **https://azure.microsoft.com/en-us/regions/offers/** ](https://azure.microsoft.com/en-us/regions/offers/)
 
@@ -271,7 +272,7 @@ Dans cette tâche, vous allez tester le pare-feu pour confirmer qu’il fonction
    |Paramètre|Valeur|
    |---|---|
    |Nom d’utilisateur|**localadmin**|
-   |Mot de passe|**Pa55w.rd1234**|
+   |Mot de passe|Mot de passe sécurisé que vous avez choisi pendant le déploiement du modèle personnalisé lors de la tâche 1, étape 6.|
 
     >**Remarque** : les étapes suivantes sont effectuées dans la session Bureau à distance sur la machine virtuelle Azure **Srv-Jump**. 
 
@@ -288,7 +289,7 @@ Dans cette tâche, vous allez tester le pare-feu pour confirmer qu’il fonction
    |Paramètre|Valeur|
    |---|---|
    |Nom d’utilisateur|**localadmin**|
-   |Mot de passe|**Pa55w.rd1234**|
+   |Mot de passe|Mot de passe sécurisé que vous avez choisi pendant le déploiement du modèle personnalisé lors de la tâche 1, étape 6.|
 
     >**Remarque** : attendez que la session Bureau à distance soit établie et que l’interface Gestionnaire de serveur charge.
 

@@ -240,7 +240,7 @@ Dans cette tâche, vous allez créer un playbook. Un playbook de sécurité est 
 
 3. Dans le volet **Microsoft Defender pour le cloud \| Protections des charges de travail**, défilez vers le bas et cliquez sur la vignette **Accès Juste à temps à la machine virtuelle** sous **Protection avancée**.
 
-4. Dans le volet **Accès juste-à-temps à la machine virtuelle**, sur le côté droit de la ligne référençant la machine virtuelle **MyVM**, cliquez sur le bouton **ellipses (...)** , cliquez sur **Supprimer**, puis sur **Oui**.
+4. Dans le volet **Accès juste-à-temps aux machines virtuelles**, à droite de la ligne qui référence la machine virtuelle **MyVM**, cliquez sur le bouton ellipse **(...)**, cliquez sur **Supprimer**, puis sur **Oui**.
 
     >**Remarque :** si la machine virtuelle n’est pas répertoriée dans les **machines virtuelles Juste à temps**, accédez au volet **Machine virtuelle**, puis cliquez sur **Configuration**. Cliquez sur l’option **Activer les machines virtuelles Juste à temps** sous **l’accès Juste à temps à la machine virtuelle**. Répétez l’étape ci-dessus pour revenir à la page **Microsoft Defender pour le cloud** et actualiser la page : la machine virtuelle s’affiche.
 

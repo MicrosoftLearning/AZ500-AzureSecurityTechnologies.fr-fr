@@ -105,11 +105,7 @@ Dans cette tâche, vous allez créer une ressource Azure Key Vault. Vous allez �
 3. Dans le volet Cloud Shell, dans la session PowerShell, exécutez la commande suivante pour créer un Azure Key Vault dans le groupe de ressources **AZ500LAB10**. (Si vous avez choisi un autre nom pour le groupe de ressources de ce labo dans le cadre de la Tâche 1, utilisez également ce nom pour cette tâche). Le nom du Key Vault doit être unique : Mémorisez le nom que vous avez choisi, Vous en aurez besoin tout au long de ce labo.  
 
     ```powershell
-    $kvName = 'az500kv' + $(Get-Random)
-
-    $location = (Get-AzResourceGroup -ResourceGroupName 'AZ500LAB10').Location
-
-    New-AzKeyVault -VaultName $kvName -ResourceGroupName 'AZ500LAB10' -Location $location
+    New-AzKeyVault -VaultName $kvName -ResourceGroupName 'AZ500LAB10-lod41132372' -Location $location -DisableRbacAuthorization
     ```
 
     >**Remarque** : la sortie de la dernière commande affiche le nom et l’URI du coffre. L’URI du coffre est au format `https://<vault_name>.vault.azure.net/`.
@@ -355,12 +351,13 @@ Dans cette tâche, vous allez vous connecter à SQL Database avec SQL Server Man
     |Nom d’utilisateur|**Étudiant**|
     |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 2 > Exercice 1 > Tâche 1 > Étape 9.**|
     
-
     >**Remarque** : attendez que la session Bureau à distance et le **Gestionnaire de serveur** se chargent. Fermez le gestionnaire de serveurs. 
 
-    >**Remarque** : les étapes restantes de ce labo sont effectuées dans la session Bureau à distance sur la machine virtuelle Azure **az500-10-vm1**. 
+    >**Remarque** : les étapes restantes de ce labo sont effectuées dans la session Bureau à distance sur la machine virtuelle Azure **az500-10-vm1**.
 
-7. Cliquez sur **Démarrer**, dans le menu **Démarrer**, développez le dossier **Outils Microsoft SQL Server 19**, puis cliquez sur l’élément de menu **Micosoft SQL Server Management Studio**.
+6. Installez [SQL Server Management Studio](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?preserve-view=true&view=sql-server-2017) sur **az500-10-vm1**. Machine virtuelle Azure.
+ 
+7. Ouvrez **SQL Server Management Studio**.
 
 8. Dans la boîte de dialogue **Se connecter au serveur**, spécifiez les paramètres suivants : 
 
@@ -372,14 +369,13 @@ Dans cette tâche, vous allez vous connecter à SQL Database avec SQL Server Man
     |Nom d’utilisateur|**Étudiant**|
     |Mot de passe|**Utilisez votre mot de passe personnel créé dans le Labo 02 > Exercice 2 > Tâche 1 > Étape 3.**|
 
+9. Dans la boîte de dialogue **Se connecter au serveur**, cliquez sur **Se connecter**.
 
-10. Dans la boîte de dialogue **Se connecter au serveur**, cliquez sur **Se connecter**.
+10. Dans le volet **Explorateur d’objets**, ouvrez la console **SQL Server Management Studio**, puis développez le dossier **Base de données**
 
-11. Dans le volet **Explorateur d’objets**, ouvrez la console **SQL Server Management Studio**, puis développez le dossier **Base de données**
+11. Dans le volet **Explorateur d’objets**, cliquez avec le bouton droit sur la base de données **medical**, puis cliquez sur **Nouvelle requête**.
 
-12. Dans le volet **Explorateur d’objets**, cliquez avec le bouton droit sur la base de données **medical**, puis cliquez sur **Nouvelle requête**.
-
-13. Collez le code suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Cela aura pour effet de créer une table **Patients**.
+12. Collez le code suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Cela aura pour effet de créer une table **Patients**.
 
      ```sql
      CREATE TABLE [dbo].[Patients](
@@ -395,25 +391,25 @@ Dans cette tâche, vous allez vous connecter à SQL Database avec SQL Server Man
         [BirthDate] [date] NOT NULL 
      PRIMARY KEY CLUSTERED ([PatientId] ASC) ON [PRIMARY] );
      ```
-14. Une fois la table créée, dans le volet **Explorateur d’objets**, développez le nœud de base de données **medical**, le nœud **tables**, cliquez avec le bouton droit sur le nœud **dbo.Patients**, puis sur **Chiffrer les colonnes**. 
+13. Une fois la table créée, dans le volet **Explorateur d’objets**, développez le nœud de base de données **medical**, le nœud **tables**, cliquez avec le bouton droit sur le nœud **dbo.Patients**, puis sur **Chiffrer les colonnes**. 
 
     >**Remarque** : cela aura pour effet d’ouvrir l’Assistant **Always Encrypted**.
 
-15. Dans la page **Introduction**, cliquez sur **Suivant**.
+14. Dans la page **Introduction**, cliquez sur **Suivant**.
 
-16. Dans la page **Sélection de colonne**, sélectionnez les colonnes **SSN** et **Birthdate**, définissez le **Type de chiffrement** de la colonne **SSN** sur **Déterministe**, et de la colonne **Birthdate** sur **Aléatoire**, puis cliquez sur **Suivant**.
+15. Dans la page **Sélection de colonne**, sélectionnez les colonnes **SSN** et **Birthdate**, définissez le **Type de chiffrement** de la colonne **SSN** sur **Déterministe**, et de la colonne **Birthdate** sur **Aléatoire**, puis cliquez sur **Suivant**.
 
     >**Remarque** : lors du chiffrement, en cas d’erreur telle que **Une exception a été levée par la cible d’un appel** liée à **Rotary (Microsoft.SQLServer.Management.ServiceManagement),** vérifiez que les valeurs de l’**Autorisation de clé** des **Opérations de stratégie de rotation** sont **désactivées**. Si ce n’est pas le cas, dans le portail Azure, accédez à **Key Vault** >> **Stratégies d’accès**  >> **Autorisations de clé** >> Désactivez toutes les valeurs sous les **Opérations de stratégie de rotation** >> Sous **Opérations de clé privilégiées** >> Désactivez **Mise en production**.
 
-17. Dans la page **Configuration de la clé principale**, sélectionnez **Azure Key Vault**, puis cliquez sur **Se connecter**. Lorsque vous y êtes invité, authentifiez-vous à l’aide du compte d’utilisateur que vous avez utilisé pour approvisionner l’instance Azure Key Vault précédemment dans ce labo, assurez-vous que le Key Vault apparaît dans la liste déroulante **Sélectionner un Azure Key Vault**, puis cliquez sur **Suivant**.
+16. Dans la page **Configuration de la clé principale**, sélectionnez **Azure Key Vault**, puis cliquez sur **Se connecter**. Lorsque vous y êtes invité, authentifiez-vous à l’aide du compte d’utilisateur que vous avez utilisé pour approvisionner l’instance Azure Key Vault précédemment dans ce labo, assurez-vous que le Key Vault apparaît dans la liste déroulante **Sélectionner un Azure Key Vault**, puis cliquez sur **Suivant**.
 
-18. Dans la page **Paramètres d’exécution**, cliquez sur **Suivant**.
+17. Dans la page **Paramètres d’exécution**, cliquez sur **Suivant**.
     
-19. Dans la page **Résumé**, cliquez sur **Terminer** pour poursuivre le chiffrement. Lorsque vous y êtes invité, reconnectez-vous à l’aide du compte d’utilisateur que vous avez utilisé pour approvisionner l’instance Azure Key Vault précédemment dans ce labo.
+18. Dans la page **Résumé**, cliquez sur **Terminer** pour poursuivre le chiffrement. Lorsque vous y êtes invité, reconnectez-vous à l’aide du compte d’utilisateur que vous avez utilisé pour approvisionner l’instance Azure Key Vault précédemment dans ce labo.
 
-20. Une fois le processus de chiffrement terminé, dans la page **Résultats**, cliquez sur **Fermer**.
+19. Une fois le processus de chiffrement terminé, dans la page **Résultats**, cliquez sur **Fermer**.
 
-21. Dans la console **SQL Server Management Studio**, dans le volet **Explorateur d’objets**, sous le nœud **medical**, développez les sous-nœuds **Sécurité** et **Clés Always Encrypted**. 
+20. Dans la console **SQL Server Management Studio**, dans le volet **Explorateur d’objets**, sous le nœud **medical**, développez les sous-nœuds **Sécurité** et **Clés Always Encrypted**. 
 
     >**Remarque** : le sous-nœud **clés Always Encrypted** contient les sous-dossiers **Clés principales de colonne** et **Clés de chiffrement de colonne**.
 
