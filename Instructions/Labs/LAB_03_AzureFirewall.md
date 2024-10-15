@@ -245,7 +245,7 @@ Dans cette tâche, vous allez configurer les adresses DNS principales et seconda
 
 2. Dans le panneau **AZ500LAB08**, dans la liste des ressources, cliquez sur la machine virtuelle **Srv-Work**.
 
-3. Dans le volet **Srv-Work**, dans la section **Paramètres**, cliquez sur **Réseau**.
+3. Dans le panneau **Srv-Work**, cliquez sur **Mise en réseau**.
 
 4. Dans le panneau **Srv-Work \| Réseau**, cliquez sur le lien en regard de l’entrée de l’**interface réseau**.
 
