@@ -172,7 +172,7 @@ Dans cette tâche, vous allez créer un groupe de sécurité réseau avec deux r
     |Paramètre|Valeur|
     |---|---|
     |Source|**Any**|
-    |Source port ranges|**\***|
+    |Plages de ports source|**\***|
     |Destination|**Étiquette du service**|
     |Identification de destination|**VirtualNetwork**|
     |Plages de ports de destination|**3389**|
@@ -222,7 +222,7 @@ Dans cette tâche, vous allez créer un groupe de sécurité réseau avec une r�
     |Paramètre|Valeur|
     |---|---|
     |Source|**Any**|
-    |Source port ranges|**\***|
+    |Plages de ports source|**\***|
     |Destination|**Étiquette du service**|
     |Identification de destination|**VirtualNetwork**|
     |Plages de ports de destination|**3389**|
