@@ -202,6 +202,8 @@ Dans cette tâche, vous allez créer une machine virtuelle à utiliser comme ser
    |Resource group|**AZ500LAB07**|
    |Nom de la machine virtuelle|**myVmWeb**|
    |Région|**(États-Unis) USA Est**|
+   |Options de disponibilité|**Aucune redondance de l’infrastructure requise**
+   |Type de sécurité|**Standard**
    |Image|**Centre de données Windows Server 2022 : Édition Azure - x64 Gen2**|
    |Taille|**Standard D2s v3**|
    |Nom d’utilisateur|**Étudiant**|
@@ -212,19 +214,19 @@ Dans cette tâche, vous allez créer une machine virtuelle à utiliser comme ser
 
     >**Remarque** : pour les ports d’entrée publics, nous allons nous appuyer sur le groupe de sécurité réseau (NSG) pré-créé. 
 
-4. Cliquez sur **Suivant : Disques >** , puis, sous l’onglet **Disques** du volet **Créer une machine virtuelle**, définissez le **Type de disque du système d’exploitation** sur **HDD Standard** et cliquez sur **Suivant : Mise en réseau >** .
+5. Cliquez sur **Suivant : Disques >** , puis, sous l’onglet **Disques** du volet **Créer une machine virtuelle**, définissez le **Type de disque du système d’exploitation** sur **HDD Standard** et cliquez sur **Suivant : Mise en réseau >** .
 
-5. Sous l’onglet **Mise en réseau** du volet **Créer une machine virtuelle**, sélectionnez le réseau **myVirtualNetwork** créé précédemment.
+6. Sous l’onglet **Mise en réseau** du volet **Créer une machine virtuelle**, sélectionnez le réseau **myVirtualNetwork** créé précédemment.
 
-6. Sous **Groupe de sécurité réseau de la carte réseau**, sélectionnez **Aucun**.
+7. Sous **Groupe de sécurité réseau de la carte réseau**, sélectionnez **Aucun**.
 
-7. Cliquez sur **Suivant : Gestion >**, puis sur **Suivant : Surveillance >**. Sur l’onglet **Surveillance** du volet **Créer une machine virtuelle**, vérifiez le paramètre suivant :
+8. Cliquez sur **Suivant : Gestion >**, puis sur **Suivant : Surveillance >**. Sur l’onglet **Surveillance** du volet **Créer une machine virtuelle**, vérifiez le paramètre suivant :
 
    |Paramètre|Valeur|
    |---|---|
    |Diagnostics de démarrage|**Activer avec un compte de stockage managé (recommandé)**|
 
-8. Cliquez sur **Vérifier + créer** dans le volet **Vérifier + créer** et vérifiez que la validation a réussi, puis cliquez sur **Créer**.
+9. Cliquez sur **Vérifier + créer** dans le volet **Vérifier + créer** et vérifiez que la validation a réussi, puis cliquez sur **Créer**.
 
 #### Tâche 2 : Créez une machine virtuelle à utiliser comme serveur d’administration. 
 
