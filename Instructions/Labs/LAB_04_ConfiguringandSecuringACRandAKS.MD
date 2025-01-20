@@ -158,7 +158,7 @@ Dans cette tâche, vous allez créer un service Azure Kubernetes et examiner les
 
     |Paramètre|Valeur|
     |----|----|
-    |Configuration réseau|**Azure CNI**|
+    |Configuration réseau|**Superposition Azure CNI**|
     |Préfixe du nom DNS|**Conservez la valeur par défaut**|
 
     >**Remarque** : AKS peut être configuré comme un cluster privé. Cela a pour effet d’attribuer une adresse IP privée au serveur d’API pour garantir que le trafic réseau entre votre serveur d’API et vos pools de nœuds reste uniquement sur le réseau privé. Pour plus d’informations, consultez [Créer un cluster Azure Kubernetes Service privé](https://docs.microsoft.com/en-us/azure/aks/private-clusters).
