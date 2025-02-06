@@ -10,7 +10,7 @@ lab:
 
 ## Scénario du labo
 
-En tant qu’ingénieur sécurité Azure pour une entreprise de technologie financière, vous êtes chargé d’améliorer la surveillance et la visibilité de la sécurité sur toutes les machines virtuelles Azure utilisées pour traiter les transactions financières et gérer les données client sensibles. L’équipe de sécurité nécessite des journaux d’activité détaillés et des mesures de performances de ces machines virtuelles pour détecter les menaces potentielles et optimiser les performances du système. Le directeur de la sécurité de l’information (CISO) vous a demandé d’implémenter une solution qui collecte des événements de sécurité, des journaux d’activité système et des compteurs de performances. Vous avez été affecté pour configurer l’agent Azure Monitor (AMA) ainsi que les règles de collecte de données pour centraliser la collecte des journaux d’activité et l’analyse des performances.
+En tant qu’ingénieur sécurité Azure pour une entreprise de technologie financière, vous êtes chargé d’améliorer la surveillance et la visibilité de la sécurité sur toutes les machines virtuelles Azure utilisées pour traiter les transactions financières et gérer les données client sensibles. L’équipe de sécurité nécessite des journaux détaillés et des indicateurs de performances de ces machines virtuelles pour détecter les menaces potentielles et optimiser les performances du système. Le directeur de la sécurité de l’information (CISO) vous a demandé d’implémenter une solution qui collecte des événements de sécurité, des journaux système et des compteurs de performances. Vous avez été chargé de configurer l’agent Azure Monitor (AMA) ainsi que les règles de collecte de données (DCR) pour centraliser la collecte des journaux et le monitoring des performances.
 
 
 
@@ -51,7 +51,7 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
     New-AzResourceGroup -Name AZ500LAB131415 -Location 'EastUS'
     ```
 
-    >**Note** : ce groupe de ressources sera utilisé pour les labos 8, 9 et 10.
+    >**Remarque** : ce groupe de ressources sera utilisé pour les labos 8, 9 et 10.
 
 5. Dans le volet Cloud Shell, dans la session PowerShell, exécutez la commande suivante pour activer le chiffrement sur l’hôte (EAH).
    
@@ -222,5 +222,5 @@ Dans cette tâche, vous allez créer une règle de collecte de données.
 
 > Résultats : Vous avez déployé une machine virtuelle Azure, un espace de travail Log Analytics, un compte de stockage Azure et une règle de collecte de données pour collecter les événements et les compteurs de performances à partir de machines virtuelles avec l’agent Azure Monitor.
 
->**Note** : ne supprimez pas les ressources de ce labo, car elles sont nécessaires pour le labo Microsoft Defender for Cloud et le labo Microsoft Sentinel.
+>**Note** : ne supprimez pas les ressources de ce labo, car elles sont nécessaires pour le labo Microsoft Defender pour le cloud et le labo Microsoft Sentinel.
  

@@ -23,7 +23,7 @@ Dans ce labo, vous allez effectuer les exercices suivants :
 - Exercice 1 : Déployer une machine virtuelle Azure
 - Exercice 2 : Créer un espace de travail Log Analytics
 - Exercice 3 : Créer un compte de stockage Azure
-- Exercice 4 : Créez une règle de collecte de données.
+- Exercice 4 : créer une règle de collecte de données
   
 ## Instructions
 

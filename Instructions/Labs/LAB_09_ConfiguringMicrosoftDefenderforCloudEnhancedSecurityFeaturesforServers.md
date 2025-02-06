@@ -14,13 +14,13 @@ En tant qu’ingénieur sécurité Azure pour une entreprise internationale de e
 
 ## Objectifs du labo
 
-- Configuration des fonctionnalités de sécurité renforcée pour les serveurs de Microsoft Defender pour le cloud
+- Configurer les fonctionnalités de sécurité renforcée de Microsoft Defender pour le cloud pour les serveurs
   
 - Passer en revue les fonctionnalités de sécurité renforcée pour le Plan 2 de Microsoft Defender pour serveurs
 
 ## Instructions de l’exercice
 
-### Configuration des fonctionnalités de sécurité renforcée pour les serveurs de Microsoft Defender pour le cloud
+### Configurer les fonctionnalités de sécurité renforcée de Microsoft Defender pour le cloud pour les serveurs
 
 1. Dans le portail Azure, dans la zone de texte Rechercher des ressources, des services et des documents située en haut de la page du portail Azure, saisissez **Microsoft Defender pour le cloud** et appuyez sur la touche **Entrée**.
 
