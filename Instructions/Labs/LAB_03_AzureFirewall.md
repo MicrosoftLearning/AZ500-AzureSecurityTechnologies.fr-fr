@@ -94,7 +94,7 @@ Au cours de cette tâche, vous allez déployer le pare-feu dans le réseau virtu
 
 2. Dans le volet **Pare-feu** , cliquez sur **+Créer**.
 
-3. Sous l’onglet **Informations de base** du volet **Créer un pare-feu**, spécifiez les paramètres suivants (laissez les valeurs par défaut des autres paramètres) :
+3. Sous l’onglet **Informations de base** du panneau **Créer un pare-feu**, spécifiez les paramètres suivants : 
 
    |Paramètre|Valeur|
    |---|---|
@@ -104,21 +104,22 @@ Au cours de cette tâche, vous allez déployer le pare-feu dans le réseau virtu
    |Référence SKU de pare-feu|**Standard**|
    |Gestion de pare-feu|**Utiliser des règles de pare-feu (classique) pour gérer ce pare-feu**|
    |Choisir un réseau virtuel|cliquez sur l’option **Utiliser l’option existante** et, dans la liste déroulante, sélectionnez **Test-FW-VN**|
+   |Carte réseau de gestion du pare-feu|Pour désactiver cette fonctionnalité, **désélectionnez** l’option **Activer la carte réseau de gestion du pare-feu**.|
    |Adresse IP publique|Cliquez sur **Ajouter nouveau** et tapez le nom **TEST-FW-PIP**, puis cliquez sur **OK**|
 
-4. Cliquez sur **Vérifier + créer**, puis sur **Créer**. 
+5. Cliquez sur **Vérifier + créer**, puis sur **Créer**. 
 
     >**Remarque** : Attendez la fin du déploiement. Ce processus prend environ 5 minutes. 
 
-5. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents** en haut de la page, tapez **Groupes de ressources**, puis appuyez sur la touche **Entrée**.
+6. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents** en haut de la page, tapez **Groupes de ressources**, puis appuyez sur la touche **Entrée**.
 
-6. Dans le volet **Groupes de ressources**, dans la liste des groupes de ressources, cliquez sur l’entrée **AZ500LAB08**.
+7. Dans le volet **Groupes de ressources**, dans la liste des groupes de ressources, cliquez sur l’entrée **AZ500LAB08**.
 
     >**Remarque** : Dans le panneau du groupe de ressources **AZ500LAB08**, passez en revue la liste des ressources. Vous pouvez trier par **type**.
 
-7. Dans la liste des ressources, cliquez sur l’entrée représentant le **pare-feu Test-FW01**.
+8. Dans la liste des ressources, cliquez sur l’entrée représentant le **pare-feu Test-FW01**.
 
-8. Dans le panneau **Test-FW01**, identifiez l’adresse **IP privée** affectée au pare-feu. 
+9. Dans le panneau **Test-FW01**, identifiez l’adresse **IP privée** affectée au pare-feu. 
 
     >**Remarque** : Vous aurez besoin de ces informations dans la tâche suivante.
 
