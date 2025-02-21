@@ -106,42 +106,44 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 
 Dans cette tâche, vous allez créer un compte d’utilisateur pour Isabel Garcia à l’aide de PowerShell.
 
-1. Ouvrez Cloud Shell en cliquant sur la première icône en haut à droite du portail Azure. Si vous y êtes invité, sélectionnez **PowerShell**, puis **Créer un stockage**.
+1. **Ouvrez Cloud Shell** en cliquant sur l’**icône Cloud Shell** en haut à droite du portail Azure.
 
-2. Vérifiez que **PowerShell** est sélectionné dans le menu déroulant en haut à gauche du volet Cloud Shell.
+2. **Si vous y êtes invité, configurez Cloud Shell en créant un compte de stockage**. Cela n’est nécessaire **que la première fois** que vous lancez Cloud Shell.
+
+3. Dans le volet Cloud Shell, **vérifiez que PowerShell est sélectionné** dans le menu déroulant en haut à gauche.
 
    >**Remarque** : pour coller un texte copié dans le Cloud Shell, cliquez avec le bouton droit dans la fenêtre du volet, puis sélectionnez **Coller**. Vous pouvez également utiliser la combinaison de touches **Maj+Inser**.
 
-3. Dans la session PowerShell dans le volet Cloud Shell, exécutez la commande suivante pour créer un objet profil de mot de passe :
+4. Dans la session PowerShell dans le volet Cloud Shell, exécutez la commande suivante pour créer un objet profil de mot de passe :
 
     ```powershell
     $passwordProfile = New-Object -TypeName Microsoft.Open.AzureAD.Model.PasswordProfile
     ```
 
-4. Dans le volet Cloud Shell de la session PowerShell, exécutez la commande suivante pour définir la valeur du mot de passe dans l’objet profil :
+5. Dans le volet Cloud Shell de la session PowerShell, exécutez la commande suivante pour définir la valeur du mot de passe dans l’objet profil :
     ```powershell
     $passwordProfile.Password = "Pa55w.rd1234"
     ```
 
-5. Dans la session PowerShell du volet Cloud Shell, exécutez la commande suivante pour vous connecter à Microsoft Entra ID :
+6. Dans la session PowerShell du volet Cloud Shell, exécutez la commande suivante pour vous connecter à Microsoft Entra ID :
 
     ```powershell
     Connect-AzureAD
     ```
       
-6. Dans la session PowerShell dans le volet Cloud Shell, exécutez la commande suivante pour identifier le nom de votre locataire Microsoft Entra : 
+7. Dans la session PowerShell dans le volet Cloud Shell, exécutez la commande suivante pour identifier le nom de votre locataire Microsoft Entra : 
 
     ```powershell
     $domainName = ((Get-AzureAdTenantDetail).VerifiedDomains)[0].Name
     ```
 
-7. Dans la session PowerShell dans le volet Cloud Shell, exécutez la commande suivante pour créer un compte d’utilisateur pour Isabel Garcia : 
+8. Dans la session PowerShell dans le volet Cloud Shell, exécutez la commande suivante pour créer un compte d’utilisateur pour Isabel Garcia : 
 
     ```powershell
     New-AzureADUser -DisplayName 'Isabel Garcia' -PasswordProfile $passwordProfile -UserPrincipalName "Isabel@$domainName" -AccountEnabled $true -MailNickName 'Isabel'
     ```
 
-8. Dans la session PowerShell du volet Cloud Shell, exécutez la commande suivante pour répertorier les utilisateurs Microsoft Entra ID (les comptes de Joseph et d’Isabel devraient figurer sur la liste) : 
+9. Dans la session PowerShell du volet Cloud Shell, exécutez la commande suivante pour répertorier les utilisateurs Microsoft Entra ID (les comptes de Joseph et d’Isabel devraient figurer sur la liste) : 
 
     ```powershell
     Get-AzureADUser -All $true | Where-Object {$_.UserPrincipalName -like "*43846135@LOD*"} 
@@ -296,7 +298,9 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 
 3. Dans le volet **AZ500Lab01 \| Contrôle d’accès (IAM)** , cliquez sur **+ Ajouter**, puis, dans le menu déroulant, sur **Ajouter une attribution de rôle**.
 
-4. Dans le volet **Ajouter une attribution de rôle**, spécifiez les paramètres suivants et cliquez sur **Suivant** après chaque étape :
+4. Dans le volet **Ajouter une attribution de rôle**, complétez chacun des paramètres suivants avant de cliquer sur Suivant :
+
+   **Note :** après avoir effectué toutes les étapes, cliquez sur **Suivant**.
 
    |Paramètre|Valeur|
    |---|---|
@@ -304,17 +308,17 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
    |Attribuer l’accès à (dans le volet Membres)|**Utilisateur, groupe ou principal de service**|
    |Sélectionnez (+ Sélectionner des membres)|**Service Desk**|
 
-5. Cliquez sur **Vérifier + attribuer** à deux reprises pour créer l’attribution de rôle.
+6. Cliquez sur **Vérifier + attribuer** à deux reprises pour créer l’attribution de rôle.
 
-6. Dans le volet **Contrôle d’accès (IAM),** sélectionnez **Attributions de rôles**.
+7. Dans le volet **Contrôle d’accès (IAM),** sélectionnez **Attributions de rôles**.
 
-7. Dans le volet **AZ500Lab01 \| Contrôle d’accès (IAM)** , sous l’onglet **Vérifier l’accès**, dans la zone de texte **Rechercher par nom ou adresse e-mail**, tapez **Dylan Williams**.
+8. Dans le volet **AZ500Lab01 \| Contrôle d’accès (IAM)** , sous l’onglet **Vérifier l’accès**, dans la zone de texte **Rechercher par nom ou adresse e-mail**, tapez **Dylan Williams**.
 
-8. Dans la liste des résultats de recherche, sélectionnez le compte d’utilisateur de Dylan Williams, puis, dans le volet **Attributions de Dylan Williams - AZ500Lab01**, affichez l’attribution nouvellement créée.
+9. Dans la liste des résultats de recherche, sélectionnez le compte d’utilisateur de Dylan Williams, puis, dans le volet **Attributions de Dylan Williams - AZ500Lab01**, affichez l’attribution nouvellement créée.
 
-9. Fermez le volet **Attributions de Dylan Williams - AZ500Lab01**.
+10. Fermez le volet **Attributions de Dylan Williams - AZ500Lab01**.
 
-10. Répétez les deux dernières étapes afin de vérifier l’accès pour **Joseph Price**. 
+11. Répétez les deux dernières étapes afin de vérifier l’accès pour **Joseph Price**. 
 
 > Résultat : Vous avez attribué et vérifié les autorisations RBAC. 
 
