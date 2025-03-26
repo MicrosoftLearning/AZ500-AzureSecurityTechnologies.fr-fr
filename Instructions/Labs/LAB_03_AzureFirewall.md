@@ -4,12 +4,12 @@ lab:
   module: Module 02 - Plan and implement security for public access to Azure resources
 ---
 
-# Lab 03 : Pare-feu Azure
+# Lab 03 : Pare-feu Azure
 # Manuel de labo de l’étudiant
 
 ## Scénario du labo
 
-Vous avez été invité à installer le pare-feu Azure. Cela aidera votre organisation à contrôler l’accès au réseau entrant et sortant, ce qui constitue un élément important d’un plan de sécurité réseau global. Plus précisément, vous souhaitez créer et tester les composants d’infrastructure suivants :
+Vous avez été invité à installer le pare-feu Azure. Cela aidera votre organisation à contrôler l’accès au réseau entrant et sortant, ce qui constitue un élément important d’un plan de sécurité réseau global. Plus précisément, vous souhaitez créer et tester les composants d’infrastructure suivants :
 
 - Un réseau virtuel avec un sous-réseau de charge de travail et un sous-réseau d’hôte de saut.
 - Une machine virtuelle est chaque sous-réseau. 
@@ -21,9 +21,9 @@ Vous avez été invité à installer le pare-feu Azure. Cela aidera votre organi
 
 ## Objectifs du labo
 
-Dans ce labo, vous allez effectuer l’exercice suivant :
+Dans ce labo, vous allez effectuer l’exercice suivant :
 
-- Exercice 1 : Déployer et tester un pare-feu Azure
+- Exercice 1 : Déployer et tester un pare-feu Azure
 
 ## Schéma de Pare-feu Azure
 
@@ -31,27 +31,27 @@ Dans ce labo, vous allez effectuer l’exercice suivant :
 
 ## Instructions
 
-## Fichiers du labo :
+## Fichiers du labo :
 
 - **\\Allfiles\\Labs\\08\\template.json**
 
-### Exercice 1 : Déployer et tester un pare-feu Azure
+### Exercice 1 : Déployer et tester un pare-feu Azure
 
-### Durée estimée : 40 minutes
+### Durée estimée : 40 minutes
 
 > Pour toutes les ressources dans ce labo, nous utilisons la région **USA Est**. Vérifiez avec votre instructeur qu’il s’agit bien de la région à utiliser pour la classe. 
 
-Dans cet exercice, vous allez effectuer les tâches suivantes :
+Dans cet exercice, vous allez effectuer les tâches suivantes :
 
-- Tâche 1 : Utiliser un modèle pour déployer l’environnement lab. 
-- Tâche 2 : Déployer un pare-feu Azure.
+- Tâche 1 : Utiliser un modèle pour déployer l’environnement lab. 
+- Tâche 2 : Déployer un pare-feu Azure.
 - Tâche 3 : Créer une route par défaut.
 - Tâche 4 : Configurer une règle d’application.
 - Tâche 5 : Configurer une règle de réseau. 
-- Tâche 6 : Configurer les serveurs DNS.
-- Tâche 7 : Tester le pare-feu. 
+- Tâche 6 : Configurer les serveurs DNS.
+- Tâche 7 : Tester le pare-feu. 
 
-#### Tâche 1 : Utiliser un modèle pour déployer l’environnement lab. 
+#### Tâche 1 : Utiliser un modèle pour déployer l’environnement lab. 
 
 Dans cette tâche, vous allez examiner et déployer l’environnement lab. 
 
@@ -59,7 +59,7 @@ Dans cette tâche, vous allez créer une machine virtuelle à l’aide d’un mo
 
 1. Connectez-vous au portail Azure **`https://portal.azure.com/`** .
 
-    >**Remarque** : connectez-vous au portail Azure en utilisant un compte disposant du rôle Propriétaire ou Contributeur dans l’abonnement Azure que vous utilisez pour ce labo.
+    >**Remarque** : connectez-vous au portail Azure en utilisant un compte disposant du rôle Propriétaire ou Contributeur dans l’abonnement Azure que vous utilisez pour ce labo.
 
 2. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents** en haut de la page, tapez **Déployer un modèle personnalisé**, puis appuyez sur la touche **Entrée**.
 
@@ -67,11 +67,11 @@ Dans cette tâche, vous allez créer une machine virtuelle à l’aide d’un mo
 
 4. Dans le volet **Modifier le modèle**, cliquez sur **Charger le fichier**, recherchez le fichier **\\Allfiles\\Labs\\08\\template.json**, puis cliquez sur **Ouvrir**.
 
-    >**Remarque** : passez en revue le contenu du modèle et notez qu’il déploie une machine virtuelle Azure hébergeant Windows Centre de données Server 2016.
+    >**Remarque** : passez en revue le contenu du modèle et notez qu’il déploie une machine virtuelle Azure hébergeant Windows Centre de données Server 2016.
 
 5. Dans le volet **Modifier le modèle**, cliquez sur **Enregistrer**.
 
-6. Dans le volet **Déploiement personnalisé**, vérifiez que les paramètres suivants sont configurés (laissez les autres avec leurs valeurs par défaut) :
+6. Dans le volet **Déploiement personnalisé**, vérifiez que les paramètres suivants sont configurés (laissez les autres avec leurs valeurs par défaut) :
 
    |Paramètre|Valeur|
    |---|---|
@@ -80,13 +80,13 @@ Dans cette tâche, vous allez créer une machine virtuelle à l’aide d’un mo
    |Emplacement|**(États-Unis) USA Est**|
    |adminPassword|Mot de passe sécurisé de votre choix pour les machines virtuelles. Mémorisez le mot de passe. Vous en avez besoin plus tard pour vous connecter aux machines virtuelles.|
 
-    >**Remarque** : pour identifier les régions Azure où vous pouvez approvisionner des machines virtuelles Azure, consultez [ **https://azure.microsoft.com/en-us/regions/offers/** ](https://azure.microsoft.com/en-us/regions/offers/)
+    >**Remarque** : pour identifier les régions Azure où vous pouvez approvisionner des machines virtuelles Azure, consultez [ **https://azure.microsoft.com/en-us/regions/offers/** ](https://azure.microsoft.com/en-us/regions/offers/)
 
 7. Cliquez sur **Examiner et créer**, puis cliquez sur **Créer**.
 
-    >**Remarque** : Attendez la fin du déploiement. Ce processus prend environ 2 minutes. 
+    >**Remarque** : Attendez la fin du déploiement. Ce processus prend environ 2 minutes. 
 
-#### Tâche 2 : Déployer le Pare-feu Azure
+#### Tâche 2 : Déployer le Pare-feu Azure
 
 Au cours de cette tâche, vous allez déployer le pare-feu dans le réseau virtuel. 
 
@@ -94,7 +94,7 @@ Au cours de cette tâche, vous allez déployer le pare-feu dans le réseau virtu
 
 2. Dans le volet **Pare-feu** , cliquez sur **+Créer**.
 
-3. Sous l’onglet **Informations de base** du panneau **Créer un pare-feu**, spécifiez les paramètres suivants : 
+3. Sous l’onglet **Informations de base** du panneau **Créer un pare-feu**, spécifiez les paramètres suivants : 
 
    |Paramètre|Valeur|
    |---|---|
@@ -109,19 +109,19 @@ Au cours de cette tâche, vous allez déployer le pare-feu dans le réseau virtu
 
 5. Cliquez sur **Vérifier + créer**, puis sur **Créer**. 
 
-    >**Remarque** : Attendez la fin du déploiement. Ce processus prend environ 5 minutes. 
+    >**Remarque** : Attendez la fin du déploiement. Ce processus prend environ 5 minutes. 
 
 6. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents** en haut de la page, tapez **Groupes de ressources**, puis appuyez sur la touche **Entrée**.
 
 7. Dans le volet **Groupes de ressources**, dans la liste des groupes de ressources, cliquez sur l’entrée **AZ500LAB08**.
 
-    >**Remarque** : Dans le panneau du groupe de ressources **AZ500LAB08**, passez en revue la liste des ressources. Vous pouvez trier par **type**.
+    >**Remarque** : Dans le panneau du groupe de ressources **AZ500LAB08**, passez en revue la liste des ressources. Vous pouvez trier par **type**.
 
 8. Dans la liste des ressources, cliquez sur l’entrée représentant le **pare-feu Test-FW01**.
 
 9. Dans le panneau **Test-FW01**, identifiez l’adresse **IP privée** affectée au pare-feu. 
 
-    >**Remarque** : Vous aurez besoin de ces informations dans la tâche suivante.
+    >**Remarque** : Vous aurez besoin de ces informations dans la tâche suivante.
 
 
 #### Tâche 3 : Créer un itinéraire par défaut
@@ -132,7 +132,7 @@ Dans cette tâche, vous allez créer un itinéraire par défaut pour le sous-ré
 
 2. Dans le panneau **Tables de routage**, cliquez sur **+Créer**.
 
-3. Dans le panneau **Créer une table de routage**, spécifiez les paramètres suivants :
+3. Dans le panneau **Créer une table de routage**, spécifiez les paramètres suivants :
 
    |Paramètre|Valeur|
    |---|---|
@@ -146,30 +146,30 @@ Dans cette tâche, vous allez créer un itinéraire par défaut pour le sous-ré
 
 6. Dans le panneau **Pare-feu**, dans la section **Paramètres**, cliquez sur **Sous-réseaux**, puis, dans le panneau **Sous-réseaux de routage \| de pare-feu**, cliquez sur **+Associer**.
 
-7. Dans le volet **Associer un sous-réseau** , spécifiez les paramètres suivants :
+7. Dans le volet **Associer un sous-réseau** , spécifiez les paramètres suivants :
 
    |Paramètre|Valeur|
    |---|---|
    |Réseau virtuel|**Test-FW-VN**|
    |Subnet|**Workload-SN**|
 
-    >**Remarque** : vérifiez que le sous-réseau **Workload-SN** est sélectionné pour cette route, sinon le pare-feu ne fonctionnera pas correctement.
+    >**Remarque** : vérifiez que le sous-réseau **Workload-SN** est sélectionné pour cette route, sinon le pare-feu ne fonctionnera pas correctement.
 
 8. Cliquez sur **OK** pour associer le pare-feu au sous-réseau de réseau virtuel. 
 
 9. De retour dans le panneau **Pare-feu**, dans la section **Paramètres**, cliquez sur **Itinéraires**, puis sur **+ Ajouter**. 
 
-10. Dans le volet **Ajouter un itinéraire**, spécifiez les paramètres suivants :  
+10. Dans le volet **Ajouter un itinéraire**, spécifiez les paramètres suivants :  
 
    |Paramètre|Valeur|
    |---|---|
    |Nom de l’itinéraire|**FW-DG**|
-   |Destination du préfixe d’adresse|**Adresse IP**|
+   |Type de destination|**Adresse IP**|
    |Plages d’adresses IP/CIDR de destination|**0.0.0.0/0**
    |Type de tronçon suivant|**Appliance virtuelle**|
    |adresse de tronçon suivant|l’adresse IP privée du pare-feu que vous avez identifié à l’étape précédente|
 
-    >**Remarque** : Le Pare-feu Azure est en réalité un service managé, mais l’appliance virtuelle fonctionne dans ce cas.
+    >**Remarque** : Le Pare-feu Azure est en réalité un service managé, mais l’appliance virtuelle fonctionne dans ce cas.
     
 11.  Cliquez sur **Ajouter** pour ajouter l’itinéraire. 
 
@@ -184,7 +184,7 @@ Dans cette tâche, vous allez ajouter une règle d’application qui autorise l�
 
 3. Dans le panneau **Règles de test FW01 \| (classique)** , cliquez sur l’onglet **Regroupement de règles d’application**, puis cliquez sur **+Ajouter une collection de règles d’application**.
 
-4. Dans le volet **Ajouter une collection de règles d’application**, spécifiez les paramètres suivants (conservez les valeurs par défaut pour les autres) :
+4. Dans le volet **Ajouter une collection de règles d’application**, spécifiez les paramètres suivants (conservez les valeurs par défaut pour les autres) :
 
    |Paramètre|Valeur|
    |---|---|
@@ -192,7 +192,7 @@ Dans cette tâche, vous allez ajouter une règle d’application qui autorise l�
    |Priority|**200**|
    |Action|**Autoriser**|
 
-5. Dans le volet **Ajouter une collection de règles d’application**, créez une entrée dans la section **Nom de domaine complet cible** avec les paramètres suivants (conservez les valeurs par défaut pour les autres) :
+5. Dans le volet **Ajouter une collection de règles d’application**, créez une entrée dans la section **Nom de domaine complet cible** avec les paramètres suivants (conservez les valeurs par défaut pour les autres) :
 
    |Paramètre|Valeur|
    |---|---|
@@ -204,7 +204,7 @@ Dans cette tâche, vous allez ajouter une règle d’application qui autorise l�
 
 6. Cliquez sur **Ajouter** pour ajouter la règle d’application basée sur les noms de domaine complets cibles.
 
-    >**Remarque** : Le Pare-feu Azure comprend un regroupement de règles intégré pour les noms de domaine complets d’infrastructure qui sont autorisés par défaut. Ces noms de domaine complets sont spécifiques à la plateforme et ne peuvent pas être utilisés à d’autres fins. 
+    >**Remarque** : Le Pare-feu Azure comprend un regroupement de règles intégré pour les noms de domaine complets d’infrastructure qui sont autorisés par défaut. Ces noms de domaine complets sont spécifiques à la plateforme et ne peuvent pas être utilisés à d’autres fins. 
 
 #### Tâche 5 : Configurer une règle de réseau
 
@@ -214,7 +214,7 @@ Dans cette tâche, vous allez créer une règle réseau qui autorise l’accès 
 
 2. Dans le volet **Règles de test FW01 \| (classique)** , cliquez sur l’onglet **Collection de règles d’application**, puis cliquez sur **+Ajouter une collection de règles d’application**.
 
-3. Dans le volet **Ajouter une collection de règles réseau**, spécifiez les paramètres suivants (conservez les valeurs par défaut pour les autres) :
+3. Dans le volet **Ajouter une collection de règles réseau**, spécifiez les paramètres suivants (conservez les valeurs par défaut pour les autres) :
 
    |Paramètre|Valeur|
    |---|---|
@@ -222,23 +222,23 @@ Dans cette tâche, vous allez créer une règle réseau qui autorise l’accès 
    |Priority|**200**|
    |Action|**Autoriser**|
 
-4. Dans le volet **Ajouter une collection de règles réseau**, créez une entrée dans la section **Adresses IP** avec les paramètres suivants (conservez les valeurs par défaut pour les autres) :
+4. Dans le volet **Ajouter une collection de règles réseau**, créez une entrée dans la section **Adresses IP** avec les paramètres suivants (conservez les valeurs par défaut pour les autres) :
 
    |Paramètre|Valeur|
    |---|---|
    |Nom|**AllowDNS**|
    |Protocol|**UDP**|
-   |Type de source|**Adresse IP**|
+   |Type de source|**Adresse IP**|
    |Adresses sources|**10.0.2.0/24**|
-   |Type de destination|**Adresse IP**|
+   |Type de destination|**Adresse IP**|
    |Destination Address|**209.244.0.3,209.244.0.4**|
    |Ports de destination|**53**|
 
 5. Cliquez sur **Ajouter** pour ajouter la règle réseau.
 
-    >**Remarque** : les adresses de destination utilisées dans ce cas sont des serveurs DNS publics connus. 
+    >**Remarque** : les adresses de destination utilisées dans ce cas sont des serveurs DNS publics connus. 
 
-#### Tâche 6 : Configurer les serveurs DNS de la machine virtuelle
+#### Tâche 6 : Configurer les serveurs DNS de la machine virtuelle
 
 Dans cette tâche, vous allez configurer les adresses DNS principales et secondaires de la machine virtuelle. Il ne s’agit pas d’une exigence de pare-feu. 
 
@@ -248,17 +248,17 @@ Dans cette tâche, vous allez configurer les adresses DNS principales et seconda
 
 3. Dans le panneau **Srv-Work**, cliquez sur **Mise en réseau**.
 
-4. Dans le panneau **Srv-Work \| Réseau**, cliquez sur le lien en regard de l’entrée de l’**interface réseau**.
+4. Dans le panneau **Srv-Work \| Paramètres réseau**, cliquez sur le lien en regard de l’entrée de l’**interface réseau**.
 
-5. Dans le volet de l’interface réseau, dans la section **Paramètres**, cliquez sur **Serveurs DNS**, sélectionnez l’option **Personnalisé**, ajoutez les deux serveurs DNS référencés dans la règle réseau : **209.244.0.3** et **209.244.0.4**, et cliquez sur **Enregistrer** pour enregistrer la modification.
+5. Dans le volet de l’interface réseau, dans la section **Paramètres**, cliquez sur **Serveurs DNS**, sélectionnez l’option **Personnalisé**, ajoutez les deux serveurs DNS référencés dans la règle réseau : **209.244.0.3** et **209.244.0.4**, et cliquez sur **Enregistrer** pour enregistrer la modification.
 
 6. Revenez sur la page de machine virtuelle **Srv-Work**.
 
-    >**Remarque** : Attendez la fin de la mise à jour.
+    >**Remarque** : Attendez la fin de la mise à jour.
 
-    >**Remarque** : La mise à jour des serveurs DNS de cette interface réseau va automatiquement redémarrer la machine virtuelle à laquelle elle est attachée et, le cas échéant, les autres machines virtuelles du même groupe à haute disponibilité.
+    >**Remarque** : La mise à jour des serveurs DNS de cette interface réseau va automatiquement redémarrer la machine virtuelle à laquelle elle est attachée et, le cas échéant, les autres machines virtuelles du même groupe à haute disponibilité.
 
-#### Tâche 7 : Tester le pare-feu
+#### Tâche 7 : Tester le pare-feu
 
 Dans cette tâche, vous allez tester le pare-feu pour confirmer qu’il fonctionne comme prévu.
 
@@ -268,16 +268,16 @@ Dans cette tâche, vous allez tester le pare-feu pour confirmer qu’il fonction
 
 3. Dans le volet **Srv-Jump**, cliquez sur **Connecter** et, dans le menu déroulant, cliquez sur **RDP**. 
 
-4. Cliquez sur **Télécharger le fichier RDP**, puis utilisez-le pour vous connecter à la machine virtuelle Azure **Srv-Jump** via le Bureau à distance. Lorsque vous êtes invité à vous authentifier, fournissez les informations d’identification suivantes :
+4. Cliquez sur **Télécharger le fichier RDP**, puis utilisez-le pour vous connecter à la machine virtuelle Azure **Srv-Jump** via le Bureau à distance. Lorsque vous êtes invité à vous authentifier, fournissez les informations d’identification suivantes :
 
    |Paramètre|Valeur|
    |---|---|
    |Nom d’utilisateur|**localadmin**|
    |Mot de passe|Mot de passe sécurisé que vous avez choisi pendant le déploiement du modèle personnalisé dans la tâche 1, étape 6.|
 
-    >**Remarque** : les étapes suivantes sont effectuées dans la session Bureau à distance sur la machine virtuelle Azure **Srv-Jump**. 
+    >**Remarque** : les étapes suivantes sont effectuées dans la session Bureau à distance sur la machine virtuelle Azure **Srv-Jump**. 
 
-    >**Remarque** : vous allez vous connecter à la machine virtuelle **Srv-Work**. Pour cela, nous pouvons tester la possibilité d’accéder au site web bing.com.  
+    >**Remarque** : vous allez vous connecter à la machine virtuelle **Srv-Work**. Pour cela, nous pouvons tester la possibilité d’accéder au site web bing.com.  
 
 5. Dans la session Bureau à distance pour **Srv-Jump**, cliquez avec le bouton droit sur **Démarrer**, dans le menu contextuel, cliquez sur **Exécuter**, puis, dans la boîte de dialogue **Exécuter**, exécutez la commande suivante pour vous connecter à **Srv-Work**. 
 
@@ -285,14 +285,14 @@ Dans cette tâche, vous allez tester le pare-feu pour confirmer qu’il fonction
     mstsc /v:Srv-Work
     ```
 
-6. Lorsque vous êtes invité à vous authentifier, fournissez les informations d’identification suivantes :
+6. Lorsque vous êtes invité à vous authentifier, fournissez les informations d’identification suivantes :
 
    |Paramètre|Valeur|
    |---|---|
    |Nom d’utilisateur|**localadmin**|
    |Mot de passe|Mot de passe sécurisé que vous avez choisi pendant le déploiement du modèle personnalisé dans la tâche 1, étape 6.|
 
-    >**Remarque** : attendez que la session Bureau à distance soit établie et que l’interface Gestionnaire de serveur charge.
+    >**Remarque** : attendez que la session Bureau à distance soit établie et que l’interface Gestionnaire de serveur charge.
 
 7. Dans la session Bureau à distance vers **Srv-Work**, dans **Gestionnaire de serveur**, cliquez sur **Serveur local**, puis sur **Configuration de sécurité améliorée d’Internet Explorer**.
 
@@ -300,15 +300,15 @@ Dans cette tâche, vous allez tester le pare-feu pour confirmer qu’il fonction
 
 9. Dans la session Bureau à distance vers **Srv-Work**, démarrez Internet Explorer et accédez à **`https://www.bing.com`** . 
 
-    >**Remarque** : le site web devrait s’afficher correctement. Le pare-feu vous autorise l’accès.
+    >**Remarque** : le site web devrait s’afficher correctement. Le pare-feu vous autorise l’accès.
 
 10. Accédez à **`http://www.microsoft.com/`**.
 
-    >**Remarque** : Dans la page du navigateur, vous devriez recevoir un message avec un texte similaire à ce qui suit : `HTTP request from 10.0.2.4:xxxxx to microsoft.com:80. Action: Deny. No rule matched. Proceeding with default action.` Ceci est attendu, car le pare-feu bloque l’accès à ce site web. 
+    >**Remarque** : Dans la page du navigateur, vous devriez recevoir un message avec un texte similaire à ce qui suit : `HTTP request from 10.0.2.4:xxxxx to microsoft.com:80. Action: Deny. No rule matched. Proceeding with default action.` Ceci est attendu, car le pare-feu bloque l’accès à ce site web. 
 
 11. Terminez les deux sessions Bureau à distance.
 
-> Résultat : Vous avez configuré et testé le Pare-feu Azure.
+> Résultat : Vous avez configuré et testé le Pare-feu Azure.
 
 **Nettoyer les ressources**
 
@@ -318,9 +318,9 @@ Dans cette tâche, vous allez tester le pare-feu pour confirmer qu’il fonction
 
 2. Vérifiez que **PowerShell** est sélectionné dans le menu déroulant en haut à gauche du volet Cloud Shell.
 
-3. Dans la session PowerShell du volet Cloud Shell, exécutez ce qui suit pour supprimer le groupe de ressources que vous avez créé dans ce labo :
+3. Dans la session PowerShell du volet Cloud Shell, exécutez ce qui suit pour supprimer le groupe de ressources que vous avez créé dans ce labo :
   
     ```powershell
     Remove-AzResourceGroup -Name "AZ500LAB08" -Force -AsJob
     ```
-4. Fermez le volet **Cloud Shell**. 
+4. Fermez le volet **Cloud Shell**. 
