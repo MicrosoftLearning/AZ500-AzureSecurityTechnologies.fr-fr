@@ -4,12 +4,12 @@ lab:
   module: Module 03 - Plan and implement security for Azure SQL Database and Azure SQL Managed Instance
 ---
 
-# Labo 6 : Points de terminaison de service et sécurisation du stockage
+# Labo 6 : Points de terminaison de service et sécurisation du stockage
 # Manuel de labo de l’étudiant
 
 ## Scénario du labo
 
-Vous avez été invité à créer une preuve de concept pour montrer la sécurisation des partages de fichiers Azure. Plus précisément, vous souhaitez :
+Vous avez été invité à créer une preuve de concept pour montrer la sécurisation des partages de fichiers Azure. Plus précisément, vous souhaitez :
     
 - Créer un point de terminaison de stockage afin que le trafic destiné à Stockage Azure reste toujours au sein du réseau principal Azure.
 - Configurez le point de terminaison de stockage afin que seules des ressources d’un sous-réseau spécifique puissent accéder au stockage.
@@ -19,9 +19,9 @@ Vous avez été invité à créer une preuve de concept pour montrer la sécuris
 
 ## Objectifs du labo
 
-Dans ce labo, vous allez effectuer les exercices suivants :
+Dans ce labo, vous allez effectuer les exercices suivants :
 
-- Exercice 1 : Points de terminaison de service et stockage de sécurité
+- Exercice 1 : Points de terminaison de service et stockage de sécurité
 
 ## Diagramme de points de terminaison de services et de sécurisation du stockage
 
@@ -29,34 +29,34 @@ Dans ce labo, vous allez effectuer les exercices suivants :
 
 ## Instructions
 
-### Exercice 1 : Points de terminaison de service et stockage de sécurité
+### Exercice 1 : Points de terminaison de service et stockage de sécurité
 
-### Durée estimée : 45 minutes
+### Durée estimée : 45 minutes
 
-Dans cet exercice, vous allez effectuer les tâches suivantes :
+Dans cet exercice, vous allez effectuer les tâches suivantes :
 
-- Tâche 1 : Créer un réseau virtuel
-- Tâche 2 : Ajouter un sous-réseau au réseau virtuel et configurer un point de terminaison de stockage
+- Tâche 1 : Créer un réseau virtuel
+- Tâche 2 : Ajouter un sous-réseau au réseau virtuel et configurer un point de terminaison de stockage
 - Tâche 3 : Configurer un groupe de sécurité réseau pour restreindre l’accès au sous-réseau
-- Tâche 4 : Configurer un groupe de sécurité réseau pour autoriser RDP sur le sous-réseau public
-- Tâche 5 : Créer un compte de stockage avec un partage de fichiers
-- Tâche 6 : Déployer des machines virtuelles dans les sous-réseaux désignés
-- Tâche 7 : Tester la connexion de stockage à partir du sous-réseau privé pour confirmer que l’accès est autorisé
-- Tâche 8 : Tester la connexion de stockage à partir du sous-réseau public pour confirmer que l’accès est refusé 
+- Tâche 4 : Configurer un groupe de sécurité réseau pour autoriser RDP sur le sous-réseau public
+- Tâche 5 : Créer un compte de stockage avec un partage de fichiers
+- Tâche 6 : Déployer des machines virtuelles dans les sous-réseaux désignés
+- Tâche 7 : Tester la connexion de stockage à partir du sous-réseau privé pour confirmer que l’accès est autorisé
+- Tâche 8 : Tester la connexion de stockage à partir du sous-réseau public pour confirmer que l’accès est refusé 
 
-#### Tâche 1 : Créer un réseau virtuel
+#### Tâche 1 : Créer un réseau virtuel
 
 Dans cette tâche, vous allez créer un réseau virtuel.
 
 1. Connectez-vous au portail Azure **`https://portal.azure.com/`** .
 
-    >**Remarque** : connectez-vous au portail Azure en utilisant un compte disposant du rôle Propriétaire ou Contributeur dans l’abonnement Azure que vous utilisez pour ce labo.
+    >**Remarque** : connectez-vous au portail Azure en utilisant un compte disposant du rôle Propriétaire ou Contributeur dans l’abonnement Azure que vous utilisez pour ce labo.
 
 2. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents** en haut de la page, tapez **Réseaux virtuels**, puis appuyez sur la touche **Entrée**.
 
 3. Dans le volet **Réseaux virtuels**, cliquez sur  **+ Créer**.
 
-4. Dans le volet **Créer un réseau virtuel**, sous l’onglet **Options de base**, spécifiez les paramètres suivants (conservez les valeurs par défaut pour les autres), puis cliquez sur **Suivant : Adresses IP** :
+4. Dans le volet **Créer un réseau virtuel**, sous l’onglet **Options de base**, spécifiez les paramètres suivants (conservez les valeurs par défaut pour les autres), puis cliquez sur **Suivant : Adresses IP** :
 
     |Paramètre|Valeur|
     |---|---|
@@ -76,7 +76,7 @@ Dans cette tâche, vous allez créer un réseau virtuel.
 
 7. Sous l’onglet **Vérifier + créer** du volet **Créer un réseau virtuel**, cliquez sur **Créer**.
 
-#### Tâche 2 : Ajouter un sous-réseau au réseau virtuel et configurer un point de terminaison de stockage
+#### Tâche 2 : Ajouter un sous-réseau au réseau virtuel et configurer un point de terminaison de stockage
 
 Dans cette tâche, vous allez créer un autre sous-réseau et activer un point de terminaison de service sur celui-ci. Les points de terminaison de service sont activés par service, par sous-réseau. 
 
@@ -88,7 +88,7 @@ Dans cette tâche, vous allez créer un autre sous-réseau et activer un point d
 
 4. Dans le volet **myVirtualNetwork \| Sous-réseaux**, cliquez sur **+ Sous-réseau**. 
 
-5. Dans le volet **Ajouter un sous-réseau**, spécifiez les paramètres suivants (conservez les valeurs par défaut pour les autres) :
+5. Dans le volet **Ajouter un sous-réseau**, spécifiez les paramètres suivants (conservez les valeurs par défaut pour les autres) :
 
     |Paramètre|Valeur|
     |---|---|
@@ -98,7 +98,7 @@ Dans cette tâche, vous allez créer un autre sous-réseau et activer un point d
 
 6. Dans le volet **Ajouter un sous-réseau**, cliquez sur **Enregistrer** pour ajouter le nouveau sous-réseau.
 
-    >**Remarque** : le réseau virtuel a maintenant deux sous-réseaux : public et privé. 
+    >**Remarque** : le réseau virtuel a maintenant deux sous-réseaux : public et privé. 
     
 #### Tâche 3 : Configurer un groupe de sécurité réseau pour restreindre l’accès au sous-réseau
 
@@ -108,7 +108,7 @@ Dans cette tâche, vous allez créer un groupe de sécurité réseau avec deux r
 
 2. Dans le volet **Groupes de sécurité réseau**, cliquez sur **+Créer**.
 
-3. Sous l’onglet **Options de base** du volet **Créer un groupe de sécurité réseau**, spécifiez les paramètres suivants : 
+3. Sous l’onglet **Options de base** du volet **Créer un groupe de sécurité réseau**, spécifiez les paramètres suivants : 
 
     |Paramètre|Valeur|
     |---|---|
@@ -119,7 +119,7 @@ Dans cette tâche, vous allez créer un groupe de sécurité réseau avec deux r
 
 4. Cliquez sur **Vérifier + créer**, puis sur **Créer**.
 
-    >**Remarque** : dans les étapes suivantes, vous allez créer une règle de sécurité de trafic sortant qui permet de communiquer avec le service Stockage Azure. 
+    >**Remarque** : dans les étapes suivantes, vous allez créer une règle de sécurité de trafic sortant qui permet de communiquer avec le service Stockage Azure. 
 
 5. Dans le Portail Azure, revenez au volet **Groupes de sécurité réseau**, puis cliquez sur l’entrée **myNsgPrivate**.
 
@@ -161,13 +161,13 @@ Dans cette tâche, vous allez créer un groupe de sécurité réseau avec deux r
     |Priority|**1100**|
     |Nom|**Deny-Internet-All**|
 
-    >**Remarque** : Cette règle qui permet la communication Internet sortante se substitue à une règle par défaut dans tous les groupes de sécurité réseau. 
+    >**Remarque** : Cette règle qui permet la communication Internet sortante se substitue à une règle par défaut dans tous les groupes de sécurité réseau. 
 
-    >**Remarque** : Dans les étapes suivantes, vous allez créer une règle de sécurité de trafic entrant qui autorise le trafic via le protocole RDP (Remote Desktop Protocol) vers le sous-réseau. La règle remplace une règle de sécurité par défaut qui refuse tout le trafic entrant provenant d’Internet. Les connexions Bureau à distance sont autorisées vers le sous-réseau afin que la connectivité puisse être testée dans une étape ultérieure.
+    >**Remarque** : Dans les étapes suivantes, vous allez créer une règle de sécurité de trafic entrant qui autorise le trafic via le protocole RDP (Remote Desktop Protocol) vers le sous-réseau. La règle remplace une règle de sécurité par défaut qui refuse tout le trafic entrant provenant d’Internet. Les connexions Bureau à distance sont autorisées vers le sous-réseau afin que la connectivité puisse être testée dans une étape ultérieure.
 
 12. Dans le volet **myNsgPrivate**, dans la section **Paramètres**, cliquez sur **Règles de sécurité de trafic entrant**, puis sur **+ Ajouter**.
 
-13. Dans le volet **Ajouter une règle de sécurité de trafic entrant**, spécifiez les paramètres suivants (conservez les valeurs par défaut pour les autres) : 
+13. Dans le volet **Ajouter une règle de sécurité de trafic entrant**, spécifiez les paramètres suivants (conservez les valeurs par défaut pour les autres) : 
 
     |Paramètre|Valeur|
     |---|---|
@@ -183,7 +183,7 @@ Dans cette tâche, vous allez créer un groupe de sécurité réseau avec deux r
 
 14. Dans le volet **Ajouter une règle de sécurité de trafic entrant**, cliquez sur **Ajouter** pour créer une règle de trafic entrant. 
 
-    >**Remarque** : Vous allez maintenant associer le groupe de sécurité réseau avec le sous-réseau privé.
+    >**Remarque** : Vous allez maintenant associer le groupe de sécurité réseau avec le sous-réseau privé.
 
 15. Dans le volet **Sous-réseaux**, sélectionnez **+ Associer** et spécifiez les paramètres suivants dans la section **Associer un sous-réseau**, puis cliquez sur **OK** :
 
@@ -192,7 +192,7 @@ Dans cette tâche, vous allez créer un groupe de sécurité réseau avec deux r
     |Réseau virtuel|**myVirtualNetwork**|
     |Subnet|**Privé**|
 
-#### Tâche 4 : Configurer un groupe de sécurité réseau pour autoriser RDP sur le sous-réseau public
+#### Tâche 4 : Configurer un groupe de sécurité réseau pour autoriser RDP sur le sous-réseau public
 
 Dans cette tâche, vous allez créer un groupe de sécurité réseau avec une règle de sécurité de trafic entrant (RDP). Vous allez également associer le groupe de sécurité réseau au sous-réseau public. Cela autorisera l’accès RDP à la machine virtuelle publique.
 
@@ -200,7 +200,7 @@ Dans cette tâche, vous allez créer un groupe de sécurité réseau avec une r�
 
 2. Dans le volet **Groupes de sécurité réseau**, cliquez sur **+Créer**.
 
-3. Sous l’onglet **Options de base** du volet **Créer un groupe de sécurité réseau**, spécifiez les paramètres suivants : 
+3. Sous l’onglet **Options de base** du volet **Créer un groupe de sécurité réseau**, spécifiez les paramètres suivants : 
 
     |Paramètre|Valeur|
     |---|---|
@@ -211,13 +211,13 @@ Dans cette tâche, vous allez créer un groupe de sécurité réseau avec une r�
 
 4. Cliquez sur **Vérifier + créer**, puis sur **Créer**.
 
-    >**Remarque** : dans les étapes suivantes, vous allez créer une règle de sécurité de trafic sortant qui permet de communiquer avec le service Stockage Azure. 
+    >**Remarque** : dans les étapes suivantes, vous allez créer une règle de sécurité de trafic sortant qui permet de communiquer avec le service Stockage Azure. 
 
 5. Dans le portail Azure, revenez au volet **Groupes de sécurité réseau**, puis cliquez sur l’entrée **myNsgPublic**.
 
 6. Dans le volet **myNsgPublic**, dans la section **Paramètres**, cliquez sur **Règles de sécurité de trafic entrant**, puis sur **+ Ajouter**.
 
-7. Dans le volet **Ajouter une règle de sécurité de trafic entrant**, spécifiez les paramètres suivants (conservez les valeurs par défaut pour les autres) : 
+7. Dans le volet **Ajouter une règle de sécurité de trafic entrant**, spécifiez les paramètres suivants (conservez les valeurs par défaut pour les autres) : 
 
     |Paramètre|Valeur|
     |---|---|
@@ -233,7 +233,7 @@ Dans cette tâche, vous allez créer un groupe de sécurité réseau avec une r�
 
 8. Dans le volet **Ajouter une règle de sécurité de trafic entrant**, cliquez sur **Ajouter** pour créer une règle de trafic entrant. 
 
-    >**Remarque** : Vous allez maintenant associer le groupe de sécurité réseau avec le sous-réseau public.
+    >**Remarque** : Vous allez maintenant associer le groupe de sécurité réseau avec le sous-réseau public.
 
 9. Dans le volet **Sous-réseaux**, sélectionnez **+ Associer** et spécifiez les paramètres suivants dans la section **Associer un sous-réseau**, puis cliquez sur **OK** :
 
@@ -242,7 +242,7 @@ Dans cette tâche, vous allez créer un groupe de sécurité réseau avec une r�
     |Réseau virtuel|**myVirtualNetwork**|
     |Subnet|**Public**|
     
-#### Tâche 5 : Créer un compte de stockage avec un partage de fichiers
+#### Tâche 5 : Créer un compte de stockage avec un partage de fichiers
 
 Dans cette tâche, vous allez créer un compte de stockage avec un partage de fichiers et obtenir la clé du compte de stockage.  
 
@@ -250,20 +250,20 @@ Dans cette tâche, vous allez créer un compte de stockage avec un partage de fi
 
 2. Dans le volet **Comptes de stockage**, cliquez sur  **+ Créer**.
 
-3. Sous l’onglet **Options de base** du volet **Créer un compte de stockage**, spécifiez les paramètres suivants (conservez les valeurs par défaut pour les autres) :
+3. Sous l’onglet **Options de base** du volet **Créer un compte de stockage**, spécifiez les paramètres suivants (conservez les valeurs par défaut pour les autres) :
 
     |Paramètre|Valeur|
     |---|---|
     |Abonnement|le nom de l’abonnement Azure que vous utilisez dans ce labo|
     |Groupe de ressources|**AZ500LAB12**|
-    |Nom du compte de stockage|Nom global unique comprenant entre 3 et 24 caractères alphanumériques.|
+    |Nom du compte de stockage|Nom global unique comprenant entre 3 et 24 caractères alphanumériques.|
     |Emplacement|**(États-Unis) EastUS**|
     |Performances|**Standard (compte v2 à usage général)**|
     |Redondance|**Stockage localement redondant (LRS)**|
 
 4. Sous l’onglet **Informations de base** du volet **Créer un compte de stockage**, cliquez sur **Vérifier + créer**, attendez la fin du processus de validation, puis cliquez sur **Créer**.
 
-    >**Remarque** : attendez que le compte de stockage soit créé. Ce processus prend environ 2 minutes.
+    >**Remarque** : attendez que le compte de stockage soit créé. Ce processus prend environ 2 minutes.
 
 5. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents** en haut de la page, tapez **Groupes de ressources**, puis appuyez sur la touche **Entrée**.
 
@@ -283,7 +283,7 @@ Dans cette tâche, vous allez créer un compte de stockage avec un partage de fi
 
 11. Dans le volet **Nouveau partage de fichiers**, cliquez sur **Créer**.
 
-    >**Remarque** : à présent, récupérez et enregistrez le script PowerShell qui crée un mappage de lecteur au partage de fichiers Azure. 
+    >**Remarque** : à présent, récupérez et enregistrez le script PowerShell qui crée un mappage de lecteur au partage de fichiers Azure. 
 
 12. Dans le volet du compte de stockage, dans la liste des partages de fichiers, cliquez sur **my-file-share**.
 
@@ -291,13 +291,15 @@ Dans cette tâche, vous allez créer un compte de stockage avec un partage de fi
 
 14. Dans le volet **Se connecter**, sous l’onglet **Windows**, copiez le script PowerShell qui crée un mappage de lecteur Z au partage de fichiers. 
 
-    >**Remarque** : enregistrez ce script. Vous en aurez besoin plus tard dans ce labo pour mapper le partage de fichiers à partir de la machine virtuelle Azure sur le sous-réseau **Privé**.
+    >**Remarque** : enregistrez ce script. Vous en aurez besoin plus tard dans ce labo pour mapper le partage de fichiers à partir de la machine virtuelle Azure sur le sous-réseau **Privé**.
 
 15. Revenez au volet du compte de stockage, puis, dans la section **Sécurité + mise en réseau**, cliquez sur **Mise en réseau**.
 
-16. Dans le volet **Pare-feu et réseaux virtuels**, sélectionnez l’option **Activé à partir des réseaux virtuels et adresses IP sélectionnés**, puis cliquez sur le lien **+ Ajouter un réseau virtuel existant**. 
+16. Sous **Accès au réseau public**, sélectionnez **Gérer** et, comme **action par défaut**, sélectionnez **Activer à partir de réseaux sélectionnés**.
 
-17. Dans le volet **Ajouter des réseaux**, spécifiez les paramètres suivants :
+17. Sous le panneau **Paramètres de ressource : réseaux virtuels, adresses IP et exceptions**, sélectionnez **l’affichage**, puis cliquez sur le lien **+ Ajouter un réseau virtuel existant**. 
+
+18. Dans le volet **Ajouter des réseaux**, spécifiez les paramètres suivants :
 
     |Paramètre|Valeur|
     |---|---|
@@ -305,23 +307,23 @@ Dans cette tâche, vous allez créer un compte de stockage avec un partage de fi
     |Réseaux virtuels|**myVirtualNetwork**|
     |Sous-réseaux|**Privé**|
 
-18. Dans le volet **Ajouter des réseaux**, cliquez sur **Ajouter**. 
+19. Dans le volet **Ajouter des réseaux**, cliquez sur **Ajouter**. 
 
-19. De retour dans le volet du compte de stockage, cliquez sur **Enregistrer**.
+20. De retour dans le volet du compte de stockage, cliquez sur **Enregistrer**.
 
-    >**Remarque** : à ce stade du labo, vous avez configuré un réseau virtuel, un groupe de sécurité réseau et un compte de stockage avec un partage de fichiers. 
+    >**Remarque** : à ce stade du labo, vous avez configuré un réseau virtuel, un groupe de sécurité réseau et un compte de stockage avec un partage de fichiers. 
 
-#### Tâche 6 : Déployer des machines virtuelles dans les sous-réseaux désignés
+#### Tâche 6 : Déployer des machines virtuelles dans les sous-réseaux désignés
 
-Dans cette tâche, vous allez créer deux machines virtuelles : l’une dans le sous-réseau privé et l’autre dans le sous-réseau public. 
+Dans cette tâche, vous allez créer deux machines virtuelles : l’une dans le sous-réseau privé et l’autre dans le sous-réseau public. 
 
->**Remarque** : la première machine virtuelle sera connectée au sous-réseau privé.
+>**Remarque** : la première machine virtuelle sera connectée au sous-réseau privé.
 
 1. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents** en haut de la page Portail Azure, tapez **Machines virtuelles** et appuyez sur la touche **Entrée**.
 
 2. Dans le volet **Machines virtuelles**, cliquez sur **+ Créer** et, dans la liste déroulante, cliquez sur **+ Machine virtuelle Azure**.
 
-3. Sous l’onglet **Informations de base** du volet **Créer une machine virtuelle**, spécifiez les paramètres suivants (conservez les valeurs par défaut pour les autres) :
+3. Sous l’onglet **Informations de base** du volet **Créer une machine virtuelle**, spécifiez les paramètres suivants (conservez les valeurs par défaut pour les autres) :
 
     |Paramètre|Valeur|
     |---|---|
@@ -329,34 +331,34 @@ Dans cette tâche, vous allez créer deux machines virtuelles : l’une dans le
     |Groupe de ressources|**AZ500LAB12**|
     |Nom de la machine virtuelle|**myVmPrivate**|
     |Région|**(États-Unis) USA Est**|
-    |Image|**Windows Server 2022 Datacenter : Édition Azure - Gen 2**|
+    |Image|**Windows Server 2022 Datacenter : Édition Azure - Gen 2**|
     |Nom d’utilisateur|**Étudiant**|
-    |Mot de passe|**Utilisez votre mot de passe personnel créé dans le Labo 02 > Exercice 2 > Tâche 1 > Étape 3.**|
+    |Mot de passe|**Utilisez votre mot de passe personnel créé dans le Labo 02 > Exercice 2 > Tâche 1 > Étape 3.**|
     |Aucun port d’entrée public|**Aucun**|
     |Vous disposez déjà d’une licence Windows Server|**Non sélectionnée**|
 
-    >**Remarque** : pour les ports d’entrée publics, nous allons nous appuyer sur le groupe de sécurité réseau (NSG) pré-créé. 
+    >**Remarque** : pour les ports d’entrée publics, nous allons nous appuyer sur le groupe de sécurité réseau (NSG) pré-créé. 
 
-4. Cliquez sur **Suivant : Disques >** , puis, sous l’onglet **Disques** du volet **Créer une machine virtuelle**, définissez le **Type de disque du système d’exploitation** sur **HDD Standard** et cliquez sur **Suivant : Mise en réseau >** .
+4. Cliquez sur **Suivant : Disques >** , puis, sous l’onglet **Disques** du volet **Créer une machine virtuelle**, définissez le **Type de disque du système d’exploitation** sur **HDD Standard** et cliquez sur **Suivant : Mise en réseau >** .
 
-5. Cliquez sur **Suivant : Mise en réseau >** , sous l’onglet **Mise en réseau** du volet **Créer une machine virtuelle**, spécifiez les paramètres suivants (conservez les valeurs par défaut pour les autres) :
+5. Cliquez sur **Suivant : Mise en réseau >** , sous l’onglet **Mise en réseau** du volet **Créer une machine virtuelle**, spécifiez les paramètres suivants (conservez les valeurs par défaut pour les autres) :
 
     |Paramètre|Valeur|
     |---|---|
     |Réseau virtuel|**myVirtualNetwork**|
     |Subnet|**Privé (10.0.1.0/24)**|
-    |Adresse IP publique|**(new)myVmPrivate-ip**|
+    |Adresse IP publique|**(new)myVmPrivate-ip**|
     |Groupe de sécurité réseau de la carte réseau|**Aucun**|
 
-6. Cliquez sur **Suivant : Gestion >** , puis, sous l’onglet **Gestion** du volet **Créer une machine virtuelle**, acceptez les paramètres par défaut et cliquez sur **Vérifier + créer**.
+6. Cliquez sur **Suivant : Gestion >** , puis, sous l’onglet **Gestion** du volet **Créer une machine virtuelle**, acceptez les paramètres par défaut et cliquez sur **Vérifier + créer**.
 
 7. Dans le volet **Vérifier + créer**, vérifiez que la validation a réussi, puis cliquez sur **Créer**.
 
-    >**Remarque** : la deuxième machine virtuelle sera connectée au sous-réseau public.
+    >**Remarque** : la deuxième machine virtuelle sera connectée au sous-réseau public.
 
 8. Dans le volet **Machines virtuelles**, cliquez sur **+ Ajouter** et, dans la liste déroulante, cliquez sur **+ Machine virtuelle Azure**.
 
-9. Sous l’onglet **Informations de base** du volet **Créer une machine virtuelle**, spécifiez les paramètres suivants (conservez les valeurs par défaut pour les autres) :
+9. Sous l’onglet **Informations de base** du volet **Créer une machine virtuelle**, spécifiez les paramètres suivants (conservez les valeurs par défaut pour les autres) :
 
     |Paramètre|Valeur|
     |---|---|
@@ -364,32 +366,32 @@ Dans cette tâche, vous allez créer deux machines virtuelles : l’une dans le
     |Groupe de ressources|**AZ500LAB12**|
     |Nom de la machine virtuelle|**myVmPublic**|
     |Région|**(États-Unis) USA Est**|
-    |Image|**Windows Server 2022 Datacenter : Édition Azure - Gen 2**|
+    |Image|**Windows Server 2022 Datacenter : Édition Azure - Gen 2**|
     |Nom d’utilisateur|**Étudiant**|
-    |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 2 > Exercice 1 > Tâche 1 > Étape 9.**|
+    |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 2 > Exercice 1 > Tâche 1 > Étape 9.**|
     |Aucun port d’entrée public|**Aucun**|
     |Vous disposez déjà d’une licence Windows Server|**Non sélectionnée**|
 
-    >**Remarque** : pour les ports d’entrée publics, nous allons nous appuyer sur le groupe de sécurité réseau (NSG) pré-créé. 
+    >**Remarque** : pour les ports d’entrée publics, nous allons nous appuyer sur le groupe de sécurité réseau (NSG) pré-créé. 
 
-10. Cliquez sur **Suivant : Disques >** , puis, sous l’onglet **Disques** du volet **Créer une machine virtuelle**, définissez le **Type de disque du système d’exploitation** sur **HDD Standard** et cliquez sur **Suivant : Mise en réseau >** .
+10. Cliquez sur **Suivant : Disques >** , puis, sous l’onglet **Disques** du volet **Créer une machine virtuelle**, définissez le **Type de disque du système d’exploitation** sur **HDD Standard** et cliquez sur **Suivant : Mise en réseau >** .
 
-11. Cliquez sur **Suivant : Mise en réseau >** , sous l’onglet **Mise en réseau** du volet **Créer une machine virtuelle**, spécifiez les paramètres suivants (conservez les valeurs par défaut pour les autres) :
+11. Cliquez sur **Suivant : Mise en réseau >** , sous l’onglet **Mise en réseau** du volet **Créer une machine virtuelle**, spécifiez les paramètres suivants (conservez les valeurs par défaut pour les autres) :
 
     |Paramètre|Valeur|
     |---|---|
     |Réseau virtuel|**myVirtualNetwork**|
     |Subnet|**Public (10.0.0.0/24)**|
-    |Adresse IP publique|**(new)myVmPublic-ip**|
+    |Adresse IP publique|**(new)myVmPublic-ip**|
     |Groupe de sécurité réseau de la carte réseau|**Aucun**|
 
-12. Cliquez sur **Suivant : Gestion >** , puis, sous l’onglet **Gestion** du volet **Créer une machine virtuelle**, acceptez les paramètres par défaut et cliquez sur **Vérifier + créer**.
+12. Cliquez sur **Suivant : Gestion >** , puis, sous l’onglet **Gestion** du volet **Créer une machine virtuelle**, acceptez les paramètres par défaut et cliquez sur **Vérifier + créer**.
 
 13. Dans le volet **Vérifier + créer**, vérifiez que la validation a réussi, puis cliquez sur **Créer**.
 
-    >**Remarque** : vous pouvez passer à la tâche suivante une fois le déploiement de la machine virtuelle Azure **myVMPrivate** terminé.
+    >**Note** : vous pouvez passer à la tâche suivante une fois le déploiement de la machine virtuelle Azure **myVMPublic** terminé.
 
-#### Tâche 7 : Tester la connexion de stockage à partir du sous-réseau privé pour confirmer que l’accès est autorisé
+#### Tâche 7 : Tester la connexion de stockage à partir du sous-réseau privé pour confirmer que l’accès est autorisé
 
 Dans cette tâche, vous allez vous connecter à la machine virtuelle myVMPrivate via le Bureau à distance et mapper un lecteur au partage de fichiers. 
 
@@ -399,21 +401,21 @@ Dans cette tâche, vous allez vous connecter à la machine virtuelle myVMPrivate
 
 3. Dans le volet **myVMPrivate**, cliquez sur **Se connecter**, puis, dans le menu déroulant, cliquez sur **RDP**. 
 
-4. Cliquez sur **Télécharger le fichier RDP**, puis utilisez-le pour vous connecter à la machine virtuelle Azure **myVMPrivate** via le Bureau à distance. Lorsque vous êtes invité à vous authentifier, fournissez les informations d’identification suivantes :
+4. Cliquez sur **Télécharger le fichier RDP**, puis utilisez-le pour vous connecter à la machine virtuelle Azure **myVMPrivate** via le Bureau à distance. Lorsque vous êtes invité à vous authentifier, fournissez les informations d’identification suivantes :
 
     |Paramètre|Valeur|
     |---|---|
     |Nom d’utilisateur|**Étudiant**|
-    |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 02 > Exercice 2 > Tâche 1 > Étape 3.**|
+    |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 02 > Exercice 2 > Tâche 1 > Étape 3.**|
      
 
-    >**Remarque** : attendez que la session Bureau à distance s’ouvre et que le Gestionnaire de serveur soit chargé
+    >**Remarque** : attendez que la session Bureau à distance s’ouvre et que le Gestionnaire de serveur soit chargé
 
-    >**Remarque** : vous allez maintenant mapper le lecteur Z à un partage de fichiers Azure au sein de la session Bureau à distance sur un ordinateur Windows Server 2022
+    >**Remarque** : vous allez maintenant mapper le lecteur Z à un partage de fichiers Azure au sein de la session Bureau à distance sur un ordinateur Windows Server 2022
 
 5. Dans la session Bureau à distance sur **myVMPrivate**, cliquez sur **Démarrer**, puis sur **Windows PowerShell ISE**.
 
-6. Dans la fenêtre **Windows PowerShell ISE**, ouvrez le volet **Script**, puis collez et exécutez le script PowerShell que vous avez enregistré précédemment dans ce labo. Le format du script est le suivant :
+6. Dans la fenêtre **Windows PowerShell ISE**, ouvrez le volet **Script**, puis collez et exécutez le script PowerShell que vous avez enregistré précédemment dans ce labo. Le format du script est le suivant :
 
     ```powershell
     $connectTestResult = Test-NetConnection -ComputerName <storage_account_name>.file.core.windows.net -Port 445
@@ -426,7 +428,7 @@ Dans cette tâche, vous allez vous connecter à la machine virtuelle myVMPrivate
        Write-Error -Message "Unable to reach the Azure storage account via port 445. Check to make sure your organization or ISP is not blocking port 445, or use Azure P2S VPN, Azure S2S VPN, or Express Route to tunnel SMB traffic over a different port."
     }
     ```
-    >**Remarque** : l’espace réservé `<storage_account_name>` représente le nom du compte de stockage hébergeant le partage de fichiers, et `<storage_account_key>` sa clé primaire
+    >**Remarque** : l’espace réservé `<storage_account_name>` représente le nom du compte de stockage hébergeant le partage de fichiers, et `<storage_account_key>` sa clé primaire
 
 7. Démarrez l’Explorateur de fichiers et vérifiez que le mappage du lecteur Z: a été correctement créé.
 
@@ -436,13 +438,13 @@ Dans cette tâche, vous allez vous connecter à la machine virtuelle myVMPrivate
     Test-NetConnection -ComputerName www.bing.com -Port 80
     ```
 
-    >**Remarque** : le test échouera parce que le groupe de sécurité réseau associé au sous-réseau privé n’autorise pas l’accès sortant à Internet.
+    >**Remarque** : le test échouera parce que le groupe de sécurité réseau associé au sous-réseau privé n’autorise pas l’accès sortant à Internet.
 
 9. Mettez fin à la session Bureau à distance sur la machine virtuelle **myVmPrivate**.
 
-    >**Remarque** : à ce stade, vous avez confirmé que la machine virtuelle dans le sous-réseau privé peut accéder au compte de stockage. 
+    >**Remarque** : à ce stade, vous avez confirmé que la machine virtuelle dans le sous-réseau privé peut accéder au compte de stockage. 
 
-####  Tâche 8 : Tester la connexion de stockage à partir du sous-réseau public pour confirmer que l’accès est refusé 
+####  Tâche 8 : Tester la connexion de stockage à partir du sous-réseau public pour confirmer que l’accès est refusé 
 
 1. Revenez au panneau **Machines virtuelles**. 
 
@@ -450,25 +452,25 @@ Dans cette tâche, vous allez vous connecter à la machine virtuelle myVMPrivate
 
 3. Dans le volet **myVMPublic**, cliquez sur **Se connecter**, puis, dans le menu déroulant, cliquez sur **RDP**. 
 
-4. Cliquez sur **Télécharger le fichier RDP**, puis utilisez-le pour vous connecter à la machine virtuelle Azure **myVMPublic** via le Bureau à distance. Lorsque vous êtes invité à vous authentifier, fournissez les informations d’identification suivantes :
+4. Cliquez sur **Télécharger le fichier RDP**, puis utilisez-le pour vous connecter à la machine virtuelle Azure **myVMPublic** via le Bureau à distance. Lorsque vous êtes invité à vous authentifier, fournissez les informations d’identification suivantes :
 
     |Paramètre|Valeur|
     |---|---|
     |Nom d’utilisateur|**Étudiant**|
-    |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 02 > Exercice 2 > Tâche 1 > Étape 3.**|
+    |Mot de passe|**Utilisez votre mot de passe personnel créé dans le labo 02 > Exercice 2 > Tâche 1 > Étape 3.**|
 
 
-    >**Remarque** : attendez que la session Bureau à distance s’ouvre et que le Gestionnaire de serveur soit chargé
+    >**Remarque** : attendez que la session Bureau à distance s’ouvre et que le Gestionnaire de serveur soit chargé
 
-    >**Remarque** : vous allez maintenant mapper le lecteur Z à un partage de fichiers Azure au sein de la session Bureau à distance sur un ordinateur Windows Server 2022
+    >**Remarque** : vous allez maintenant mapper le lecteur Z à un partage de fichiers Azure au sein de la session Bureau à distance sur un ordinateur Windows Server 2022
 
 5. Dans la session Bureau à distance sur **myVMPublic**, cliquez sur **Démarrer**, puis sur **Windows PowerShell ISE**.
 
 6. Dans la fenêtre **Windows PowerShell ISE**, ouvrez le volet **Script**, puis collez et exécutez le script PowerShell que vous avez exécuté au sein de la session Bureau à distance sur la machine virtuelle Azure **myVMPrivate**.
 
-    >**Remarque** : Cette fois, vous allez voir s’afficher l’erreur **New-PSDrive : Accès refusé**. 
+    >**Remarque** : Cette fois, vous allez voir s’afficher l’erreur **New-PSDrive : Accès refusé**. 
 
-    >**Remarque** : L’accès est refusé parce que la machine virtuelle *myVmPublic* est déployée dans le sous-réseau Public. Le sous-réseau public ne dispose d’aucun point de terminaison de service activé pour le Stockage Azure. Le compte de stockage ne permet d’accès réseau qu’à partir du sous-réseau privé.
+    >**Remarque** : L’accès est refusé parce que la machine virtuelle *myVmPublic* est déployée dans le sous-réseau Public. Le sous-réseau public ne dispose d’aucun point de terminaison de service activé pour le Stockage Azure. Le compte de stockage ne permet d’accès réseau qu’à partir du sous-réseau privé.
 
 7. Ensuite, dans le volet de la console **Windows PowerShell ISE**, exécutez la commande suivante pour vérifier que la machine virtuelle a une connectivité sortante à Internet : 
 
@@ -476,11 +478,11 @@ Dans cette tâche, vous allez vous connecter à la machine virtuelle myVMPrivate
     Test-NetConnection -ComputerName www.bing.com -Port 80
     ```
 
-    >**Remarque** : Le test réussit parce qu’il n’existe aucune règle de sécurité de trafic sortant pour refuser Internet sur le sous-réseau public.
+    >**Remarque** : Le test réussit parce qu’il n’existe aucune règle de sécurité de trafic sortant pour refuser Internet sur le sous-réseau public.
 
 8. Mettez fin à la session Bureau à distance sur la machine virtuelle **myVmPublic**.
 
-    >**Remarque** : à ce stade, vous avez confirmé que la machine virtuelle dans le sous-réseau public ne peut pas accéder au compte de stockage, mais a accès à Internet.
+    >**Remarque** : à ce stade, vous avez confirmé que la machine virtuelle dans le sous-réseau public ne peut pas accéder au compte de stockage, mais a accès à Internet.
 
 
 **Nettoyer les ressources**
