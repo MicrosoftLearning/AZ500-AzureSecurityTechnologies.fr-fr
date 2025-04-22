@@ -1,10 +1,10 @@
 ---
 lab:
-  title: "09 - Configuration des fonctionnalités de sécurité renforcée de Microsoft\_Defender for Cloud pour les serveurs"
+  title: 09 - Configuration des fonctionnalités de sécurité renforcée de Microsoft Defender for Cloud pour les serveurs
   module: Module 03 - Configure and manage threat protection by using Microsoft Defender for Cloud
 ---
 
-# Labo 09 : configuration des fonctionnalités de sécurité renforcée de Microsoft Defender for Cloud pour les serveurs
+# Labo 09 : configuration des fonctionnalités de sécurité renforcée de Microsoft Defender for Cloud pour les serveurs
 
 # Manuel de labo de l’étudiant
 
@@ -14,28 +14,28 @@ En tant qu’ingénieur sécurité Azure pour une entreprise internationale de e
 
 ## Objectifs du labo
 
-- Configurer les fonctionnalités de sécurité renforcée de Microsoft Defender pour le cloud pour les serveurs
+- Configurer les fonctionnalités de sécurité renforcée de Microsoft Defender pour le cloud pour les serveurs
   
-- Passer en revue les fonctionnalités de sécurité renforcée pour le Plan 2 de Microsoft Defender pour serveurs
+- Passer en revue les fonctionnalités de sécurité renforcée pour le Plan 2 de Microsoft Defender pour serveurs
 
 ## Instructions de l’exercice
 
-### Configurer les fonctionnalités de sécurité renforcée de Microsoft Defender pour le cloud pour les serveurs
+### Configurer les fonctionnalités de sécurité renforcée de Microsoft Defender pour le cloud pour les serveurs
 
 1. Dans le portail Azure, dans la zone de texte Rechercher des ressources, des services et des documents située en haut de la page du portail Azure, saisissez **Microsoft Defender pour le cloud** et appuyez sur la touche **Entrée**.
 
-2. Dans **Microsoft Defender pour le cloud**, dans le **panneau de gestion**, accédez aux **paramètres d’environnement**. Développez les dossiers des paramètres d’environnement jusqu’à ce que la section **abonnement** s’affiche, puis cliquez sur l’**abonnement** pour afficher les détails.
+2. Dans **Microsoft Defender pour le cloud**, dans le **panneau de gestion**, accédez aux **paramètres d’environnement**. Développez les dossiers des paramètres d’environnement jusqu’à ce que la section **abonnement** s’affiche, puis cliquez sur l’**abonnement** pour afficher les détails.
 
    ![image](https://github.com/user-attachments/assets/3b25dd82-e09e-4f8a-b85e-c9bc6c4bd488)
    
 3. Dans le panneau **Paramètres**, sous **plans Defender**, développez **Protection de la charge de travail du cloud**.
 
-4. Dans la liste **Plan de protection de charge de la charge de travail du cloud**, sélectionnez **Serveurs**. À droite de la page, remplacez le **Statut** **Désactivé** par **Activé**, puis cliquez sur **Enregistrer.**
+4. Dans la liste **Plan de protection de charge de la charge de travail du cloud**, sélectionnez **Serveurs**. À droite de la page, remplacez le **Statut****Désactivé** par **Activé**, puis cliquez sur **Enregistrer.**
 
-5. Pour passer en revue les détails du **Plan 2 de Microsoft Defender pour serveurs**, sélectionnez **Modifier le plan >**.
+5. Pour passer en revue les détails du **Plan 2 de Microsoft Defender pour serveurs**, sélectionnez **Modifier le plan >**.
 
-   Remarque : l’activation du plan Serveurs de la Protection de la charge de travail du cloud active également le Plan 2 de Microsoft Defender pour serveurs.
+   Remarque : l’activation du plan Serveurs de la Protection de la charge de travail du cloud active également le Plan 2 de Microsoft Defender pour serveurs.
  
    ![image](https://github.com/user-attachments/assets/de434a75-345a-4023-83f1-fa53fcb5f288)
    
-> **Résultats** : vous avez activé le Plan 2 de Microsoft Defender pour serveurs pour votre abonnement.
+> **Résultats** : vous avez activé le Plan 2 de Microsoft Defender pour serveurs pour votre abonnement.
