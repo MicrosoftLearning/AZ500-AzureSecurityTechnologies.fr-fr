@@ -4,7 +4,7 @@ lab:
   module: Module 01 - Manage Identity and Access
 ---
 
-# Lab 01 : Contrôle d’accès en fonction du rôle
+# Lab 01 : Contrôle d’accès en fonction du rôle
 # Manuel de labo pour l’étudiant
 
 ## Scénario du labo
@@ -20,12 +20,12 @@ Vous avez été invité à créer une preuve de concept montrant comment les uti
 
 ## Objectifs du labo
 
-Dans ce labo, vous allez effectuer les exercices suivants :
+Dans ce labo, vous allez effectuer les exercices suivants :
 
-- Exercice 1 : Créer le groupe Administrateurs seniors avec le compte d’utilisateur Joseph Price comme membre (portail Azure). 
-- Exercice 2 : Créer le groupe Administrateurs juniors avec le compte d’utilisateur d’Isabel Garcia en tant que membre (PowerShell).
-- Exercice 3 : Créer le groupe Service Desk avec l’utilisateur Dylan Williams comme membre (Azure CLI). 
-- Exercice 4 : Attribuer le rôle Contributeur de machines virtuelles au groupe Service Desk.
+- Exercice 1 : Créer le groupe Administrateurs seniors avec le compte d’utilisateur Joseph Price comme membre (portail Azure). 
+- Exercice 2 : Créer le groupe Administrateurs juniors avec le compte d’utilisateur d’Isabel Garcia en tant que membre (PowerShell).
+- Exercice 3 : Créer le groupe Service Desk avec l’utilisateur Dylan Williams comme membre (Azure CLI). 
+- Exercice 4 : Attribuer le rôle Contributeur de machines virtuelles au groupe Service Desk.
 
 ## Diagramme d’architecture de contrôle d’accès en fonction du rôle
 
@@ -33,28 +33,28 @@ Dans ce labo, vous allez effectuer les exercices suivants :
 
 ## Instructions
 
-### Exercice 1 : Créer le groupe Senior Admins avec le compte d’utilisateur Joseph Price comme membre. 
+### Exercice 1 : Créer le groupe Senior Admins avec le compte d’utilisateur Joseph Price comme membre. 
 
-#### Durée estimée : 10 minutes
+#### Durée estimée : 10 minutes
 
-Dans cet exercice, vous allez effectuer les tâches suivantes :
+Dans cet exercice, vous allez effectuer les tâches suivantes :
 
-- Tâche 1 : Utiliser le portail Azure afin de créer un compte d’utilisateur pour Joseph Price.
-- Tâche 2 : Utiliser le portail Azure pour créer un groupe Senior Admins et ajouter le compte d’utilisateur de Joseph Price au groupe.
+- Tâche 1 : Utiliser le portail Azure afin de créer un compte d’utilisateur pour Joseph Price.
+- Tâche 2 : Utiliser le portail Azure pour créer un groupe Senior Admins et ajouter le compte d’utilisateur de Joseph Price au groupe.
 
-#### Tâche 1 : Utiliser le portail Azure afin de créer un compte d’utilisateur pour Joseph Price. 
+#### Tâche 1 : Utiliser le portail Azure afin de créer un compte d’utilisateur pour Joseph Price. 
 
 Dans cette tâche, vous allez créer un compte d’utilisateur pour Joseph Price. 
 
 1. Démarrez une session de navigateur et connectez-vous au portail Azure **`https://portal.azure.com/`** .
 
-    >**Remarque** : connectez-vous au Portail Azure en utilisant un compte titulaire du rôle Propriétaire ou Contributeur dans l’abonnement Azure que vous utilisez pour ce labo, et du rôle Administrateur général dans le locataire Microsoft Entra associé à cet abonnement.
+    >**Remarque** : connectez-vous au Portail Azure en utilisant un compte titulaire du rôle Propriétaire ou Contributeur dans l’abonnement Azure que vous utilisez pour ce labo, et du rôle Administrateur général dans le locataire Microsoft Entra associé à cet abonnement.
 
 2. Dans la zone de texte **Rechercher dans les ressources, services et documents** en haut de la page du Portail Azure, tapez **Microsoft Entra ID** et appuyez sur la touche **Entrée**.
 
 3. Sur le volet **Vue d’ensemble** du locataire Microsoft Entra ID, dans la section **Gérer**, sélectionnez **Utilisateurs**, puis **+ Nouvel utilisateur**.
 
-4. Dans le panneau **Nouvel utilisateur**, assurez-vous que l’option **Créer un utilisateur** est sélectionnée et spécifiez les paramètres suivants :
+4. Dans le panneau **Nouvel utilisateur**, assurez-vous que l’option **Créer un utilisateur** est sélectionnée et spécifiez les paramètres suivants :
 
    |Paramètre|Valeur|
    |---|---|
@@ -67,9 +67,9 @@ Dans cette tâche, vous allez créer un compte d’utilisateur pour Joseph Price
 
 7. Cliquez sur **Créer**.
 
-8. Actualisez le volet **Utilisateurs \| Tous les utilisateurs** pour vérifier que le nouvel utilisateur a été créé dans votre locataire Microsoft Entra.
+8. Actualisez le volet **Utilisateurs \| Tous les utilisateurs** pour vérifier que le nouvel utilisateur a été créé dans votre locataire Microsoft Entra.
 
-#### Tâche 2 : Utiliser le portail Azure pour créer un groupe Senior Admins et ajouter le compte d’utilisateur de Joseph Price au groupe.
+#### Tâche 2 : Utiliser le portail Azure pour créer un groupe Senior Admins et ajouter le compte d’utilisateur de Joseph Price au groupe.
 
 Dans cette tâche, vous allez créer le groupe *Senior Admins*, ajouter le compte d’utilisateur de Joseph Price au groupe, puis le configurer comme propriétaire du groupe.
 
@@ -77,7 +77,7 @@ Dans cette tâche, vous allez créer le groupe *Senior Admins*, ajouter le compt
 
 2. Dans la section **Gérer**, cliquez sur **Groupes**, puis sélectionnez **+ Nouveau groupe**.
  
-3. Dans le volet **Nouveau groupe**, spécifiez les paramètres suivants (conservez les valeurs par défaut pour les autres) :
+3. Dans le volet **Nouveau groupe**, spécifiez les paramètres suivants (conservez les valeurs par défaut pour les autres) :
 
    |Paramètre|Valeur|
    |---|---|
@@ -91,18 +91,18 @@ Dans cette tâche, vous allez créer le groupe *Senior Admins*, ajouter le compt
 
 6. De retour dans le volet **Nouveau groupe**, cliquez sur **Créer**.
 
-> Résultat : Vous avez utilisé le portail Azure pour créer un utilisateur et un groupe, et affecté l’utilisateur au groupe. 
+> Résultat : Vous avez utilisé le portail Azure pour créer un utilisateur et un groupe, et affecté l’utilisateur au groupe. 
 
-### Exercice 2 : Créer un groupe Junior Admins contenant le compte d’utilisateur d’Isabel Garcia en tant que membre.
+### Exercice 2 : Créer un groupe Junior Admins contenant le compte d’utilisateur d’Isabel Garcia en tant que membre.
 
-#### Durée estimée : 10 minutes
+#### Durée estimée : 10 minutes
 
-Dans cet exercice, vous allez effectuer les tâches suivantes :
+Dans cet exercice, vous allez effectuer les tâches suivantes :
 
-- Tâche 1 : Utiliser PowerShell afin de créer un compte d’utilisateur pour Isabel Garcia.
-- Tâche 2 : Utiliser PowerShell pour créer le groupe Junior Admins et ajouter le compte d’utilisateur d’Isabel Garcia au groupe. 
+- Tâche 1 : Utiliser PowerShell afin de créer un compte d’utilisateur pour Isabel Garcia.
+- Tâche 2 : Utiliser PowerShell pour créer le groupe Junior Admins et ajouter le compte d’utilisateur d’Isabel Garcia au groupe. 
 
-#### Tâche 1 : Utiliser PowerShell afin de créer un compte d’utilisateur pour Isabel Garcia.
+#### Tâche 1 : Utiliser PowerShell afin de créer un compte d’utilisateur pour Isabel Garcia.
 
 Dans cette tâche, vous allez créer un compte d’utilisateur pour Isabel Garcia à l’aide de PowerShell.
 
@@ -112,7 +112,7 @@ Dans cette tâche, vous allez créer un compte d’utilisateur pour Isabel Garci
 
 3. Dans le volet Cloud Shell, **vérifiez que PowerShell est sélectionné** dans le menu déroulant en haut à gauche.
 
-   >**Remarque** : pour coller un texte copié dans le Cloud Shell, cliquez avec le bouton droit dans la fenêtre du volet, puis sélectionnez **Coller**. Vous pouvez également utiliser la combinaison de touches **Maj+Inser**.
+   >**Remarque** : pour coller un texte copié dans le Cloud Shell, cliquez avec le bouton droit dans la fenêtre du volet, puis sélectionnez **Coller**. Vous pouvez également utiliser la combinaison de touches **Maj+Inser**.
 
 4. Dans la session PowerShell dans le volet Cloud Shell, exécutez la commande suivante pour créer un objet profil de mot de passe :
 
@@ -131,7 +131,7 @@ Dans cette tâche, vous allez créer un compte d’utilisateur pour Isabel Garci
     Connect-AzureAD
     ```
       
-7. Dans la session PowerShell dans le volet Cloud Shell, exécutez la commande suivante pour identifier le nom de votre locataire Microsoft Entra : 
+7. Dans la session PowerShell dans le volet Cloud Shell, exécutez la commande suivante pour identifier le nom de votre locataire Microsoft Entra : 
 
     ```powershell
     $domainName = ((Get-AzureAdTenantDetail).VerifiedDomains)[0].Name
@@ -143,13 +143,13 @@ Dans cette tâche, vous allez créer un compte d’utilisateur pour Isabel Garci
     New-AzureADUser -DisplayName 'Isabel Garcia' -PasswordProfile $passwordProfile -UserPrincipalName "Isabel@$domainName" -AccountEnabled $true -MailNickName 'Isabel'
     ```
 
-9. Dans la session PowerShell du volet Cloud Shell, exécutez la commande suivante pour répertorier les utilisateurs Microsoft Entra ID (les comptes de Joseph et d’Isabel devraient figurer sur la liste) : 
+9. Dans la session PowerShell du volet Cloud Shell, exécutez la commande suivante pour répertorier les utilisateurs Microsoft Entra ID (les comptes de Joseph et d’Isabel devraient figurer sur la liste) : 
 
     ```powershell
     Get-AzureADUser -All $true | Where-Object {$_.UserPrincipalName -like "*43846135@LOD*"} 
     ```
 
-#### Tâche 2 : Utiliser PowerShell pour créer le groupe Junior Admins et ajouter le compte d’utilisateur d’Isabel Garcia au groupe.
+#### Tâche 2 : Utiliser PowerShell pour créer le groupe Junior Admins et ajouter le compte d’utilisateur d’Isabel Garcia au groupe.
 
 Dans cette tâche, vous allez créer le groupe Junior Admins et ajouter le compte d’utilisateur d’Isabel Garcia au groupe à l’aide de PowerShell.
 
@@ -171,35 +171,35 @@ Dans cette tâche, vous allez créer le groupe Junior Admins et ajouter le compt
    $user = Get-AzureADUser -Filter "UserPrincipalName eq 'Isabel-43846135@LODSPRODMCA.onmicrosoft.com'"
    ```
 
-4. Dans la session PowerShell dans le volet Cloud Shell, exécutez la commande suivante pour ajouter le compte d’utilisateur d’Isabel au groupe Junior Admins43846135 :
+4. Dans la session PowerShell dans le volet Cloud Shell, exécutez la commande suivante pour ajouter le compte d’utilisateur d’Isabel au groupe Junior Admins43846135 :
    ```powershell
    Add-AzADGroupMember -MemberUserPrincipalName $user.userPrincipalName -TargetGroupDisplayName "Junior Admins43846135"
    ```
 
-5. Dans la session PowerShell dans le volet Cloud Shell, exécutez la commande suivante pour vérifier que le groupe Junior Admins43846135 contient le compte d’utilisateur d’Isabel :
+5. Dans la session PowerShell dans le volet Cloud Shell, exécutez la commande suivante pour vérifier que le groupe Junior Admins43846135 contient le compte d’utilisateur d’Isabel :
    
    ```powershell
     Get-AzADGroupMember -GroupDisplayName "Junior Admins43846135"
     ```
    
-> Résultat : Vous avez utilisé PowerShell pour créer un utilisateur et un compte de groupe, puis ajouté le compte d’utilisateur au compte de groupe. 
+> Résultat : Vous avez utilisé PowerShell pour créer un utilisateur et un compte de groupe, puis ajouté le compte d’utilisateur au compte de groupe. 
 
-### Exercice 3 : Créer un groupe Service Desk contenant le compte d’utilisateur de Dylan Williams en tant que membre.
+### Exercice 3 : Créer un groupe Service Desk contenant le compte d’utilisateur de Dylan Williams en tant que membre.
 
-#### Durée estimée : 10 minutes
+#### Durée estimée : 10 minutes
 
-Dans cet exercice, vous allez effectuer les tâches suivantes :
+Dans cet exercice, vous allez effectuer les tâches suivantes :
 
-- Tâche 1 : Utiliser Azure CLI afin de créer un compte d’utilisateur pour Dylan Williams.
-- Tâche 2 : Utiliser Azure CLI pour créer le groupe Service Desk et y ajouter le compte d’utilisateur de Dylan. 
+- Tâche 1 : Utiliser Azure CLI afin de créer un compte d’utilisateur pour Dylan Williams.
+- Tâche 2 : Utiliser Azure CLI pour créer le groupe Service Desk et y ajouter le compte d’utilisateur de Dylan. 
 
-#### Tâche 1 : Utiliser Azure CLI afin de créer un compte d’utilisateur pour Dylan Williams.
+#### Tâche 1 : Utiliser Azure CLI afin de créer un compte d’utilisateur pour Dylan Williams.
 
 Dans cette tâche, vous allez créer un compte d’utilisateur pour Dylan Williams.
 
 1. Dans le menu déroulant, dans l’angle supérieur gauche du volet Cloud Shell, sélectionnez **Bash**, puis, lorsque vous y êtes invité, cliquez sur **Confirmer**. 
 
-2. Dans la session Bash dans le volet Cloud Shell, exécutez la commande suivante pour identifier le nom de votre locataire Microsoft Entra :
+2. Dans la session Bash dans le volet Cloud Shell, exécutez la commande suivante pour identifier le nom de votre locataire Microsoft Entra :
 
     ```cli
     DOMAINNAME=$(az ad signed-in-user show --query 'userPrincipalName' | cut -d '@' -f 2 | sed 's/\"//')
@@ -211,13 +211,13 @@ Dans cette tâche, vous allez créer un compte d’utilisateur pour Dylan Willia
     az ad user create --display-name "Dylan Williams" --password "Pa55w.rd1234" --user-principal-name Dylan@$DOMAINNAME
     ```
       
-4. Dans la session Bash du volet Cloud Shell, exécutez la commande suivante pour répertorier les comptes d’utilisateur Microsoft Entra ID (les comptes d’utilisateur de Joseph, d’Isabel et de Dylan devraient figurer sur la liste) :
+4. Dans la session Bash du volet Cloud Shell, exécutez la commande suivante pour répertorier les comptes d’utilisateur Microsoft Entra ID (les comptes d’utilisateur de Joseph, d’Isabel et de Dylan devraient figurer sur la liste) :
     
     ```cli
     az ad user list --output table
     ```
 
-#### Tâche 2 : Utiliser Azure CLI pour créer le groupe Service Desk et y ajouter le compte d’utilisateur de Dylan. 
+#### Tâche 2 : Utiliser Azure CLI pour créer le groupe Service Desk et y ajouter le compte d’utilisateur de Dylan. 
 
 Dans cette tâche, vous allez créer le groupe Service Desk et y affecter Dylan. 
 
@@ -227,25 +227,25 @@ Dans cette tâche, vous allez créer le groupe Service Desk et y affecter Dylan.
     az ad group create --display-name "Service Desk" --mail-nickname "ServiceDesk"
     ```
  
-2. Dans la session Bash du volet Cloud Shell, exécutez la commande suivante pour répertorier les groupes Microsoft Entra ID (les groupes Service Desk, Senior Admins et Junior Admins devraient figurer sur la liste) :
+2. Dans la session Bash du volet Cloud Shell, exécutez la commande suivante pour répertorier les groupes Microsoft Entra ID (les groupes Service Desk, Senior Admins et Junior Admins devraient figurer sur la liste) :
 
     ```cli
     az ad group list -o table
     ```
 
-3. Dans la session Bash dans le volet Cloud Shell, exécutez la commande suivante pour obtenir une référence au compte d’utilisateur de Dylan Williams : 
+3. Dans la session Bash dans le volet Cloud Shell, exécutez la commande suivante pour obtenir une référence au compte d’utilisateur de Dylan Williams : 
 
     ```cli
     USER=$(az ad user list --filter "displayname eq 'Dylan Williams'")
     ```
 
-4. Dans la session Bash dans le volet Cloud Shell, exécutez la commande suivante pour obtenir la propriété objectId du compte d’utilisateur de Dylan Williams : 
+4. Dans la session Bash dans le volet Cloud Shell, exécutez la commande suivante pour obtenir la propriété objectId du compte d’utilisateur de Dylan Williams : 
 
     ```cli
     OBJECTID=$(echo $USER | jq '.[].id' | tr -d '"')
     ```
 
-5. Dans la session Bash dans le volet Cloud Shell, exécutez la commande suivante pour ajouter le compte d’utilisateur de Dylan au groupe Service Desk : 
+5. Dans la session Bash dans le volet Cloud Shell, exécutez la commande suivante pour ajouter le compte d’utilisateur de Dylan au groupe Service Desk : 
 
     ```cli
     az ad group member add --group "Service Desk" --member-id $OBJECTID
@@ -257,21 +257,21 @@ Dans cette tâche, vous allez créer le groupe Service Desk et y affecter Dylan.
     az ad group member list --group "Service Desk"
     ```
 
-7. Fermez le volet Cloud Shell.
+7. Fermez le volet Cloud Shell.
 
-> Résultat : À l’aide d’Azure CLI, vous avez créé un compte d’utilisateur et un groupe, puis ajouté le compte d’utilisateur au groupe. 
+> Résultat : À l’aide d’Azure CLI, vous avez créé un compte d’utilisateur et un groupe, puis ajouté le compte d’utilisateur au groupe. 
 
 
-### Exercice 4 : Attribuer le rôle Contributeur de machines virtuelles au groupe Service Desk.
+### Exercice 4 : Attribuer le rôle Contributeur de machines virtuelles au groupe Service Desk.
 
-#### Durée estimée : 10 minutes
+#### Durée estimée : 10 minutes
 
-Dans cet exercice, vous allez effectuer les tâches suivantes :
+Dans cet exercice, vous allez effectuer les tâches suivantes :
 
-- Tâche 1 : Créez un groupe de ressources. 
-- Tâche 2 : Attribuer les autorisations de Contributeur de machines virtuelles de Service Desk au groupe de ressources.  
+- Tâche 1 : Créez un groupe de ressources. 
+- Tâche 2 : Attribuer les autorisations de Contributeur de machines virtuelles de Service Desk au groupe de ressources.  
 
-#### Tâche 1 : Créer un groupe de ressources
+#### Tâche 1 : Créer un groupe de ressources
 
 1. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents** en haut de la page, tapez **Groupe de ressources**, puis appuyez sur la touche **Entrée**.
 
@@ -285,12 +285,12 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 
 3. Cliquez sur **Vérifier + créer**, puis sur **Créer**.
 
-   >**Remarque** : Attendez que le groupe de ressources soit déployé. Utilisez l’icône **Notification** (en haut à droite) pour suivre la progression de l’état du déploiement.
+   >**Remarque** : Attendez que le groupe de ressources soit déployé. Utilisez l’icône **Notification** (en haut à droite) pour suivre la progression de l’état du déploiement.
 
 4. De retour dans le volet **Groupes de ressources**, actualisez la page et vérifiez que votre nouveau groupe de ressources apparaît dans la liste des groupes de ressources.
 
 
-#### Tâche 2 : Attribuer les autorisations de Contributeur de machines virtuelles de Service Desk. 
+#### Tâche 2 : Attribuer les autorisations de Contributeur de machines virtuelles de Service Desk. 
 
 1. Dans le volet **Groupes de ressources**, cliquez sur l’entrée du groupe de ressources **AZ500LAB01**.
 
@@ -298,9 +298,9 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 
 3. Dans le volet **AZ500Lab01 \| Contrôle d’accès (IAM)** , cliquez sur **+ Ajouter**, puis, dans le menu déroulant, sur **Ajouter une attribution de rôle**.
 
-4. Dans le volet **Ajouter une attribution de rôle**, complétez chacun des paramètres suivants avant de cliquer sur Suivant :
+4. Dans le volet **Ajouter une attribution de rôle**, complétez chacun des paramètres suivants avant de cliquer sur Suivant :
 
-   **Note :** après avoir effectué toutes les étapes, cliquez sur **Suivant**.
+   **Note :** après avoir effectué toutes les étapes, cliquez sur **Suivant**.
 
    |Paramètre|Valeur|
    |---|---|
@@ -320,7 +320,7 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 
 11. Répétez les deux dernières étapes afin de vérifier l’accès pour **Joseph Price**. 
 
-> Résultat : Vous avez attribué et vérifié les autorisations RBAC. 
+> Résultat : Vous avez attribué et vérifié les autorisations RBAC. 
 
 **Nettoyer les ressources**
 
@@ -330,10 +330,10 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 
 2. Dans le menu déroulant dans le coin supérieur gauche du volet Cloud Shell, sélectionnez **PowerShell** et, lorsque vous y êtes invité, cliquez sur **Confirmer**. 
 
-3. Dans la session PowerShell du volet Cloud Shell, exécutez ce qui suit pour supprimer le groupe de ressources que vous avez créé dans ce labo :
+3. Dans la session PowerShell du volet Cloud Shell, exécutez ce qui suit pour supprimer le groupe de ressources que vous avez créé dans ce labo :
   
     ```
     Remove-AzResourceGroup -Name "AZ500LAB01" -Force -AsJob
     ```
 
-4.  Fermez le volet **Cloud Shell**. 
+4.  Fermez le volet **Cloud Shell**. 
