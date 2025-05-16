@@ -31,9 +31,7 @@ Dans ce labo, vous allez effectuer les exercices suivants :
 
 ### Durée de l’exercice : 10 minutes
 
-Dans cet exercice, vous allez effectuer les tâches suivantes : 
-
-- Tâche 1 : Déployez une machine virtuelle Azure. 
+Dans cet exercice, vous allez effectuer les tâches suivantes : 
 
 #### Tâche 1 : Déployer une machine virtuelle Azure
 
@@ -41,11 +39,17 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 
     >**Remarque** : connectez-vous au Portail Azure à l’aide d’un compte disposant du rôle Propriétaire ou Contributeur dans l’abonnement Azure que vous utilisez pour ce laboratoire.
 
-2. Ouvrez Cloud Shell en cliquant sur la première icône en haut à droite du portail Azure. Si vous y êtes invité, sélectionnez **PowerShell**, puis **Créer un stockage**.
+2. Ouvrez Cloud Shell en cliquant sur la première icône située en haut à droite du portail Azure. Si vous y êtes invité, sélectionnez **PowerShell**.
 
 3. Vérifiez que **PowerShell** est sélectionné dans le menu déroulant en haut à gauche du volet Cloud Shell.
 
-4. Dans la session PowerShell du volet Cloud Shell, exécutez la commande suivante pour supprimer un groupe de ressources que vous avez utilisé dans ce labo :
+4. Dans la **Prise en main**, laissez le paramètre par défaut tel quel : **Sélectionnez un abonnement pour commencer. Vous pouvez éventuellement monter un compte de stockage pour conserver les fichiers entre les sessions. Aucun compte de stockage requis.**
+
+5. Dans le menu déroulant **Abonnement**, sélectionnez votre **lodsubscription**
+
+6. Laissez l’option **Utiliser un réseau virtuel privé existant** décochée, puis cliquez sur **Appliquer**.
+
+7. Dans la session PowerShell du volet Cloud Shell, exécutez la commande suivante pour supprimer un groupe de ressources que vous avez utilisé dans ce labo :
   
     ```powershell
     New-AzResourceGroup -Name AZ500LAB131415 -Location 'EastUS'
@@ -53,7 +57,7 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 
     >**Remarque** : ce groupe de ressources sera utilisé pour les labos 8, 9 et 10.
 
-5. Dans le volet Cloud Shell, dans la session PowerShell, exécutez la commande suivante pour activer le chiffrement sur l’hôte (EAH).
+8. Dans le volet Cloud Shell, dans la session PowerShell, exécutez la commande suivante pour activer le chiffrement sur l’hôte (EAH).
    
    ```powershell
     Register-AzProviderFeature -FeatureName "EncryptionAtHost" -ProviderNamespace Microsoft.Compute 
@@ -88,8 +92,6 @@ Dans cet exercice, vous allez effectuer les tâches suivantes :
 
 Dans cet exercice, vous allez effectuer les tâches suivantes : 
 
-- Tâche 1 : Créer un espace de travail Log Analytics.
-
 #### Tâche 1 : Créer un espace de travail Log Analytics
 
 Dans cette tâche, vous allez créer un espace de travail Log Analytics. 
@@ -117,8 +119,6 @@ Dans cette tâche, vous allez créer un espace de travail Log Analytics.
 
 Dans cet exercice, vous allez effectuer les tâches suivantes :
 
-- Tâche 1 : Créez un compte de stockage Azure.
-
 #### Tâche 1 : Créer un compte de stockage Azure
 
 Dans cette tâche, vous allez créer un compte de stockage.
@@ -127,22 +127,18 @@ Dans cette tâche, vous allez créer un compte de stockage.
 
 2. Dans le panneau **Comptes de stockage** du portail Azure, cliquez sur le bouton **+ Créer** pour créer un compte de stockage.
 
-    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/73eb9241-d642-455a-a1ff-b504670395c0)
-
 3. Sous l’onglet **Options de base** du volet **Créer un compte de stockage**, spécifiez les paramètres suivants (conservez les valeurs par défaut pour les autres) :
 
     |Paramètre|Valeur|
     |---|---|
     |Abonnement|le nom de l’abonnement Azure que vous utilisez dans ce labo|
     |Resource group|**AZ500LAB131415**|
-    |Nom du compte de stockage|Nom global unique comprenant entre 3 et 24 caractères alphanumériques.|
-    |Emplacement|**(États-Unis) EastUS**|
-    |Performances|**Standard (compte v2 à usage général)**|
-    |Redondance|**Stockage localement redondant (LRS)**|
+    **Détails de l’instance** |Nom du compte de stockage : tout nom globalement unique, entre 3 et 24 caractères, composé de lettres et de chiffres| |Région| **(États-Unis) USA Est**|
+    |Service principal|**Stockage Blob Azure ou Azure Data Lake Storage Gen 2**|
+    |Performances| **Standard (compte polyvalent v2)**|
+    |Redondance| **Stockage localement redondant (LRS)**|
 
-4. Sous l’onglet **Informations de base** du panneau **Créer un compte de stockage**, cliquez sur **Vérifier**, attendez la fin du processus de validation, puis cliquez sur **Créer**.
-
-     ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/d443821c-2ddf-4794-87fa-bfc092980eba)
+5. Dans l’onglet **Informations de base** du panneau **Créer un compte de stockage**, cliquez sur **Examiner et créer**. Une fois le processus de validation terminé, cliquez sur **Créer**.
 
     >**Remarque** : attendez que le compte de stockage soit créé. Ce processus prend environ 2 minutes.
 
@@ -152,8 +148,6 @@ Dans cette tâche, vous allez créer un compte de stockage.
 
 Dans cet exercice, vous allez effectuer les tâches suivantes :
 
-- Tâche 1 : Créez une règle de collecte de données.
-
 #### Tâche 1 : Créez une règle de collecte de données.
 
 Dans cette tâche, vous allez créer une règle de collecte de données.
@@ -162,37 +156,32 @@ Dans cette tâche, vous allez créer une règle de collecte de données.
 
 2. Dans le volet **Paramètres**, cliquez sur **Règles de collecte de données**.
 
-  ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/d43e8f94-efb2-4255-9320-210c976fd45e)
-
-
 3. Cliquez sur **+Créer** pour créer une règle de collecte de données.
 
 4. Sous l’onglet **Informations de base** du volet **Créer une règle de collecte de données**, spécifiez les paramètres suivants :
   
     |Paramètre|Valeur|
     |---|---|
-    |**Détails de la règle**|
-    |Nom de la règle|**DCR1**|
-    |Abonnement|le nom de l’abonnement Azure que vous utilisez dans ce labo|
-    |Groupe de ressources|**AZ500LAB131415**|
+    **Détails de la règle** |Nom de la règle| **DCR1**|
+    |Abonnement|le nom de l’abonnement Azure utilisé dans ce labo| |Groupe de ressources|**AZ500LAB131415**|
     |Région|**USA Est**|
-    |Type de plate-forme|**Windows**|
+    |Type de plateforme|**Windows**|
     |Point de terminaison de collecte de données|*Laisser vide*|
 
     ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/9b58c4ce-b7a8-4acf-8289-d95b270a6083)
 
 
-4. Cliquez sur le bouton étiqueté **Suivant : Ressources >** pour continuer.
+5. Cliquez sur le bouton étiqueté **Suivant : Ressources >** pour continuer.
    
-6. Sous l’onglet Ressources, sélectionnez **+ Ajouter des ressources** et cochez la case **Activer les points de terminaison de collecte de données**. Dans le modèle Sélectionner une étendue, cochez la case **AZ500LAB131415**, puis cliquez sur **Appliquer.**
+6. Sur la page **Ressources**, sélectionnez **+ Ajouter des ressources**.
 
-    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/d4191115-11bc-43ec-9bee-e84b9b95a821)
+7. Dans le modèle **Sélectionner une étendue**, cochez la case **Abonnement** dans l’**Étendue**.
 
-10. Cliquez sur le bouton étiqueté **Suivant : Collecter et livrer >** pour continuer.
+8. En bas du modèle **Sélectionner une étendue**, cliquez sur **Appliquer**.
 
-    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/8294d300-f910-4757-ad52-43c7594ac822)
+9. En bas de la page **Ressources**, sélectionnez **Suivant : Collecter et remettre >**.
 
-11. Cliquez sur **+ Ajouter une source de données**, puis dans la page **Ajouter une source de données**, modifiez le menu déroulant **Type de source de données** pour afficher **Compteurs de performances**. Laissez les paramètres par défaut suivants :
+10. Cliquez sur **+ Ajouter une source de données**, puis dans la page **Ajouter une source de données**, modifiez le menu déroulant **Type de source de données** pour afficher **Compteurs de performances**. Laissez les paramètres par défaut suivants :
 
     |Paramètre|Valeur|
     |---|---|
@@ -208,17 +197,15 @@ Dans cette tâche, vous allez créer une règle de collecte de données.
   
 12. Cliquez sur **+Ajouter une destination**, modifiez le menu déroulant **Type de destination** pour afficher **Journaux d’activité Azure Monitor**. Dans la fenêtre **Abonnement**, vérifiez que votre *abonnement* est affiché, puis modifiez le menu déroulant **Compte ou espace de noms** pour refléter votre espace de travail Log Analytics créé précédemment.
 
-   ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/481843f5-94c4-4a8f-bf51-a10d49130bf8)
-
-11. Cliquez sur **Ajouter une source de données** en bas de la page.
+13. Cliquez sur **Ajouter une source de données** en bas de la page.
     
     ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/964091e7-bbbc-4ca8-8383-bb2871a1e7f0)
 
-13. Cliquez sur **Vérifier + créer**.
+14. Cliquez sur **Vérifier + créer**.
 
     ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/50dd8407-a106-4540-9e14-ae40a3c04830)
 
-14. Cliquez sur **Créer**.
+15. Cliquez sur **Créer**.
 
 > Résultats : Vous avez déployé une machine virtuelle Azure, un espace de travail Log Analytics, un compte de stockage Azure et une règle de collecte de données pour collecter les événements et les compteurs de performances à partir de machines virtuelles avec l’agent Azure Monitor.
 
