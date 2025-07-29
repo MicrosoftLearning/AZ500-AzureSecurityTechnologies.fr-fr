@@ -399,9 +399,9 @@ Dans cette tâche, vous allez vous connecter à la machine virtuelle myVMPrivate
 
 2. Dans le volet **Machines virtuelles**, cliquez sur l’entrée **myVMPrivate**.
 
-3. Dans le volet **myVMPrivate**, cliquez sur **Se connecter**, puis, dans le menu déroulant, cliquez sur **RDP**. 
+3. Dans le volet **myVMPrivate**, cliquez sur **Se connecter** et, dans le menu déroulant, cliquez sur **Se connecter**. 
 
-4. Cliquez sur **Télécharger le fichier RDP**, puis utilisez-le pour vous connecter à la machine virtuelle Azure **myVMPrivate** via le Bureau à distance. Lorsque vous êtes invité à vous authentifier, fournissez les informations d’identification suivantes :
+4. Téléchargez le fichier RDP et utilisez-le pour vous connecter à la machine virtuelle Azure **myVMPrivate** via le Bureau à distance. Lorsque vous êtes invité à vous authentifier, fournissez les informations d’identification suivantes :
 
     |Paramètre|Valeur|
     |---|---|
@@ -450,9 +450,9 @@ Dans cette tâche, vous allez vous connecter à la machine virtuelle myVMPrivate
 
 2. Dans le volet **Machines virtuelles**, cliquez sur l’entrée **myVMPrivate**.
 
-3. Dans le volet **myVMPublic**, cliquez sur **Se connecter**, puis, dans le menu déroulant, cliquez sur **RDP**. 
+3. Dans le volet **myVMPublic**, cliquez sur **Se connecter**, puis, dans le menu déroulant, cliquez sur **Se connecter**. 
 
-4. Cliquez sur **Télécharger le fichier RDP**, puis utilisez-le pour vous connecter à la machine virtuelle Azure **myVMPublic** via le Bureau à distance. Lorsque vous êtes invité à vous authentifier, fournissez les informations d’identification suivantes :
+4. Cliquez sur **Se connecter via RDP** et utilisez-le pour vous connecter à la machine virtuelle Azure **myVMPublic** via le Bureau à distance. Lorsque vous êtes invité à vous authentifier, fournissez les informations d’identification suivantes :
 
     |Paramètre|Valeur|
     |---|---|
