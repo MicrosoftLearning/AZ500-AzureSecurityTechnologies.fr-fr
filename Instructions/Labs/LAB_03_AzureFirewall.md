@@ -161,13 +161,14 @@ Dans cette tâche, vous allez créer un itinéraire par défaut pour le sous-ré
 
 10. Dans le volet **Ajouter un itinéraire**, spécifiez les paramètres suivants :  
 
-   |Paramètre|Valeur|
-   |---|---|
-   |Nom de l’itinéraire|**FW-DG**|
-   |Type de destination|**Adresse IP**|
-   |Plages d’adresses IP/CIDR de destination|**0.0.0.0/0**
-   |Type de tronçon suivant|**Appliance virtuelle**|
-   |adresse de tronçon suivant|l’adresse IP privée du pare-feu que vous avez identifié à l’étape précédente|
+    |Paramètre|Valeur|
+    |---|---|
+    |Nom de l’itinéraire|**FW-DG**|
+    |Type de destination|**Adresse IP**|
+    |Plages d’adresses IP/CIDR de destination|**0.0.0.0/0**
+    |Type de tronçon suivant|**Appliance virtuelle**|
+    |adresse de tronçon suivant|l’adresse IP privée du pare-feu que vous avez identifié à l’étape précédente|
+
 
     >**Remarque** : Le Pare-feu Azure est en réalité un service managé, mais l’appliance virtuelle fonctionne dans ce cas.
     
@@ -266,9 +267,9 @@ Dans cette tâche, vous allez tester le pare-feu pour confirmer qu’il fonction
 
 2. Dans le volet **AZ500LAB08**, dans la liste des ressources, cliquez sur la machine virtuelle **Srv-Jump**.
 
-3. Dans le volet **Srv-Jump**, cliquez sur **Connecter** et, dans le menu déroulant, cliquez sur **RDP**. 
+3. Dans le volet **Srv-Jump**, cliquez sur **Se connecter** et, dans le menu déroulant, cliquez sur **Se connecter**. 
 
-4. Cliquez sur **Télécharger le fichier RDP**, puis utilisez-le pour vous connecter à la machine virtuelle Azure **Srv-Jump** via le Bureau à distance. Lorsque vous êtes invité à vous authentifier, fournissez les informations d’identification suivantes :
+4. Téléchargez le fichier RDP et utilisez-le pour vous connecter à la machine virtuelle Azure **Srv-Jump** via le Bureau à distance. Lorsque vous êtes invité à vous authentifier, fournissez les informations d’identification suivantes :
 
    |Paramètre|Valeur|
    |---|---|

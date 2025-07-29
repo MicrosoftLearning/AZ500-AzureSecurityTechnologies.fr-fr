@@ -242,6 +242,8 @@ Dans cette tâche, vous allez créer une machine virtuelle à utiliser comme ser
    |Resource group|**AZ500LAB07**|
    |Nom de la machine virtuelle|**myVMMgmt**|
    |Région|(États-Unis) USA Est|
+   |Options de disponibilité|**Aucune redondance de l’infrastructure requise**
+   |Type de sécurité|**Standard**
    |Image|**Centre de données Windows Server 2022 : Édition Azure - x64 Gen2**|
    |Taille|**Standard D2s v3**|
    |Nom d’utilisateur|**Étudiant**|
@@ -251,19 +253,19 @@ Dans cette tâche, vous allez créer une machine virtuelle à utiliser comme ser
 
     >**Remarque** : pour les ports d’entrée publics, nous allons nous appuyer sur le groupe de sécurité réseau (NSG) pré-créé. 
 
-3. Cliquez sur **Suivant : Disques >** , puis, sous l’onglet **Disques** du volet **Créer une machine virtuelle**, définissez le **Type de disque du système d’exploitation** sur **HDD Standard** et cliquez sur **Suivant : Mise en réseau >** .
+4. Cliquez sur **Suivant : Disques >** , puis, sous l’onglet **Disques** du volet **Créer une machine virtuelle**, définissez le **Type de disque du système d’exploitation** sur **HDD Standard** et cliquez sur **Suivant : Mise en réseau >** .
 
-4. Sous l’onglet **Mise en réseau** du volet **Créer une machine virtuelle**, sélectionnez le réseau **myVirtualNetwork** créé précédemment.
+5. Sous l’onglet **Mise en réseau** du volet **Créer une machine virtuelle**, sélectionnez le réseau **myVirtualNetwork** créé précédemment.
 
-5. Sous **Groupe de sécurité réseau de la carte réseau**, sélectionnez **Aucun**.
+6. Sous **Groupe de sécurité réseau de la carte réseau**, sélectionnez **Aucun**.
 
-6. Cliquez sur **Suivant : Gestion >**, puis sur **Suivant : Surveillance >**. Sur l’onglet **Surveillance** du volet **Créer une machine virtuelle**, vérifiez le paramètre suivant :
+7. Cliquez sur **Suivant : Gestion >**, puis sur **Suivant : Surveillance >**. Sur l’onglet **Surveillance** du volet **Créer une machine virtuelle**, vérifiez le paramètre suivant :
 
    |Paramètre|Valeur|
    |---|---|
    |Diagnostics de démarrage|**Activer avec un compte de stockage managé (recommandé)**|
 
-7. Cliquez sur **Vérifier + créer** dans le volet **Vérifier + créer** et vérifiez que la validation a réussi, puis cliquez sur **Créer**.
+8. Cliquez sur **Vérifier + créer** dans le volet **Vérifier + créer** et vérifiez que la validation a réussi, puis cliquez sur **Créer**.
 
     >**Remarque** : Attendez que les deux machines virtuelles soient approvisionnées avant de continuer. 
 
@@ -291,9 +293,9 @@ Dans cette tâche, vous allez tester les filtres de trafic réseau. Vous devez �
 
 1. Revenez au volet la machine virtuelle **myVMMgmt**.
 
-2. Dans le volet **myVMMgmt**, cliquez sur **Se connecter**, puis, dans le menu déroulant, cliquez sur **RDP**. 
+2. Dans le volet **myVMMgmt** Vue d’ensemble, cliquez sur **Se connecter** et, dans le menu déroulant, cliquez sur **Se connecter**. 
 
-3. Cliquez sur **Télécharger le fichier RDP**, puis utilisez-le pour vous connecter à la machine virtuelle Azure **myVMMgmt** via le Bureau à distance. Lorsque vous êtes invité à vous authentifier, fournissez les informations d’identification suivantes :
+3. Téléchargez le fichier RDP et utilisez-le pour vous connecter à la machine virtuelle Azure **myVMMgmt** via le Bureau à distance. Lorsque vous êtes invité à vous authentifier, fournissez les informations d’identification suivantes :
 
    |Paramètre|Valeur|
    |---|---|

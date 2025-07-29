@@ -347,9 +347,9 @@ Dans cette tâche, vous allez vous connecter à SQL Database avec SQL Server Man
 
     >**Remarque** : cela a pour effet de modifier les paramètres du pare-feu du serveur, en autorisant les connexions à la base de données medical à partir de l’adresse IP publique de la machine virtuelle Azure que vous avez déployée dans ce labo.
 
-4. Revenez au panneau **az500-10-vm1**, cliquez sur **Vue d’ensemble**, **Se connecter**, puis, dans le menu déroulant, cliquez sur **RDP**. 
+4. Revenez au volet **az500-10-vm1**, cliquez sur **Vue d’ensemble**, puis cliquez sur **Se connecter** et, dans le menu déroulant, cliquez sur **Se connecter**. 
 
-5. Cliquez sur **Télécharger le fichier RDP**, puis utilisez-le pour vous connecter à la machine virtuelle Azure **az500-10-vm1** via le Bureau à distance. Lorsque vous êtes invité à vous authentifier, fournissez les informations d’identification suivantes :
+5. Téléchargez le fichier RDP et utilisez-le pour vous connecter à la machine virtuelle Azure **az500-10-vm1** via le Bureau à distance. Lorsque vous êtes invité à vous authentifier, fournissez les informations d’identification suivantes :
 
     |Paramètre|Valeur|
     |---|---|
