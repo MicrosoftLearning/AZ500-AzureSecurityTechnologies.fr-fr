@@ -74,7 +74,6 @@ Dans cette tâche, vous allez déployer une machine virtuelle Azure qui va insta
    |Nom d’utilisateur|**Étudiant**|
    |Mot de passe|**Utilisez votre mot de passe personnel créé dans le Labo 02 > Exercice 2 > Tâche 1 > Étape 3.**|
    
-   
     >**Remarque** : bien que vous puissiez modifier les informations d’identification d’administration utilisées pour la connexion à la machine virtuelle, ce n’est pas nécessaire.
 
     >**Remarque** : pour identifier les régions Azure où vous pouvez approvisionner des machines virtuelles Azure, consultez [ **https://azure.microsoft.com/en-us/regions/offers/** ](https://azure.microsoft.com/en-us/regions/offers/)
@@ -84,6 +83,18 @@ Dans cette tâche, vous allez déployer une machine virtuelle Azure qui va insta
     >**Remarque** : cela a pour effet de lancer le déploiement de la machine virtuelle Azure et de la base de données Azure SQL requises pour ce labo. 
 
     >**Remarque** : n’attendez pas que le déploiement du modèle ARM soit terminé ; passez plutôt à l’exercice suivant. Le déploiement pourrait prendre de **20 à 25 minutes**. 
+
+#### Installez le modèle personnalisé az500-10-DB.json
+
+1. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents** en haut de la page Portail Azure, tapez **Déployer un modèle personnalisé** et appuyez sur la touche **Entrée**.
+
+2. Dans le volet **Déploiement personnalisé**, sélectionnez **Créer votre propre modèle dans l’éditeur**.
+
+3. Dans le volet **Modifier le modèle**, cliquez sur **Charger le fichier**, recherchez le fichier **\Allfiles\Labs\10\az-500-10_DB.json**, puis cliquez sur **Ouvrir**.
+
+4. Assurez-vous que le groupe de ressources correct est sélectionné.
+
+5. Définissez le **mot de passe administrateur** sur le même mot de passe que celui utilisé à l'étape précédente.
 
 ### Exercice 2 : Configurer les ressource Key Vault avec une clé et un secret
 
@@ -418,14 +429,35 @@ Dans cette tâche, vous allez vous connecter à SQL Database avec SQL Server Man
 
     >**Remarque** : le sous-nœud **clés Always Encrypted** contient les sous-dossiers **Clés principales de colonne** et **Clés de chiffrement de colonne**.
 
-
 ### Exercice 4 : Montrer l’utilisation d’Azure Key Vault pour le chiffrement de la base de données Azure SQL.
 
 Dans cet exercice, vous allez effectuer les tâches suivantes :
 
-- Tâche 1 : Exécuter une application pilotées par les données pour montrer l’utilisation d’Azure Key Vault en lien avec le chiffrement de la base de données Azure SQL.
+- Tâche 1 : Installez Visual Studio 2022
+- Tâche 2 : Exécuter une application pilotées par les données pour montrer l’utilisation d’Azure Key Vault en lien avec le chiffrement de la base de données Azure SQL.
 
-#### Tâche 1 : Exécuter une application pilotées par les données pour montrer l’utilisation d’Azure Key Vault en lien avec le chiffrement de la base de données Azure SQL.
+#### Tâche 1 : Installez Visual Studio 2022
+
+1. Passez à votre machine virtuelle serveur si vous n'y êtes pas déjà.
+
+2. Ouvrez le Gestionnaire de serveur.
+
+3. Sélectionnez les serveurs locaux.
+
+4. Désactivez **la configuration de sécurité renforcée** d'**Internet Explorer**.
+
+5. Ouvrez le navigateur et ignorez l'avertissement concernant la désactivation de IE ESC.
+
+6. Accédez à https://visualstudio.microsoft.com/downloads.
+
+7. Dans la case **Visual Studio 2022** , sous **Communauté** , sélectionnez **Téléchargement gratuit**.
+
+8. Une fois le téléchargement terminé, sélectionnez **Ouvrir un fichier**.
+
+9. Sélectionnez Suivant pour poursuivre l’installation.
+  - L'installation prend environ 10 minutes
+
+#### Tâche 2 : Exécuter une application pilotées par les données pour montrer l’utilisation d’Azure Key Vault en lien avec le chiffrement de la base de données Azure SQL.
 
 Vous allez créer une application console à l’aide de Visual Studio pour charger des données dans les colonnes chiffrées, puis accéder à ces données en toute sécurité en utilisant une chaîne de connexion qui accède à la clé dans le Key Vault.
 
