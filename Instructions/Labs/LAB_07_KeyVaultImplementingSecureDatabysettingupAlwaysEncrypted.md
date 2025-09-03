@@ -30,7 +30,7 @@ Dans ce labo, vous allez effectuer les exercices suivants :
 
 ## Diagramme de Key Vault
 
-![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/38c4ba6d-2fc7-45e5-b9a2-d5dbb4fbbcbc)
+![Diagramme montrant le flux de processus des tâches de ce labo.](../media/key-vault-diagram.png)
 
 ## Instructions
 
@@ -145,7 +145,7 @@ Dans cette tâche, vous allez créer une ressource Azure Key Vault. Vous allez �
     |Autorisations de clés/Opérations de chiffrement|Cliquez sur **Se connecter**, ce qui aboutit à la sélection **1 autorisation**|
     |Autorisations de secret|Cliquez sur **Sélectionner tout**, ce qui aboutit à la sélection **7 autorisations**|
     |Autorisations de certification|Cliquez sur **Sélectionner tout**, ce qui aboutit à la sélection **15 autorisations**|
-    |Sélectionner le principal|Dans le volet **Principal**, cliquez sur **Aucune sélection**, sélectionnez votre compte d’utilisateur, puis cliquez sur **Suivant**|
+    |Sélectionner le principal|Sur le volet **Principal**, sélectionnez votre compte d’utilisateur, puis cliquez sur **Suivant**|
     |Application (facultatif)|Cliquez sur **Suivant**|
     |Vérifier + créer|Cliquez sur **Créer**|
     
