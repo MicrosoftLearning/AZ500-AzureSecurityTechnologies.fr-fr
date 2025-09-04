@@ -28,7 +28,7 @@ Dans ce labo, vous allez effectuer les exercices suivants :
 
 ## Schéma des groupes de sécurité réseau et d’application
 
-![image](https://user-images.githubusercontent.com/91347931/157526438-6da4f68b-db88-4931-a041-8474e66d3fe5.png)
+![Diagramme montrant le flux de processus des tâches de labo.](../media/network-and-application-security-groups-diagram.png)
 
 ## Instructions
 
@@ -53,7 +53,7 @@ Dans cette tâche, vous allez créer un réseau virtuel à utiliser avec les gro
 
     >**Remarque** : connectez-vous au portail Azure en utilisant un compte disposant du rôle Propriétaire ou Contributeur dans l’abonnement Azure que vous utilisez pour ce labo.
 
-2. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents** en haut de la page, tapez **Réseaux virtuels**, puis appuyez sur la touche **Entrée**.
+2. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents** en haut de la page du portail Azure, tapez +++Réseaux virtuels+++ et appuyez sur la touche **Entrée**.
 
 3. Dans le volet **Réseaux virtuels**, cliquez sur **+Créer**.
 
@@ -61,10 +61,10 @@ Dans cette tâche, vous allez créer un réseau virtuel à utiliser avec les gro
 
     |Paramètre|Valeur|
     |---|---|
-    |Abonnement|le nom de l’abonnement Azure que vous utilisez dans ce labo|
-    |Resource group|cliquez sur **Créer** et tapez le nom **AZ500LAB07**|
-    |Nom|**myVirtualNetwork**|
-    |Région|**USA Est**|
+    |Abonnement | Nom de l’abonnement Azure que vous utilisez dans ce labo |
+    |Resource group | Utilisez le groupe de ressources fourni nommé **AZ500LAB07** |
+    |Nom| +++myVirtualNetwork+++ |
+    |Région| **USA Est** |
 
 5. Sous l’onglet **Adresses IP** du volet **Créer un réseau virtuel**, définissez l’**espace d’adressage IPv4** sur **10.0.0.0/16**. Si nécessaire, dans la colonne **Nom du sous-réseau**, cliquez sur **Par défaut**, puis, dans le volet **Modifier le sous-réseau**, spécifiez les paramètres suivants et cliquez sur **Enregistrer** :
 
@@ -73,15 +73,15 @@ Dans cette tâche, vous allez créer un réseau virtuel à utiliser avec les gro
     |Nom du sous-réseau|**default**|
     |Plage d’adresses de sous-réseau|**10.0.0.0/24**|
 
-6. De retour sous l’onglet **Adresses IP** du volet **Créer un réseau virtuel**, cliquez sur **Vérifier + créer**.
+6. De retour dans l’onglet **Adresses IP** de l’écran **Créer un réseau virtuel**, cliquez sur **Passer en revue + créer**.
 
-7. Sous l’onglet **Vérifier + créer** du volet **Créer un réseau virtuel**, cliquez sur **Créer**.
+7. Dans l’onglet **Passer en revue + créer** de l’écran **Créer un réseau virtuel**, cliquez sur **Créer**.
 
 #### Tâche 2 :  Créer des groupes de sécurité d’application
 
 Dans cette tâche, vous allez créer un groupe de sécurité d’application.
 
-1. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents**, située en haut de la page, tapez **Groupes de sécurité d’application**, puis appuyez sur la touche **Entrée**.
+1. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents** en haut de la page du portail Azure, tapez +++Groupes de sécurité d’application+++ et appuyez sur la touche **Entrée**.
 
 2. Dans le volet **Groupes de sécurité d’application** , cliquez sur **+Créer**.
 
@@ -89,9 +89,9 @@ Dans cette tâche, vous allez créer un groupe de sécurité d’application.
 
     |Paramètre|Valeur|
     |---|---|
-    |Resource group|**AZ500LAB07**|
-    |Nom|**myAsgWebServers**|
-    |Région|**USA Est**|
+    | Resource group | **AZ500LAB07** |
+    | Nom | +++myAsgWebServers+++ |
+    | Région | **USA Est** |
 
     >**Remarque** : Ce groupe sera destiné aux serveurs web.
 
@@ -104,7 +104,7 @@ Dans cette tâche, vous allez créer un groupe de sécurité d’application.
     |Paramètre|Valeur|
     |---|---|
     |Resource group|**AZ500LAB07**|
-    |Nom|**myAsgMgmtServers**|
+    |Nom| +++myAsgMgmtServers+++ |
     |Région|**USA Est**|
 
     >**Remarque** : Ce groupe sera destiné aux serveurs d’administration.
@@ -115,7 +115,7 @@ Dans cette tâche, vous allez créer un groupe de sécurité d’application.
 
 Dans cette tâche, vous allez créer un groupe de sécurité de réseau. 
 
-1. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents** en haut de la page, tapez **Réseau virtuel**, puis appuyez sur la touche **Entrée**.
+1. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents** en haut de la page du portail Azure, tapez +++Groupes de sécurité réseau+++ et appuyez sur la touche **Entrée**.
 
 2. Dans le volet **Groupes de sécurité réseau**, cliquez sur **+Créer**.
 
@@ -123,18 +123,18 @@ Dans cette tâche, vous allez créer un groupe de sécurité de réseau.
 
     |Paramètre|Valeur|
     |---|---|
-    |Abonnement|le nom de l’abonnement Azure que vous utilisez dans ce labo|
-    |Resource group|**AZ500LAB07**|
-    |Nom|**myNsg**|
-    |Région|**USA Est**|
+    | Abonnement | Nom de l’abonnement Azure que vous utilisez dans ce labo |
+    | Resource group | **AZ500LAB07** |
+    | Nom | +++myNsg+++ |
+    | Région | **USA Est** |
 
 4. Cliquez sur **Vérifier + créer**, puis sur **Créer**.
 
-5. Dans le Portail Azure, revenez au volet **Groupes de sécurité réseau**, puis cliquez sur l’entrée **myNsg**.
+5. Dans le portail Azure, revenez à la page **Groupes de sécurité réseau** et sélectionnez l’entrée **myNsg**. Ou sélectionnez **Accéder à la ressource** si disponible.
 
-6. Dans le volet **myNsg**, dans la section **Paramètres**, cliquez sur **Sous-réseaux**, puis sur **+Associer**. 
+6. Dans le volet **myNsg**, dans la section **Paramètres**, cliquez sur **Sous-réseaux**, puis sélectionnez **+ Associer**. 
 
-7. Dans le volet **Associer un sous-réseau** , spécifiez les paramètres suivants, puis cliquez sur **OK** :
+7. Dans le volet **Sous-réseau associé**, spécifiez les paramètres suivants et sélectionnez **OK** :
 
     |Paramètre|Valeur|
     |---|---|
@@ -151,13 +151,17 @@ Dans cette tâche, vous allez créer un groupe de sécurité de réseau.
 
     |Paramètre|Valeur|
     |---|---|
+    | Source | **Any** |
+    | Source port ranges | * |
     |Destination|Dans la liste déroulante, sélectionnez **Groupe de sécurité d’application**, puis cliquez sur **myAsgWebServers**|
+    | Service | **Personnalisée** |
     |Plages de ports de destination|**80,443**|
     |Protocol|**TCP**|
-    |Priority|**100**|                                                    
+    | Action | **Autoriser** |
+    |Priorité|**100**|
     |Nom|**Allow-Web-All**|
 
-4. Dans le volet **Ajouter une règle de sécurité de trafic entrant**, cliquez sur **Ajouter** pour créer une règle de trafic entrant. 
+4. Sélectionnez le bouton **Ajouter** sur la page **Ajouter une règle de sécurité entrante** pour créer la nouvelle règle entrante.
 
 5. Dans le volet **myNsg**, dans la section **Paramètres**, cliquez sur **Règles de sécurité de trafic entrant**, puis sur **+ Ajouter**.
 
@@ -165,13 +169,17 @@ Dans cette tâche, vous allez créer un groupe de sécurité de réseau.
 
     |Paramètre|Valeur|
     |---|---|
+    | Source | **Any** |
+    | Source port ranges | * |
     |Destination|Dans la liste déroulante, sélectionnez **Groupe de sécurité d’application**, puis cliquez sur **myAsgWebServers**|
+    | Service | **Personnalisée** |
     |Plages de ports de destination|**3389**|
     |Protocol|**TCP**|
-    |Priority|**110**|                                                    
+    | Action | **Autoriser** |
+    |Priority|**110**|
     |Nom|**Allow-RDP-All**|
 
-7. Dans le volet **Ajouter une règle de sécurité de trafic entrant**, cliquez sur **Ajouter** pour créer une règle de trafic entrant. 
+7. Sélectionnez **Ajouter** sur la page **Ajouter une règle de sécurité entrante** pour créer la nouvelle règle entrante. 
 
 > Résultat : vous avez déployé un réseau virtuel, une sécurité réseau avec des règles de sécurité entrantes et deux groupes de sécurité d’application. 
 
@@ -182,15 +190,15 @@ Dans cette tâche, vous allez créer un groupe de sécurité de réseau.
 Dans cet exercice, vous allez effectuer les tâches suivantes :
 
 - Tâche 1 : Créez une machine virtuelle à utiliser comme serveur web.
-- Tâche 2 : Créez une machine virtuelle à utiliser comme serveur d’administration. 
+- Tâche 2 : Créez une machine virtuelle à utiliser comme serveur d’administration.
 - Tâche 3 : Associez chaque interface réseau de machines virtuelles au groupe de sécurité d’application.
 - Tâche 4 : Testez les règles de filtrage du trafic réseau.
 
-#### Tâche 1 : Créez une machine virtuelle à utiliser comme serveur web.
+#### Tâche 1 : Créez une machine virtuelle à utiliser comme serveur web
 
 Dans cette tâche, vous allez créer une machine virtuelle à utiliser comme serveur web.
 
-1. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents** en haut de la page Portail Azure, tapez **Machines virtuelles** et appuyez sur la touche **Entrée**.
+1. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents** en haut de la page du portail Azure, tapez +++Machines virtuelles+++ et appuyez sur la touche **Entrée**.
 
 2. Dans le volet **Machines virtuelles**, cliquez sur **+ Créer** et, dans la liste déroulante, cliquez sur **+ Machine virtuelle Azure**.
 
