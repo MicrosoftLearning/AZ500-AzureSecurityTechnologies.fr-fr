@@ -41,12 +41,12 @@ Dans ce labo, vous allez effectuer les exercices suivants :
    - Machines Windows
    
      - Port RDP : 3389
-     - Accès maximal autorisé : trois heures
+     - Accès autorisé au maximum : trois heures
      - Adresses IP sources autorisées : toutes les adresses IP
 
    - Machines Linux
      - Port SSH : 22
-     - Accès maximal autorisé : trois heures
+     - Accès autorisé au maximum : trois heures
      - Adresses IP sources autorisées : toutes les adresses IP
    
 7. Par défaut, l’accès juste-à-temps pour la machine virtuelle utilise les paramètres suivants :
@@ -68,7 +68,7 @@ Dans ce labo, vous allez effectuer les exercices suivants :
 
    - Azure vérifie si l’accès JAT est activé sur cette machine virtuelle.
 
-        - S’il n’est pas activé pour la machine virtuelle, vous êtes invité à le faire.
+        - Si JAT n’est pas activé pour la machine virtuelle, vous êtes invité à l’activer.
     
         - S’il est activé, sélectionnez **Demander l’accès** pour transmettre une demande d’accès avec l’adresse IP, la plage de temps et les ports de la requête qui ont été configurés pour cette machine virtuelle.
     
