@@ -293,7 +293,7 @@ Dans cette tâche, vous allez associer chaque interface réseau des machines vir
 
 6. Dans le volet **myVMMgmt**, dans la section **Mise en réseau**, cliquez sur **Paramètres réseau**, puis, dans le volet **myVMMgmt \| Paramètres de mise en réseau**, cliquez sur l’onglet **Groupes de sécurité d’application**.
 
-7. Cliquez sur **+ Ajouter des groupes de sécurité d’application**. Dans la liste **Groupe de sécurité d’application**, sélectionnez **myAsgMgmtServers**, puis cliquez sur **Enregistrer**.
+7. Cliquez sur + **Ajouter des groupes de sécurité d’application**, dans la liste **Groupe de sécurité d’application**, sélectionnez **myAsgMgmtServers**, puis cliquez sur **Ajouter**.
 
 #### Tâche 4 : Testez les règles de filtrage du trafic réseau
 
