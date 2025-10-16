@@ -30,7 +30,7 @@ Dans ce labo, vous allez effectuer les exercices suivants :
 
 ## Diagramme d’architecture de contrôle d’accès en fonction du rôle
 
-![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/506cde9c-5242-4438-a793-f88a5434a2b2)
+![Diagramme montrant la disposition système de ce labo et le flux de processus des labos](../media/role-based-access-control-architecture-diagram.png)
 
 ## Instructions
 
@@ -68,7 +68,7 @@ Dans cette tâche, vous allez créer un compte d’utilisateur pour Joseph Price
 
 7. Cliquez sur **Créer**.
 
-8. Actualisez le volet **Utilisateurs \| Tous les utilisateurs** pour vérifier que le nouvel utilisateur a été créé dans votre locataire Microsoft Entra.
+8. Actualisez le volet **Utilisateurs | Tous les utilisateurs** pour vérifier que le nouvel utilisateur a bien été créé dans votre locataire Microsoft Entra.
 
 #### Tâche 2 : Utiliser le portail Azure pour créer un groupe Senior Admins et ajouter le compte d’utilisateur de Joseph Price au groupe.
 

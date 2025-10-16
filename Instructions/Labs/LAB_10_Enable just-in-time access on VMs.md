@@ -53,7 +53,7 @@ Dans ce labo, vous allez effectuer les exercices suivants :
 
    - Dans l’onglet **Configuré**, cliquez avec le bouton droit sur la machine virtuelle à laquelle vous souhaitez ajouter un port, puis sélectionnez Modifier.
 
-   ![image](https://github.com/user-attachments/assets/aa4ded55-c5b1-4d40-b5a0-a4c33b9eb81b)
+   ![Capture d’écran de l’accès juste à temps pour l’écran de configuration de la machine virtuelle.](../media/just-in-time-vm-access.png)
    
    - Sous **JIT VM access configuration** (Configuration de l’accès juste-à-temps à la machine virtuelle), vous pouvez soit modifier les paramètres existants d’un port déjà protégé, soit ajouter un nouveau port personnalisé.
    - Lorsque vous avez fini de modifier les ports, sélectionnez **Enregistrer**.   
@@ -72,6 +72,6 @@ Dans ce labo, vous allez effectuer les exercices suivants :
     
         - S’il est activé, sélectionnez **Demander l’accès** pour transmettre une demande d’accès avec l’adresse IP, la plage de temps et les ports de la requête qui ont été configurés pour cette machine virtuelle.
     
-   ![image](https://github.com/user-attachments/assets/f5d0b67c-7731-4261-b0eb-a56c505dadd4)
+   ![Capture d’écran de la connexion à une machine virtuelle à l’aide de JAT.](../media/vm-connection-for-vm1.png)
 
 > **Résultats** : vous avez étudié différentes méthodes pour activer l’accès JAT sur vos machines virtuelles et savoir comment demander l’accès aux machines virtuelles sur lesquelles il est activé dans Microsoft Defender pour le cloud.

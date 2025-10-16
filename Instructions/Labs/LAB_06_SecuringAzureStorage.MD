@@ -25,7 +25,7 @@ Dans ce labo, vous allez effectuer les exercices suivants :
 
 ## Diagramme de points de terminaison de services et de sécurisation du stockage
 
-![image](https://user-images.githubusercontent.com/91347931/157534883-29664a05-85d1-4c70-99a7-f16d2360755d.png)
+![Diagramme montrant le flux de processus des tâches dans le labo.](../media/service-endpoints-and-securing-storage-diagram.png)
 
 ## Instructions
 
