@@ -168,7 +168,7 @@ Dans cette tâche, vous allez créer une règle de collecte de données.
     |Type de plateforme|**Windows**|
     |Point de terminaison de collecte de données|*Laisser vide*|
 
-    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/9b58c4ce-b7a8-4acf-8289-d95b270a6083)
+    ![Capture d’écran de l’onglet de base de la règle de collecte de données.](../media/crete-a-data-collection-rule-basics-tab.png)
 
 
 5. Cliquez sur le bouton étiqueté **Suivant : Ressources >** pour continuer.
@@ -191,7 +191,7 @@ Dans cette tâche, vous allez créer une règle de collecte de données.
     |Disque|60|
     |Réseau|60|
 
-   ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/a24e44ad-1d10-4533-80e2-bae1b3f6564d)
+   ![Capture d’écran de l’onglet Collecter et livrer de la règle de collecte de données.](../media/crete-a-data-collection-rule-collectanddeliver-tab.png)
 
 11. Cliquez sur le bouton étiqueté **Suivant : Destination >** pour continuer.
   
@@ -199,11 +199,11 @@ Dans cette tâche, vous allez créer une règle de collecte de données.
 
 13. Cliquez sur **Ajouter une source de données** en bas de la page.
     
-    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/964091e7-bbbc-4ca8-8383-bb2871a1e7f0)
+    ![Capture d’écran de la page Ajouter une source de données dans la page Règle de collecte de données.](../media/crete-a-data-collection-rule-add-datasource.png)
 
 14. Cliquez sur **Vérifier + créer**.
 
-    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/50dd8407-a106-4540-9e14-ae40a3c04830)
+    ![Capture d’écran de l’onglet Passer en revue + Créer de l’assistant de règle de collecte de données.](../media/crete-a-data-collection-rule-reviewcreate-tab.png)
 
 15. Cliquez sur **Créer**.
 

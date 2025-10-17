@@ -25,7 +25,7 @@ Dans ce labo, vous allez effectuer l’exercice suivant :
 
 ## Schéma de sécurisation d’Azure SQL Database
 
-![image](https://user-images.githubusercontent.com/91347931/157533836-7250fa58-a109-4882-a55b-d3fa3baf34ab.png)
+![Diagramme montrant le flux de processus des tâches de ce labo.](../media/securing-azure-sql-database-diagram.png)
 
 ## Instructions
 

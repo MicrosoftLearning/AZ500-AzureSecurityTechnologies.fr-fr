@@ -27,7 +27,7 @@ Dans ce labo, vous allez effectuer l’exercice suivant :
 
 ## Schéma de Pare-feu Azure
 
-![image](https://user-images.githubusercontent.com/91347931/157529954-a1bc434b-2eca-41c1-b875-1f0c977d5e20.png)
+![Diagramme montrant le flux de processus des tâches de ce labo.](../media/azure-firewall-diagram.png)
 
 ## Instructions
 

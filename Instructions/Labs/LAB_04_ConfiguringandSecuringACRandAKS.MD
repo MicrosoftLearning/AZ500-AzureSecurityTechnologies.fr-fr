@@ -76,18 +76,24 @@ Dans cette tâche, vous allez créer un groupe de ressources pour le labo et un 
     az group list --query "[?name=='AZ500LAB09']" -o table
     ```
 
-6. Dans la session Bash du volet Cloud Shell, exécutez la commande suivante pour créer une instance Azure Container Registry (ACR) (le nom de l’ACR doit être globalement unique) : 
+6. Dans la session Bash, exécutez les commandes suivantes pour enregistrer le **Registre de conteneurs** dans l’environnement de labo.
+
+   ```sh
+   az provider register --namespace Microsoft.Kubernetes
+   az provider register --namespace Microsoft.KubernetesConfiguration
+   az provider register --namespace Microsoft.OperationsManagement
+   az provider register --namespace Microsoft.OperationalInsights
+   az provider register --namespace Microsoft.ContainerService
+   az provider register --namespace Microsoft.ContainerRegistry
+   ```
+
+7. Dans la session Bash du volet Cloud Shell, exécutez la commande suivante pour créer une instance Azure Container Registry (ACR) (le nom de l’ACR doit être globalement unique) : 
 
     ```sh
     az acr create --resource-group AZ500LAB09 --name az500$RANDOM$RANDOM --sku Basic
     ```
-    > **Note** : enregistrez le fournisseur de ressources Azure Container Registry. Si vous rencontrez une erreur lors de l’exécution de `az acr create`, cela est probablement dû au fait que le service **Azure Container Registry** n’a pas encore été enregistré pour votre abonnement. Pour résoudre ce problème, vous pouvez enregistrer le service et créer votre registre en une seule commande :
-    
-    > ```sh
-    > az provider register --namespace Microsoft.ContainerRegistry
-    > ```
 
-7. Dans la session Bash dans le volet Cloud Shell, exécutez la commande suivante afin de vérifier que le nouvel ACR a été créé :
+8. Dans la session Bash dans le volet Cloud Shell, exécutez la commande suivante afin de vérifier que le nouvel ACR a été créé :
 
     ```sh
     az acr list --resource-group AZ500LAB09
@@ -135,7 +141,7 @@ Dans cette tâche, vous allez créer un Dockerfile, générer une image à parti
 
 Dans cette tâche, vous allez créer un service Azure Kubernetes et examiner les ressources déployées. 
 
-1. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents** en haut de la page, tapez **Services Kubernetes**, puis appuyez sur la touche **Entrée**.
+1. Dans le portail Azure, dans la zone de texte **Rechercher des ressources, des services et des documents** en haut de la page du portail Azure, tapez +++Services Kubernetes+++ et appuyez sur la touche **Entrée**.
 
 2. Dans le volet **Services Kubernetes**, cliquez sur **+ Créer**, puis, dans le menu déroulant, cliquez sur **+ Créer un cluster Kubernetes**.
 
@@ -143,32 +149,45 @@ Dans cette tâche, vous allez créer un service Azure Kubernetes et examiner les
 
     |Paramètre|Valeur|
     |----|----|
-    |Abonnement|le nom de l’abonnement Azure que vous utilisez dans ce labo|
-    |Groupe de ressources|**AZ500LAB09**|
-    |Nom du cluster Kubernetes|**MyKubernetesCluster**|
-    |Région|**(États-Unis) USA Est**|
-    |Zones de disponibilité |**Aucun**|
-    |Méthode de mise à l’échelle|**Manuel**|
-    |Nombre de nœuds|**1**|
+    | Abonnement | *Utilisez le nom de l’abonnement Azure que vous utilisez dans ce labo* |
+    | Resource group | **AZ500LAB09** |
+    | Configuration prédéfinie du cluster | **Dev/Test** |
+    | Nom du cluster Kubernetes | +++MyKubernetesCluster+++ |
+    | Région | **(États-Unis) USA Est** |
+    | Gestionnaire de flotte | **Aucun(e)** |
+    | Zones de disponibilité | **Aucun** |
+    | Niveau tarifaire AKS | **Gratuit** |
+    | Activer le support à long terme | **Décoché** |
+    | Version de Kubernetes | *Utiliser la valeur par défaut* |
+    | Mise à jour automatique | *Conserver la valeur par défaut * |
+    | Type de canal de sécurité du nœud | *Conserver la valeur par défaut* |
+    | Authentification et autorisation | **Comptes locaux avec RBAC Kubernetes** |
 
-4. Cliquez sur **Suivant : Pools de noeuds >** , puis sous l’onglet **Pools de noeuds** du volet **Créer un cluster Kubernetes**, spécifiez les paramètres suivants (conservez les valeurs par défaut pour les autres) :
+4. Cliquez sur **Suivant** et, dans l’onglet **Pools de nœuds** du volet **Créer un cluster Kubernetes**, spécifiez les paramètres suivants (laissez les autres avec leurs valeurs par défaut) :
 
     |Paramètre|Valeur|
     |----|----|
-    |Activer les nœuds virtuels|Case à cocher désactivée|
-    
-5. Cliquez sur **Suivant : Accès >** , puis, sous l’onglet **Accès** du volet **Créer un cluster Kubernetes**, acceptez les valeurs par défaut et cliquez sur **Suivant : Mise en réseau >** . 
+    | Activer l’approvisionnement automatique des nœuds | **Décocher la case** |
+    | Activer les nœuds virtuels | **Décocher la case** |
+    | Autres valeurs | *Conserver les valeurs par défaut* |
+
+5. Cliquez sur **Suivant** pour accéder à **Mise en réseau**. 
+
+  >REMARQUE : une fenêtre contextuelle s’affichera pour indiquer qu’une **Recommandation** est disponible pour la taille de votre machine virtuelle.  **Accepter la recommandation** pour continuer.
 
 6. Sous l’onglet **Mise en réseau** du volet **Créer un cluster Kubernetes**, spécifiez les paramètres suivants (conservez les valeurs par défaut pour les autres) :
 
     |Paramètre|Valeur|
     |----|----|
-    |Configuration réseau|**Superposition Azure CNI**|
-    |Préfixe du nom DNS|**Conservez la valeur par défaut**|
+    | Activer le cluster privé | **Décoché** |
+    | Définir des plages d’adresses IP autorisées | **Décoché** |
+    | Configuration réseau | **Superposition Azure CNI** |
+    | Préfixe du nom DNS | **Conservez la valeur par défaut** |
+    | Stratégie réseau | **Aucun(e)** |
 
     >**Remarque** : AKS peut être configuré comme un cluster privé. Cela a pour effet d’attribuer une adresse IP privée au serveur d’API pour garantir que le trafic réseau entre votre serveur d’API et vos pools de nœuds reste uniquement sur le réseau privé. Pour plus d’informations, consultez [Créer un cluster Azure Kubernetes Service privé](https://docs.microsoft.com/en-us/azure/aks/private-clusters).
 
-7. Cliquez sur **Suivant : Intégrations >** , puis, sous l’onglet **Intégrations** du volet **Créer un cluster Kubernetes**, définissez la **Surveillance du conteneur** sur **Désactivée**. 
+7. Cliquez sur **Suivant** et, dans l’onglet **Intégrations** de la page **Créer un cluster Kubernetes**, laissez **Toutes les valeurs par défaut**. 
 
     >**Remarque** : dans les scénarios de production, il est préférable d’activer la surveillance. En l’occurrence, la surveillance est désactivée parce qu’elle n’est pas couverte dans le labo. 
 
